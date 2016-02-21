@@ -15,8 +15,8 @@ using Mkamo.Memopad.Remote;
 
 namespace Mkamo.Memopad.Remote {
     public static class MemopadClient {
-        private const string TargetExeFilename = "Confidante.exe";
-        private const string TargetWindowTitle = "Confidante";
+        private const string TargetExeFilename = "MochaNote.exe";
+        private const string TargetWindowTitle = "MochaNote";
 
         private const string Create = "create";
         private const string Load = "load";
@@ -143,7 +143,7 @@ namespace Mkamo.Memopad.Remote {
                 }
 
                 if (!IsAlive(facade)) {
-                    WriteLine("Failed to start confidante", console);
+                    WriteLine("Failed to start MochaNote", console);
                     return;
                 }
             }
@@ -154,7 +154,7 @@ namespace Mkamo.Memopad.Remote {
                     var ret = facade.CreateMemo(title);
                     WriteLine(ret == null ? "false" : ("memoUri=memo:///" + ret), console);
                     if (needActivate) {
-                        ActivateConfidante();
+                        ActivateMochaNote();
                     }
                     break;
                 }
@@ -162,7 +162,7 @@ namespace Mkamo.Memopad.Remote {
                     var ret = facade.LoadMemo(memoId);
                     WriteLine(ret ? "true" : "false", console);
                     if (needActivate) {
-                        ActivateConfidante();
+                        ActivateMochaNote();
                     }
                     break;
                 }
@@ -170,7 +170,7 @@ namespace Mkamo.Memopad.Remote {
                     var ret = facade.RemoveMemo(memoId);
                     WriteLine(ret ? "true" : "false", console);
                     if (needActivate) {
-                        ActivateConfidante();
+                        ActivateMochaNote();
                     }
                     break;
                 }
@@ -184,7 +184,7 @@ namespace Mkamo.Memopad.Remote {
                         }
                     }
                     if (needActivate) {
-                        ActivateConfidante();
+                        ActivateMochaNote();
                     }
                     break;
                 }
@@ -192,7 +192,7 @@ namespace Mkamo.Memopad.Remote {
                     var ret = facade.ExistsMemo(memoId);
                     WriteLine(ret ? "true" : "false", console);
                     if (needActivate) {
-                        ActivateConfidante();
+                        ActivateMochaNote();
                     }
                     break;
                 }
@@ -200,14 +200,14 @@ namespace Mkamo.Memopad.Remote {
                     var ret = facade.GetMemoTitle(memoId);
                     WriteLine(ret == null ? "false" : ("title=" + ret), console);
                     if (needActivate) {
-                        ActivateConfidante();
+                        ActivateMochaNote();
                     }
                     break;
                 }
             }
         }
 
-        private static void ActivateConfidante() {
+        private static void ActivateMochaNote() {
             User32Util.ActivateWindow(null, TargetWindowTitle, TargetExeFilename);
         }
 
@@ -226,7 +226,7 @@ namespace Mkamo.Memopad.Remote {
                 ChannelServices.RegisterChannel(client, true);
                 var ret = (IMemopadRemoteFacade) Activator.GetObject(
                     typeof(MemopadRemoteFacadeProxy),
-                    "ipc://confidante/facade"
+                    "ipc://mochanote/facade"
                 );
                 return ret;
             } catch (Exception) {
@@ -236,7 +236,7 @@ namespace Mkamo.Memopad.Remote {
 
         private static void ShowUsage() {
             Console.WriteLine("Usage:");
-            Console.WriteLine("  ConfidanteClient.exe <method and args> [options]");
+            Console.WriteLine("  MochaNoteClient.exe <method and args> [options]");
             Console.WriteLine();
 
             Console.WriteLine("  <method and args> are");
@@ -253,21 +253,21 @@ namespace Mkamo.Memopad.Remote {
             Console.WriteLine();
 
             Console.WriteLine("  [options] are");
-            Console.WriteLine("    -a: activate Confidante window");
-            Console.WriteLine("    -s[=seconds]: start Confidante if not started and wait for seconds.");
+            Console.WriteLine("    -a: activate MochaNote window");
+            Console.WriteLine("    -s[=seconds]: start MochaNote if not started and wait for seconds.");
             Console.WriteLine("                  If seconds omitted, wait for 20 seconds");
             Console.WriteLine();
 
             Console.WriteLine("  Example:");
-            Console.WriteLine("    ConfidanteClient.exe create \"My memo\"");
+            Console.WriteLine("    MochaNoteClient.exe create \"My memo\"");
             Console.WriteLine("      create a memo titled \"My memo\"");
-            Console.WriteLine("    ConfidanteClient.exe load MEMO_URI");
+            Console.WriteLine("    MochaNoteClient.exe load MEMO_URI");
             Console.WriteLine("      load a memo specified by MEMO_URI");
-            Console.WriteLine("    ConfidanteClient.exe create \"My Memo\" -s=30 -a");
-            Console.WriteLine("      start Confidante if not started, and create a memo, and activate");
+            Console.WriteLine("    MochaNoteClient.exe create \"My Memo\" -s=30 -a");
+            Console.WriteLine("      start MochaNote if not started, and create a memo, and activate");
 
             Console.WriteLine();
-            Console.WriteLine("Copyright (c) 2010 mkamo All rights reserved.");
+            Console.WriteLine("Copyright (c) 2010-2016 mocha All rights reserved.");
         }
 
         private static void WriteLine(string s, bool console) {
