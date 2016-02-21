@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Comment CommentText="EditorのFigureは子として以下のFigureを持つ．&#xD;&#xA;  - EditorFigureParts: Editorの内容を表示するために使われているFigure&#xD;&#xA;  - ChildEditorFigures: 子EditorのFigure&#xD;&#xA;子Editorの追加・削除でEditorFigurePartsが影響を受けないように&#xD;&#xA;ChildEditorFiguresを追加・削除する．&#xD;&#xA;">
+    <Position X="5.28" Y="5.896" Height="1.213" Width="4.142" />
+  </Comment>
+  <Class Name="Mkamo.Editor.Internal.Editors.Editor">
+    <Position X="0.5" Y="2" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+      <Compartment Name="Events" Collapsed="true" />
+    </Compartments>
+    <NestedTypes>
+      <Class Name="Mkamo.Editor.Internal.Editors.Editor.EditorMemento" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Internal\Editors\Editor.cs</NewMemberFileName>
+        </TypeIdentifier>
+        <Lollipop Position="0.2" />
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>YKAMEAkGCSFXkCCADgAkVEiAmgJCEAgDBg6BRuBSjKE=</HashCode>
+      <FileName>Internal\Editors\Editor.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="_FigureMaintainer" />
+      <Property Name="Figure" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Mkamo.Editor.Internal.Core.FigureStructureMaintainer" Collapsed="true">
+    <Position X="5.75" Y="5" Width="2.25" />
+    <AssociationLine Name="EditorFigure" Type="Mkamo.Figure.Core.IFigure" FixedFromPoint="true">
+      <Path>
+        <Point X="6.062" Y="5" />
+        <Point X="6.062" Y="3.302" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="ChildEditorFigures" Type="Mkamo.Figure.Core.IFigure" FixedFromPoint="true">
+      <Path>
+        <Point X="7.188" Y="5" />
+        <Point X="7.188" Y="3.302" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-1.348" Y="0.373" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="EditorFigureParts" Type="Mkamo.Figure.Core.IFigure" FixedToPoint="true">
+      <Path>
+        <Point X="6.562" Y="5" />
+        <Point X="6.562" Y="3.302" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-1.256" Y="0.21" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAABAAAAAAAAAQAAEABBAAAAAA0AAAAAEAQA=</HashCode>
+      <FileName>Internal\Core\FigureStructureMaintainer.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="EditorFigure" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="ChildEditorFigures" />
+      <Property Name="EditorFigureParts" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Interface Name="Mkamo.Editor.Core.IEditor" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAIAAAGASFHkCAADAAgAAAACgBCEAAABg4ARABQCCE=</HashCode>
+      <FileName>Core\IEditor.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Mkamo.Figure.Core.IFigure" Collapsed="true">
+    <Position X="5.75" Y="2" Width="1.75" />
+    <TypeIdentifier />
+  </Interface>
+  <Font Name="MeiryoKe_UIGothic" Size="9" />
+</ClassDiagram>

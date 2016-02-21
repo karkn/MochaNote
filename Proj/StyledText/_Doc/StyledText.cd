@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Mkamo.StyledText.Core.Flow" Collapsed="true">
+    <Position X="5.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QIggAAGABAAIQCAEAAIERQBQCgCAAACAAAAAmgACAFE=</HashCode>
+      <FileName>Core\Flow.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Mkamo.StyledText.Core.Inline" Collapsed="true">
+    <Position X="4" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAMKABAAAABAAARAEBAAAAAAAAQAAAAAAAgAAAEA=</HashCode>
+      <FileName>Core\Inline.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mkamo.StyledText.Core.Run" Collapsed="true">
+    <Position X="0.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAgAAAAABAABQAABQBAAgAAASQAAAAASAAAAhA=</HashCode>
+      <FileName>Core\Inline.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mkamo.StyledText.Core.ControlCharacterInline" Collapsed="true">
+    <Position X="3" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAAAAAAQAABAAAAAAAAQAAAAAAAAACAAA=</HashCode>
+      <FileName>Core\Inline.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mkamo.StyledText.Core.LineBreak" Collapsed="true">
+    <Position X="0.75" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAABAAgAAAAAAAAAACAAAAEA=</HashCode>
+      <FileName>Core\Inline.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mkamo.StyledText.Core.BlockBreak" Collapsed="true">
+    <Position X="2.5" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAABAAgAAAAAAAAAACgAAAEA=</HashCode>
+      <FileName>Core\Inline.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mkamo.StyledText.Core.Anchor" Collapsed="true">
+    <Position X="4.25" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAgAAAAAAAABBAAQBAAgAAAAAAAAAACAAAAEA=</HashCode>
+      <FileName>Core\Inline.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mkamo.StyledText.Core.Block" Collapsed="true">
+    <Position X="6.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>GABBAkGABAgkABAAoABFBQRAAAAEyACSCAJAGQAgQFA=</HashCode>
+      <FileName>Core\Block.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Mkamo.StyledText.Core.Paragraph" Collapsed="true">
+    <Position X="6.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAQAAAAAISAAAAAAAAAQACAgEAIAAAAAAAUAAAAEA=</HashCode>
+      <FileName>Core\Paragraph.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mkamo.StyledText.Core.StyledText" Collapsed="true">
+    <Position X="8.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>WIJUlEmgBAqABDAMoABFBQRASgAAaACSyAhCHaQg4EA=</HashCode>
+      <FileName>Core\StyledText.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Mkamo.StyledText.Core.Link" Collapsed="true">
+    <Position X="0.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAgAAAAACAACAAAIAACAABAAAAAjA=</HashCode>
+      <FileName>Core\Link.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Font Name="MeiryoKe_UIGothic" Size="9" />
+</ClassDiagram>

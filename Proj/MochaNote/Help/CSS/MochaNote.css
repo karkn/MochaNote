@@ -1,0 +1,89 @@
+﻿body {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Meiryo UI', 'メイリオ', 'Meiryo', sans-serif;
+	font-size: 9pt;
+}
+
+#container {
+    text-align:left;
+	width: 820px;
+}
+
+#navi {
+    width: 200px;
+    height:100%;
+    float:left;
+}
+
+#content {
+	margin-top: 1em;
+	margin-bottom: 2em;
+	width: 600px;
+	text-align: left;
+	float: right;
+}
+
+#content p.navi_next {
+	margin-top: 2em;
+}
+
+#header {
+    width: 98%;
+}
+
+#footer {
+    width: 98%;
+    clear: left;
+}
+
+
+#navi iframe {
+    border-right: solid 1px #ccc;
+    width: 200px;
+    height: 60em;
+    text-align: left;
+    padding-left: 1em;
+    padding-top: 1em;
+}
+#navilist, #navilist ul {
+	padding-left: 0em;
+    margin-left: 0px;
+    text-align: left;
+    list-style-type: none;
+}
+
+img {
+	border: none;
+}
+img.border {
+	border: solid thin silver;
+}
+
+table {
+	border-collapse: collapse;
+	border: solid thin silver;
+}
+th {
+    border: thin silver solid;
+	background: #DDD;
+    vertical-align: top;
+    text-align: center;
+    padding: 0.5em;
+}
+td {
+    border: thin silver solid;
+    vertical-align: top;
+    padding: 0.5em;
+}
+
+a {
+	text-decoration: none;
+	color: #2030F0;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+.clearBoth { clear: both; }

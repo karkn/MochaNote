@@ -1,0 +1,8 @@
+﻿log4net
+kripton toolkit
+TabControlEx
+  http://www.codeproject.com/KB/tabs/flattabcontrol.aspx
+TabControlEx
+  Icon: Firefox
+    firefox-3.6.source\mozilla-1.9.2\toolkit\themes\winstripe\global\icons
+    LGPLなのでリバースエンジニアを拒否できない

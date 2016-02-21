@@ -1,0 +1,244 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6E243DF9-8A7D-418B-9600-C3F0B9F97705}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Mkamo.StyledText</RootNamespace>
+    <AssemblyName>Mkamo.StyledText</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SignAssembly>false</SignAssembly>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Document|AnyCPU' ">
+    <OutputPath>bin\Document\</OutputPath>
+    <DocumentationFile>bin\Document\Mkamo.StyledText.XML</DocumentationFile>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <BaseAddress>1614807040</BaseAddress>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Document|x86' ">
+    <OutputPath>bin\x86\Document\</OutputPath>
+    <DocumentationFile>bin\Document\Mkamo.StyledText.XML</DocumentationFile>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Deploy|AnyCPU' ">
+    <OutputPath>bin\Deploy\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Deploy|x86' ">
+    <OutputPath>bin\x86\Deploy\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Lib\log4net\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Commands\Primitive_\AppendStringToInlineCommand.cs" />
+    <Compile Include="Commands\Primitive_\InsertBlockToStyledTextCommand.cs" />
+    <Compile Include="Commands\Primitive_\InsertInlineBeforeToBlockCommand.cs" />
+    <Compile Include="Commands\Primitive_\InsertInlineToLineSegmentCommand.cs" />
+    <Compile Include="Commands\Primitive_\InsertLineSegmentToBlockCommand.cs" />
+    <Compile Include="Commands\Primitive_\InsertStringToInlineCommand.cs" />
+    <Compile Include="Commands\Primitive_\MergeBlocksCommand.cs" />
+    <Compile Include="Commands\Primitive_\MergeLineSegmentsCommand.cs" />
+    <Compile Include="Commands\Primitive_\RemoveBlockFromStyledTextCommand.cs" />
+    <Compile Include="Commands\Primitive_\RemoveInlineFromLineSegmentCommand.cs" />
+    <Compile Include="Commands\Primitive_\RemoveLineSegmentFromBlockCommand.cs" />
+    <Compile Include="Commands\Primitive_\RemoveStringFromInlineCommand.cs" />
+    <Compile Include="Commands\Primitive_\SetColorOfFlowCommand.cs" />
+    <Compile Include="Commands\Primitive_\SetFontOfFlowCommand.cs" />
+    <Compile Include="Commands\Primitive_\SetHorizontalAlignmentOfBlock.cs" />
+    <Compile Include="Commands\Primitive_\SetTextOfFlowCommand.cs" />
+    <Compile Include="Commands\Primitive_\SetVerticalAlignmentOfStyledTextCommand.cs" />
+    <Compile Include="Commands\Primitive_\SplitBlockCommand.cs" />
+    <Compile Include="Commands\Primitive_\SplitInlineCommand.cs" />
+    <Compile Include="Commands\Primitive_\SplitLineSegmentCommand.cs" />
+    <Compile Include="Commands\IRangeCommand.cs" />
+    <Compile Include="Commands\Primitive_\SetLinkOfRunCommand.cs" />
+    <Compile Include="Commands\Primitive_\MergeInlineCommand.cs" />
+    <Compile Include="Commands\Primitive_\SetListKindOfParagraphCommand.cs" />
+    <Compile Include="Commands\Primitive_\SetParagraphKindOfParagraphCommand.cs" />
+    <Compile Include="Commands\Sophisticated_\ApplyCommandCommand.cs" />
+    <Compile Include="Commands\Sophisticated_\ApplyCommandToInlineCommand.cs" />
+    <Compile Include="Commands\Sophisticated_\CompressInlinesCommand.cs" />
+    <Compile Include="Commands\Sophisticated_\CopyCommand.cs" />
+    <Compile Include="Commands\Sophisticated_\EnsureBlockBreakCommand.cs" />
+    <Compile Include="Commands\Sophisticated_\EnsureInlineBreakCommand.cs" />
+    <Compile Include="Commands\Sophisticated_\EnsureLineSegmentBreakCommand.cs" />
+    <Compile Include="Commands\Primitive_\IndentParagraphCommand.cs" />
+    <Compile Include="Commands\Sophisticated_\InsertBlockBreakCommand.cs" />
+    <Compile Include="Commands\Sophisticated_\InsertBlocksAndInlinesCommand.cs" />
+    <Compile Include="Commands\Sophisticated_\InsertInlineCommand.cs" />
+    <Compile Include="Commands\Sophisticated_\InsertLineBreakCommand.cs" />
+    <Compile Include="Commands\Sophisticated_\InsertStringCommand.cs" />
+    <Compile Include="Commands\Sophisticated_\PasteCommand.cs" />
+    <Compile Include="Commands\Sophisticated_\RemoveCommand.cs" />
+    <Compile Include="Commands\Sophisticated_\SetFontCommand.cs" />
+    <Compile Include="Commands\Sophisticated_\SetParagraphPropertiesCommand.cs" />
+    <Compile Include="Commands\Sophisticated_\SetColorCommand.cs" />
+    <Compile Include="Commands\Sophisticated_\SetLinkCommand.cs" />
+    <Compile Include="Commands\Primitive_\OutdentParagraphCommand.cs" />
+    <Compile Include="Core\Block.cs" />
+    <Compile Include="Core\Flow.cs" />
+    <Compile Include="Core\Inline.cs" />
+    <Compile Include="Core\LineSegment.cs" />
+    <Compile Include="Core\Link.cs" />
+    <Compile Include="Core\Paragraph.cs" />
+    <Compile Include="Core\StyledText.cs" />
+    <Compile Include="Core\StyledTextConsts.cs" />
+    <Compile Include="Core\StyledTextEventArgs.cs" />
+    <Compile Include="Core\StyledTextReferer.cs" />
+    <Compile Include="Core\StyledTextSelection.cs" />
+    <Compile Include="Core\StyledTextTypes.cs" />
+    <Compile Include="Internal\Core\FlowOffsetCache.cs" />
+    <Compile Include="Internal\Core\TypeService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Util\ClipboardUtil.cs" />
+    <Compile Include="Util\StyledTextUtil.cs" />
+    <Compile Include="Writer\HtmlWriter.cs" />
+    <Compile Include="Writer\PlainTextWriter.cs" />
+    <Compile Include="Writer\XmlUtil.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Proj\CommonForms\CommonForms.csproj">
+      <Project>{6E0EE774-EDD5-4B7D-9A1A-2FF4808FFFDC}</Project>
+      <Name>CommonForms</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Proj\Common\Common.csproj">
+      <Project>{11E94803-0024-4A00-88C4-0E0E0C826FE5}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="_Doc\License.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="_Doc\StyledText.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows インストーラー 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

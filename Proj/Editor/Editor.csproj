@@ -1,0 +1,445 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{23CEF6F7-BE4B-4B43-B23B-6E9891E69D33}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Mkamo.Editor</RootNamespace>
+    <AssemblyName>Mkamo.Editor</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SignAssembly>false</SignAssembly>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Document|AnyCPU' ">
+    <OutputPath>bin\Document\</OutputPath>
+    <DocumentationFile>bin\Document\Mkamo.Editor.XML</DocumentationFile>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <BaseAddress>1625292800</BaseAddress>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Document|x86' ">
+    <OutputPath>bin\x86\Document\</OutputPath>
+    <DocumentationFile>bin\Document\Mkamo.Editor.XML</DocumentationFile>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Deploy|AnyCPU' ">
+    <OutputPath>bin\Deploy\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Deploy|x86' ">
+    <OutputPath>bin\x86\Deploy\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Lib\log4net\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Commands\AddEditorsCommand.cs" />
+    <Compile Include="Commands\ChangeBoundsCommand.cs" />
+    <Compile Include="Commands\CloneCommand.cs" />
+    <Compile Include="Commands\CombineCommand.cs" />
+    <Compile Include="Commands\ConnectCommand.cs" />
+    <Compile Include="Commands\CopyCommand.cs" />
+    <Compile Include="Commands\CreateFreehandCommand.cs" />
+    <Compile Include="Commands\CreateNodeCommand.cs" />
+    <Compile Include="Commands\CreateEdgeCommand.cs" />
+    <Compile Include="Commands\CutCommand.cs" />
+    <Compile Include="Commands\DisconnectCommand.cs" />
+    <Compile Include="Commands\ExportCommand.cs" />
+    <Compile Include="Commands\FocusCommand.cs" />
+    <Compile Include="Commands\MoveEdgePointCommand.cs" />
+    <Compile Include="Commands\NewEdgePointCommand.cs" />
+    <Compile Include="Commands\RemoveCommand.cs" />
+    <Compile Include="Commands\RemoveEdgePointCommand.cs" />
+    <Compile Include="Commands\ReorderCommand.cs" />
+    <Compile Include="Commands\SelectCommand.cs" />
+    <Compile Include="Commands\PasteCommand.cs" />
+    <Compile Include="Commands\SetNodeBackgroundCommand.cs" />
+    <Compile Include="Commands\SetNodeBorderCommand.cs" />
+    <Compile Include="Commands\SetPlainTextFontCommand.cs" />
+    <Compile Include="Commands\SetStyledTextFontCommand.cs" />
+    <Compile Include="Commands\ReorderModelCommand.cs" />
+    <Compile Include="Commands\SetEdgeLineCommand.cs" />
+    <Compile Include="Commands\SetStyledTextColorCommand.cs" />
+    <Compile Include="Commands\SetStyledTextAlignmentCommand.cs" />
+    <Compile Include="Commands\SelectMultiCommand.cs" />
+    <Compile Include="Commands\SetStyledTextListKindCommand.cs" />
+    <Compile Include="Controllers\AbstractController.cs" />
+    <Compile Include="Controllers\NullController.cs" />
+    <Compile Include="Controllers\ObjectNodeController.cs" />
+    <Compile Include="Controllers\RootController.cs" />
+    <Compile Include="Core\EditorConsts.cs" />
+    <Compile Include="Core\EditorBundle.cs" />
+    <Compile Include="Core\EditorTypes.cs" />
+    <Compile Include="Core\IContainerController.cs" />
+    <Compile Include="Core\IContextMenuProvider.cs" />
+    <Compile Include="Core\IAbbrevWordProvider.cs" />
+    <Compile Include="Core\IEditorCopyExtenderManager.cs" />
+    <Compile Include="Core\IEditorDataAggregatorManager.cs" />
+    <Compile Include="Core\IFigureExt.cs" />
+    <Compile Include="Core\IEditorHandle.cs" />
+    <Compile Include="Core\IEditorExt.cs" />
+    <Compile Include="Core\IEditorSite.cs" />
+    <Compile Include="Core\IFocusManager.cs" />
+    <Compile Include="Core\IGridService.cs" />
+    <Compile Include="Core\IHandle.cs" />
+    <Compile Include="Core\IModelDescriptor.cs" />
+    <Compile Include="Core\IUIProvider.cs" />
+    <Compile Include="Core\IModelFactory.cs" />
+    <Compile Include="Core\IRootEditor.cs" />
+    <Compile Include="Core\ISelectionManager.cs" />
+    <Compile Include="Core\RefreshContext.cs" />
+    <Compile Include="Focuses\AbstractFocus.cs" />
+    <Compile Include="Core\_Event\LinkClickedEventArgs.cs" />
+    <Compile Include="Focuses\StyledTextFocus.Classes.cs" />
+    <Compile Include="Focuses\StyledTextFocus.cs" />
+    <Compile Include="Focuses\StyledTextFocus.KeyMap.cs" />
+    <Compile Include="Focuses\StyledTextFocusContextMenuProvider.cs" />
+    <Compile Include="Focuses\StyledTextFocusKeyActions.cs" />
+    <Compile Include="Forms\EdgeLineDetailPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\EdgeLineDetailPage.Designer.cs">
+      <DependentUpon>EdgeLineDetailPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\NodeBackgroundDetailPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\NodeBackgroundDetailPage.Designer.cs">
+      <DependentUpon>NodeBackgroundDetailPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\NodeBorderDetailPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\NodeBorderDetailPage.Designer.cs">
+      <DependentUpon>NodeBorderDetailPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\NodeBorderLineDetailPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\NodeBorderLineDetailPage.Designer.cs">
+      <DependentUpon>NodeBorderLineDetailPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Handles\DefaultEditorHandle.cs" />
+    <Compile Include="Handles\AbstractHandle.cs" />
+    <Compile Include="Handles\AbstractMoveHandle.cs" />
+    <Compile Include="Handles\AbstractResizeHandle.cs" />
+    <Compile Include="Handles\AbstractSelectHandle.cs" />
+    <Compile Include="Handles\AbstractContainerHandle.cs" />
+    <Compile Include="Handles\CompositeEdgePointAndAnchorHandle.cs" />
+    <Compile Include="Handles\DefaultAuxiliaryHandle.cs" />
+    <Compile Include="Handles\EdgeAnchorHandle.cs" />
+    <Compile Include="Handles\CompositeHandle.cs" />
+    <Compile Include="Handles\FrameHandle.cs" />
+    <Compile Include="Handles\Scenarios\ResizeScenario.cs" />
+    <Compile Include="Handles\SelectionIndicatingHandle.cs" />
+    <Compile Include="Handles\MoveOrthogonalEdgePointHandle.cs" />
+    <Compile Include="Internal\Controls\Completion.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Internal\Controls\Completion.Designer.cs">
+      <DependentUpon>Completion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Internal\Core\DefaultGridService.cs" />
+    <Compile Include="Internal\Core\AbbrevWordProvider.cs" />
+    <Compile Include="Internal\Core\EditorCopyExtenderManager.cs" />
+    <Compile Include="Internal\Core\EditorDataAggregatorManager.cs" />
+    <Compile Include="Internal\Figures\AdjustSpaceFeedbackFigure.cs" />
+    <Compile Include="Internal\Figures\MoveHandleFigure.cs" />
+    <Compile Include="Requests\CombineRequest.cs" />
+    <Compile Include="Requests\FreehandRequest.cs" />
+    <Compile Include="Requests\Request.cs" />
+    <Compile Include="Requests\SetStyledTextFontRequest.cs" />
+    <Compile Include="Requests\SetPlainTextFontRequest.cs" />
+    <Compile Include="Requests\SetStyledTextAlignmentRequest.cs" />
+    <Compile Include="Requests\SetStyledTextColorRequest.cs" />
+    <Compile Include="Requests\ExportRequest.cs" />
+    <Compile Include="Requests\DropTextRequest.cs" />
+    <Compile Include="Requests\AdjustSpaceRequest.cs" />
+    <Compile Include="Requests\SetStyledTextListKindRequest.cs" />
+    <Compile Include="Roles\CombineRole.cs" />
+    <Compile Include="Roles\Container\CreateFreehandRole.cs" />
+    <Compile Include="Roles\Container\AdjustSpaceRole.cs" />
+    <Compile Include="Roles\ExportRole.cs" />
+    <Compile Include="Roles\SetStyledTextFontRole.cs" />
+    <Compile Include="Roles\SetPlainTextFontRole.cs" />
+    <Compile Include="Roles\SetStyledTextAlignmentRole.cs" />
+    <Compile Include="Roles\SetStyledTextColorRole.cs" />
+    <Compile Include="Roles\DropTextRole.cs" />
+    <Compile Include="Roles\SetStyledTextListKindRole.cs" />
+    <Compile Include="Tools\AddEdgeTool.cs" />
+    <Compile Include="Tools\FreehandTool.cs" />
+    <Compile Include="Tools\EraserTool.cs" />
+    <Compile Include="Tools\DragSelectTool.cs" />
+    <Compile Include="Tools\HandTool.cs" />
+    <Compile Include="Tools\AdjustSpaceTool.cs" />
+    <Compile Include="Utils\CategorizedListBox\CategorizedListBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Utils\CategorizedListBox\Controllers\CategorizedListBoxControllerFactory.cs" />
+    <Compile Include="Utils\CategorizedListBox\Controllers\CategorizedListController.cs" />
+    <Compile Include="Utils\CategorizedListBox\Controllers\CategoryController.cs" />
+    <Compile Include="Utils\CategorizedListBox\Controllers\ListItemController.cs" />
+    <Compile Include="Utils\CategorizedListBox\Figures\ChildrenFoldHandleFigure.cs" />
+    <Compile Include="Utils\CategorizedListBox\Handles\ChildrenFoldHandle.cs" />
+    <Compile Include="Utils\CategorizedListBox\Models\CategorizedList.cs" />
+    <Compile Include="Utils\CategorizedListBox\Models\Category.cs" />
+    <Compile Include="Utils\CategorizedListBox\Models\ListItem.cs" />
+    <Compile Include="Handles\FrameMoveHandle.cs" />
+    <Compile Include="Handles\FrameResizeHandle.cs" />
+    <Compile Include="Handles\MoveEdgePointHandle.cs" />
+    <Compile Include="Handles\CompositeEdgePointHandle.cs" />
+    <Compile Include="Handles\MoveEditorHandle.cs" />
+    <Compile Include="Handles\NewEdgePointHandle.cs" />
+    <Compile Include="Handles\CompositeNewEdgePointHandle.cs" />
+    <Compile Include="Handles\ResizeHandle.cs" />
+    <Compile Include="Handles\ContainerEditorHandle.cs" />
+    <Compile Include="Handles\Scenarios\AbstractScenario.cs" />
+    <Compile Include="Handles\Scenarios\ContainerScenario.cs" />
+    <Compile Include="Handles\Scenarios\MoveScenario.cs" />
+    <Compile Include="Handles\Scenarios\SelectScenario.cs" />
+    <Compile Include="Handles\SelectEditorHandle.cs" />
+    <Compile Include="Handles\MoveNodeHandle.cs" />
+    <Compile Include="Core\EditorCanvas.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Core\RequestIds.cs" />
+    <Compile Include="Core\IController.cs" />
+    <Compile Include="Core\IControllerFactory.cs" />
+    <Compile Include="Core\IConnectionController.cs" />
+    <Compile Include="Core\IEditor.cs" />
+    <Compile Include="Core\IFocus.cs" />
+    <Compile Include="Core\IAuxiliaryHandle.cs" />
+    <Compile Include="Core\IModelSerializer.cs" />
+    <Compile Include="Core\IConnectableController.cs" />
+    <Compile Include="Core\IRequest.cs" />
+    <Compile Include="Core\IRole.cs" />
+    <Compile Include="Core\ITool.cs" />
+    <Compile Include="Internal\Core\EditorFactory.cs" />
+    <Compile Include="Internal\Core\FocusManager.cs" />
+    <Compile Include="Internal\Core\NullFocusManager.cs" />
+    <Compile Include="Internal\Editors\Editor.cs" />
+    <Compile Include="Internal\Editors\Editor.IExternalizable.cs" />
+    <Compile Include="Internal\Editors\RootEditor.cs" />
+    <Compile Include="Core\_Event\SelectionChangedEventArgs.cs" />
+    <Compile Include="Handles\AbstractAuxiliaryHandle.cs" />
+    <Compile Include="Handles\SelectNodeHandle.cs" />
+    <Compile Include="Internal\Core\DefaultContextMenuProvider.cs" />
+    <Compile Include="Internal\Core\EditorEventDispatcher.cs" />
+    <Compile Include="Internal\Core\FigureStructureMaintainer.cs" />
+    <Compile Include="Internal\Core\EditorSite.cs" />
+    <Compile Include="Internal\Core\IEditorExt.cs" />
+    <Compile Include="Internal\Core\NullCommandExecutor.cs" />
+    <Compile Include="Internal\Core\NullControllerFactory.cs" />
+    <Compile Include="Internal\Core\NullEditorSite.cs" />
+    <Compile Include="Internal\Core\NullSelectionManager.cs" />
+    <Compile Include="Internal\Core\SelectionManager.cs" />
+    <Compile Include="Internal\Figures\FrameResizeFigure.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Requests\AbstractRequest.cs" />
+    <Compile Include="Requests\ChangeBoundsRequest.cs" />
+    <Compile Include="Requests\CloneRequest.cs" />
+    <Compile Include="Requests\ConnectRequest.cs" />
+    <Compile Include="Requests\CreateEdgeRequest.cs" />
+    <Compile Include="Requests\CreateNodeRequest.cs" />
+    <Compile Include="Requests\FocusRequest.cs" />
+    <Compile Include="Requests\AbstractGroupRequest.cs" />
+    <Compile Include="Requests\HighlightRequest.cs" />
+    <Compile Include="Requests\MoveEdgePointRequest.cs" />
+    <Compile Include="Requests\NewEdgePointRequest.cs" />
+    <Compile Include="Requests\RemoveRequest.cs" />
+    <Compile Include="Requests\ReorderRequest.cs" />
+    <Compile Include="Requests\RubberbandRequest.cs" />
+    <Compile Include="Requests\SelectRequest.cs" />
+    <Compile Include="Requests\PasteRequest.cs" />
+    <Compile Include="Requests\CopyRequest.cs" />
+    <Compile Include="Roles\AbstractRole.cs" />
+    <Compile Include="Roles\CloneRole.cs" />
+    <Compile Include="Roles\CompositeRole.cs" />
+    <Compile Include="Roles\ConnectionRole.cs" />
+    <Compile Include="Roles\Edge\ConnectRole.cs" />
+    <Compile Include="Roles\Edge\MoveEdgeRole.cs" />
+    <Compile Include="Roles\ContainerRole.cs" />
+    <Compile Include="Roles\Container\PasteRole.cs" />
+    <Compile Include="Roles\Container\CreateChildEdgeRole.cs" />
+    <Compile Include="Roles\Container\CreateChildNodeRole.cs" />
+    <Compile Include="Roles\EdgeRole.cs" />
+    <Compile Include="Roles\FocusRole.cs" />
+    <Compile Include="Roles\HighlightRole.cs" />
+    <Compile Include="Roles\Edge\MoveEdgePointRole.cs" />
+    <Compile Include="Roles\MoveRole.cs" />
+    <Compile Include="Roles\Edge\NewEdgePointRole.cs" />
+    <Compile Include="Roles\CopyRole.cs" />
+    <Compile Include="Roles\RemoveRole.cs" />
+    <Compile Include="Roles\ReorderRole.cs" />
+    <Compile Include="Roles\ResizeRole.cs" />
+    <Compile Include="Roles\Container\RubberbandRole.cs" />
+    <Compile Include="Roles\SelectRole.cs" />
+    <Compile Include="Tools\AbstractTool.cs" />
+    <Compile Include="Tools\CreateEdgeTool.cs" />
+    <Compile Include="Tools\CreateNodeTool.cs" />
+    <Compile Include="Tools\SelectTool.cs" />
+    <Compile Include="Controllers\AbstractContextMenuProvider.cs" />
+    <Compile Include="Controllers\AbstractUIProvider.cs" />
+    <Compile Include="Controllers\DefaultUIProvider.cs" />
+    <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\StyledText\StyledText.csproj">
+      <Project>{6E243DF9-8A7D-418B-9600-C3F0B9F97705}</Project>
+      <Name>StyledText</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CommonForms\CommonForms.csproj">
+      <Project>{6E0EE774-EDD5-4B7D-9A1A-2FF4808FFFDC}</Project>
+      <Name>CommonForms</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{11E94803-0024-4A00-88C4-0E0E0C826FE5}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Control\Control.csproj">
+      <Project>{4B0D4325-D210-42E7-88E4-4905E17F3660}</Project>
+      <Name>Control</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Figure\Figure.csproj">
+      <Project>{505ADE94-1A96-4291-909D-24988FFD1A51}</Project>
+      <Name>Figure</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="_Doc\EditorAndFigure.cd" />
+    <None Include="_Doc\Controller.cd" />
+    <None Include="_Doc\FigureMaintenace.cd" />
+    <None Include="_Doc\SelectAndFocus.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="_Doc\License.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Forms\NodeBackgroundDetailPage.resx">
+      <DependentUpon>NodeBackgroundDetailPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Internal\Controls\Completion.resx">
+      <DependentUpon>Completion.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows インストーラー 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

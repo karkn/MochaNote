@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Mkamo.Figure.Figures.AbstractFigure" Collapsed="true">
+    <Position X="3.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>lpyhJjtKpNWo2GLkKopUyfBFwJKaeGcMKkiYsonLwlA=</HashCode>
+      <FileName>Figures\AbstractFigure.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Mkamo.Figure.Figures.AbstractBoundingFigure" Collapsed="true">
+    <Position X="5.5" Y="2" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAIAAAIAAAAAAAAAAAAAQAAAAAAAAAIAAAhA=</HashCode>
+      <FileName>Figures\AbstractBoundingFigure.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mkamo.Figure.Figures.AbstractWrappingFigure" Collapsed="true">
+    <Position X="1.5" Y="2" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAgAAoAAAIAAAAAAAAAAgAAQCEIAAIAAAIAAghA=</HashCode>
+      <FileName>Figures\AbstractWrappingFigure.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mkamo.Figure.Figures.Layer" Collapsed="true">
+    <Position X="9" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAABA=</HashCode>
+      <FileName>Figures\Layer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mkamo.Figure.Figures.FigureGroup" Collapsed="true">
+    <Position X="2.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAQAAAAAAAAAAEAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Figures\FigureGroup.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mkamo.Figure.Figures.RootFigure" Collapsed="true">
+    <Position X="10.75" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAGAACAAACAAAAAAAQCAAAAAAAIAAQAgEAAAAAA=</HashCode>
+      <FileName>Figures\RootFigure.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Mkamo.Figure.Figures.AbstractEdge" Collapsed="true">
+    <Position X="0.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AwAghAgAAKAAQ0KAAIgBCQCiMAAwAAAAAICCAIIIABA=</HashCode>
+      <FileName>Figures\AbstractEdge.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Mkamo.Figure.Figures.AbstractNode" Collapsed="true">
+    <Position X="5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>hKaYFOkgAAmoV2UCIMCDMABBccjEyBAIiAIhiYKC0hE=</HashCode>
+      <FileName>Figures\AbstractNode.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Mkamo.Figure.Figures.SolidLayer" Collapsed="true">
+    <Position X="9" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAQAAAAAAAAAAEAAAAQAIAAAAAAAAAAAA=</HashCode>
+      <FileName>Figures\SolidLayer.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.158" />
+  </Class>
+  <Class Name="Mkamo.Figure.Figures.AbstractPathBoundingNode" Collapsed="true">
+    <Position X="3" Y="6" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAgACIgAIAIgIAAAAUAAAQAAAAAAAEAYAAABA=</HashCode>
+      <FileName>Figures\AbstractPathBoundingNode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mkamo.Figure.Figures.Rect" Collapsed="true">
+    <Position X="5.25" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Figures\Rect.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mkamo.Figure.Figures.LineEdge" Collapsed="true">
+    <Position X="0.75" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAABQAgQAAAAAAAAAAAAAAAEAAAAAAAAAAAAAYAAAEA=</HashCode>
+      <FileName>Figures\LineEdge.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mkamo.Figure.Figures.RoundedRect" Collapsed="true">
+    <Position X="5" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAgAgAAAAAAAAAEAAAAAAAAAAAAAAAAAAIAAAAA=</HashCode>
+      <FileName>Figures\RoundedRect.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mkamo.Figure.Figures.ArrowFigure" Collapsed="true">
+    <Position X="3.25" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAgAAAAAAAAIAAAAAAAAAACAAAAAAIAIAAAAA=</HashCode>
+      <FileName>Figures\ArrowFigure.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mkamo.Figure.Figures.Ellipse" Collapsed="true">
+    <Position X="6.75" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Figures\Ellipse.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mkamo.Figure.Figures.MirageLayer" Collapsed="true">
+    <Position X="9" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAABA=</HashCode>
+      <FileName>Figures\MirageLayer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mkamo.Figure.Figures.ImageFigure" Collapsed="true">
+    <Position X="7" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAGAgAAABAQgAAABAAgBAEAAAEQAAAAAAAAIAAAgA=</HashCode>
+      <FileName>Figures\ImageFigure.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mkamo.Figure.Figures.AbstractConnection" Collapsed="true">
+    <Position X="0.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAgABmAQAAAQQAAACCABQAAQAQABAAAAAIAIAAA=</HashCode>
+      <FileName>Figures\AbstractConnection.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Mkamo.Figure.Figures.AbstractConnectable" Collapsed="true">
+    <Position X="4.75" Y="3.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAgAAAAAgAIAIAAAABAAAAAoQAAgAAAAAJgAAAA=</HashCode>
+      <FileName>Figures\AbstractConnectable.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Font Name="MeiryoKe_UIGothic" Size="9" />
+</ClassDiagram>

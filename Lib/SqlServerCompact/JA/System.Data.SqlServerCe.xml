@@ -1,0 +1,2502 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+	<assembly>
+		<name>System.Data.SqlServerCe</name>
+	</assembly>
+	<members>
+		<member name="N:System.Data.SqlServerCe">
+			<summary><see cref="N:System.Data.SqlServerCe" /> 名前空間は、SQL Server Compact のマネージ データ プロバイダです。この名前空間は、SQL Server Compact データベースへのアクセスを提供するクラスのコレクションです。<see cref="N:System.Data.SqlServerCe" /> を使用することで、スマート デバイスまたはコンピュータの SQL Server Compact データベースを作成、管理、および同期できます。</summary>
+		</member>
+		<member name="T:System.Data.SqlServerCe.AddOption">
+			<summary>サブスクリプションを既存のデータベースに追加するか、またはサブスクリプションの追加時にデータベースを新規作成するかを決定します。</summary>
+		</member>
+		<member name="F:System.Data.SqlServerCe.AddOption.CreateDatabase">
+			<summary>サブスクリプションの作成時に SQL Server Compact データベースが新規作成されます。</summary>
+		</member>
+		<member name="F:System.Data.SqlServerCe.AddOption.ExistingDatabase">
+			<summary>接続文字列で定義されている既存のデータベースにサブスクリプションが追加されます。</summary>
+		</member>
+		<member name="T:System.Data.SqlServerCe.CommitMode">
+			<summary><see cref="M:System.Data.SqlServerCe.SqlCeTransaction.Commit" /> 関数に CommitMode を渡すと、コミットの発生タイミングが指定されます。</summary>
+		</member>
+		<member name="F:System.Data.SqlServerCe.CommitMode.Deferred">
+			<summary>ユーザーが指定したフラッシュ間隔が経過した後に、変更がディスクにコミットされます。既定のフラッシュ間隔は、10 秒です。ただし、これは、<see cref="P:System.Data.SqlServerCe.SqlCeConnection.ConnectionString" /> 内で変更できます。</summary>
+		</member>
+		<member name="F:System.Data.SqlServerCe.CommitMode.Immediate">
+			<summary>変更がすぐにコミットされます。</summary>
+		</member>
+		<member name="T:System.Data.SqlServerCe.DbInsertOptions">
+			<summary><see cref="System.Data.SqlServerCe.SqlCeResultSet.Insert" /> メソッドの使用時に使用するオプションを指定します。</summary>
+		</member>
+		<member name="F:System.Data.SqlServerCe.DbInsertOptions.KeepCurrentPosition">
+			<summary>新しい行の追加後に、現在の位置のまま維持します。</summary>
+		</member>
+		<member name="F:System.Data.SqlServerCe.DbInsertOptions.PositionOnInsertedRow">
+			<summary>新しく挿入した行にカーソルを移動します。</summary>
+		</member>
+		<member name="T:System.Data.SqlServerCe.DbRangeOptions">
+			<summary>シークするインデックスの範囲を指定する場合は、<see cref="M:System.Data.SqlServerCe.SqlCeCommand.SetRange(System.Data.SqlServerCe.DbRangeOptions,System.Object[],System.Object[])" /> メソッドで使用するオプションを指定します。</summary>
+		</member>
+		<member name="F:System.Data.SqlServerCe.DbRangeOptions.Default">
+			<summary><see cref="F:System.Data.SqlServerCe.DbRangeOptions.InclusiveStart" /> フラグと <see cref="F:System.Data.SqlServerCe.DbRangeOptions.InclusiveEnd" /> フラグの両方を設定するのと同じです。</summary>
+		</member>
+		<member name="F:System.Data.SqlServerCe.DbRangeOptions.ExcludeNulls">
+			<summary>範囲から null 値を除外します。</summary>
+		</member>
+		<member name="F:System.Data.SqlServerCe.DbRangeOptions.ExclusiveEnd">
+			<summary>範囲から endData 値を除外します。</summary>
+		</member>
+		<member name="F:System.Data.SqlServerCe.DbRangeOptions.ExclusiveStart">
+			<summary>範囲から startData 値を除外します。</summary>
+		</member>
+		<member name="F:System.Data.SqlServerCe.DbRangeOptions.InclusiveEnd">
+			<summary>範囲に endData 値を含めます。</summary>
+		</member>
+		<member name="F:System.Data.SqlServerCe.DbRangeOptions.InclusiveStart">
+			<summary>範囲に startData 値を含めます。</summary>
+		</member>
+		<member name="F:System.Data.SqlServerCe.DbRangeOptions.Match">
+			<summary>インデックス値と startData の値が一致する範囲を指定します。Match オプションを使用する場合、endData を null に設定する必要があります。</summary>
+		</member>
+		<member name="F:System.Data.SqlServerCe.DbRangeOptions.Prefix">
+			<summary>インデックス値が startData の値で始まる範囲を指定します。Prefix オプションを使用する場合、endData を null に設定する必要があります。</summary>
+		</member>
+		<member name="T:System.Data.SqlServerCe.DbSeekOptions">
+			<summary><see cref="M:System.Data.SqlServerCe.SqlCeDataReader.Seek(System.Data.SqlServerCe.DbSeekOptions,System.Object[])" /> メソッドの、インデックスに対するシーク方法を指定するオプション。</summary>
+		</member>
+		<member name="F:System.Data.SqlServerCe.DbSeekOptions.After">
+			<summary>インデックス順で、シーク値よりも後にあり、値を持つ最初の行に進みます。</summary>
+		</member>
+		<member name="F:System.Data.SqlServerCe.DbSeekOptions.AfterEqual">
+			<summary>インデックスが一致する最後の行に進みます。一致する行がない場合は、シーク値よりもインデックス順で後の値を持つ最初の行に進みます。</summary>
+		</member>
+		<member name="F:System.Data.SqlServerCe.DbSeekOptions.Before">
+			<summary>インデックス順で、シーク値よりも前にあり、値を持つ最後の行に進みます。</summary>
+		</member>
+		<member name="F:System.Data.SqlServerCe.DbSeekOptions.BeforeEqual">
+			<summary>インデックスが一致する最初の行に進みます。一致する行がない場合、シーク値よりもインデックス順で前の値を持つ最初の行に進みます。</summary>
+		</member>
+		<member name="F:System.Data.SqlServerCe.DbSeekOptions.FirstEqual">
+			<summary>インデックス順で、インデックスが最初に一致する行に進みます。</summary>
+		</member>
+		<member name="F:System.Data.SqlServerCe.DbSeekOptions.LastEqual">
+			<summary>インデックス順で、インデックスが最後に一致する行に進みます。</summary>
+		</member>
+		<member name="T:System.Data.SqlServerCe.DropOption">
+			<summary><see cref="M:System.Data.SqlServerCe.SqlCeReplication.DropSubscription(System.Data.SqlServerCe.DropOption)" /> メソッドを使用してサブスクリプションを削除するときに、データベースを削除するかどうかを指定します。</summary>
+		</member>
+		<member name="F:System.Data.SqlServerCe.DropOption.DropDatabase">
+			<summary><see cref="M:System.Data.SqlServerCe.SqlCeReplication.DropSubscription(System.Data.SqlServerCe.DropOption)" /> メソッドを使用してサブスクリプションを削除するときに、SQL Server Compact データベースが削除されます。</summary>
+		</member>
+		<member name="F:System.Data.SqlServerCe.DropOption.LeaveDatabase">
+			<summary><see cref="M:System.Data.SqlServerCe.SqlCeReplication.DropSubscription(System.Data.SqlServerCe.DropOption)" /> メソッドを使用してサブスクリプションを削除するときに、レプリケーション システム テーブル、およびユーザー テーブル内のすべてのレプリケーション システム列が削除されます。ただし、SQL Server Compact データベースは削除されません。</summary>
+		</member>
+		<member name="F:System.Data.SqlServerCe.DropOption.UnregisterSubscription">
+			<summary>
+        SQL Server Compact データベースをサブスクリプションから登録解除します。</summary>
+		</member>
+		<member name="T:System.Data.SqlServerCe.ExchangeType">
+			<summary>データをパブリッシャ側だけにマージするか、またはパブリッシャ側とサブスクライバの両方向でマージするかを指定します。</summary>
+		</member>
+		<member name="F:System.Data.SqlServerCe.ExchangeType.BiDirectional">
+			<summary>パブリッシャとサブスクライバ間ですべての変更をマージします。これは、既定の設定です。</summary>
+		</member>
+		<member name="F:System.Data.SqlServerCe.ExchangeType.None">
+			<summary><see cref="ExchangeType" /> のオプションが指定されません。</summary>
+		</member>
+		<member name="F:System.Data.SqlServerCe.ExchangeType.Upload">
+			<summary>サブスクライバの変更だけをパブリッシャ側でマージします。</summary>
+		</member>
+		<member name="T:System.Data.SqlServerCe.NetworkType">
+			<summary><see cref="T:System.Data.SqlServerCe.SqlCeReplication" /> オブジェクトの <see cref="P:System.Data.SqlServerCe.SqlCeReplication.DistributorNetwork" /> プロパティまたは <see cref="P:System.Data.SqlServerCe.SqlCeReplication.PublisherNetwork" /> プロパティを設定するときに使用するネットワーク プロトコルを指定します。</summary>
+		</member>
+		<member name="F:System.Data.SqlServerCe.NetworkType.DefaultNetwork">
+			<summary><see cref="T:System.Data.SqlServerCe.SqlCeReplication" /> オブジェクトの <see cref="P:System.Data.SqlServerCe.SqlCeReplication.DistributorNetwork" /> プロパティまたは <see cref="P:System.Data.SqlServerCe.SqlCeReplication.PublisherNetwork" /> プロパティを設定するときに、現在設定されている Net-Library を使用します。</summary>
+		</member>
+		<member name="F:System.Data.SqlServerCe.NetworkType.MultiProtocol">
+			<summary><see cref="T:System.Data.SqlServerCe.SqlCeReplication" /> オブジェクトの <see cref="P:System.Data.SqlServerCe.SqlCeReplication.DistributorNetwork" /> プロパティまたは <see cref="P:System.Data.SqlServerCe.SqlCeReplication.PublisherNetwork" /> プロパティを設定するときに、マルチプロトコル Net-Library を使用します。</summary>
+		</member>
+		<member name="F:System.Data.SqlServerCe.NetworkType.TcpIpSockets">
+			<summary><see cref="T:System.Data.SqlServerCe.SqlCeReplication" /> オブジェクトの <see cref="P:System.Data.SqlServerCe.SqlCeReplication.DistributorNetwork" /> プロパティまたは <see cref="P:System.Data.SqlServerCe.SqlCeReplication.PublisherNetwork" /> プロパティを設定するときに、TCP/IP ソケット Net-Library を使用します。</summary>
+		</member>
+		<member name="T:System.Data.SqlServerCe.OnStartTableDownload">
+			<summary>サーバーからテーブル変更のダウンロードが開始されるときに起動されるイベントに対するユーザー定義のデリゲート。</summary>
+			<param name="ar"><see cref="M:System.Data.SqlServerCe.SqlCeReplication.BeginSynchronize(System.AsyncCallback,System.Data.SqlServerCe.OnStartTableUpload,System.Data.SqlServerCe.OnStartTableDownload,System.Data.SqlServerCe.OnSynchronization,System.Object)" /> メソッドが返す <see cref="T:System.IAsyncResult" /> インターフェイス。</param>
+			<param name="tableName">サーバーからダウンロード中のテーブルの名前。</param>
+		</member>
+		<member name="T:System.Data.SqlServerCe.OnStartTableUpload">
+			<summary>サーバーへのテーブル変更のアップロードが開始されるときに起動されるイベントに対するユーザー定義のデリゲート。</summary>
+			<param name="ar">BeginSynchronize メソッドが返す <see cref="T:System.IAsyncResult" /> インターフェイス。</param>
+			<param name="tableName">サーバーにアップロード中のテーブルの名前。</param>
+		</member>
+		<member name="T:System.Data.SqlServerCe.OnSynchronization">
+			<summary>競合回避モジュールの動作中に報告された実行中の同期イベントを処理するユーザー定義のデリゲート。</summary>
+			<param name="ar">BeginSynchronize メソッドが返す <see cref="T:System.IAsyncResult" /> インターフェイス。</param>
+			<param name="percentComplete">競合回避モジュールによって返された値。競合回避モジュールによるレプリケーション処理の完了割合 (%) を表します。</param>
+		</member>
+		<member name="T:System.Data.SqlServerCe.PurgeType">
+			<summary>実行するデータ削除の種類を指定する値を格納します。</summary>
+		</member>
+		<member name="F:System.Data.SqlServerCe.PurgeType.CsnBased">
+			<summary>トランザクションのコミット順にメタデータを削除することを指定します。</summary>
+		</member>
+		<member name="F:System.Data.SqlServerCe.PurgeType.Max">
+			<summary>センチネル フィールドです。使用されていません。</summary>
+		</member>
+		<member name="F:System.Data.SqlServerCe.PurgeType.None">
+			<summary>センチネル フィールドです。使用されていません。</summary>
+		</member>
+		<member name="F:System.Data.SqlServerCe.PurgeType.TimeBased">
+			<summary>指定した日数よりも古いメタデータを削除することを指定します。</summary>
+		</member>
+		<member name="T:System.Data.SqlServerCe.RdaBatchOption">
+			<summary><see cref="M:System.Data.SqlServerCe.SqlCeRemoteDataAccess.Push(System.String,System.String)" /> に関連付けられている行を 1 つのトランザクション内でバッチ処理するかどうかを指定します。</summary>
+		</member>
+		<member name="F:System.Data.SqlServerCe.RdaBatchOption.BatchingOff">
+			<summary>
+        SQL Server Compact で、SQL Server にプッシュされた行をバッチ処理しないことを示します。このサーバーは、1 行ずつ個別に処理を実行します。これは、既定の設定です。</summary>
+		</member>
+		<member name="F:System.Data.SqlServerCe.RdaBatchOption.BatchingOn">
+			<summary>
+        SQL Server Compact で、SQL Server にプッシュされた行を 1 つのトランザクションでバッチ処理することを示します。</summary>
+		</member>
+		<member name="T:System.Data.SqlServerCe.RdaTrackOption">
+			<summary>デバイスにプルされたテーブルを追跡するかどうかを指定します。</summary>
+		</member>
+		<member name="F:System.Data.SqlServerCe.RdaTrackOption.TrackingOff">
+			<summary>
+        SQL Server Compact で、プルされたテーブルへの変更を追跡しないことを示します。ローカルに PRIMARY KEY 制約は作成されません。</summary>
+		</member>
+		<member name="F:System.Data.SqlServerCe.RdaTrackOption.TrackingOffWithIndexes">
+			<summary>
+        SQL Server Compact で、プルされたテーブルへの変更を追跡しないことを示します。sqlSelectString で指定した SQL Server テーブルに存在するインデックスと PRIMARY KEY 制約が、ローカル テーブルに作成されます。</summary>
+		</member>
+		<member name="F:System.Data.SqlServerCe.RdaTrackOption.TrackingOn">
+			<summary>
+        SQL Server Compact で、プルされたテーブルへのすべての変更を追跡することを示します。sqlSelectString で指定した値に関連する PRIMARY KEY 制約が、ローカル テーブルに作成されます。これは、既定の設定です。</summary>
+		</member>
+		<member name="F:System.Data.SqlServerCe.RdaTrackOption.TrackingOnWithIndexes">
+			<summary>
+        SQL Server Compact で、プルされたテーブルへのすべての変更を追跡することを示します。sqlSelectString で指定した SQL Server テーブルに存在するインデックスと PRIMARY KEY 制約が、ローカル テーブルに作成されます。</summary>
+		</member>
+		<member name="T:System.Data.SqlServerCe.RepairOption">
+			<summary><see cref="M:System.Data.SqlServerCe.SqlCeEngine.Repair(System.String,System.Data.SqlServerCe.RepairOption)" /> メソッドに <see cref="T:System.Data.SqlServerCe.RepairOption" /> を渡すと、実行するデータベース修復の種類が指定されます。</summary>
+		</member>
+		<member name="F:System.Data.SqlServerCe.RepairOption.DeleteCorruptedRows">
+			<summary>破損したすべての行を修復しようとせずに削除します。</summary>
+		</member>
+		<member name="F:System.Data.SqlServerCe.RepairOption.RecoverCorruptedRows">
+			<summary>破損したすべての行を削除せずに修復しようとします。</summary>
+		</member>
+		<member name="T:System.Data.SqlServerCe.ResultSetEnumerator">
+			<summary>ResultSet オブジェクト内で一連のレコードを反復処理するために使用できる列挙子。<see cref="T:System.Data.SqlServerCe.ResultSetEnumerator" /> は、コードで直接使用するためのものではありません。<see cref="T:System.Data.SqlServerCe.SqlCeResultSet" /> オブジェクトを直接操作すると、より多くの機能を使用できます。</summary>
+		</member>
+		<member name="M:System.Data.SqlServerCe.ResultSetEnumerator.#ctor(System.Data.SqlServerCe.SqlCeResultSet)">
+			<summary><see cref="T:System.Data.SqlServerCe.ResultSetEnumerator" /> クラスの新しいインスタンスを初期化します。</summary>
+			<param name="resultSet">列挙するレコードを格納した <see cref="T:System.Data.SqlServerCe.SqlCeResultSet" /> オブジェクト。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.ResultSetEnumerator.Reset">
+			<summary><see cref="T:System.Data.SqlServerCe.SqlCeResultSet" /> 内の最初のレコードの前にカーソルが配置されます。</summary>
+		</member>
+		<member name="T:System.Data.SqlServerCe.ResultSetOptions">
+			<summary><see cref="M:System.Data.SqlServerCe.ResultSetEnumerator.#ctor(System.Data.SqlServerCe.SqlCeResultSet)" /> のオプションを設定します。</summary>
+		</member>
+		<member name="F:System.Data.SqlServerCe.ResultSetOptions.Insensitive">
+			<summary>データ ソースに加えられた変更が ResultSet で検出されません。</summary>
+		</member>
+		<member name="F:System.Data.SqlServerCe.ResultSetOptions.None">
+			<summary>ResultSet のオプションが指定されません。</summary>
+		</member>
+		<member name="F:System.Data.SqlServerCe.ResultSetOptions.Scrollable">
+			<summary>ResultSet は順方向と逆方向のどちらにもスクロールできます。</summary>
+		</member>
+		<member name="F:System.Data.SqlServerCe.ResultSetOptions.Sensitive">
+			<summary>データ ソースに加えられた変更が ResultSet で検出されます。</summary>
+		</member>
+		<member name="F:System.Data.SqlServerCe.ResultSetOptions.Updatable">
+			<summary>ResultSet は更新が可能です。</summary>
+		</member>
+		<member name="T:System.Data.SqlServerCe.ResultSetSensitivity">
+			<summary><see cref="M:System.Data.SqlServerCe.ResultSetEnumerator.#ctor(System.Data.SqlServerCe.SqlCeResultSet)" /> の感度を設定します。</summary>
+		</member>
+		<member name="F:System.Data.SqlServerCe.ResultSetSensitivity.Asensitive">
+			<summary>ResultSet の感度が設定されません。</summary>
+		</member>
+		<member name="F:System.Data.SqlServerCe.ResultSetSensitivity.Insensitive">
+			<summary>データ ソースに加えられた変更が ResultSet で検出されません。</summary>
+		</member>
+		<member name="F:System.Data.SqlServerCe.ResultSetSensitivity.Sensitive">
+			<summary>データ ソースに加えられた変更が ResultSet で検出されます。</summary>
+		</member>
+		<member name="T:System.Data.SqlServerCe.ResultSetView">
+			<summary>データ バインディング インターフェイスを実装し、ユーザー インターフェイス コントロールと <see cref="T:System.Data.SqlServerCe.SqlCeResultSet" /> を関連付けます。</summary>
+		</member>
+		<member name="E:System.Data.SqlServerCe.ResultSetView.ListChanged">
+			<summary><see cref="T:System.Data.SqlServerCe.ResultSetView" /> に対して項目の追加または削除が実行された場合に、このイベントが発生します。</summary>
+		</member>
+		<member name="T:System.Data.SqlServerCe.SecurityType">
+			<summary>レプリケーション中にパブリッシャまたはディストリビュータに接続するときに使用するセキュリティのモードを指定します。</summary>
+		</member>
+		<member name="F:System.Data.SqlServerCe.SecurityType.DBAuthentication">
+			<summary>レプリケーション中にパブリッシャまたはディストリビュータに接続するときに、SQL Server 認証を使用します。これは、既定の設定です。</summary>
+		</member>
+		<member name="F:System.Data.SqlServerCe.SecurityType.NTAuthentication">
+			<summary>レプリケーション中にパブリッシャまたはディストリビュータに接続するときに、統合 Windows 認証を使用します。</summary>
+		</member>
+		<member name="T:System.Data.SqlServerCe.SnapshotTransferType">
+			<summary>IIS を実行中のコンピュータに、ディストリビュータからスナップショット ファイルを転送する方法を制御します。</summary>
+		</member>
+		<member name="F:System.Data.SqlServerCe.SnapshotTransferType.FTP">
+			<summary>スナップショット ファイルは、FTP プロトコル経由で転送されます。</summary>
+		</member>
+		<member name="F:System.Data.SqlServerCe.SnapshotTransferType.UNC">
+			<summary>スナップショット ファイルは、サーバー上の UNC (Universal Naming Convention) 共有から転送されます。これは、既定の設定です。</summary>
+		</member>
+		<member name="T:System.Data.SqlServerCe.SqlCeChangeTracking">
+			<summary>Sync Framework プロバイダーに必要な追跡機能を提供します。</summary>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeChangeTracking.#ctor(System.Data.SqlServerCe.SqlCeConnection)">
+			<summary>指定された接続を使用して、<see cref="T:System.Data.SqlServerCe.SqlCeChangeTracking" /> クラスの新しいインスタンスを初期化します。</summary>
+			<param name="connection">指定された接続です。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeChangeTracking.#ctor(System.Data.SqlServerCe.SqlCeTransaction)">
+			<summary>指定されたトランザクションを使用して、<see cref="T:System.Data.SqlServerCe.SqlCeChangeTracking" /> クラスの新しいインスタンスを初期化します。</summary>
+			<param name="transaction">指定されたトランザクションです。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeChangeTracking.DisableTracking(System.String)">
+			<summary>テーブルの追跡を無効にします。</summary>
+			<param name="tableName">無効にするテーブルの名前です。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeChangeTracking.Dispose">
+			<summary><see cref="T:System.Data.SqlServerCe.SqlCeChangeTracking" /> で使用されるすべてのリソースを解放します。</summary>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeChangeTracking.Dispose(System.Boolean)">
+			<summary><see cref="T:System.Data.SqlServerCe.SqlCeChangeTracking" /> で使用されるアンマネージ リソースを解放し、必要に応じてマネージ リソースも解放します。</summary>
+			<param name="disposing">
+                アンマネージ リソースとマネージ リソースの両方を解放する場合は true、アンマネージ リソースのみを解放する場合は false となります。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeChangeTracking.EnableTracking(System.String,System.Data.SqlServerCe.TrackingKeyType,System.Data.SqlServerCe.TrackingOptions)">
+			<summary>テーブルの追跡を有効にします。</summary>
+			<param name="tableName">追跡を有効にするテーブルの名前です。</param>
+			<param name="trackingKeyType"><see cref="T:System.Data.SqlServerCe.TrackingKeyType" /> の値のいずれか 1 つです。指定できる値は、Guid または PrimaryKey です。</param>
+			<param name="trackingOptions"><see cref="T:System.Data.SqlServerCe.TrackingOptions" /> の値のいずれか 1 つです。指定できる値は、All、Delete、Insert または Update です。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeChangeTracking.GetLastCommittedCsn">
+			<summary>データベース レベルのトランザクション Csn (コミット シーケンス番号) を取得します。この番号は、最後にコミットされたトランザクションの番号です。つまり、データベースには、トランザクションのコミット時間の順序を示す Csn の実行中のカウンターが保持されます。この番号はすべてのトランザクションに対してコミット時に割り当てられ、1 ずつ増加します。</summary>
+			<returns>コミット シーケンス番号を表す値です。</returns>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeChangeTracking.GetTrackingOptions(System.String,System.Data.SqlServerCe.TrackingOptions@)">
+			<summary>呼び出し側の追跡オプションを取得します。</summary>
+			<param name="tableName">オプションを追跡するテーブルの名前です。</param>
+			<param name="trackingOptions"><see cref="T:System.Data.SqlServerCe.TrackingOptions" /> の値のいずれか 1 つです。指定できる値は、All、Delete、Insert または Update です。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeChangeTracking.PackTombstoneKey(System.String,System.Object[])">
+			<summary>行の主キー (または ROWGUID) 値を、廃棄テーブルの対応する __sysRK の値に変換します。</summary>
+			<returns>行のキー値を表すバイトの配列です。</returns>
+			<param name="tableName">行を含むテーブルの名前です。</param>
+			<param name="columnValues">列の値です。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeChangeTracking.PurgeTombstoneTableData(System.String,System.Data.SqlServerCe.PurgeType,System.Int64)">
+			<summary>渡されたテーブル引数の廃棄データを削除します。</summary>
+			<param name="tableName">削除対象のデータを含むテーブルの名前です。</param>
+			<param name="pType"><see cref="T:System.Data.SqlServerCe.PurgeType" /> の値のいずれか 1 つです。指定できる値は、CsnBased または TimeBased です。</param>
+			<param name="retentionValue">廃棄行が削除される制限を指定します。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeChangeTracking.PurgeTransactionSequenceData(System.Data.SqlServerCe.PurgeType,System.Int64)">
+			<summary>トランザクション履歴テーブルを削除します。</summary>
+			<param name="pType"><see cref="T:System.Data.SqlServerCe.PurgeType" /> の値のいずれか 1 つです。指定できる値は、CsnBased または TimeBased です。</param>
+			<param name="retentionValue">廃棄行が削除される制限を指定します。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeChangeTracking.UnpackTombstoneKey(System.String,System.Byte[])">
+			<summary>削除された行の主キー/ROWGUID のバイト配列表現 (廃棄テーブルの __sysRK 列の値) を受け取り、アンパックします。</summary>
+			<returns>削除された行のキー値を表すオブジェクトの配列です。キーには、主キーまたは GUID 列 (1 列または複数) を指定できます。</returns>
+			<param name="tableName">主キーを含むテーブルの名前です。</param>
+			<param name="tombstoneKey">廃棄キーです。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeChangeTracking.UpgradePublicTracking(System.String)">
+			<summary>パブリック追跡をアップグレードするかどうかを示す値を取得します。</summary>
+			<returns>
+            パブリック追跡をアップグレードする場合は true、アップグレードしない場合は false です。</returns>
+			<param name="connectionString">接続文字列です。</param>
+		</member>
+		<member name="T:System.Data.SqlServerCe.SqlCeCommand">
+			<summary>データ ソースに対して実行する SQL ステートメントを表します。</summary>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeCommand.#ctor">
+			<summary><see cref="T:System.Data.SqlServerCe.SqlCeCommand" /> クラスの新しいインスタンスを初期化します。</summary>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeCommand.#ctor(System.String)">
+			<summary>クエリ テキストを指定して、<see cref="T:System.Data.SqlServerCe.SqlCeCommand" /> クラスの新しいインスタンスを初期化します。</summary>
+			<param name="commandText">クエリ テキスト。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeCommand.#ctor(System.String,System.Data.SqlServerCe.SqlCeConnection)">
+			<summary>クエリ テキストと <see cref="T:System.Data.SqlServerCe.SqlCeConnection" /> を指定して、<see cref="T:System.Data.SqlServerCe.SqlCeCommand" /> クラスの新しいインスタンスを初期化します。</summary>
+			<param name="commandText">クエリ テキスト。</param>
+			<param name="connection">データ ソースへの接続を表す <see cref="T:System.Data.SqlServerCe.SqlCeConnection" />。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeCommand.#ctor(System.String,System.Data.SqlServerCe.SqlCeConnection,System.Data.SqlServerCe.SqlCeTransaction)">
+			<summary>クエリ テキスト、<see cref="T:System.Data.SqlServerCe.SqlCeConnection" />、および <see cref="T:System.Data.SqlServerCe.SqlCeTransaction" /> を指定して、<see cref="T:System.Data.SqlServerCe.SqlCeCommand" /> クラスの新しいインスタンスを初期化します。</summary>
+			<param name="commandText">クエリ テキスト。</param>
+			<param name="connection">データ ソースへの接続を表す <see cref="T:System.Data.SqlServerCe.SqlCeConnection" />。</param>
+			<param name="transaction"><see cref="T:System.Data.SqlServerCe.SqlCeCommand" /> を実行するトランザクション。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeCommand.Cancel">
+			<summary><see cref="T:System.Data.SqlServerCe.SqlCeCommand" /> の実行のキャンセルを試行します。</summary>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeCommand.CreateParameter">
+			<summary><see cref="T:System.Data.SqlServerCe.SqlCeParameter" /> オブジェクトの新しいインスタンスを作成します。</summary>
+			<returns><see cref="T:System.Data.SqlServerCe.SqlCeParameter" /> オブジェクト。</returns>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeCommand.ExecuteNonQuery">
+			<summary><see cref="T:System.Data.SqlServerCe.SqlCeConnection" /> に対して SQL ステートメントを実行し、影響を受けた行数を返します。</summary>
+			<returns>影響を受けた行数。</returns>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeCommand.ExecuteReader">
+			<summary><see cref="P:System.Data.SqlServerCe.SqlCeCommand.CommandText" /> を <see cref="P:System.Data.SqlServerCe.SqlCeCommand.Connection" /> に送信し、<see cref="T:System.Data.SqlServerCe.SqlCeDataReader" /> を構築します。</summary>
+			<returns><see cref="T:System.Data.SqlServerCe.SqlCeDataReader" /> オブジェクト。</returns>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeCommand.ExecuteReader(System.Data.CommandBehavior)">
+			<summary><see cref="P:System.Data.SqlServerCe.SqlCeCommand.CommandText" /> を <see cref="P:System.Data.SqlServerCe.SqlCeCommand.Connection" /> に送信し、<see cref="T:System.Data.CommandBehavior" /> 値のいずれかを使用して <see cref="T:System.Data.SqlServerCe.SqlCeDataReader" /> を構築します。</summary>
+			<returns><see cref="T:System.Data.SqlServerCe.SqlCeDataReader" /> オブジェクト。</returns>
+			<param name="behavior"><see cref="T:System.Data.CommandBehavior" /> 値の 1 つ。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeCommand.ExecuteResultSet(System.Data.SqlServerCe.ResultSetOptions)">
+			<summary><see cref="P:System.Data.SqlServerCe.SqlCeCommand.CommandText" /> を <see cref="P:System.Data.SqlServerCe.SqlCeCommand.Connection" /> に送信し、<see cref="T:System.Data.SqlServerCe.ResultSetOptions" /> を使用して、<see cref="T:System.Data.SqlServerCe.SqlCeResultSet" /> を構築します。</summary>
+			<param name="options">ResultSet の構築時に使用する ResultSetOptions。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeCommand.ExecuteResultSet(System.Data.SqlServerCe.ResultSetOptions,System.Data.SqlServerCe.SqlCeResultSet)">
+			<summary><see cref="P:System.Data.SqlServerCe.SqlCeCommand.CommandText" /> を <see cref="P:System.Data.SqlServerCe.SqlCeCommand.Connection" /> に送信し、<see cref="T:System.Data.SqlServerCe.ResultSetOptions" /> を使用して、<see cref="T:System.Data.SqlServerCe.SqlCeResultSet" /> を構築します。</summary>
+			<param name="options">ResultSet の構築時に使用する ResultSetOptions。</param>
+			<param name="resultSet">ビルドする ResultSet。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeCommand.ExecuteScalar">
+			<summary>クエリを実行し、そのクエリが返す結果セットの最初の行にある最初の列を返します。残りの列または行は無視されます。</summary>
+			<returns>結果セット内の最初の行の最初の列。</returns>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeCommand.Prepare">
+			<summary>準備された (コンパイル済みの) バージョンのコマンドをデータ ソースに作成します。</summary>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeCommand.SetRange(System.Data.SqlServerCe.DbRangeOptions,System.Object[],System.Object[])">
+			<summary><see cref="T:System.Data.SqlServerCe.SqlCeDataReader" /> が読み込む行セットを制限します。</summary>
+			<param name="dbRangeOptions">範囲を指定するときに使用するオプション。</param>
+			<param name="startData">範囲の開始を示すキー値。</param>
+			<param name="endData">範囲の終了を示すキー値。</param>
+		</member>
+		<member name="P:System.Data.SqlServerCe.SqlCeCommand.CommandText">
+			<summary>データ ソースで実行する SQL ステートメントを取得または設定します。</summary>
+			<returns>実行する SQL ステートメント、または開くベース テーブルの名前。既定値は空の文字列です。</returns>
+		</member>
+		<member name="P:System.Data.SqlServerCe.SqlCeCommand.CommandTimeout">
+			<summary>コマンドを実行する試みを終了してエラーが生成されるまでの待機時間を取得または設定します。</summary>
+			<returns>
+        SQL Server Compact の場合は、常に 0 です。</returns>
+		</member>
+		<member name="P:System.Data.SqlServerCe.SqlCeCommand.CommandType">
+			<summary><see cref="P:System.Data.SqlServerCe.SqlCeCommand.CommandText" /> プロパティの解釈方法を示す値を取得または設定します。</summary>
+			<returns><see cref="T:System.Data.CommandType" /> 値の 1 つ。既定値は <see cref="F:System.Data.CommandType.Text" /> です。</returns>
+		</member>
+		<member name="P:System.Data.SqlServerCe.SqlCeCommand.Connection">
+			<summary>この <see cref="T:System.Data.SqlServerCe.SqlCeCommand" /> のインスタンスで使用する <see cref="T:System.Data.SqlServerCe.SqlCeConnection" /> を取得または設定します。</summary>
+			<returns>データ ソースへの接続。既定値は null です。</returns>
+		</member>
+		<member name="P:System.Data.SqlServerCe.SqlCeCommand.IndexName">
+			<summary>開くインデックスを指定します。</summary>
+			<returns>開くインデックスの名前。</returns>
+		</member>
+		<member name="P:System.Data.SqlServerCe.SqlCeCommand.Parameters">
+			<summary><see cref="T:System.Data.SqlServerCe.SqlCeParameterCollection" /> を取得します。</summary>
+			<returns>SQL ステートメントのパラメータ。既定値は空のコレクションです。</returns>
+		</member>
+		<member name="P:System.Data.SqlServerCe.SqlCeCommand.Transaction">
+			<summary><see cref="T:System.Data.SqlServerCe.SqlCeCommand" /> を実行するトランザクションを取得または設定します。</summary>
+			<returns><see cref="T:System.Data.SqlServerCe.SqlCeTransaction" />。既定値は null です。</returns>
+		</member>
+		<member name="P:System.Data.SqlServerCe.SqlCeCommand.UpdatedRowSource">
+			<summary><see cref="T:System.Data.Common.DbDataAdapter" /> の <see cref="M:System.Data.Common.DbDataAdapter.Update(System.Data.DataSet)" /> メソッドで使用するときに、コマンドの結果を <see cref="T:System.Data.DataRow" /> に適用する方法を取得または設定します。このプロパティは、.NET Compact Framework Data Provider for SQL Server Compact では使用しないでください。</summary>
+			<returns><see cref="T:System.Data.UpdateRowSource" /> 値の 1 つ。既定値は Both です。コマンドが自動生成される場合、既定値は None です。</returns>
+		</member>
+		<member name="T:System.Data.SqlServerCe.SqlCeCommandBuilder">
+			<summary><see cref="T:System.Data.DataSet" /> への変更を関連データベースに反映させるための単一テーブル コマンドを自動的に生成する手段を提供します。このクラスは継承できません。</summary>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeCommandBuilder.#ctor">
+			<summary><see cref="T:System.Data.SqlServerCe.SqlCeCommandBuilder" /> クラスの新しいインスタンスを初期化します。</summary>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeCommandBuilder.#ctor(System.Data.SqlServerCe.SqlCeDataAdapter)">
+			<summary>関連付けられた <see cref="T:System.Data.SqlServerCe.SqlCeDataAdapter" /> オブジェクトと <see cref="T:System.Data.SqlServerCe.SqlCeCommand" /> オブジェクトを使用して、<see cref="T:System.Data.SqlServerCe.SqlCeCommandBuilder" /> クラスの新しいインスタンスを初期化します。</summary>
+			<param name="adapter"><see cref="T:System.Data.SqlServerCe.SqlCeDataAdapter" /> の名前。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeCommandBuilder.GetDeleteCommand">
+			<summary>アプリケーションが <see cref="T:System.Data.SqlServerCe.SqlCeDataAdapter" /> に対して <see cref="M:System.Data.Common.DbDataAdapter.Update(System.Data.DataSet)" /> を呼び出したときにデータベースで削除処理を実行するための、自動生成された <see cref="T:System.Data.SqlServerCe.SqlCeCommand" /> オブジェクトを取得します。</summary>
+			<returns>削除を実行するための自動生成された <see cref="T:System.Data.SqlServerCe.SqlCeCommand" /> オブジェクト。</returns>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeCommandBuilder.GetInsertCommand">
+			<summary>アプリケーションが <see cref="T:System.Data.SqlServerCe.SqlCeDataAdapter" /> に対して <see cref="M:System.Data.Common.DbDataAdapter.Update(System.Data.DataSet)" /> を呼び出したときにデータベースで挿入処理を実行するための、自動生成された <see cref="T:System.Data.SqlServerCe.SqlCeCommand" /> オブジェクトを取得します。</summary>
+			<returns>挿入を実行するための自動生成された <see cref="T:System.Data.SqlServerCe.SqlCeCommand" /> オブジェクト。</returns>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeCommandBuilder.GetUpdateCommand">
+			<summary>アプリケーションが <see cref="T:System.Data.SqlServerCe.SqlCeDataAdapter" /> に対して <see cref="M:System.Data.Common.DbDataAdapter.Update(System.Data.DataSet)" /> を呼び出したときにデータベースで更新処理を実行するための、自動生成された <see cref="T:System.Data.SqlServerCe.SqlCeCommand" /> オブジェクトを取得します。</summary>
+			<returns>更新を実行するための自動生成された <see cref="T:System.Data.SqlServerCe.SqlCeCommand" /> オブジェクト。</returns>
+		</member>
+		<member name="P:System.Data.SqlServerCe.SqlCeCommandBuilder.ConflictOption">
+			<summary><see cref="T:System.Data.SqlServerCe.SqlCeCommandBuilder" /> で使用する <see cref="T:System.Data.ConflictOption" /> を指定します。</summary>
+			<returns><see cref="T:System.Data.ConflictOption" /> オブジェクト。</returns>
+		</member>
+		<member name="P:System.Data.SqlServerCe.SqlCeCommandBuilder.DataAdapter">
+			<summary>SQL ステートメントを自動生成する対象の <see cref="T:System.Data.SqlServerCe.SqlCeDataAdapter" /> オブジェクトを取得または設定します。</summary>
+			<returns><see cref="T:System.Data.SqlServerCe.SqlCeDataAdapter" /> オブジェクト。</returns>
+		</member>
+		<member name="P:System.Data.SqlServerCe.SqlCeCommandBuilder.QuotePrefix">
+			<summary>名前に空白や予約済みトークンなどの文字を含む SQL Server データベース オブジェクト (テーブル、列など) を指定するための開始文字を取得または設定します。</summary>
+			<returns>使用する開始文字。既定値は空の文字列です。</returns>
+		</member>
+		<member name="P:System.Data.SqlServerCe.SqlCeCommandBuilder.QuoteSuffix">
+			<summary>名前に空白や予約済みトークンなどの文字を含む SQL Server データベース オブジェクト (テーブル、列など) を指定するための終了文字を取得または設定します。</summary>
+			<returns>使用する終了文字。既定値は空の文字列です。</returns>
+		</member>
+		<member name="T:System.Data.SqlServerCe.SqlCeConnection">
+			<summary>
+        SQL Server Compact データ ソースへの開いた接続を表します。</summary>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeConnection.#ctor">
+			<summary><see cref="T:System.Data.SqlServerCe.SqlCeConnection" /> クラスの新しいインスタンスを初期化します。</summary>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeConnection.#ctor(System.String)">
+			<summary>接続文字列を指定して、<see cref="T:System.Data.SqlServerCe.SqlCeConnection" /> クラスの新しいインスタンスを初期化します。</summary>
+			<param name="connectionString">データベースを開くために使用する接続。</param>
+		</member>
+		<member name="E:System.Data.SqlServerCe.SqlCeConnection.FlushFailure">
+			<summary>バックグラウンドでのフラッシュが失敗した場合に発生します。</summary>
+		</member>
+		<member name="E:System.Data.SqlServerCe.SqlCeConnection.InfoMessage">
+			<summary>.NET Compact Framework Data Provider for SQL Server が警告メッセージまたは情報メッセージを送信したときに発生します。</summary>
+		</member>
+		<member name="E:System.Data.SqlServerCe.SqlCeConnection.StateChange">
+			<summary>接続の状態が変更したときに発生します。</summary>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeConnection.BeginTransaction">
+			<summary>データベース トランザクションを開始します。</summary>
+			<returns>新しいトランザクションを表すオブジェクト。</returns>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeConnection.BeginTransaction(System.Data.IsolationLevel)">
+			<summary>現在の <see cref="T:System.Data.IsolationLevel" /> 値を使用して、データベース トランザクションを開始します。</summary>
+			<returns>新しいトランザクションを表すオブジェクト。</returns>
+			<param name="isolationLevel">この接続のトランザクション分離レベル。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeConnection.ChangeDatabase(System.String)">
+			<summary>開いている <see cref="T:System.Data.SqlServerCe.SqlCeConnection" /> の現在のデータベースを変更します。</summary>
+			<returns>データベースが正常に変更された場合は、true。それ以外の場合は、false。</returns>
+			<param name="value">データベース名。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeConnection.Close">
+			<summary>データ ソースへの接続を閉じます。このメソッドは、開いている接続を閉じるための最も好ましいメソッドです。</summary>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeConnection.CreateCommand">
+			<summary><see cref="T:System.Data.SqlServerCe.SqlCeConnection" /> に関連付けられている <see cref="T:System.Data.SqlServerCe.SqlCeCommand" /> オブジェクトを作成し、返します。</summary>
+			<returns><see cref="T:System.Data.SqlServerCe.SqlCeCommand" /> オブジェクト。</returns>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeConnection.Dispose">
+			<summary>SQL Server Compact 3.5 の <see cref="T:System.Data.SqlServerCe.SqlCeConnection" /> のリソースをすべて解放します。</summary>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeConnection.EnlistTransaction(System.Transactions.Transaction)">
+			<summary>指定された System.Transactions.Transaction に参加します。</summary>
+			<param name="SysTrans">参加するトランザクション</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeConnection.GetDatabaseInfo">
+			<summary>接続されているデータベースのロケール情報、暗号化モード、および大文字と小文字の区別に関するキーと値のペアを返します。</summary>
+			<returns>ロケール、暗号化モード、および大文字と小文字の区別に関する名前と値のペアの並べ替えられたリスト。</returns>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeConnection.Open">
+			<summary><see cref="P:System.Data.SqlServerCe.SqlCeConnection.ConnectionString" /> で指定したプロパティ設定を使用して、データベース接続を開きます。</summary>
+		</member>
+		<member name="P:System.Data.SqlServerCe.SqlCeConnection.ConnectionString">
+			<summary>データベースを開くために使用する文字列を取得または設定します。</summary>
+			<returns>データ ソース名を含む .NET Compact Framework Data Provider for SQL Server Compact の接続文字列、および初期接続を確立するために必要なその他のパラメータ。既定値は空の文字列です。</returns>
+		</member>
+		<member name="P:System.Data.SqlServerCe.SqlCeConnection.ConnectionTimeout">
+			<summary>接続の確立の試行を開始してから、その試行を終了してエラーを生成するまでの待機時間を取得します。</summary>
+			<returns>接続が開かれるまでの待機時間 (秒)。SQL Server Compact では、値は常に 0 です。</returns>
+		</member>
+		<member name="P:System.Data.SqlServerCe.SqlCeConnection.Database">
+			<summary>現在のデータベース名、または接続が開いてから使用するデータベース名を取得します。</summary>
+			<returns>現在のデータベース名、または接続が開いてから使用するデータベース名。既定値は空の文字列です。SQL Server Compact の場合、このプロパティの値には、\myApp\myDB.sdf のように、データベース ファイルの完全パスを指定する必要があります。</returns>
+		</member>
+		<member name="P:System.Data.SqlServerCe.SqlCeConnection.DatabaseIdentifier">
+			<summary>同期の実行中に現在のデータベースの一意の識別子を取得します。</summary>
+			<returns>現在のデータベースの一意の識別子。</returns>
+		</member>
+		<member name="P:System.Data.SqlServerCe.SqlCeConnection.DataSource">
+			<summary>データ ソースのファイル名を取得します。</summary>
+			<returns>データ ソースの場所とファイル名。既定値は空の文字列です。</returns>
+		</member>
+		<member name="P:System.Data.SqlServerCe.SqlCeConnection.ServerVersion">
+			<summary>データベースのバージョン番号を文字列として返します。</summary>
+			<returns>
+        SQL Server Compact のバージョンの文字列。</returns>
+		</member>
+		<member name="P:System.Data.SqlServerCe.SqlCeConnection.State">
+			<summary>接続の現在の状態を取得します。</summary>
+			<returns><see cref="T:System.Data.ConnectionState" /> 値のビットごとの組み合わせ。既定値は Closed です。</returns>
+		</member>
+		<member name="T:System.Data.SqlServerCe.SqlCeDataAdapter">
+			<summary><see cref="T:System.Data.DataSet" /> へのデータの格納およびデータ ソースの更新に使用される、一連のデータ コマンドおよびデータベース接続を表します。</summary>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeDataAdapter.#ctor">
+			<summary><see cref="T:System.Data.SqlServerCe.SqlCeDataAdapter" /> クラスの新しいインスタンスを初期化します。</summary>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeDataAdapter.#ctor(System.Data.SqlServerCe.SqlCeCommand)">
+			<summary><see cref="P:System.Data.SqlServerCe.SqlCeDataAdapter.SelectCommand" /> プロパティとして <see cref="T:System.Data.SqlServerCe.SqlCeCommand" /> を指定して、<see cref="T:System.Data.SqlServerCe.SqlCeDataAdapter" /> クラスの新しいインスタンスを初期化します。</summary>
+			<param name="selectCommand">SELECT ステートメントである <see cref="T:System.Data.SqlServerCe.SqlCeCommand" />。この <see cref="T:System.Data.SqlServerCe.SqlCeCommand" /> は、<see cref="T:System.Data.SqlServerCe.SqlCeDataAdapter" /> の <see cref="P:System.Data.SqlServerCe.SqlCeDataAdapter.SelectCommand" /> プロパティとして設定されます。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeDataAdapter.#ctor(System.String,System.Data.SqlServerCe.SqlCeConnection)">
+			<summary><see cref="P:System.Data.SqlServerCe.SqlCeDataAdapter.SelectCommand" /> オブジェクトと <see cref="T:System.Data.SqlServerCe.SqlCeConnection" /> オブジェクトを指定して、<see cref="T:System.Data.SqlServerCe.SqlCeDataAdapter" /> クラスの新しいインスタンスを初期化します。</summary>
+			<param name="selectCommandText">SQL SELECT ステートメントである <see cref="T:System.String" />。この文字列は、<see cref="T:System.Data.SqlServerCe.SqlCeDataAdapter" /> の <see cref="P:System.Data.SqlServerCe.SqlCeDataAdapter.SelectCommand" /> プロパティの <see cref="P:System.Data.SqlServerCe.SqlCeCommand.CommandText" /> として使用されます。</param>
+			<param name="selectConnection">接続を表す <see cref="T:System.Data.SqlServerCe.SqlCeConnection" />。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeDataAdapter.#ctor(System.String,System.String)">
+			<summary><see cref="P:System.Data.SqlServerCe.SqlCeDataAdapter.SelectCommand" /> と接続文字列を指定して、<see cref="T:System.Data.SqlServerCe.SqlCeDataAdapter" /> クラスの新しいインスタンスを初期化します。</summary>
+			<param name="selectCommandText">SQL SELECT ステートメントである <see cref="T:System.String" />。この文字列は、<see cref="T:System.Data.SqlServerCe.SqlCeDataAdapter" /> の <see cref="P:System.Data.SqlServerCe.SqlCeDataAdapter.SelectCommand" /> プロパティの <see cref="P:System.Data.SqlServerCe.SqlCeCommand.CommandText" /> として使用されます。</param>
+			<param name="selectConne ctionString">接続文字列。</param>
+		</member>
+		<member name="E:System.Data.SqlServerCe.SqlCeDataAdapter.RowUpdated">
+			<summary><see cref="M:System.Data.Common.DbDataAdapter.Update(System.Data.DataSet)" /> の呼び出し中に、データ ソースに対して更新コマンドが実行された後に発生します。更新が試行されると、このイベントが発生します。</summary>
+		</member>
+		<member name="E:System.Data.SqlServerCe.SqlCeDataAdapter.RowUpdating">
+			<summary><see cref="M:System.Data.Common.DbDataAdapter.Update(System.Data.DataSet)" /> の呼び出し中に、データ ソースに対して更新コマンドが実行される前に発生します。更新が試行されると、このイベントが発生します。</summary>
+		</member>
+		<member name="P:System.Data.SqlServerCe.SqlCeDataAdapter.DeleteCommand">
+			<summary>データ セットからレコードを削除する SQL ステートメントを取得または設定します。</summary>
+			<returns><see cref="M:System.Data.Common.DbDataAdapter.Update(System.Data.DataSet)" /> 処理中に、<see cref="T:System.Data.DataSet" /> 内の削除行に対応するデータ ソース内のレコードを削除するための <see cref="T:System.Data.SqlServerCe.SqlCeCommand" />。</returns>
+		</member>
+		<member name="P:System.Data.SqlServerCe.SqlCeDataAdapter.InsertCommand">
+			<summary>データ ソースに新しいレコードを挿入する SQL ステートメントを取得または設定します。</summary>
+			<returns><see cref="M:System.Data.Common.DbDataAdapter.Update(System.Data.DataSet)" /> 処理中に、<see cref="T:System.Data.DataSet" /> 内の新しい行に対応するデータ ソース内のレコードを挿入するための <see cref="T:System.Data.SqlServerCe.SqlCeCommand" />。</returns>
+		</member>
+		<member name="P:System.Data.SqlServerCe.SqlCeDataAdapter.SelectCommand">
+			<summary>データ ソース内のレコードを選択する SQL ステートメントを取得または設定します。</summary>
+			<returns><see cref="M:System.Data.Common.DbDataAdapter.Fill(System.Data.DataTable)" /> 処理中に、<see cref="T:System.Data.DataSet" /> に格納するレコードをデータ ソースから選択するための <see cref="T:System.Data.SqlServerCe.SqlCeCommand" />。</returns>
+		</member>
+		<member name="P:System.Data.SqlServerCe.SqlCeDataAdapter.UpdateCommand">
+			<summary>データ ソース内のレコードを更新する SQL ステートメントを取得または設定します。</summary>
+			<returns><see cref="M:System.Data.Common.DbDataAdapter.Update(System.Data.DataSet)" /> 処理中に、<see cref="T:System.Data.DataSet" /> 内の変更行に対応するデータ ソース内のレコードを更新するための <see cref="T:System.Data.SqlServerCe.SqlCeCommand" />。</returns>
+		</member>
+		<member name="T:System.Data.SqlServerCe.SqlCeDataReader">
+			<summary>データ ソースからデータ行の前方向ストリームを読み取る方法を提供します。このクラスは継承できません。</summary>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeDataReader.Close">
+			<summary><see cref="T:System.Data.SqlServerCe.SqlCeDataReader" /> オブジェクトを閉じます。</summary>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeDataReader.Dispose">
+			<summary><see cref="T:System.Data.SqlServerCe.SqlCeDataReader" /> によって消費されているリソースを解放します。</summary>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeDataReader.Finalize">
+			<summary><see cref="T:System.Data.SqlServerCe.SqlCeDataReader" /> がガベージ コレクションによってクリアされる前に、アンマネージ リソースを解放し、その他のクリーンアップ操作を実行します。</summary>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeDataReader.GetBoolean(System.Int32)">
+			<summary>指定した列の値をブール値として取得します。</summary>
+			<returns>列の値。</returns>
+			<param name="ordinal">列の 0 から始まる序数。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeDataReader.GetByte(System.Int32)">
+			<summary>指定した列の値をバイトとして取得します。</summary>
+			<returns>指定した列のバイト型の値。</returns>
+			<param name="ordinal">列の 0 から始まる序数。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeDataReader.GetBytes(System.Int32,System.Int64,System.Byte[],System.Int32,System.Int32)">
+			<summary>指定した列オフセットからのバイト ストリームを、配列としてバッファに読み込みます。読み込みは、指定したバッファ オフセットから開始されます。</summary>
+			<returns>実際に読み取ったバイト数。</returns>
+			<param name="ordinal">列の 0 から始まる序数。</param>
+			<param name="dataIndex">読み取り操作の開始位置を示す、フィールド内のインデックス。</param>
+			<param name="buffer">バイト ストリームの読み取り先のバッファ。</param>
+			<param name="bufferIndex">読み取り操作を開始するための、buffer のインデックス。</param>
+			<param name="length">バッファにコピーする最大データ長。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeDataReader.GetChar(System.Int32)">
+			<summary>.NET Compact Framework Data Provider for SQL Server Compact ではサポートされていません。</summary>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeDataReader.GetChars(System.Int32,System.Int64,System.Char[],System.Int32,System.Int32)">
+			<summary>指定した列オフセットからの文字ストリームを、配列としてバッファに読み込みます。読み込みは、指定したバッファ オフセットから開始されます。</summary>
+			<returns>実際に読み取った文字数。</returns>
+			<param name="ordinal">列の 0 から始まる序数。</param>
+			<param name="dataIndex">読み取り操作の開始位置を示す、行内のインデックス。</param>
+			<param name="buffer">データのコピー先のバッファ。</param>
+			<param name="bufferIndex">読み取り操作を開始するための、buffer のインデックス。</param>
+			<param name="length">読み取る文字数。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeDataReader.GetDataTypeName(System.Int32)">
+			<summary>ソース データ型名を取得します。</summary>
+			<returns>バックエンド データ型名。</returns>
+			<param name="index">列の 0 から始まる序数。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeDataReader.GetDateTime(System.Int32)">
+			<summary>指定した列の値を <see cref="T:System.DateTime" /> オブジェクトとして取得します。</summary>
+			<returns>指定した列の値。</returns>
+			<param name="ordinal">列の 0 から始まる序数。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeDataReader.GetDecimal(System.Int32)">
+			<summary>指定した列の値を <see cref="T:System.Decimal" /> オブジェクトとして取得します。</summary>
+			<returns>指定した列の値。</returns>
+			<param name="ordinal">列の 0 から始まる序数。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeDataReader.GetDouble(System.Int32)">
+			<summary>指定した列の値を倍精度浮動小数点数として取得します。</summary>
+			<returns>指定した列の値。</returns>
+			<param name="ordinal">列の 0 から始まる序数。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeDataReader.GetFieldType(System.Int32)">
+			<summary>オブジェクトのデータ型である <see cref="T:System.Type" /> を取得します。</summary>
+			<returns>オブジェクトのデータ型である <see cref="T:System.Type" />。</returns>
+			<param name="ordinal">列の 0 から始まる序数。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeDataReader.GetFloat(System.Int32)">
+			<summary>指定した列の値を単精度浮動小数点数として取得します。</summary>
+			<returns>指定した列の値。</returns>
+			<param name="ordinal">列の 0 から始まる序数。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeDataReader.GetGuid(System.Int32)">
+			<summary>指定した列の値をグローバル一意識別子 (GUID) として取得します。</summary>
+			<returns>指定した列の値。</returns>
+			<param name="ordinal">列の 0 から始まる序数。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeDataReader.GetInt16(System.Int32)">
+			<summary>指定した列の値を 16 ビット符号付き整数として取得します。</summary>
+			<returns>指定した列の値。</returns>
+			<param name="ordinal">列の 0 から始まる序数。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeDataReader.GetInt32(System.Int32)">
+			<summary>指定した列の値を 32 ビット符号付き整数として取得します。</summary>
+			<returns>指定した列の値。</returns>
+			<param name="ordinal">列の 0 から始まる序数。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeDataReader.GetInt64(System.Int32)">
+			<summary>指定した列の値を 64 ビット符号付き整数として取得します。</summary>
+			<returns>指定した列の値。</returns>
+			<param name="ordinal">列の 0 から始まる序数。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeDataReader.GetName(System.Int32)">
+			<summary>指定した列の名前を取得します。</summary>
+			<returns>指定した列の名前。</returns>
+			<param name="index">列の 0 から始まる序数。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeDataReader.GetOrdinal(System.String)">
+			<summary>列名を指定して、列の序数を取得します。</summary>
+			<returns>列の 0 から始まる序数。</returns>
+			<param name="name">列の名前。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeDataReader.GetProviderSpecificFieldType(System.Int32)">
+			<summary>基になるプロバイダ固有フィールド型の内部表現である <see cref="T:System.Object" /> を取得します。</summary>
+			<returns>指定した列のデータ型を記述する <see cref="T:System.Type" /> オブジェクト。</returns>
+			<param name="ordinal">列の 0 から始まる序数。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeDataReader.GetSchemaTable">
+			<summary><see cref="T:System.Data.SqlServerCe.SqlCeDataReader" /> の列メタデータを記述する <see cref="T:System.Data.DataTable" /> を返します。</summary>
+			<returns>列メタデータを説明する <see cref="T:System.Data.DataTable" />。</returns>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeDataReader.GetSqlBinary(System.Int32)">
+			<summary>指定した列の値を <see cref="T:System.Data.SqlTypes.SqlBinary" /> として取得します。</summary>
+			<returns><see cref="T:System.Data.SqlTypes.SqlBinary" />。</returns>
+			<param name="ordinal">列の 0 から始まる序数。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeDataReader.GetSqlBoolean(System.Int32)">
+			<summary>指定した列の値を <see cref="T:System.Data.SqlTypes.SqlBoolean" /> として取得します。</summary>
+			<returns>列の値。</returns>
+			<param name="ordinal">列の 0 から始まる序数。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeDataReader.GetSqlByte(System.Int32)">
+			<summary>指定した列の値を <see cref="T:System.Data.SqlTypes.SqlByte" /> として取得します。</summary>
+			<returns><see cref="T:System.Data.SqlTypes.SqlByte" />。</returns>
+			<param name="ordinal">列の 0 から始まる序数。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeDataReader.GetSqlDateTime(System.Int32)">
+			<summary>指定した列の値を <see cref="T:System.Data.SqlTypes.SqlDateTime" /> として取得します。</summary>
+			<returns><see cref="T:System.Data.SqlTypes.SqlDateTime" />。</returns>
+			<param name="ordinal">列の 0 から始まる序数。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeDataReader.GetSqlDecimal(System.Int32)">
+			<summary>指定した列の値を <see cref="T:System.Data.SqlTypes.SqlDecimal" /> として取得します。</summary>
+			<returns><see cref="T:System.Data.SqlTypes.SqlDecimal" />。</returns>
+			<param name="ordinal">列の 0 から始まる序数。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeDataReader.GetSqlDouble(System.Int32)">
+			<summary>指定した列の値を <see cref="T:System.Data.SqlTypes.SqlDouble" /> として取得します。</summary>
+			<returns><see cref="T:System.Data.SqlTypes.SqlDouble" />。</returns>
+			<param name="ordinal">列の 0 から始まる序数。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeDataReader.GetSqlGuid(System.Int32)">
+			<summary>指定した列の値を <see cref="T:System.Data.SqlTypes.SqlGuid" /> として取得します。</summary>
+			<returns><see cref="T:System.Data.SqlTypes.SqlGuid" />。</returns>
+			<param name="ordinal">列の 0 から始まる序数。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeDataReader.GetSqlInt16(System.Int32)">
+			<summary>指定した列の値を <see cref="T:System.Data.SqlTypes.SqlInt16" /> として取得します。</summary>
+			<returns><see cref="T:System.Data.SqlTypes.SqlInt16" />。</returns>
+			<param name="ordinal">列の 0 から始まる序数。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeDataReader.GetSqlInt32(System.Int32)">
+			<summary>指定した列の値を <see cref="T:System.Data.SqlTypes.SqlInt32" /> として取得します。</summary>
+			<returns><see cref="T:System.Data.SqlTypes.SqlInt32" />。</returns>
+			<param name="ordinal">列の 0 から始まる序数。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeDataReader.GetSqlInt64(System.Int32)">
+			<summary>指定した列の値を <see cref="T:System.Data.SqlTypes.SqlInt64" /> として取得します。</summary>
+			<returns><see cref="T:System.Data.SqlTypes.SqlInt64" />。</returns>
+			<param name="ordinal">列の 0 から始まる序数。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeDataReader.GetSqlMoney(System.Int32)">
+			<summary>指定した列の値を <see cref="T:System.Data.SqlTypes.SqlMoney" /> として取得します。</summary>
+			<returns><see cref="T:System.Data.SqlTypes.SqlMoney" />。</returns>
+			<param name="ordinal">列の 0 から始まる序数。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeDataReader.GetSqlSingle(System.Int32)">
+			<summary>指定した列の値を <see cref="T:System.Data.SqlTypes.SqlSingle" /> として取得します。</summary>
+			<returns><see cref="T:System.Data.SqlTypes.SqlSingle" />。</returns>
+			<param name="ordinal">列の 0 から始まる序数。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeDataReader.GetSqlString(System.Int32)">
+			<summary>指定した列の値を <see cref="T:System.Data.SqlTypes.SqlString" /> として取得します。</summary>
+			<returns><see cref="T:System.Data.SqlTypes.SqlString" />。</returns>
+			<param name="ordinal">列の 0 から始まる序数。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeDataReader.GetString(System.Int32)">
+			<summary>指定した列の値を文字列として取得します。</summary>
+			<returns>指定した列の値。</returns>
+			<param name="ordinal">列の 0 から始まる序数。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeDataReader.GetValue(System.Int32)">
+			<summary>指定した序数の列の値をネイティブ形式で取得します。</summary>
+			<returns>取得した値。</returns>
+			<param name="ordinal">列の 0 から始まる序数。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeDataReader.GetValues(System.Object[])">
+			<summary>現在の行のすべての属性列を取得します。</summary>
+			<returns>配列の <see cref="T:System.Object" /> のインスタンス数。</returns>
+			<param name="values">属性列のコピー先の <see cref="T:System.Object" /> 配列。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeDataReader.IsDBNull(System.Int32)">
+			<summary>列に格納されている値が存在しない値または欠損値かどうかを示す値を取得します。</summary>
+			<returns>
+            指定した列の値が <see cref="T:System.DBNull" /> と等価である場合は true。それ以外の場合は false。</returns>
+			<param name="ordinal">列の 0 から始まる序数。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeDataReader.NextResult">
+			<summary>.NET Compact Framework Data Provider for SQL Server Compact ではサポートされていません。</summary>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeDataReader.Read">
+			<summary><see cref="T:System.Data.SqlServerCe.SqlCeDataReader" /> を次のレコードに進めます。</summary>
+			<returns>
+            他の行が存在する場合は true。それ以外の場合は false。</returns>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeDataReader.Seek(System.Data.SqlServerCe.DbSeekOptions,System.Object[])">
+			<summary><see cref="T:System.Data.SqlServerCe.SqlCeDataReader" /> を、指定したパラメータに一致するインデックス値が存在するレコードに配置します。</summary>
+			<returns>ブール値。true の場合はカーソルが行に配置されています。</returns>
+			<param name="dbSeekOptions">使用する <see cref="T:System.Data.SqlServerCe.DbSeekOptions" />。</param>
+			<param name="index">レコードのインデックス。</param>
+		</member>
+		<member name="P:System.Data.SqlServerCe.SqlCeDataReader.Depth">
+			<summary>現在の行の入れ子の深さを示す値を取得します。</summary>
+			<returns>現在の行の入れ子の深さ。.NET Compact Framework Data Provider for SQL Server Compact は入れ子をサポートしないため、常にゼロが返されます。</returns>
+		</member>
+		<member name="P:System.Data.SqlServerCe.SqlCeDataReader.FieldCount">
+			<summary>クエリの SELECT 句内の列数を取得します。</summary>
+			<returns>有効なレコードセットに位置していない場合は 0。それ以外の場合は現在のレコードの列数。</returns>
+		</member>
+		<member name="P:System.Data.SqlServerCe.SqlCeDataReader.HasRows">
+			<summary><see cref="T:System.Data.SqlServerCe.SqlCeDataReader" /> に 1 行以上の行が格納されているかどうかを示す値を取得します。</summary>
+			<returns><see cref="T:System.Boolean" /> 値。</returns>
+		</member>
+		<member name="P:System.Data.SqlServerCe.SqlCeDataReader.IsClosed">
+			<summary>データ リーダーが閉じているかどうかを示します。</summary>
+			<returns><see cref="T:System.Data.SqlServerCe.SqlCeDataReader" /> が閉じている場合は true。それ以外の場合は false。</returns>
+		</member>
+		<member name="P:System.Data.SqlServerCe.SqlCeDataReader.Item(System.Int32)">
+			<summary>列の序数によって指定した列の値をネイティブ形式で取得します。</summary>
+			<returns>指定した列のネイティブ形式での値。</returns>
+			<param name="index">列の序数。</param>
+		</member>
+		<member name="P:System.Data.SqlServerCe.SqlCeDataReader.Item(System.String)">
+			<summary>列名によって指定した列の値をネイティブ形式で取得します。</summary>
+			<returns>指定した列のネイティブ形式での値。</returns>
+			<param name="name">列名。</param>
+		</member>
+		<member name="P:System.Data.SqlServerCe.SqlCeDataReader.RecordsAffected">
+			<summary>SQL ステートメントの実行によって変更、挿入、または削除された行の数を取得します。</summary>
+			<returns>変更、挿入、または削除された行数。影響を受けた行がなかった場合またはステートメントが失敗した場合は 0。SELECT ステートメントの場合は -1。</returns>
+		</member>
+		<member name="T:System.Data.SqlServerCe.SqlCeEngine">
+			<summary>
+        SQL Server Compact エンジン オブジェクトのプロパティ、メソッド、および他のオブジェクトを表します。このクラスは継承できません。</summary>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeEngine.#ctor">
+			<summary><see cref="T:System.Data.SqlServerCe.SqlCeEngine" /> クラスの新しいインスタンスを初期化します。</summary>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeEngine.#ctor(System.String)">
+			<summary>ローカル接続文字列を指定して、<see cref="T:System.Data.SqlServerCe.SqlCeEngine" /> クラスの新しいインスタンスを初期化します。</summary>
+			<param name="localConnectionString">データベースへの接続文字列。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeEngine.Compact(System.String)">
+			<summary>既存のデータベース ファイルから新しいデータベース ファイルを作成し、SQL Server Compact データベース内の使用済み領域をクリアします。このメソッドは、データベースの照合順序、暗号化、またはパスワードの設定変更にも使用されます。</summary>
+			<param name="connectionString">接続先データベースへの接続文字列。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeEngine.CreateDatabase">
+			<summary>新しいデータベースを作成します。</summary>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeEngine.Dispose">
+			<summary>すべての SQL Server Compact<see cref="T:System.Data.SqlServerCe.SqlCeEngine" /> リソースを解放します。</summary>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeEngine.Repair(System.String,System.Data.SqlServerCe.RepairOption)">
+			<summary>破損したデータベースを修復します。</summary>
+			<param name="connectionString">データベースへのローカル接続文字列。</param>
+			<param name="options">データベースの修復時に使用する RepairOption。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeEngine.Shrink">
+			<summary>空のページをファイルの末尾に移動して、ファイルを切り詰めることにより、SQL Server Compact データベース内の使用済み領域がクリアされます。</summary>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeEngine.Upgrade">
+			<summary>SQL Server Compact データベースを Version 3.1 から 3.5 にアップグレードします。アップグレード後、ソース データベースが暗号化されていた場合は、データベースが暗号化されます。そうでなかった場合、アップグレードされたデータベースは暗号化されません。</summary>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeEngine.Upgrade(System.String)">
+			<summary>SQL Server Compact データベースを Version 3.1 から 3.5 にアップグレードします。接続先データベースは、接続文字列で暗号化モードが指定されていた場合、暗号化されます。データベースの照合順序は、接続文字列で大文字と小文字の区別のプロパティが true に設定されている場合、大文字と小文字が区別されます。</summary>
+			<param name="destConnectionString">接続先データベースへの接続文字列。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeEngine.Verify">
+			<summary>データベース内の各ページのチェックサムを再計算し、その新しいチェックサムと予測される値を比較します。</summary>
+			<returns>チェックサムが一致し、データベースが破損していない場合、true。それ以外の場合は、false。</returns>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeEngine.Verify(System.Data.SqlServerCe.VerifyOption)">
+			<summary>VerifyOption に基づいて、データベースの整合性を検証します。</summary>
+			<returns>データベースが破損していない場合は true。それ以外の場合は、false。</returns>
+			<param name="option">使用するデータベース検証のレベルを決めます。使用できるオプションの値の詳細については、「<see cref="T:System.Data.SqlServerCe.VerifyOption" />」を参照してください。</param>
+		</member>
+		<member name="P:System.Data.SqlServerCe.SqlCeEngine.LocalConnectionString">
+			<summary>
+        SQL Server Compact データベースの接続文字列を取得または設定します。</summary>
+			<returns>接続文字列。</returns>
+		</member>
+		<member name="T:System.Data.SqlServerCe.SqlCeError">
+			<summary>データ ソースが返す警告またはエラーに関する情報を収集します。このクラスは継承できません。</summary>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeError.ToString">
+			<summary>エラー メッセージの完全なテキストを取得します。</summary>
+			<returns>エラー メッセージの完全なテキスト。</returns>
+		</member>
+		<member name="P:System.Data.SqlServerCe.SqlCeError.ErrorParameters">
+			<summary>最後の 3 つのエラー パラメータを取得します。SQL Server Compact は、エラー パラメータを使用して、エラーに関する詳細情報を提供します。</summary>
+			<returns>最後の 3 つのエラー パラメータを格納する文字列配列。</returns>
+		</member>
+		<member name="P:System.Data.SqlServerCe.SqlCeError.HResult">
+			<summary>エラーの種類を示す HRESULT 値を返します。</summary>
+			<returns>エラーの種類を示す HR 番号。</returns>
+		</member>
+		<member name="P:System.Data.SqlServerCe.SqlCeError.Message">
+			<summary>エラーを説明するテキストを取得します。</summary>
+			<returns>エラーを説明するテキスト。</returns>
+		</member>
+		<member name="P:System.Data.SqlServerCe.SqlCeError.NativeError">
+			<summary><see cref="T:System.Data.SqlServerCe.SqlCeError" /> のネイティブ エラー番号を取得します。これらのエラーの詳細については、SQL Server Compact オンライン ブックの「トラブルシューティング」セクションの「SQL Server Compact のエラー」を参照してください。</summary>
+			<returns><see cref="T:System.Data.SqlServerCe.SqlCeError" /> のネイティブ エラー番号。</returns>
+		</member>
+		<member name="P:System.Data.SqlServerCe.SqlCeError.NumericErrorParameters">
+			<summary>最初の 3 つのエラー パラメータを取得します。SQL Server Compact は、エラー パラメータを使用して、エラーに関する詳細情報を提供します。</summary>
+			<returns>最初の 3 つのエラー パラメータを格納する整数配列。</returns>
+		</member>
+		<member name="P:System.Data.SqlServerCe.SqlCeError.Source">
+			<summary>エラーを生成したプロバイダの名前を取得します。</summary>
+			<returns>エラーを生成したプロバイダの名前。たとえば、<see cref="P:System.Data.SqlServerCe.SqlCeError.Source" /> プロパティから "OLE DB Provider for SQL Server Compact" のような文字列が返されることがあります。</returns>
+		</member>
+		<member name="T:System.Data.SqlServerCe.SqlCeErrorCollection">
+			<summary>.NET Compact Framework Data Provider for SQL Server Compact が生成するすべてのエラーを収集します。このクラスは継承できません。</summary>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeErrorCollection.CopyTo(System.Array,System.Int32)">
+			<summary><see cref="T:System.Data.SqlServerCe.SqlCeErrorCollection" /> の要素を <see cref="T:System.Array" /> にコピーします。コピーは、<see cref="T:System.Array" /> 内の指定したインデックス位置から開始されます。</summary>
+			<param name="array">要素のコピー先の <see cref="T:System.Array" />。</param>
+			<param name="index">array の開始インデックス。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeErrorCollection.GetEnumerator">
+			<summary><see cref="T:System.Data.SqlServerCe.SqlCeErrorCollection" /> を反復処理できる列挙子を返します。</summary>
+			<returns><see cref="T:System.Collections.IEnumerator" /></returns>
+		</member>
+		<member name="P:System.Data.SqlServerCe.SqlCeErrorCollection.Count">
+			<summary>コレクション内の <see cref="T:System.Data.SqlServerCe.SqlCeError" /> オブジェクト数を取得します。</summary>
+			<returns>コレクション内の <see cref="T:System.Data.SqlServerCe.SqlCeError" /> オブジェクトの合計数。</returns>
+		</member>
+		<member name="P:System.Data.SqlServerCe.SqlCeErrorCollection.Item(System.Int32)">
+			<summary>指定したインデックス位置にあるエラーを取得します。</summary>
+			<returns>指定したインデックス位置にあるエラーを格納する <see cref="T:System.Data.SqlServerCe.SqlCeError" />。</returns>
+			<param name="index">取得する <see cref="T:System.Data.SqlServerCe.SqlCeError" /> の、0 から始まるインデックス番号。</param>
+		</member>
+		<member name="T:System.Data.SqlServerCe.SqlCeException">
+			<summary>基になるプロバイダが SQL Server Compact データ ソースから警告またはエラーを返したときにスローされる例外。このクラスは継承できません。</summary>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeException.ToString">
+			<summary>現在の例外の文字列形式を作成して返します。</summary>
+			<returns><see cref="T:System.String" /> 値。</returns>
+		</member>
+		<member name="P:System.Data.SqlServerCe.SqlCeException.Errors">
+			<summary>.NET Compact Framework Data Provider for SQL Server Compact が生成する例外の詳細情報を含む、1 つ以上の <see cref="T:System.Data.SqlServerCe.SqlCeError" /> オブジェクトのコレクションを取得します。</summary>
+			<returns>例外の <see cref="T:System.Data.SqlServerCe.SqlCeError" /> クラスの収集されたインスタンスを格納する <see cref="T:System.Data.SqlServerCe.SqlCeErrorCollection" /> オブジェクト。</returns>
+		</member>
+		<member name="P:System.Data.SqlServerCe.SqlCeException.HResult">
+			<summary>例外の HRESULT 値を取得します。値は、例外の <see cref="T:System.Data.SqlServerCe.SqlCeErrorCollection" /> 内にある <see cref="T:System.Data.SqlServerCe.SqlCeError" /> の最初のインスタンスの <see cref="P:System.Data.SqlServerCe.SqlCeError.HResult" /> 値と同じです。</summary>
+			<returns>HRESULT 値。</returns>
+		</member>
+		<member name="P:System.Data.SqlServerCe.SqlCeException.Message">
+			<summary>この例外の <see cref="T:System.Data.SqlServerCe.SqlCeErrorCollection" /> 内にある <see cref="T:System.Data.SqlServerCe.SqlCeError" /> の最初のインスタンスの説明テキストを取得します。</summary>
+			<returns>エラーを説明するテキスト。</returns>
+		</member>
+		<member name="P:System.Data.SqlServerCe.SqlCeException.NativeError">
+			<summary><see cref="T:System.Data.SqlServerCe.SqlCeErrorCollection" /> 内の最初の <see cref="T:System.Data.SqlServerCe.SqlCeError" /> のネイティブ エラー番号を取得します。エラーの詳細については、SQL Server Compact オンライン ブックの「トラブルシューティング」セクションの「SQL Server Compact のエラー」のトピックを参照してください。</summary>
+		</member>
+		<member name="P:System.Data.SqlServerCe.SqlCeException.Source">
+			<summary>エラーを生成した OLE DB プロバイダの名前を取得します。</summary>
+			<returns>エラーを生成した OLE DB プロバイダの名前。</returns>
+		</member>
+		<member name="T:System.Data.SqlServerCe.SqlCeFlushFailureEventArgs">
+			<summary><see cref="E:System.Data.SqlServerCe.SqlCeConnection.FlushFailure" /> イベントのイベント引数をカプセル化します。</summary>
+		</member>
+		<member name="T:System.Data.SqlServerCe.SqlCeFlushFailureEventHandler">
+			<summary><see cref="E:System.Data.SqlServerCe.SqlCeConnection.FlushFailure" /> イベントを待機するために実装する必要があるデリゲート。</summary>
+			<param name="sender">イベントのソース。</param>
+			<param name="e">イベント データを格納している <see cref="T:System.Data.SqlServerCe.SqlCeFlushFailureEventArgs" />。</param>
+		</member>
+		<member name="T:System.Data.SqlServerCe.SqlCeInfoMessageEventArgs">
+			<summary><see cref="E:System.Data.SqlServerCe.SqlCeConnection.InfoMessage" /> イベントのデータを提供します。このクラスは継承できません。</summary>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeInfoMessageEventArgs.ToString">
+			<summary><see cref="E:System.Data.SqlServerCe.SqlCeConnection.InfoMessage" /> イベントの文字列形式を取得します。</summary>
+			<returns><see cref="E:System.Data.SqlServerCe.SqlCeConnection.InfoMessage" /> イベントを表す文字列。</returns>
+		</member>
+		<member name="P:System.Data.SqlServerCe.SqlCeInfoMessageEventArgs.Errors">
+			<summary>データ ソースから送信された警告のコレクションを取得します。</summary>
+			<returns>データ ソースから送信された警告のコレクション。</returns>
+		</member>
+		<member name="P:System.Data.SqlServerCe.SqlCeInfoMessageEventArgs.Message">
+			<summary>データ ソースから送信されたエラーの完全なテキストを取得します。</summary>
+			<returns>エラーの完全なテキスト。</returns>
+		</member>
+		<member name="T:System.Data.SqlServerCe.SqlCeInfoMessageEventHandler">
+			<summary><see cref="T:System.Data.SqlServerCe.SqlCeConnection" /> の <see cref="E:System.Data.SqlServerCe.SqlCeConnection.InfoMessage" /> イベントを処理するメソッドを表します。</summary>
+			<param name="sender">イベントのソース。</param>
+			<param name="e">イベント データを格納している <see cref="T:System.Data.SqlServerCe.SqlCeInfoMessageEventArgs" />。</param>
+		</member>
+		<member name="T:System.Data.SqlServerCe.SqlCeInvalidDatabaseFormatException">
+			<summary>SQL Server Compact の古いバージョンまたは新しいバージョンのデータベース ファイルを開こうとした場合に、SQL Server Compact データ ソースからの例外をスローします。</summary>
+		</member>
+		<member name="T:System.Data.SqlServerCe.SqlCeLockTimeoutException">
+			<summary>この例外は、ロックのタイムアウトが発生したときに、スローされます。</summary>
+		</member>
+		<member name="T:System.Data.SqlServerCe.SqlCeParameter">
+			<summary><see cref="T:System.Data.SqlServerCe.SqlCeCommand" /> のパラメータと、オプションで <see cref="T:System.Data.DataSet" /> 列に対するマップを表します。このクラスは継承できません。</summary>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeParameter.#ctor">
+			<summary><see cref="T:System.Data.SqlServerCe.SqlCeParameter" /> クラスの新しいインスタンスを初期化します。</summary>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeParameter.#ctor(System.String,System.Object)">
+			<summary>パラメータ名と新しい <see cref="T:System.Data.SqlServerCe.SqlCeParameter" /> の値を指定して、<see cref="T:System.Data.SqlServerCe.SqlCeParameter" /> クラスの新しいインスタンスを初期化します。</summary>
+			<param name="name">割り当てるパラメータの名前。</param>
+			<param name="value">新しい <see cref="T:System.Data.SqlServerCe.SqlCeParameter" /> オブジェクトの値。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeParameter.#ctor(System.String,System.Data.SqlDbType)">
+			<summary>パラメータ名とデータ型を指定して、<see cref="T:System.Data.SqlServerCe.SqlCeParameter" /> クラスの新しいインスタンスを初期化します。</summary>
+			<param name="name">割り当てるパラメータの名前。</param>
+			<param name="dataType"><see cref="T:System.Data.SqlDbType" /> 値の 1 つ。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeParameter.#ctor(System.String,System.Data.SqlDbType,System.Int32)">
+			<summary>パラメータ名、データ型、および長さを使用して、<see cref="T:System.Data.SqlServerCe.SqlCeParameter" /> クラスの新しいインスタンスを初期化します。</summary>
+			<param name="name">割り当てるパラメータの名前。</param>
+			<param name="dataType"><see cref="T:System.Data.SqlDbType" /> 値の 1 つ。</param>
+			<param name="size">パラメータの長さ。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeParameter.#ctor(System.String,System.Data.SqlDbType,System.Int32,System.String)">
+			<summary>パラメータ名、データ型、長さ、およびソース列名を指定して、<see cref="T:System.Data.SqlServerCe.SqlCeParameter" /> クラスの新しいインスタンスを初期化します。</summary>
+			<param name="name">割り当てるパラメータの名前。</param>
+			<param name="dataType"><see cref="T:System.Data.SqlDbType" /> 値の 1 つ。</param>
+			<param name="size">パラメータの長さ。</param>
+			<param name="sourceColumn">ソース列の名前。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeParameter.#ctor(System.String,System.Data.SqlDbType,System.Int32,System.Boolean,System.Byte,System.Byte,System.String,System.Data.DataRowVersion,System.Object)">
+			<summary>パラメータ名、データ型、長さなどのプロパティを使用して、<see cref="T:System.Data.SqlServerCe.SqlCeParameter" /> クラスの新しいインスタンスを初期化します。SQL Server Compact では、入力パラメータだけがサポートされます。</summary>
+			<param name="parameterName">パラメータの名前。</param>
+			<param name="dbType"><see cref="T:System.Data.SqlDbType" /> 値の 1 つ。</param>
+			<param name="size">パラメータの長さ。</param>
+			<param name="isNullable">
+                フィールドの値を null にできる場合は true。それ以外の場合は false。</param>
+			<param name="precision"><see cref="P:System.Data.SqlServerCe.SqlCeParameter.Value" /> を解決するための、小数点の左右の合計桁数。</param>
+			<param name="scale"><see cref="P:System.Data.SqlServerCe.SqlCeParameter.Value" /> を解決するための、小数部の桁数。</param>
+			<param name="sourceColumn">ソース列の名前。</param>
+			<param name="sourceVersion"><see cref="T:System.Data.DataRowVersion" /> 値の 1 つ。</param>
+			<param name="value"><see cref="T:System.Data.SqlServerCe.SqlCeParameter" /> の値を示す <see cref="T:System.Object" />。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeParameter.#ctor(System.String,System.Data.SqlDbType,System.Int32,System.Data.ParameterDirection,System.Boolean,System.Byte,System.Byte,System.String,System.Data.DataRowVersion,System.Object)">
+			<summary>パラメータ名、データ型、長さ、パラメータの方向などのプロパティを指定して、<see cref="T:System.Data.SqlServerCe.SqlCeParameter" /> クラスの新しいインスタンスを初期化します。SQL Server Compact では、入力パラメータだけがサポートされます。</summary>
+			<param name="parameterName">パラメータの名前。</param>
+			<param name="dbType"><see cref="T:System.Data.SqlDbType" /> 値の 1 つ。</param>
+			<param name="size">パラメータの長さ。</param>
+			<param name="direction">使用する <see cref="P:System.Data.ParameterDirection" />。</param>
+			<param name="isNullable">
+                フィールドの値を null にできる場合は true。それ以外の場合は false。</param>
+			<param name="precision"><see cref="P:System.Data.SqlServerCe.SqlCeParameter.Value" /> を解決するための、小数点の左右の合計桁数。</param>
+			<param name="scale"><see cref="P:System.Data.SqlServerCe.SqlCeParameter.Value" /> を解決するための、小数部の桁数。</param>
+			<param name="sourceColumn">ソース列の名前。</param>
+			<param name="sourceVersion"><see cref="T:System.Data.DataRowVersion" /> 値の 1 つ。</param>
+			<param name="value"><see cref="T:System.Data.SqlServerCe.SqlCeParameter" /> の値を示す <see cref="T:System.Object" />。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeParameter.ResetDbType">
+			<summary>この <see cref="T:System.Data.SqlServerCe.SqlCeParameter" /> に関連付けられている型をリセットします。</summary>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeParameter.ToString">
+			<summary><see cref="P:System.Data.SqlServerCe.SqlCeParameter.ParameterName" /> が含まれる文字列を取得します。</summary>
+			<returns><see cref="P:System.Data.SqlServerCe.SqlCeParameter.ParameterName" /> が含まれる文字列。</returns>
+		</member>
+		<member name="P:System.Data.SqlServerCe.SqlCeParameter.DbType">
+			<summary>パラメータの <see cref="T:System.Data.DbType" /> を取得または設定します。</summary>
+			<returns><see cref="T:System.Data.DbType" /> 値の 1 つ。既定値は <see cref="F:System.Data.DbType.String" /> です。</returns>
+		</member>
+		<member name="P:System.Data.SqlServerCe.SqlCeParameter.Direction">
+			<summary>.NET Compact Framework Data Provider for SQL Server Compact では、このプロパティは常に ParameterDirection.Input を返します。このプロパティに別の値を設定すると、<see cref="T:System.InvalidOperationException" /> がスローされます。</summary>
+			<returns>
+        SQL Server Compact Data Provider では、このプロパティは常に ParameterDirection.Input を返します。このプロパティの設定は、サポートされていません。</returns>
+		</member>
+		<member name="P:System.Data.SqlServerCe.SqlCeParameter.IsNullable">
+			<summary>パラメータが null 値を受け付けるかどうかを示す値を取得または設定します。</summary>
+			<returns>
+            null 値を受け付ける場合は true。それ以外の場合は false。既定値は false です。</returns>
+		</member>
+		<member name="P:System.Data.SqlServerCe.SqlCeParameter.ParameterName">
+			<summary><see cref="T:System.Data.SqlServerCe.SqlCeParameter" /> の名前を取得または設定します。</summary>
+			<returns><see cref="T:System.Data.SqlServerCe.SqlCeParameter" /> の名前。既定値は空の文字列です。</returns>
+		</member>
+		<member name="P:System.Data.SqlServerCe.SqlCeParameter.Precision">
+			<summary><see cref="P:System.Data.SqlServerCe.SqlCeParameter.Value" /> プロパティを表すときに使用する最大桁数を取得または設定します。</summary>
+			<returns><see cref="P:System.Data.SqlServerCe.SqlCeParameter.Value" /> プロパティを表すための最大桁数。既定値は 0 です。</returns>
+		</member>
+		<member name="P:System.Data.SqlServerCe.SqlCeParameter.Scale">
+			<summary><see cref="P:System.Data.SqlServerCe.SqlCeParameter.Value" /> を解決するための小数部桁数を取得または設定します。</summary>
+			<returns><see cref="P:System.Data.SqlServerCe.SqlCeParameter.Value" /> を解決するための小数部の桁数。既定値は 0 です。</returns>
+		</member>
+		<member name="P:System.Data.SqlServerCe.SqlCeParameter.Size">
+			<summary>列内のデータの最大長を取得または設定します。</summary>
+			<returns>列内のデータの最大長。既定値は、パラメータ値から推論されます。</returns>
+		</member>
+		<member name="P:System.Data.SqlServerCe.SqlCeParameter.SourceColumn">
+			<summary><see cref="T:System.Data.DataSet" /> に割り当てられ、<see cref="P:System.Data.SqlServerCe.SqlCeParameter.Value" /> の読み込みまたは戻しに使用されるソース列の名前を取得または設定します。</summary>
+			<returns><see cref="T:System.Data.DataSet" /> に割り当てられたソース列の名前。既定値は空の文字列です。</returns>
+		</member>
+		<member name="P:System.Data.SqlServerCe.SqlCeParameter.SourceVersion">
+			<summary><see cref="P:System.Data.SqlServerCe.SqlCeParameter.Value" /> の読み込み時に使用する <see cref="T:System.Data.DataRowVersion" /> を取得または設定します。</summary>
+			<returns><see cref="T:System.Data.DataRowVersion" /> 値の 1 つ。既定値は Current です。</returns>
+		</member>
+		<member name="P:System.Data.SqlServerCe.SqlCeParameter.SqlDbType">
+			<summary>パラメータの <see cref="T:System.Data.SqlDbType" /> を取得または設定します。</summary>
+			<returns><see cref="T:System.Data.SqlDbType" /> 値の 1 つ。既定値は NVarChar です。</returns>
+		</member>
+		<member name="P:System.Data.SqlServerCe.SqlCeParameter.Value">
+			<summary>パラメータの値を取得または設定します。</summary>
+			<returns>パラメータの値を示す <see cref="T:System.Object" />。既定値は null です。</returns>
+		</member>
+		<member name="T:System.Data.SqlServerCe.SqlCeParameterCollection">
+			<summary><see cref="T:System.Data.SqlServerCe.SqlCeCommand" /> に関連するすべてのパラメータ、および <see cref="T:System.Data.DataSet" /> 列に対する各パラメータのマップを収集します。</summary>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeParameterCollection.Add(System.Object)">
+			<summary><see cref="T:System.Data.SqlServerCe.SqlCeParameter" /> オブジェクトを <see cref="T:System.Data.SqlServerCe.SqlCeCommand" /> に追加します。</summary>
+			<returns>新しい <see cref="T:System.Data.SqlServerCe.SqlCeParameter" /> オブジェクトの、コレクション内でのインデックス。</returns>
+			<param name="value">コレクションに追加する <see cref="T:System.Data.SqlServerCe.SqlCeParameter" /> オブジェクト。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeParameterCollection.Add(System.Data.SqlServerCe.SqlCeParameter)">
+			<summary>指定した <see cref="T:System.Data.SqlServerCe.SqlCeParameter" /> を <see cref="T:System.Data.SqlServerCe.SqlCeParameterCollection" /> に追加します。</summary>
+			<returns>新しい <see cref="T:System.Data.SqlServerCe.SqlCeParameter" /> オブジェクトへの参照。</returns>
+			<param name="value">コレクションに追加する <see cref="T:System.Data.SqlServerCe.SqlCeParameter" />。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeParameterCollection.Add(System.String,System.Object)">
+			<summary>パラメータの名前と値を指定して、<see cref="T:System.Data.SqlServerCe.SqlCeParameter" /> を <see cref="T:System.Data.SqlServerCe.SqlCeParameterCollection" /> に追加します。</summary>
+			<returns>新しい <see cref="T:System.Data.SqlServerCe.SqlCeParameter" /> オブジェクトへの参照。</returns>
+			<param name="parameterName">パラメータの名前。</param>
+			<param name="value">コレクションに追加する <see cref="T:System.Data.SqlServerCe.SqlCeParameter" /> の <see cref="T:System.Object" /> 値。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeParameterCollection.Add(System.String,System.Data.SqlDbType)">
+			<summary>パラメータの名前とデータ型を指定して、<see cref="T:System.Data.SqlServerCe.SqlCeParameter" /> を <see cref="T:System.Data.SqlServerCe.SqlCeParameterCollection" /> に追加します。</summary>
+			<returns>新しい <see cref="T:System.Data.SqlServerCe.SqlCeParameter" /> オブジェクトへの参照。</returns>
+			<param name="parameterName">パラメータの名前。</param>
+			<param name="type">SqlDbType 値の 1 つ。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeParameterCollection.Add(System.String,System.Data.SqlDbType,System.Int32)">
+			<summary>パラメータ名、データ型、および列の幅を指定して、<see cref="T:System.Data.SqlServerCe.SqlCeParameter" /> を <see cref="T:System.Data.SqlServerCe.SqlCeParameterCollection" /> に追加します。</summary>
+			<returns>新しい <see cref="T:System.Data.SqlServerCe.SqlCeParameter" /> オブジェクトへの参照。</returns>
+			<param name="parameterName">パラメータの名前。</param>
+			<param name="type">SqlDbType 値の 1 つ。</param>
+			<param name="size">列の幅。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeParameterCollection.Add(System.String,System.Data.SqlDbType,System.Int32,System.String)">
+			<summary>パラメータの名前、データ型、列の幅、およびソース列名を指定して、<see cref="T:System.Data.SqlServerCe.SqlCeParameter" /> を <see cref="T:System.Data.SqlServerCe.SqlCeCommand" /> に追加します。</summary>
+			<returns>新しい <see cref="T:System.Data.SqlServerCe.SqlCeParameter" /> オブジェクトへの参照。</returns>
+			<param name="parameterName">パラメータの名前。</param>
+			<param name="type">SqlDbType 値の 1 つ。</param>
+			<param name="size">列の幅。</param>
+			<param name="sourceColumn">ソース列の名前。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeParameterCollection.AddRange(System.Array)">
+			<summary><see cref="T:System.Data.SqlServerCe.SqlCeParameterCollection" /> に <see cref="T:System.Data.SqlServerCe.SqlCeParameter" /> オブジェクトの配列を追加します。</summary>
+			<param name="values">コレクションに追加する <see cref="T:System.Data.SqlServerCe.SqlCeParameter" /> 型の値の配列。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeParameterCollection.AddWithValue(System.String,System.Object)">
+			<summary>新しい <see cref="T:System.Data.SqlServerCe.SqlCeParameter" /> を <see cref="T:System.Data.SqlServerCe.SqlCeParameterCollection" /> に追加し、その値を設定します。</summary>
+			<param name="parameterName"><see cref="T:System.Data.SqlServerCe.SqlCeParameter" /> の名前。</param>
+			<param name="value">parameterName の値。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeParameterCollection.Clear">
+			<summary>コレクションからすべての項目を削除します。</summary>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeParameterCollection.Contains(System.Object)">
+			<summary><see cref="T:System.Data.SqlServerCe.SqlCeParameter" /> オブジェクトがコレクション内に存在するかどうかを示す値を取得します。</summary>
+			<returns>
+            コレクションに <see cref="T:System.Data.SqlServerCe.SqlCeParameter" /> が格納されている場合は true。それ以外の場合は false。</returns>
+			<param name="value">検索する <see cref="T:System.Data.SqlServerCe.SqlCeParameter" /> オブジェクトの値。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeParameterCollection.Contains(System.String)">
+			<summary>指定したパラメータ名の <see cref="T:System.Data.SqlServerCe.SqlCeParameter" /> がコレクション内に存在するかどうかを示す値を取得します。</summary>
+			<returns>
+            コレクションにパラメータが格納されている場合は true。それ以外の場合は false。</returns>
+			<param name="value">パラメータの名前。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeParameterCollection.CopyTo(System.Array,System.Int32)">
+			<summary><see cref="T:System.Data.SqlServerCe.SqlCeParameterCollection" /> から、指定した配列に <see cref="T:System.Data.SqlServerCe.SqlCeParameter" /> オブジェクトをコピーします。</summary>
+			<param name="array"><see cref="T:System.Data.SqlServerCe.SqlCeParameter" /> オブジェクトのコピー先の <see cref="T:System.Array" />。</param>
+			<param name="index">配列の開始インデックス。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeParameterCollection.IndexOf(System.Object)">
+			<summary><see cref="T:System.Data.SqlServerCe.SqlCeParameter" /> オブジェクトの、コレクション内での位置を取得します。</summary>
+			<returns><see cref="T:System.Data.SqlServerCe.SqlCeParameter" /> の、コレクション内での 0 から始まる位置。</returns>
+			<param name="value">検索する <see cref="T:System.Data.SqlServerCe.SqlCeParameter" /> オブジェクト。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeParameterCollection.IndexOf(System.String)">
+			<summary>指定したパラメータ名の <see cref="T:System.Data.SqlServerCe.SqlCeParameter" /> の、コレクション内での位置を取得します。</summary>
+			<returns><see cref="T:System.Data.SqlServerCe.SqlCeParameter" /> の、コレクション内での位置。</returns>
+			<param name="parameterName">検索するパラメータの名前。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeParameterCollection.Insert(System.Int32,System.Object)">
+			<summary>コレクション内の指定したインデックス位置に <see cref="T:System.Data.SqlServerCe.SqlCeParameter" /> を挿入します。</summary>
+			<param name="index">コレクション内でパラメータを挿入する位置の、0 から始まるインデックス番号。</param>
+			<param name="value">コレクションに追加する <see cref="T:System.Data.SqlServerCe.SqlCeParameter" />。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeParameterCollection.Remove(System.Object)">
+			<summary>指定した <see cref="T:System.Data.SqlServerCe.SqlCeParameter" /> をコレクションから削除します。</summary>
+			<param name="value">コレクションから削除する <see cref="T:System.Data.SqlServerCe.SqlCeParameter" /> オブジェクト。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeParameterCollection.RemoveAt(System.Int32)">
+			<summary>指定したインデックス位置にある <see cref="T:System.Data.SqlServerCe.SqlCeParameter" /> をコレクションから削除します。</summary>
+			<param name="index">削除するパラメータの、0 から始まるインデックス。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeParameterCollection.RemoveAt(System.String)">
+			<summary>指定した名前の <see cref="T:System.Data.SqlServerCe.SqlCeParameter" /> をコレクションから削除します。</summary>
+			<param name="parameterName">削除するパラメータの名前。</param>
+		</member>
+		<member name="P:System.Data.SqlServerCe.SqlCeParameterCollection.Count">
+			<summary>コレクション内の <see cref="T:System.Data.SqlServerCe.SqlCeParameter" /> オブジェクト数を取得します。</summary>
+			<returns>コレクション内の <see cref="T:System.Data.SqlServerCe.SqlCeParameter" /> オブジェクト数。</returns>
+		</member>
+		<member name="P:System.Data.SqlServerCe.SqlCeParameterCollection.Item(System.Int32)">
+			<summary>指定したインデックス位置にある <see cref="T:System.Data.SqlServerCe.SqlCeParameter" /> を取得または設定します。</summary>
+			<returns>指定したインデックス位置にある <see cref="T:System.Data.SqlServerCe.SqlCeParameter" />。</returns>
+			<param name="index">取得するパラメータの、0 から始まるインデックス番号。</param>
+		</member>
+		<member name="P:System.Data.SqlServerCe.SqlCeParameterCollection.Item(System.String)">
+			<summary>指定した名前の <see cref="T:System.Data.SqlServerCe.SqlCeParameter" /> を取得または設定します。</summary>
+			<returns>指定した名前を持つ <see cref="T:System.Data.SqlServerCe.SqlCeParameter" />。</returns>
+			<param name="parameterName">取得するパラメータの名前。</param>
+		</member>
+		<member name="T:System.Data.SqlServerCe.SqlCeProviderFactory">
+			<summary>プロバイダのデータ ソース クラスの実装のインスタンスを作成するためのメソッドのセットを表します。</summary>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeProviderFactory.#ctor">
+			<summary><see cref="T:System.Data.SqlServerCe.SqlCeProviderFactory" /> クラスの新しいインスタンスを初期化します。</summary>
+		</member>
+		<member name="F:System.Data.SqlServerCe.SqlCeProviderFactory.Instance">
+			<summary><see cref="T:System.Data.SqlServerCe.SqlCeProviderFactory" /> のインスタンス。</summary>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeProviderFactory.CreateCommand">
+			<summary><see cref="T:System.Data.Common.DbCommand" /> を実装しているプロバイダのクラスの新しいインスタンスを返します。</summary>
+			<returns><see cref="System.Data.Common.DbCommand" /> の新しいインスタンス。</returns>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeProviderFactory.CreateCommandBuilder">
+			<summary><see cref="System.Data.Common.DbCommandBuilder" /> を実装しているプロバイダのクラスの新しいインスタンスを返します。</summary>
+			<returns><see cref="System.Data.Common.DbCommandBuilder" /> の新しいインスタンス。</returns>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeProviderFactory.CreateConnection">
+			<summary><see cref="System.Data.Common.DbConnection" /> を実装しているプロバイダのクラスの新しいインスタンスを返します。</summary>
+			<returns><see cref="System.Data.Common.DbConnection" /> の新しいインスタンス。</returns>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeProviderFactory.CreateDataAdapter">
+			<summary><see cref="System.Data.Common.DbDataAdapter" /> を実装しているプロバイダのクラスの新しいインスタンスを返します。</summary>
+			<returns><see cref="System.Data.Common.DbDataAdapter." /> の新しいインスタンス。</returns>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeProviderFactory.CreateParameter">
+			<summary><see cref="System.Data.Common.DbParameter" /> を実装しているプロバイダのクラスの新しいインスタンスを返します。</summary>
+			<returns><see cref="System.Data.Common.DbParameter" /> の新しいインスタンス。</returns>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeProviderFactory.System#IServiceProvider#GetService(System.Type)">
+			<summary>指定した型のサービス オブジェクトを取得します。</summary>
+			<param name="serviceType">取得対象となるサービスの型を指定するオブジェクト。</param>
+		</member>
+		<member name="T:System.Data.SqlServerCe.SqlCeRemoteDataAccess">
+			<summary><see cref="T:System.Data.SqlServerCe.SqlCeRemoteDataAccess" /> オブジェクトの新しいインスタンスを初期化します。リモート データ アクセスの詳細については、「Using Remote Data Access (RDA)」を参照してください。</summary>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeRemoteDataAccess.#ctor">
+			<summary><see cref="T:System.Data.SqlServerCe.SqlCeRemoteDataAccess" /> オブジェクトの新しいインスタンスを初期化します。</summary>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeRemoteDataAccess.#ctor(System.String,System.String)">
+			<summary><see cref="T:System.Data.SqlServerCe.SqlCeRemoteDataAccess" /> オブジェクトの新しいインスタンスを初期化し、Microsoft インターネット インフォメーション サービス (IIS) への匿名アクセスを設定します。</summary>
+			<param name="internetUrl">
+            SQL Server Compact サーバー エージェントに接続するときに使用する URL。</param>
+			<param name="localConnectionString">
+            SQL Server Compact データベースに接続するための OLE DB 接続文字列。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeRemoteDataAccess.#ctor(System.String,System.String,System.String,System.String)">
+			<summary><see cref="T:System.Data.SqlServerCe.SqlCeRemoteDataAccess" /> オブジェクトの新しいインスタンスを初期化し、Microsoft インターネット インフォメーション サービス (IIS) に対する基本認証または統合 Windows 認証を設定します。</summary>
+			<param name="internetUrl">
+            SQL Server Compact サーバー エージェントに接続するときに使用する URL。</param>
+			<param name="internetLogin">
+            SQL Server Compact サーバー エージェントに接続するときに使用するログイン名。</param>
+			<param name="internetPassword">
+            SQL Server Compact サーバー エージェントに接続するときに使用するパスワード。</param>
+			<param name="localConnectionString">
+            SQL Server Compact データベースに接続するための OLE DB 接続文字列。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeRemoteDataAccess.Dispose">
+			<summary>アンマネージ リソースをすべて解放します。</summary>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeRemoteDataAccess.Pull(System.String,System.String,System.String)">
+			<summary>リモート SQL Server データベースからデータをダウンロードし、ローカルの SQL Server Compact データベース内の単一のテーブルに格納します。</summary>
+			<param name="localTableName">抽出された SQL Server のレコードを受け取る SQL Server Compact のテーブルの名前。同名のテーブルが既に存在する場合、エラーが発生します。</param>
+			<param name="sqlSelectString">
+            SQL Server データベースから抽出して SQL Server Compact データベースに格納するテーブル、列、およびレコードを指定する任意の有効な Transact-SQL ステートメント。これには SELECT ステートメントやストアド プロシージャが含まれます。</param>
+			<param name="oledbConnectionString">
+            SQL Server データベースに接続するときに使用する OLE DB 接続文字列。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeRemoteDataAccess.Pull(System.String,System.String,System.String,System.Data.SqlServerCe.RdaTrackOption)">
+			<summary>リモート SQL Server データベースからデータをダウンロードし、ローカルの SQL Server Compact データベース内の単一のテーブルに格納します。</summary>
+			<param name="localTableName">抽出された SQL Server のレコードを受け取る SQL Server Compact のテーブルの名前。同名のテーブルが既に存在する場合、エラーが発生します。</param>
+			<param name="sqlSelectString">
+            SQL Server データベースから抽出して SQL Server Compact データベースに格納するテーブル、列、およびレコードを指定する任意の有効な Transact-SQL ステートメント。これには SELECT ステートメントやストアド プロシージャが含まれます。</param>
+			<param name="oledbConnectionString">
+            SQL Server データベースに接続するときに使用する OLE DB 接続文字列。</param>
+			<param name="trackOption">プルされたテーブルに対する変更を SQL Server Compact が追跡するかどうか、また、プルされたテーブルに存在するインデックスを PRIMARY KEY 制約と共にデバイスに格納するかどうかを示すオプション。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeRemoteDataAccess.Pull(System.String,System.String,System.String,System.Data.SqlServerCe.RdaTrackOption,System.String)">
+			<summary>リモート SQL Server データベースからデータをダウンロードし、ローカルの SQL Server Compact データベース内の単一のテーブルに格納します。</summary>
+			<param name="localTableName">抽出された SQL Server のレコードを受け取る SQL Server Compact のテーブルの名前。同名のテーブルが既に存在する場合、エラーが発生します。</param>
+			<param name="sqlSelectString">
+            SQL Server データベースから抽出して SQL Server Compact データベースに格納するテーブル、列、およびレコードを指定する任意の有効な Transact-SQL ステートメント。これには SELECT ステートメントやストアド プロシージャが含まれます。</param>
+			<param name="oledbConnectionString">
+            SQL Server データベースに接続するときに使用する OLE DB 接続文字列。</param>
+			<param name="trackOption">プルされたテーブルに対する変更を SQL Server Compact が追跡するかどうか、また、プルされたテーブルに存在するインデックスを PRIMARY KEY 制約と共にデバイスに格納するかどうかを示すオプション。</param>
+			<param name="errorTable">ローカル エラー テーブルの名前。このテーブルは、後に <see cref="Overload:System.Data.SqlServerCe.SqlCeRemoteDataAccess.Push" /> メソッドを呼び出して変更を SQL Server に送り返すときにエラーが発生した場合に作成されます。このオプションは、RdaTrackOption 値が <see cref="F:System.Data.SqlServerCe.RdaTrackOption.TrackingOn" /> または <see cref="F:System.Data.SqlServerCe.RdaTrackOption.TrackingOnWithIndexes" /> の場合にだけ、指定できます。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeRemoteDataAccess.Push(System.String,System.String)">
+			<summary>プルされ、追跡されている SQL Server Compact のテーブルから元の SQL Server テーブルへ、変更を送り返します。これらの変更は、個々のトランザクションで、個別にサーバーに適用されます。</summary>
+			<param name="localTableName">抽出された SQL Server のレコードを受け取る SQL Server Compact のテーブルの名前。同名のテーブルが既に存在する場合、エラーが発生します。</param>
+			<param name="oledbConnectionString">
+            SQL Server データベースに接続するときに使用する OLE DB 接続文字列。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeRemoteDataAccess.Push(System.String,System.String,System.Data.SqlServerCe.RdaBatchOption)">
+			<summary>プルされ、追跡されている SQL Server Compact のテーブルから SQL Server テーブルへ、変更を送り返します。これらの変更は、個別にサーバーに適用するか、または 1 つのトランザクションでバッチ処理できます。</summary>
+			<param name="localTableName">抽出された SQL Server のレコードを受け取る SQL Server Compact のテーブルの名前。同名のテーブルが既に存在する場合、エラーが発生します。</param>
+			<param name="oledbConnectionString">
+            SQL Server データベースに接続するときに使用する OLE DB 接続文字列。</param>
+			<param name="batchOption">
+            SQL Server テーブルに送り返す変更を 1 つのトランザクションでバッチ処理するか、個別に適用するかを示すオプション。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeRemoteDataAccess.SubmitSql(System.String,System.String)">
+			<summary>リモート サーバー上の SQL Server データベースで実行する SQL ステートメントを送信します。</summary>
+			<param name="sqlString">行を返さない任意の SQL ステートメント。</param>
+			<param name="oleDBConnectionString">リモート SQL Server データベースに接続するための OLE DB 接続文字列。</param>
+		</member>
+		<member name="P:System.Data.SqlServerCe.SqlCeRemoteDataAccess.CompressionLevel">
+			<summary>Push 操作および Pull 操作中に圧縮ルーチンで使用される圧縮量を指定します。</summary>
+			<returns>設定された圧縮レベル。</returns>
+			<param name="value">使用する圧縮レベル。有効値は、0 以上 6 以下です。値 0 は、圧縮されないことを表します。値 6 は、最大に圧縮することを表します。</param>
+		</member>
+		<member name="P:System.Data.SqlServerCe.SqlCeRemoteDataAccess.ConnectionRetryTimeout">
+			<summary>
+        SQL Server Compact クライアントが、失敗した要求の送信を再試行し続ける期間 (秒) を指定します。</summary>
+			<returns><see cref="P:System.Data.SqlServerCe.SqlCeRemoteDataAccess.ConnectionRetryTimeout" /> 値。既定値は 120 秒です。</returns>
+			<param name="value">
+            SQL Server Compact クライアントが、確立した後で失敗した接続を再試行し続ける期間 (秒)。有効値は 0 以上、900 以下です。既定値は 120 秒です。</param>
+		</member>
+		<member name="P:System.Data.SqlServerCe.SqlCeRemoteDataAccess.ConnectTimeout">
+			<summary><see cref="T:System.Data.SqlServerCe.SqlCeRemoteDataAccess" /> オブジェクトがサーバーへの接続を待機する時間を、ミリ秒単位で取得または設定します。</summary>
+			<returns>タイムアウトを表す <see cref="T:System.Int32" /> 値 (ミリ秒単位)。既定値はありません。</returns>
+		</member>
+		<member name="P:System.Data.SqlServerCe.SqlCeRemoteDataAccess.InternetLogin">
+			<summary>
+        SQL Server Compact サーバー エージェントへの接続時に使用する、Microsoft インターネット インフォメーション サービス (IIS) のログイン名を指定します。</summary>
+			<returns>
+        SQL Server Compact サーバー エージェントに接続するときに使用する IIS のログイン名。既定では、ログインはありません。</returns>
+		</member>
+		<member name="P:System.Data.SqlServerCe.SqlCeRemoteDataAccess.InternetPassword">
+			<summary>
+        SQL Server Compact サーバー エージェントへの接続時に使用する、Microsoft インターネット インフォメーション サービス (IIS) のパスワードを指定します。</summary>
+			<returns>
+        SQL Server Compact サーバー エージェントに接続するときに使用する IIS のパスワード文字列。既定値はパスワードなしです。</returns>
+		</member>
+		<member name="P:System.Data.SqlServerCe.SqlCeRemoteDataAccess.InternetProxyLogin">
+			<summary>認証を必要とする (<see cref="P:System.Data.SqlServerCe.SqlCeRemoteDataAccess.InternetProxyServer" /> プロパティで定義されている) プロキシ サーバーへの接続時に使用するログイン名を指定します。</summary>
+			<returns>プロキシ サーバーのログイン名。既定では、ログインはありません。</returns>
+		</member>
+		<member name="P:System.Data.SqlServerCe.SqlCeRemoteDataAccess.InternetProxyPassword">
+			<summary>認証を必要とする (<see cref="P:System.Data.SqlServerCe.SqlCeRemoteDataAccess.InternetProxyServer" /> プロパティで定義されている) プロキシ サーバーへの接続時に使用するパスワードを指定します。</summary>
+			<returns>プロキシ サーバーのパスワード文字列。既定値はパスワードなしです。</returns>
+		</member>
+		<member name="P:System.Data.SqlServerCe.SqlCeRemoteDataAccess.InternetProxyServer">
+			<summary><see cref="P:System.Data.SqlServerCe.SqlCeRemoteDataAccess.InternetUrl" /> プロパティで指定した HTTP リソースへのアクセス時に使用するプロキシ サーバーを指定します。</summary>
+			<returns>指定した HTTP リソースにアクセスするときに使用するプロキシ サーバー名 (または、IP アドレス) とポート番号 (ProxyServerName:Port)。</returns>
+		</member>
+		<member name="P:System.Data.SqlServerCe.SqlCeRemoteDataAccess.InternetUrl">
+			<summary>
+        SQL Server Compact サーバー エージェントへの接続に使用する URL を指定します。SQL Server Compact サーバー エージェントとは、SQL Server Compact クライアントを Microsoft SQL Server データベースに接続する Microsoft インターネット インフォメーション サービス (IIS) ISAPI DLL です。このプロパティは、必ず設定する必要があります。</summary>
+			<returns>
+        SQL Server Compact サーバー エージェントの URL (ファイル名 Sqlcesa35.dll も含む) を格納する文字列。</returns>
+		</member>
+		<member name="P:System.Data.SqlServerCe.SqlCeRemoteDataAccess.LocalConnectionString">
+			<summary>
+        SQL Server Compact データベースへの接続文字列を指定します。</summary>
+			<returns>
+        SQL Server Compact データベースへの接続文字列。</returns>
+		</member>
+		<member name="P:System.Data.SqlServerCe.SqlCeRemoteDataAccess.ReceiveTimeout">
+			<summary><see cref="T:System.Data.SqlServerCe.SqlCeRemoteDataAccess" /> オブジェクトがサーバー要求に対する応答を待機する時間を、ミリ秒単位で取得または設定します。</summary>
+			<returns>タイムアウトを表す <see cref="T:System:Int32" /> 値 (ミリ秒単位)。既定値は 60 秒です。</returns>
+		</member>
+		<member name="P:System.Data.SqlServerCe.SqlCeRemoteDataAccess.SendTimeout">
+			<summary><see cref="T:System.Data.SqlServerCe.SqlCeRemoteDataAccess" /> オブジェクトがサーバーに要求を送信するまでの待機時間を、ミリ秒単位で取得または設定します。</summary>
+			<returns>タイムアウトを表す <see cref="T:System.Int32" /> 値 (ミリ秒単位)。既定値はありません。</returns>
+		</member>
+		<member name="T:System.Data.SqlServerCe.SqlCeReplication">
+			<summary><see cref="T:System.Data.SqlServerCe.SqlCeReplication" /> オブジェクトの新しいインスタンスを初期化します。SQL Server のレプリケーションの詳細については、SQL Server オンライン ブックを参照してください。SQL Server Compact でのマージ レプリケーションの詳細については、SQL Server Compact オンライン ブックを参照してください。</summary>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeReplication.#ctor">
+			<summary><see cref="T:System.Data.SqlServerCe.SqlCeReplication" /> オブジェクトの新しいインスタンスを初期化します。これは既定のコンストラクタです。</summary>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeReplication.#ctor(System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+			<summary><see cref="T:System.Data.SqlServerCe.SqlCeReplication" /> オブジェクトの新しいインスタンスを初期化し、パブリケーションに接続するために必要なプロパティを設定します。</summary>
+			<param name="internetUrl">
+            SQL Server Compact サーバー エージェントに接続するときに使用する URL。</param>
+			<param name="internetLogin">
+            SQL Server Compact サーバー エージェントに接続するときに使用するログイン名。</param>
+			<param name="internetPassword">
+            SQL Server Compact サーバー エージェントに接続するときに使用するパスワード。</param>
+			<param name="publisher">パブリッシャの名前。</param>
+			<param name="publisherDatabase">パブリケーション データベースの名前。</param>
+			<param name="publication">匿名マージ サブスクリプションで使用可能なパブリケーション名。</param>
+			<param name="subscriber">サブスクライバの名前。</param>
+			<param name="subscriberConnectionString">
+            Windows Mobile ベースのデバイス上の SQL Server Compact データベースに接続するための OLE DB 接続文字列。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeReplication.#ctor(System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+			<summary><see cref="T:System.Data.SqlServerCe.SqlCeReplication" /> オブジェクトの新しいインスタンスを初期化し、パブリケーションに接続するためのプロパティを設定します。</summary>
+			<param name="internetUrl">
+            SQL Server Compact サーバー エージェントに接続するときに使用する URL。</param>
+			<param name="internetLogin">
+            SQL Server Compact サーバー エージェントに接続するときに使用するログイン名。</param>
+			<param name="internetPassword">
+            SQL Server Compact サーバー エージェントに接続するときに使用するパスワード。</param>
+			<param name="publisher">パブリッシャの名前。</param>
+			<param name="publisherDatabase">パブリケーション データベースの名前。</param>
+			<param name="publisherLogin">パブリッシャへの接続時に使用するログイン名。</param>
+			<param name="publisherPassword">パブリッシャへの接続時に使用するログイン パスワード。</param>
+			<param name="publication">匿名マージ サブスクリプションで使用可能なパブリケーション名。</param>
+			<param name="subscriber">サブスクライバの名前。</param>
+			<param name="subscriberConnectionString">
+            Windows Mobile ベースのデバイス上の SQL Server Compact データベースに接続するための OLE DB 接続文字列。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeReplication.AddSubscription(System.Data.SqlServerCe.AddOption)">
+			<summary>既存の SQL Server パブリケーションに対する新しい匿名サブスクリプションを作成します。<see cref="M:System.Data.SqlServerCe.SqlCeReplication.AddSubscription(System.Data.SqlServerCe.AddOption)" /> メソッドを呼び出した後で、アプリケーションで <see cref="M:System.Data.SqlServerCe.SqlCeReplication.Synchronize" /> メソッドを呼び出して、最新のスナップショットに基づいて、新しいサブスクリプションをパブリケーションに同期させる必要があります。</summary>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeReplication.BeginSynchronize(System.AsyncCallback,System.Object)">
+			<summary>非同期データの同期操作を開始します。同期が終了すると、<see cref="T:System.AsyncCallback" /> デリゲートが呼び出されます。同期中には、ステータス レポートが実行されません。</summary>
+			<returns>この関数を呼び出すことによって開始される非同期操作の <see cref="T:System.IAsyncResult" /> インターフェイス。このインターフェイスを使用して、完了テストを実行したり、同期が終了するまで待機したりできます。</returns>
+			<param name="onSyncCompletion">呼び出し元によって実装され、同期の最後に呼び出される <see cref="T:System.IAsyncResult" /> デリゲート。</param>
+			<param name="state"><see cref="P:System.IAsyncResult.AsyncState" /> プロパティによって返されるユーザー定義のオブジェクト。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeReplication.BeginSynchronize(System.AsyncCallback,System.Data.SqlServerCe.OnStartTableUpload,System.Data.SqlServerCe.OnStartTableDownload,System.Data.SqlServerCe.OnSynchronization,System.Object)">
+			<summary>非同期データの同期操作を開始します。同期が終了すると、<see cref="T:System.AsyncCallback" /> デリゲートが呼び出されます。同期中に、同期ステータス レポートが SyncStatusReport デリゲートに送信されます。</summary>
+			<returns>この関数を呼び出すことによって開始される非同期操作の <see cref="T:System.IAsyncResult" /> インターフェイス。このインターフェイスを使用して、完了テストを実行したり、同期が終了するまで待機したりできます。</returns>
+			<param name="onSyncCompletion">呼び出し元によって実装され、同期操作の最後に呼び出される <see cref="T:System.AsyncCallback" /> デリゲート。</param>
+			<param name="onStartTableUpload">サーバーへのテーブル変更のアップロードが開始されるときに起動されるイベントに対するユーザー定義のデリゲート。</param>
+			<param name="onStartTableDownload">サーバーからテーブル変更のダウンロードが開始されるときに起動されるイベントに対するユーザー定義のデリゲート。</param>
+			<param name="onSynchronization">競合回避モジュールの動作中に報告された実行中の同期イベントを処理するユーザー定義のデリゲート。</param>
+			<param name="state"><see cref="P:System.IAsyncResult.AsyncState" /> プロパティによって返されるユーザー定義のオブジェクト。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeReplication.CancelSynchronize">
+			<summary><see cref="Overload:System.Data.SqlServerCe.SqlCeReplication.BeginSynchronize" /> メソッドを呼び出して開始した非同期データの同期化を、その実行中にキャンセルします。</summary>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeReplication.Dispose">
+			<summary>すべてのネイティブ リソースを解放します。</summary>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeReplication.DropSubscription(System.Data.SqlServerCe.DropOption)">
+			<summary>
+        SQL Server のパブリケーションに対するサブスクリプションを削除し、オプションで Windows Mobile ベースのデバイスから SQL Server Compact データベースを削除します。</summary>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeReplication.EndSynchronize(System.IAsyncResult)">
+			<summary><see cref="Overload:System.Data.SqlServerCe.SqlCeReplication.BeginSynchronize" /> メソッドを呼び出して開始した非同期データの同期化を終了します。</summary>
+			<param name="ar"><see cref="Overload:System.Data.SqlServerCe.SqlCeReplication.BeginSynchronize" /> メソッドが返す <see cref="T:System.IAsyncResult" /> インターフェイス。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeReplication.LoadProperties">
+			<summary>同期プロパティに保存されたすべての値を取得し、その保存値を <see cref="T:System.Data.SqlServerCe.SqlCeReplication" /> クラス プロパティに入力します。</summary>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeReplication.ReinitializeSubscription(System.Boolean)">
+			<summary>再初期化するようサブスクリプションをマークします。このメソッドを呼び出した後で、アプリケーションで <see cref="M:System.Data.SqlServerCe.SqlCeReplication.Synchronize" /> メソッドを呼び出して、パブリケーションの最新のスナップショットをデバイスにダウンロードする必要があります。</summary>
+			<param name="uploadBeforeReinitialize">True の場合は、サブスクライバ側でスナップショットを適用する前に、サブスクリプション データベースの変更がパブリッシャにアップロードされます。既定値は False です。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeReplication.SaveProperties">
+			<summary>現在のサブスクリプションについて <see cref="T:System.Data.SqlServerCe.SqlCeReplication" /> クラス プロパティ内に格納されたすべての値を取得し、システム テーブルに格納します。</summary>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeReplication.Synchronize">
+			<summary>
+        SQL Server Compact のサブスクリプションと SQL Server のパブリッシャとの間のマージ レプリケーションを起動します。</summary>
+		</member>
+		<member name="P:System.Data.SqlServerCe.SqlCeReplication.CompressionLevel">
+			<summary>レプリケーション中に圧縮ルーチンで使用される圧縮量を指定します。</summary>
+			<returns>圧縮レベル。</returns>
+			<param name="value">使用する圧縮レベル。有効値は、0 以上 6 以下です。値 0 は、圧縮されないことを表します。値 6 は、最大に圧縮することを表します。既定値は 1 です。</param>
+		</member>
+		<member name="P:System.Data.SqlServerCe.SqlCeReplication.ConnectionManager">
+			<summary>Replication オブジェクトを有効にし、スマート デバイスの接続マネージャの API を使用して、ネットワーク接続を確立します。接続は、同期の最後に解放されます。</summary>
+			<returns>接続マネージャの設定が使用される場合は、true。それ以外の場合は false。</returns>
+			<param name="value">接続マネージャの設定を使用する場合は true、それ以外の場合は false に設定します。既定値は false です。</param>
+		</member>
+		<member name="P:System.Data.SqlServerCe.SqlCeReplication.ConnectionRetryTimeout">
+			<summary>確立された接続が失敗した後に、SQL Server Compact クライアントが要求の送信を再試行し続ける時間 (秒) を指定します。</summary>
+			<returns><see cref="P:System.Data.SqlServerCe.SqlCeReplication.ConnectionRetryTimeout" /> 値。既定値は 120 秒です。</returns>
+			<param name="value">
+            SQL Server Compact クライアントが、失敗した同期を再試行し続ける期間 (秒)。有効値は 0 以上、900 以下です。既定値は 120 秒です。</param>
+		</member>
+		<member name="P:System.Data.SqlServerCe.SqlCeReplication.ConnectTimeout">
+			<summary><see cref="T:System.Data.SqlServerCe.SqlCeReplication" /> オブジェクトがサーバーへの接続を待機する時間を、ミリ秒単位で取得または設定します。</summary>
+			<returns>タイムアウトを表す <see cref="T:System:Int32" /> 値 (ミリ秒単位)。既定値はありません。</returns>
+		</member>
+		<member name="P:System.Data.SqlServerCe.SqlCeReplication.Distributor">
+			<summary>
+        SQL Server のディストリビュータを指定します。</summary>
+			<returns>パブリッシャが使用するディストリビュータの名前。</returns>
+		</member>
+		<member name="P:System.Data.SqlServerCe.SqlCeReplication.DistributorAddress">
+			<summary>
+        SQL Server Reconciler がディストリビュータに接続するときに使用するネットワーク アドレスを指定します。</summary>
+			<returns>ディストリビュータへの接続時に使用するネットワーク アドレス。</returns>
+		</member>
+		<member name="P:System.Data.SqlServerCe.SqlCeReplication.DistributorLogin">
+			<summary>ディストリビュータへの接続時に使用するログイン名を指定します。</summary>
+			<returns>ディストリビュータへの接続時に使用するログイン名。</returns>
+		</member>
+		<member name="P:System.Data.SqlServerCe.SqlCeReplication.DistributorNetwork">
+			<summary>
+        SQL Server Reconciler がディストリビュータと通信するときに使用するネットワーク プロトコルを指定します。</summary>
+			<returns>
+        SQL Server Reconciler がディストリビュータとの通信に使用する <see cref="T:System.Data.SqlServerCe.NetworkType" /> 定数。</returns>
+		</member>
+		<member name="P:System.Data.SqlServerCe.SqlCeReplication.DistributorPassword">
+			<summary>ディストリビュータへの接続時に使用するログイン パスワードを指定します。</summary>
+			<returns>ディストリビュータへの接続時に使用するパスワード。</returns>
+		</member>
+		<member name="P:System.Data.SqlServerCe.SqlCeReplication.DistributorSecurityMode">
+			<summary>ディストリビュータへの接続時に使用するセキュリティ モードを指定します。</summary>
+			<returns>ディストリビュータに適用するセキュリティ モードを指定する <see cref="T:System.Data.SqlServerCe.SecurityType" /> 定数。</returns>
+		</member>
+		<member name="P:System.Data.SqlServerCe.SqlCeReplication.ExchangeType">
+			<summary>パブリッシャとサブスクライバ間の同期が両方向か、アップロードだけかを指定します。</summary>
+			<returns>データをパブリッシャだけにマージするか、またはパブリッシャとサブスクライバの両方向でマージするかを指定する <see cref="P:System.Data.SqlServerCe.SqlCeReplication.ExchangeType" /> 定数。</returns>
+		</member>
+		<member name="P:System.Data.SqlServerCe.SqlCeReplication.HostName">
+			<summary>パブリッシャへの接続時にデバイスに使用するホスト名を取得または設定します。</summary>
+			<returns>デバイスのホスト名。既定では、ホスト名はありません。</returns>
+		</member>
+		<member name="P:System.Data.SqlServerCe.SqlCeReplication.InternetLogin">
+			<summary>
+        SQL Server Compact サーバー エージェントに接続するときに使用するログイン名を指定します。</summary>
+			<returns>インターネット インフォメーション サービス (IIS) のログイン名。既定では、ログイン名はありません。</returns>
+		</member>
+		<member name="P:System.Data.SqlServerCe.SqlCeReplication.InternetPassword">
+			<summary>
+        SQL Server Compact サーバー エージェントに接続するときに使用するパスワードを指定します。</summary>
+			<returns>インターネット インフォメーション サービス (IIS) のパスワード文字列。既定値はパスワードなしです。</returns>
+		</member>
+		<member name="P:System.Data.SqlServerCe.SqlCeReplication.InternetProxyLogin">
+			<summary>認証を必要とする <see cref="P:System.Data.SqlServerCe.SqlCeReplication.InternetProxyServer" /> への接続時に使用するログイン名を指定します。</summary>
+			<returns>プロキシ サーバーのログイン名。既定では、ログイン名はありません。</returns>
+		</member>
+		<member name="P:System.Data.SqlServerCe.SqlCeReplication.InternetProxyPassword">
+			<summary>認証を必要とする <see cref="P:System.Data.SqlServerCe.SqlCeReplication.InternetProxyServer" /> への接続時に使用するパスワードを指定します。</summary>
+			<returns>プロキシ サーバーのパスワード文字列。既定値はパスワードなしです。</returns>
+		</member>
+		<member name="P:System.Data.SqlServerCe.SqlCeReplication.InternetProxyServer">
+			<summary><see cref="P:System.Data.SqlServerCe.SqlCeReplication.InternetUrl" /> プロパティで指定した HTTP リソースへのアクセス時に使用するプロキシ サーバーを指定します。</summary>
+			<returns>次の形式で指定した、プロキシ サーバー名 (または IP アドレス) と、オプションでポート番号。ProxyServerName:Port</returns>
+		</member>
+		<member name="P:System.Data.SqlServerCe.SqlCeReplication.InternetUrl">
+			<summary>
+        SQL Server Compact サーバー エージェントへの接続に使用する URL を指定します。</summary>
+			<returns>URL 文字列。</returns>
+		</member>
+		<member name="P:System.Data.SqlServerCe.SqlCeReplication.LoginTimeout">
+			<summary>接続が確立するまでの最大待機時間を秒で指定します。このプロパティは、インターネット インフォメーション サービス (IIS) を実行中のコンピュータとパブリッシャまたはディストリビュータの間の接続時間に影響します。このプロパティでは、スマート デバイスと IIS の間の接続時間は、制御されません。</summary>
+			<returns>接続が確立されるまでの秒数。既定値は 15 秒です。</returns>
+		</member>
+		<member name="P:System.Data.SqlServerCe.SqlCeReplication.ProfileName">
+			<summary><see cref="T:System.Data.SqlServerCe.SqlCeReplication" /> オブジェクトが使用するディストリビュータで、エージェント プロファイルの名前を指定します。</summary>
+			<returns>エージェント プロファイル名。</returns>
+		</member>
+		<member name="P:System.Data.SqlServerCe.SqlCeReplication.Publication">
+			<summary>
+        SQL Server Compact サブスクライバで使用可能な SQL Server パブリケーション名を指定します。</summary>
+			<returns>パブリケーションの名前。</returns>
+		</member>
+		<member name="P:System.Data.SqlServerCe.SqlCeReplication.Publisher">
+			<summary>
+        SQL Server のパブリッシャの名前を指定します。パブリッシャとは、SQL Server が実行されていて、パブリケーションを格納しているコンピュータです。</summary>
+			<returns>パブリッシャの名前。</returns>
+		</member>
+		<member name="P:System.Data.SqlServerCe.SqlCeReplication.PublisherAddress">
+			<summary>パブリッシャへの接続時に使用するネットワーク アドレスを指定します。</summary>
+			<returns>パブリッシャへの接続時に使用するネットワーク アドレス。</returns>
+		</member>
+		<member name="P:System.Data.SqlServerCe.SqlCeReplication.PublisherChanges">
+			<summary>前回 <see cref="M:System.Data.SqlServerCe.SqlCeReplication.Synchronize" /> メソッドを呼び出したときにサブスクライバ側に適用された、パブリッシャによる変更の合計件数を示します。</summary>
+			<returns>パブリッシャ側で挿入、更新、削除された合計行数。</returns>
+		</member>
+		<member name="P:System.Data.SqlServerCe.SqlCeReplication.PublisherConflicts">
+			<summary>前回 <see cref="M:System.Data.SqlServerCe.SqlCeReplication.Synchronize" /> メソッドを呼び出したときに、パブリッシャ側で発生した不整合の合計件数を示します。</summary>
+			<returns>発生した不整合の合計件数。</returns>
+		</member>
+		<member name="P:System.Data.SqlServerCe.SqlCeReplication.PublisherDatabase">
+			<summary>パブリケーション データベースの名前を指定します。</summary>
+			<returns>パブリケーション データベースの名前。</returns>
+		</member>
+		<member name="P:System.Data.SqlServerCe.SqlCeReplication.PublisherLogin">
+			<summary>パブリッシャへの接続時に使用するログイン名を指定します。</summary>
+			<returns>パブリッシャのログイン名。</returns>
+		</member>
+		<member name="P:System.Data.SqlServerCe.SqlCeReplication.PublisherNetwork">
+			<summary>
+        SQL Server Replication Provider がパブリッシャと通信するときに使用するネットワーク プロトコルを指定します。</summary>
+			<returns>使用するネットワーク プロトコルを指定する <see cref="T:System.Data.SqlServerCe.NetworkType" /> 定数。</returns>
+		</member>
+		<member name="P:System.Data.SqlServerCe.SqlCeReplication.PublisherPassword">
+			<summary>パブリッシャへの接続時に使用するログイン パスワードを指定します。</summary>
+			<returns>ログイン パスワード。既定では、パスワードはありません (空の文字列)。</returns>
+		</member>
+		<member name="P:System.Data.SqlServerCe.SqlCeReplication.PublisherSecurityMode">
+			<summary>パブリッシャへの接続時に使用するセキュリティ モードを指定します。</summary>
+			<returns>セキュリティ モードを指定する <see cref="T:System.Data.SqlServerCe.SecurityType" /> 定数。</returns>
+		</member>
+		<member name="P:System.Data.SqlServerCe.SqlCeReplication.QueryTimeout">
+			<summary>内部クエリが完了するまでの許容時間を秒で指定します。</summary>
+			<returns>内部クエリが完了するまでの許容時間 (秒)。既定値は 300 秒です。</returns>
+		</member>
+		<member name="P:System.Data.SqlServerCe.SqlCeReplication.ReceiveTimeout">
+			<summary><see cref="T:System.Data.SqlServerCe.SqlCeReplication" /> オブジェクトがサーバー要求に対する応答を待機する時間を、ミリ秒単位で取得または設定します。</summary>
+			<returns>タイムアウトを表す <see cref="T:System:Int32" /> 値 (ミリ秒単位)。既定値は 60 秒です。</returns>
+		</member>
+		<member name="P:System.Data.SqlServerCe.SqlCeReplication.SendTimeout">
+			<summary><see cref="T:System.Data.SqlServerCe.SqlCeReplication" /> オブジェクトがサーバーに要求を送信するまでの待機時間を、ミリ秒単位で取得または設定します。</summary>
+			<returns>タイムアウトを表す <see cref="T:System.Int32" /> 値 (ミリ秒単位)。既定値はありません。</returns>
+		</member>
+		<member name="P:System.Data.SqlServerCe.SqlCeReplication.SnapshotTransferType">
+			<summary>IIS を実行中のコンピュータに、ディストリビュータからスナップショット ファイルを転送する方法を制御します。スナップショット ファイルは、HTTP プロトコルまたは FTP プロトコルを使用して転送されます。</summary>
+			<returns><see cref="P:System.Data.SqlServerCe.SqlCeReplication.SnapshotTransferType" /> 値。</returns>
+			<param name="value">実行するデータ転送のタイプを指定する <see cref="T:System.Data.SqlServerCe.SnapshotTransferType" /> 定数。</param>
+		</member>
+		<member name="P:System.Data.SqlServerCe.SqlCeReplication.Subscriber">
+			<summary>サブスクライバの名前を指定します。</summary>
+			<returns>サブスクライバ名。</returns>
+		</member>
+		<member name="P:System.Data.SqlServerCe.SqlCeReplication.SubscriberChanges">
+			<summary>前回 <see cref="M:System.Data.SqlServerCe.SqlCeReplication.Synchronize" /> メソッドを呼び出したときにパブリッシャ側に適用された、サブスクライバによる変更の合計件数を示します。</summary>
+			<returns>サブスクライバ側で挿入、更新、削除された合計行数。</returns>
+		</member>
+		<member name="P:System.Data.SqlServerCe.SqlCeReplication.SubscriberConflicts">
+			<summary>このプロパティは SQL Server Compact では使用されていません。</summary>
+			<param name="value">
+            SQL Server のパブリッシャですべての競合が検出され、ログに記録されるため、必ず 0 です。</param>
+		</member>
+		<member name="P:System.Data.SqlServerCe.SqlCeReplication.SubscriberConnectionString">
+			<summary>
+        SQL Server Compact データベースへの接続文字列を指定します。</summary>
+			<returns>
+        SQL Server Compact データベースへの接続文字列。</returns>
+		</member>
+		<member name="P:System.Data.SqlServerCe.SqlCeReplication.Validate">
+			<summary>同期中に SQL Server Compact のレプリケーションで実行されるデータ評価のタイプを指定します。</summary>
+			<returns>実行するデータ評価のタイプを指定する <see cref="T:System.Data.SqlServerCe.ValidateType" /> 定数。</returns>
+		</member>
+		<member name="T:System.Data.SqlServerCe.SqlCeResultSet">
+			<summary>更新、スクロール、およびバインドが可能なカーソル。</summary>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeResultSet.#ctor">
+			<summary>使用しないでください。<see cref="T:System.Data.SqlServerCe.SqlCeResultSet" /> を作成するには、<see cref="T:System.Data.SqlServerCe.SqlCeCommand" /> の <see cref="M:System.Data.Sql.ISqlExecutionContext.ExecuteResultSet(System.Data.ResultSetOptions)" /> メソッドを呼び出す必要があります。</summary>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeResultSet.CreateRecord">
+			<summary>サーバーに新しい行を作成し、<see cref="T:System.Data.SqlServerCe.SqlCeUpdatableRecord" /> オブジェクトを返します。</summary>
+			<returns><see cref="T:System.Data.SqlServerCe.SqlCeResultSet" /> のメタデータがあらかじめ格納された SqlCeUpdatableRecord。</returns>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeResultSet.Delete">
+			<summary>サーバーのデータ ソースから現在のレコードを削除します。</summary>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeResultSet.GetBoolean(System.Int32)">
+			<summary>指定したインデックス位置にある列の値をブール値として返します。</summary>
+			<returns>指定したインデックス位置にある列の値。</returns>
+			<param name="ordinal">データの取得元となる列の序数位置。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeResultSet.GetByte(System.Int32)">
+			<summary>指定したインデックス位置にある列の値をバイト値として返します。</summary>
+			<returns>指定したインデックス位置にある列の値。</returns>
+			<param name="ordinal">データの取得元となる列の序数位置。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeResultSet.GetBytes(System.Int32,System.Int64,System.Byte[],System.Int32,System.Int32)">
+			<summary>指定したフィールドの指定した位置を開始位置として、連続するバイトをバッファにコピーします。</summary>
+			<returns>実際にバッファにコピーされたバイト数。</returns>
+			<param name="ordinal">データの取得元となる列の序数位置。</param>
+			<param name="dataIndex">データ コピーの開始位置となるフィールド内のオフセット (バイト単位)。</param>
+			<param name="buffer">データのコピー先のバッファ。</param>
+			<param name="bufferIndex">コピーの開始位置となるバッファ内のオフセット。</param>
+			<param name="length">コピーする最大バイト数。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeResultSet.GetChars(System.Int32,System.Int64,System.Char[],System.Int32,System.Int32)">
+			<summary>指定したフィールドの指定した位置を開始位置として、連続する文字をバッファにコピーします。</summary>
+			<returns>実際にコピーされた文字数。</returns>
+			<param name="ordinal">データの取得元となるフィールドの序数位置。</param>
+			<param name="dataIndex">コピーの開始位置となるフィールド内のオフセット (文字単位)。</param>
+			<param name="buffer">データのコピー先のバッファ。</param>
+			<param name="bufferIndex">コピーの開始位置となるバッファ内のオフセット。</param>
+			<param name="length">コピーする最大バイト数。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeResultSet.GetDateTime(System.Int32)">
+			<summary>指定したインデックス位置にある列の値を DateTime として返します。</summary>
+			<returns>指定したインデックス位置にある列の値。</returns>
+			<param name="ordinal">データの取得元となる列の序数位置。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeResultSet.GetDecimal(System.Int32)">
+			<summary>指定したインデックス位置にある列の値を Double として返します。</summary>
+			<returns>指定したインデックス位置にある列の値。</returns>
+			<param name="ordinal">データの取得元となる列の序数位置。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeResultSet.GetDouble(System.Int32)">
+			<summary>指定したインデックス位置にある列の値を Double として返します。</summary>
+			<returns>指定したインデックス位置にある列の値。</returns>
+			<param name="ordinal">データの取得元となる列の序数位置。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeResultSet.GetEnumerator">
+			<summary>データ リーダー内の行を反復処理するために使用できる <see cref="T:System.Collections.IEnumerator" /> を返します。</summary>
+			<returns><see cref="T:System.Collections.IEnumerator" />。</returns>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeResultSet.GetFloat(System.Int32)">
+			<summary>指定したインデックス位置にある列の値を Float として返します。</summary>
+			<returns>指定したインデックス位置にある列の値。</returns>
+			<param name="ordinal">データの取得元となる列の序数位置。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeResultSet.GetGuid(System.Int32)">
+			<summary>指定したインデックス位置にある列の値を GUID として返します。</summary>
+			<returns>指定したインデックス位置にある列の値。</returns>
+			<param name="ordinal">データの取得元となる列の序数位置。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeResultSet.GetInt16(System.Int32)">
+			<summary>指定したインデックス位置にある列の値を Int16 として返します。</summary>
+			<returns>指定したインデックス位置にある列の値。</returns>
+			<param name="ordinal">データの取得元となる列の序数位置。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeResultSet.GetInt32(System.Int32)">
+			<summary>指定したインデックス位置にある列の値を Int32 として返します。</summary>
+			<returns>指定したインデックス位置にある列の値。</returns>
+			<param name="ordinal">TBD</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeResultSet.GetInt64(System.Int32)">
+			<summary>指定したインデックス位置にある列の値を Int64 として返します。</summary>
+			<returns>指定したインデックス位置にある列の値。</returns>
+			<param name="ordinal">データの取得元となる列の序数位置。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeResultSet.GetList">
+			<summary><see cref="T:System.Data.SqlServerCe.ResultSetView" /> のインスタンスを返します。</summary>
+			<returns><see cref="T:System.Data.SqlServerCe.ResultSetView" /> オブジェクト。</returns>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeResultSet.GetSqlBinary(System.Int32)">
+			<summary>指定したインデックス位置にある列の値を SqlBinary 型として返します。</summary>
+			<returns>指定したインデックス位置にある列の値。</returns>
+			<param name="ordinal">データの取得元となる列の序数位置。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeResultSet.GetSqlBoolean(System.Int32)">
+			<summary>指定したインデックス位置にある列の値を SqlBoolean 型として返します。</summary>
+			<returns>指定したインデックス位置にある列の値。</returns>
+			<param name="ordinal">データの取得元となる列の序数位置。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeResultSet.GetSqlByte(System.Int32)">
+			<summary>指定したインデックス位置にある列の値を SqlByte 型として返します。</summary>
+			<returns>指定したインデックス位置にある列の値。</returns>
+			<param name="ordinal">データの取得元となる列の序数位置。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeResultSet.GetSqlDateTime(System.Int32)">
+			<summary>指定したインデックス位置にある列の値を SqlDateTime 型として返します。</summary>
+			<returns>指定したインデックス位置にある列の値。</returns>
+			<param name="ordinal">データの取得元となる列の序数位置。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeResultSet.GetSqlDecimal(System.Int32)">
+			<summary>指定したインデックス位置にある列の値を SqlDecimal 型として返します。</summary>
+			<returns>指定したインデックス位置にある列の値。</returns>
+			<param name="ordinal">データの取得元となる列の序数位置。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeResultSet.GetSqlDouble(System.Int32)">
+			<summary>指定したインデックス位置にある列の値を SqlDouble 型として返します。</summary>
+			<returns>指定したインデックス位置にある列の値。</returns>
+			<param name="ordinal">データの取得元となる列の序数位置。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeResultSet.GetSqlGuid(System.Int32)">
+			<summary>指定したインデックス位置にある列の値を SqlGuid 型として返します。</summary>
+			<returns>指定したインデックス位置にある列の値。</returns>
+			<param name="ordinal">データの取得元となる列の序数位置。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeResultSet.GetSqlInt16(System.Int32)">
+			<summary>指定したインデックス位置にある列の値を SqlInt16 型として返します。</summary>
+			<returns>指定したインデックス位置にある列の値。</returns>
+			<param name="ordinal">データの取得元となる列の序数位置。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeResultSet.GetSqlInt32(System.Int32)">
+			<summary>指定したインデックス位置にある列の値を SqlInt32 型として返します。</summary>
+			<returns>指定したインデックス位置にある列の値。</returns>
+			<param name="ordinal">データの取得元となる列の序数位置。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeResultSet.GetSqlInt64(System.Int32)">
+			<summary>指定したインデックス位置にある列の値を SqlInt64 型として返します。</summary>
+			<returns>指定したインデックス位置にある列の値。</returns>
+			<param name="ordinal">データの取得元となる列の序数位置。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeResultSet.GetSqlMetaData(System.Int32)">
+			<summary>指定した列に関連付けられたメタデータ情報を返します。</summary>
+			<returns>指定したインデックス位置にある列のメタデータ。</returns>
+			<param name="ordinal">データの取得元となる列の序数位置。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeResultSet.GetSqlMoney(System.Int32)">
+			<summary>指定したインデックス位置にある列の値を SqlMoney 型として返します。</summary>
+			<returns>指定したインデックス位置にある列の値。</returns>
+			<param name="ordinal">データの取得元となる列の序数位置。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeResultSet.GetSqlSingle(System.Int32)">
+			<summary>指定したインデックス位置にある列の値を SqlSingle 型として返します。</summary>
+			<returns>指定したインデックス位置にある列の値。</returns>
+			<param name="ordinal">データの取得元となる列の序数位置。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeResultSet.GetSqlString(System.Int32)">
+			<summary>指定したインデックス位置にある列の値を SqlString 型として返します。</summary>
+			<returns>指定したインデックス位置にある列の値。</returns>
+			<param name="ordinal">データの取得元となる列の序数位置。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeResultSet.GetString(System.Int32)">
+			<summary>指定したインデックス位置にある列の値を String 型として返します。</summary>
+			<returns>指定したインデックス位置にある列の値。</returns>
+			<param name="ordinal">データの取得元となる列の序数位置。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeResultSet.GetValue(System.Int32)">
+			<summary>指定したフィールドの値を返します。</summary>
+			<returns>指定したフィールドの値を格納しているオブジェクト。</returns>
+			<param name="ordinal">値を取得する列の序数位置。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeResultSet.GetValues(System.Object[])">
+			<summary>指定したレコードのすべてのフィールドの配列を取得します。</summary>
+			<returns>配列内のインスタンス数。</returns>
+			<param name="values">値が返されたときに格納するための Object 型配列。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeResultSet.Insert(System.Data.SqlServerCe.SqlCeUpdatableRecord)">
+			<summary>指定した <see cref="T:System.Data.SqlServerCe.SqlCeUpdatableRecord" /> を基になる行セットに挿入します。</summary>
+			<param name="record">挿入するレコード。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeResultSet.Insert(System.Data.SqlServerCe.SqlCeUpdatableRecord,System.Data.SqlServerCe.DbInsertOptions)">
+			<summary>指定した <see cref="T:System.Data.SqlServerCe.SqlCeUpdatableRecord" /> を基になる行セットに挿入し、カーソルの配置方法を指定します。</summary>
+			<param name="record">挿入するレコード。</param>
+			<param name="options">挿入の後にカーソルを配置する方法を指定する <see cref="T:System.Data.SqlServerCe.DbInsertOptions" /> オプション。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeResultSet.IsDBNull(System.Int32)">
+			<summary>指定した序数位置にあるフィールドが null かどうかを判断します。</summary>
+			<returns>指定したフィールドが null の場合は、true。それ以外の場合は、false。</returns>
+			<param name="ordinal">値を取得する列の序数位置。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeResultSet.IsSetAsDefault(System.Int32)">
+			<summary>指定された序数位置にあるフィールドが基になる既定値を使用するように設定されているかどうかを確認します。</summary>
+			<returns>指定したフィールドが基になる既定値を使用するように設定されている場合は、true。それ以外の場合は、false。</returns>
+			<param name="ordinal">値を取得する列の序数位置。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeResultSet.ReadAbsolute(System.Int32)">
+			<summary>ResultSet 内の特定のレコードにリーダーを移動します。</summary>
+			<returns>正常に操作できた場合は true。それ以外の場合は false。</returns>
+			<param name="position">リーダーの移動先の位置。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeResultSet.ReadFirst">
+			<summary>ResultSet 内の最初のレコードにリーダーを移動します。</summary>
+			<returns>正常に操作できた場合は true。それ以外の場合は false。</returns>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeResultSet.ReadLast">
+			<summary>ResultSet 内の最後のレコードにリーダーを移動します。</summary>
+			<returns>正常に操作できた場合は true。それ以外の場合は false。</returns>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeResultSet.ReadPrevious">
+			<summary>現在のレコードの前にあるレコードにリーダーを移動します。</summary>
+			<returns>正常に操作できた場合は true。それ以外の場合は false。</returns>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeResultSet.ReadRelative(System.Int32)">
+			<summary>現在の位置から指定した分だけリーダーを移動します。</summary>
+			<returns>正常に操作できた場合は true。それ以外の場合は false。</returns>
+			<param name="position">リーダーを移動する位置の数。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeResultSet.SetBoolean(System.Int32,System.Boolean)">
+			<summary>指定した列の値に、渡されたブール値を設定します。</summary>
+			<param name="ordinal">設定する列の序数位置。</param>
+			<param name="value">指定された列に代入する値。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeResultSet.SetByte(System.Int32,System.Byte)">
+			<summary>指定した列の値に、渡されたバイト値を設定します。</summary>
+			<param name="ordinal">設定する列の序数位置。</param>
+			<param name="value">指定された列に代入する値。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeResultSet.SetBytes(System.Int32,System.Int64,System.Byte[],System.Int32,System.Int32)">
+			<summary>指定したバッファから指定した列にバイトの長さをコピーします。コピーは、フィールド内の指定位置から開始されます。</summary>
+			<param name="ordinal">設定する列の序数位置。</param>
+			<param name="dataIndex">データ コピーを開始する列内の位置。</param>
+			<param name="buffer">コピーするデータを格納しているバッファ。</param>
+			<param name="bufferIndex">データのコピー元バッファ内のオフセット。</param>
+			<param name="length">コピーする最大バイト数。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeResultSet.SetChar(System.Int32,System.Char)">
+			<summary>指定した列の値に、渡された Char 値を設定します。</summary>
+			<param name="ordinal">設定する列の序数位置。</param>
+			<param name="c">指定された列に代入する値。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeResultSet.SetChars(System.Int32,System.Int64,System.Char[],System.Int32,System.Int32)">
+			<summary>指定したバッファから指定した列に文字の長さをコピーします。コピーは、フィールド内の指定位置から開始されます。</summary>
+			<param name="ordinal">設定する列の序数位置。</param>
+			<param name="dataIndex">データ コピーを開始する列内の位置。</param>
+			<param name="buffer">コピーするデータを格納しているバッファ。</param>
+			<param name="bufferIndex">データのコピー元バッファ内のオフセット。</param>
+			<param name="length">コピーする最大バイト数。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeResultSet.SetDateTime(System.Int32,System.DateTime)">
+			<summary>指定した列の値に、渡された DateTime 値を設定します。</summary>
+			<param name="ordinal">設定する列の序数位置。</param>
+			<param name="value">指定された列に代入する値。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeResultSet.SetDecimal(System.Int32,System.Decimal)">
+			<summary>指定した列の値に、渡された Decimal 値を設定します。</summary>
+			<param name="ordinal">設定する列の序数位置。</param>
+			<param name="value">指定された列に代入する値。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeResultSet.SetDefault(System.Int32)">
+			<summary>指定した列に既定値を設定します。</summary>
+			<param name="ordinal">設定する列の序数位置。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeResultSet.SetDouble(System.Int32,System.Double)">
+			<summary>指定した列の値に、渡された Double 値を設定します。</summary>
+			<param name="ordinal">設定する列の序数位置。</param>
+			<param name="value">指定された列に代入する値。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeResultSet.SetFloat(System.Int32,System.Single)">
+			<summary>指定した列の値に、渡された Float 値を設定します。</summary>
+			<param name="ordinal">設定する列の序数位置。</param>
+			<param name="value">指定された列に代入する値。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeResultSet.SetGuid(System.Int32,System.Guid)">
+			<summary>指定した列の値に、渡された Guid 値を設定します。</summary>
+			<param name="ordinal">設定する列の序数位置。</param>
+			<param name="value">指定された列に代入する値。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeResultSet.SetInt16(System.Int32,System.Int16)">
+			<summary>指定した列の値に、渡された Int16 値を設定します。</summary>
+			<param name="ordinal">設定する列の序数位置。</param>
+			<param name="value">指定された列に代入する値。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeResultSet.SetInt32(System.Int32,System.Int32)">
+			<summary>指定した列の値に、渡された Int32 値を設定します。</summary>
+			<param name="ordinal">設定する列の序数位置。</param>
+			<param name="value">指定された列に代入する値。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeResultSet.SetInt64(System.Int32,System.Int64)">
+			<summary>指定した列の値に、渡された Int64 値を設定します。</summary>
+			<param name="ordinal">設定する列の序数位置。</param>
+			<param name="value">指定された列に代入する値。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeResultSet.SetObjectRef(System.Int32,System.Object)">
+			<summary>指定した位置の列にオブジェクトをバインドします。</summary>
+			<param name="ordinal">設定する列の序数位置。</param>
+			<param name="buffer">指定された列に代入する値。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeResultSet.SetSqlBinary(System.Int32,System.Data.SqlTypes.SqlBinary)">
+			<summary>指定した列の値に、渡されてきた SqlBinary 値を設定します。</summary>
+			<param name="ordinal">設定する列の序数位置。</param>
+			<param name="value">指定された列に代入する値。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeResultSet.SetSqlBoolean(System.Int32,System.Data.SqlTypes.SqlBoolean)">
+			<summary>指定した列の値に、渡された SqlBoolean 値を設定します。</summary>
+			<param name="ordinal">設定する列の序数位置。</param>
+			<param name="value">指定された列に代入する値。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeResultSet.SetSqlByte(System.Int32,System.Data.SqlTypes.SqlByte)">
+			<summary>指定した列の値に、渡された SqlByte 値を設定します。</summary>
+			<param name="ordinal">設定する列の序数位置。</param>
+			<param name="value">指定された列に代入する値。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeResultSet.SetSqlDateTime(System.Int32,System.Data.SqlTypes.SqlDateTime)">
+			<summary>指定した列の値に、渡された SqlDateTime 値を設定します。</summary>
+			<param name="ordinal">設定する列の序数位置。</param>
+			<param name="value">指定された列に代入する値。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeResultSet.SetSqlDecimal(System.Int32,System.Data.SqlTypes.SqlDecimal)">
+			<summary>指定した列の値に、渡された SqlDecimal 値を設定します。</summary>
+			<param name="ordinal">設定する列の序数位置。</param>
+			<param name="value">指定された列に代入する値。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeResultSet.SetSqlDouble(System.Int32,System.Data.SqlTypes.SqlDouble)">
+			<summary>指定した列の値に、渡された SqlDouble 値を設定します。</summary>
+			<param name="ordinal">設定する列の序数位置。</param>
+			<param name="value">指定された列に代入する値。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeResultSet.SetSqlGuid(System.Int32,System.Data.SqlTypes.SqlGuid)">
+			<summary>指定した列の値に、渡された SqlGuid 値を設定します。</summary>
+			<param name="ordinal">設定する列の序数位置。</param>
+			<param name="value">指定された列に代入する値。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeResultSet.SetSqlInt16(System.Int32,System.Data.SqlTypes.SqlInt16)">
+			<summary>指定した列の値に、渡された SqlInt16 値を設定します。</summary>
+			<param name="ordinal">設定する列の序数位置。</param>
+			<param name="value">指定された列に代入する値。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeResultSet.SetSqlInt32(System.Int32,System.Data.SqlTypes.SqlInt32)">
+			<summary>指定した列の値に、渡された SqlInt32 値を設定します。</summary>
+			<param name="ordinal">設定する列の序数位置。</param>
+			<param name="value">指定された列に代入する値。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeResultSet.SetSqlInt64(System.Int32,System.Data.SqlTypes.SqlInt64)">
+			<summary>指定した列の値に、渡された SqlInt64 値を設定します。</summary>
+			<param name="ordinal">設定する列の序数位置。</param>
+			<param name="value">指定された列に代入する値。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeResultSet.SetSqlMoney(System.Int32,System.Data.SqlTypes.SqlMoney)">
+			<summary>指定した列の値に、渡された SqlMoney 値を設定します。</summary>
+			<param name="ordinal">設定する列の序数位置。</param>
+			<param name="value">指定された列に代入する値。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeResultSet.SetSqlSingle(System.Int32,System.Data.SqlTypes.SqlSingle)">
+			<summary>指定した列の値に、渡された SqlSingle 値を設定します。</summary>
+			<param name="ordinal">設定する列の序数位置。</param>
+			<param name="value">指定された列に代入する値。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeResultSet.SetSqlString(System.Int32,System.Data.SqlTypes.SqlString)">
+			<summary>指定した列の値に、渡された SqlString 値を設定します。</summary>
+			<param name="ordinal">設定する列の序数位置。</param>
+			<param name="value">指定された列に代入する値。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeResultSet.SetString(System.Int32,System.String)">
+			<summary>指定した列の値に、渡された String 値を設定します。</summary>
+			<param name="ordinal">設定する列の序数位置。</param>
+			<param name="value">指定された列に代入する値。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeResultSet.SetValue(System.Int32,System.Object)">
+			<summary>指定した列の値に、渡された値を設定します。</summary>
+			<param name="ordinal">設定する列の序数位置。</param>
+			<param name="value">指定された列に代入する値。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeResultSet.SetValues(System.Object[])">
+			<summary>指定したレコード内の各フィールドに、指定した配列内の対応する値を設定します。</summary>
+			<returns>配列からコピーされる値の数。</returns>
+			<param name="values">設定する値を格納する配列。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeResultSet.Update">
+			<summary>現在のレコードから、サーバーの基になる行に変更が送信されます。</summary>
+		</member>
+		<member name="P:System.Data.SqlServerCe.SqlCeResultSet.Item(System.Int32)">
+			<summary><see cref="T:System.Data.SqlServerCe.SqlCeResultSet" /> のインデクサとして機能します。</summary>
+			<returns>指定したインデックス位置にあるレコード。</returns>
+			<param name="index">ResultSet 内での項目の位置。</param>
+		</member>
+		<member name="P:System.Data.SqlServerCe.SqlCeResultSet.Item(System.String)">
+			<summary><see cref="T:System.Data.SqlServerCe.SqlCeResultSet" /> のインデクサとして機能します。</summary>
+			<returns>指定した名前と一致するレコード。</returns>
+			<param name="name">ResultSet 内のレコードの名前。</param>
+		</member>
+		<member name="P:System.Data.SqlServerCe.SqlCeResultSet.ResultSetView">
+			<summary><see cref="T:System.Data.SqlServerCe.SqlCeResultSet" /> をコントロールにデータ バインディングするときに使用されます。</summary>
+			<returns><see cref="T:System.Data.SqlServerCe.ResultSetView" />。</returns>
+		</member>
+		<member name="P:System.Data.SqlServerCe.SqlCeResultSet.Scrollable">
+			<summary><see cref="T:System.Data.SqlServerCe.SqlCeResultSet" /> がスクロール可能かどうかを判断します。</summary>
+			<returns><see cref="T:System.Data.SqlServerCe.SqlCeResultSet" /> がスクロール可能な場合は true。それ以外の場合は false。</returns>
+		</member>
+		<member name="P:System.Data.SqlServerCe.SqlCeResultSet.Sensitivity">
+			<summary><see cref="T:System.Data.SqlServerCe.SqlCeResultSet" /> の感度を判断します。</summary>
+			<returns><see cref="T:System.Data.SqlServerCe.SqlCeResultSet" /> の <see cref="T:System.Data.SqlServerCe.ResultSetSensitivity" />。</returns>
+		</member>
+		<member name="P:System.Data.SqlServerCe.SqlCeResultSet.Updatable">
+			<summary><see cref="T:System.Data.SqlServerCe.SqlCeResultSet" /> 内の値が変更可能かどうかを判断します。</summary>
+			<returns>レコード内の値を変更できる場合は true。それ以外の場合は false。</returns>
+		</member>
+		<member name="T:System.Data.SqlServerCe.SqlCeRowUpdatedEventArgs">
+			<summary><see cref="E:System.Data.SqlServerCe.SqlCeDataAdapter.RowUpdated" /> イベントのデータを提供します。</summary>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeRowUpdatedEventArgs.#ctor(System.Data.DataRow,System.Data.IDbCommand,System.Data.StatementType,System.Data.Common.DataTableMapping)">
+			<summary><see cref="T:System.Data.SqlServerCe.SqlCeRowUpdatedEventArgs" /> クラスの新しいインスタンスを初期化します。</summary>
+			<param name="dataRow"><see cref="M:System.Data.Common.DbDataAdapter.Update(System.Data.DataSet)" /> を通じて送信された <see cref="T:System.Data.DataRow" />。</param>
+			<param name="command"><see cref="M:System.Data.Common.DbDataAdapter.Update(System.Data.DataSet)" /> の呼び出し時に実行される <see cref="T:System.Data.IDbCommand" />。</param>
+			<param name="statementType">実行されたクエリの種類を指定する <see cref="T:System.Data.StatementType" /> 値の 1 つ。</param>
+			<param name="tableMapping"><see cref="M:System.Data.Common.DbDataAdapter.Update(System.Data.DataSet)" /> を通じて送信された <see cref="T:System.Data.Common.DataTableMapping" />。</param>
+		</member>
+		<member name="P:System.Data.SqlServerCe.SqlCeRowUpdatedEventArgs.Command">
+			<summary><see cref="M:System.Data.Common.DbDataAdapter.Update(System.Data.DataSet)" /> の呼び出し時に実行される <see cref="T:System.Data.SqlServerCe.SqlCeCommand" /> を取得します。</summary>
+			<returns><see cref="M:System.Data.Common.DbDataAdapter.Update(System.Data.DataSet)" /> の呼び出し時に実行される <see cref="T:System.Data.SqlServerCe.SqlCeCommand" />。</returns>
+		</member>
+		<member name="T:System.Data.SqlServerCe.SqlCeRowUpdatedEventHandler">
+			<summary><see cref="T:System.Data.SqlServerCe.SqlCeDataAdapter" /> の <see cref="E:System.Data.SqlServerCe.SqlCeDataAdapter.RowUpdated" /> イベントを処理するメソッドを表します。</summary>
+			<param name="sender">イベントのソース。</param>
+			<param name="e">イベント データを格納している <see cref="T:System.Data.SqlServerCe.SqlCeRowUpdatedEventArgs" />。</param>
+		</member>
+		<member name="T:System.Data.SqlServerCe.SqlCeRowUpdatingEventArgs">
+			<summary><see cref="E:System.Data.SqlServerCe.SqlCeDataAdapter.RowUpdating" /> イベントのデータを提供します。</summary>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeRowUpdatingEventArgs.#ctor(System.Data.DataRow,System.Data.IDbCommand,System.Data.StatementType,System.Data.Common.DataTableMapping)">
+			<summary><see cref="T:System.Data.SqlServerCe.SqlCeRowUpdatingEventArgs" /> クラスの新しいインスタンスを初期化します。</summary>
+			<param name="dataRow"><see cref="M:System.Data.Common.DbDataAdapter.Update(System.Data.DataSet)" /> を実行する <see cref="T:System.Data.DataRow" />。</param>
+			<param name="command"><see cref="M:System.Data.Common.DbDataAdapter.Update(System.Data.DataSet)" /> 処理中に実行する <see cref="T:System.Data.IDbCommand" />。</param>
+			<param name="statementType">実行されたクエリの種類を指定する <see cref="T:System.Data.StatementType" /> 値の 1 つ。</param>
+			<param name="tableMapping"><see cref="M:System.Data.Common.DbDataAdapter.Update(System.Data.DataSet)" /> を通じて送信された <see cref="T:System.Data.Common.DataTableMapping" />。</param>
+		</member>
+		<member name="P:System.Data.SqlServerCe.SqlCeRowUpdatingEventArgs.Command">
+			<summary><see cref="M:System.Data.Common.DbDataAdapter.Update(System.Data.DataSet)" /> の実行時に実行する <see cref="T:System.Data.SqlServerCe.SqlCeCommand" /> を取得または設定します。</summary>
+			<returns><see cref="M:System.Data.Common.DbDataAdapter.Update(System.Data.DataSet)" /> の実行時に実行する <see cref="T:System.Data.SqlServerCe.SqlCeCommand" />。</returns>
+		</member>
+		<member name="T:System.Data.SqlServerCe.SqlCeRowUpdatingEventHandler">
+			<summary><see cref="T:System.Data.SqlServerCe.SqlCeDataAdapter" /> の <see cref="E:System.Data.SqlServerCe.SqlCeDataAdapter.RowUpdating" /> イベントを処理するメソッドを表します。</summary>
+			<param name="sender">イベントのソース。</param>
+			<param name="e">イベント データを格納している <see cref="T:System.Data.SqlServerCe.SqlCeRowUpdatingEventArgs" />。</param>
+		</member>
+		<member name="T:System.Data.SqlServerCe.SqlCeTransaction">
+			<summary>データ ソースで作成する SQL トランザクションを表します。このクラスは継承できません。</summary>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeTransaction.Commit">
+			<summary>データベース トランザクションをコミットします。</summary>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeTransaction.Commit(System.Data.SqlServerCe.CommitMode)">
+			<summary>指定された <see cref="T:System.Data.SqlServerCe.CommitMode" /> を使用して、データベース トランザクションをコミットします。</summary>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeTransaction.Dispose">
+			<summary>トランザクションに関連付けられているすべての <see cref="T:System.Data.SqlServerCe.SqlCeConnection" /> オブジェクトを解放します。</summary>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeTransaction.Rollback">
+			<summary>トランザクションを保留中の状態からロールバックします。</summary>
+		</member>
+		<member name="P:System.Data.SqlServerCe.SqlCeTransaction.IsolationLevel">
+			<summary>このトランザクションの <see cref="T:System.Data.IsolationLevel" /> を指定します。</summary>
+			<returns>トランザクションの <see cref="T:System.Data.IsolationLevel" />。.NET Compact Framework Data Provider for SQL Server Compact では、ReadCommitted、Serializable、および ReadRepeatable の各分離レベルがサポートされます。</returns>
+		</member>
+		<member name="T:System.Data.SqlServerCe.SqlCeTransactionInProgressException">
+			<summary>別のトランザクションの進行中に、データベースを変更しようとすると、発生します。</summary>
+		</member>
+		<member name="T:System.Data.SqlServerCe.SqlCeUpdatableRecord">
+			<summary>データ ソースから取得した更新可能な値の行を表します。<see cref="T:System.Data.SqlServerCe.SqlCeResultSet" /> オブジェクトには、1 つ以上の UpdatableRecords が格納されます。</summary>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeUpdatableRecord.GetBoolean(System.Int32)">
+			<summary>指定したフィールドの値を bool として返します。</summary>
+			<param name="ordinal">値の取得元となるフィールド。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeUpdatableRecord.GetByte(System.Int32)">
+			<summary>指定したフィールドの値を byte として返します。</summary>
+			<param name="ordinal">値の取得元となるフィールド。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeUpdatableRecord.GetBytes(System.Int32,System.Int64,System.Byte[],System.Int32,System.Int32)">
+			<summary>指定したフィールドの指定した位置を開始位置として、連続するバイトをバッファにコピーします。</summary>
+			<param name="ordinal">データの取得元となる列の序数位置。</param>
+			<param name="dataIndex">データ コピーの開始位置となるフィールド内のオフセット (バイト単位)。</param>
+			<param name="buffer">データのコピー先のバッファ。</param>
+			<param name="bufferIndex">コピーの開始位置となるバッファ内のオフセット。</param>
+			<param name="length">コピーする最大バイト数。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeUpdatableRecord.GetChar(System.Int32)">
+			<summary>指定したフィールドの値を char として返します。</summary>
+			<param name="ordinal">値の取得元となるフィールド。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeUpdatableRecord.GetChars(System.Int32,System.Int64,System.Char[],System.Int32,System.Int32)">
+			<summary>指定したフィールドの指定した位置を開始位置として、連続する char をバッファにコピーします。</summary>
+			<param name="ordinal">データの取得元となるフィールドの序数位置。</param>
+			<param name="dataIndex">コピーの開始位置となるフィールド内のオフセット (文字単位)。</param>
+			<param name="buffer">データのコピー先のバッファ。</param>
+			<param name="bufferIndex">コピーの開始位置となるバッファ内のオフセット。</param>
+			<param name="length">コピーする最大バイト数。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeUpdatableRecord.GetData(System.Int32)">
+			<summary>現在のレコードに位置する <see cref="T:System.Data.SqlServerCe.SqlCeDataReader" /> を返します。</summary>
+			<param name="ordinal">値の取得元となるフィールド。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeUpdatableRecord.GetDataTypeName(System.Int32)">
+			<summary>指定されたフィールドの datatype 名を返します。</summary>
+			<param name="ordinal">値の取得元となるフィールド。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeUpdatableRecord.GetDateTime(System.Int32)">
+			<summary>指定したフィールドの値を DateTime として返します。</summary>
+			<param name="ordinal">値の取得元となるフィールド。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeUpdatableRecord.GetDecimal(System.Int32)">
+			<summary>指定したフィールドの値を decimal として返します。</summary>
+			<param name="ordinal">値の取得元となるフィールド。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeUpdatableRecord.GetDouble(System.Int32)">
+			<summary>指定したフィールドの値を double として返します。</summary>
+			<param name="ordinal">値の取得元となるフィールド。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeUpdatableRecord.GetFieldType(System.Int32)">
+			<summary>指定されたフィールドの CLR データ型を返します。</summary>
+			<returns>このフィールドの CLR データ型。</returns>
+			<param name="ordinal">値の取得元となるフィールド。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeUpdatableRecord.GetFloat(System.Int32)">
+			<summary>指定したフィールドの値を float として返します。</summary>
+			<param name="ordinal">値の取得元となるフィールド。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeUpdatableRecord.GetGuid(System.Int32)">
+			<summary>指定したフィールドの値を GUID として返します。</summary>
+			<param name="ordinal">値の取得元となるフィールド。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeUpdatableRecord.GetInt16(System.Int32)">
+			<summary>指定したフィールドの値を int16 として返します。</summary>
+			<param name="ordinal">値の取得元となるフィールド。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeUpdatableRecord.GetInt32(System.Int32)">
+			<summary>指定したフィールドの値を int32 として返します。</summary>
+			<param name="ordinal">値の取得元となるフィールド。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeUpdatableRecord.GetInt64(System.Int32)">
+			<summary>指定したフィールドの値を int64 として返します。</summary>
+			<param name="ordinal">値の取得元となるフィールド。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeUpdatableRecord.GetName(System.Int32)">
+			<summary>指定したフィールドの名前を返します。</summary>
+			<param name="ordinal">値の取得元となるフィールド。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeUpdatableRecord.GetOrdinal(System.String)">
+			<summary>渡された名前で指定されたフィールドの序数を返します。</summary>
+			<param name="name">序数を決定するためのフィールドの名前。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeUpdatableRecord.GetSqlBinary(System.Int32)">
+			<summary>指定したフィールドの値を SqlBinary として返します。</summary>
+			<param name="ordinal">値の取得元となるフィールド。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeUpdatableRecord.GetSqlBoolean(System.Int32)">
+			<summary>指定したフィールドの値を SqlBoolean として返します。</summary>
+			<param name="ordinal">値の取得元となるフィールド。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeUpdatableRecord.GetSqlByte(System.Int32)">
+			<summary>指定したフィールドの値を SqlByte として返します。</summary>
+			<param name="ordinal">値の取得元となるフィールド。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeUpdatableRecord.GetSqlBytesRef(System.Int32)">
+			<summary>指定したフィールドの値を格納する SqlBytes インスタンスへの参照を返します。</summary>
+			<returns>SqlBytes インスタンスへの参照。</returns>
+			<param name="ordinal">値の取得元となるフィールド。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeUpdatableRecord.GetSqlCharsRef(System.Int32)">
+			<summary>指定したフィールドの値を格納する SqlChars インスタンスへの参照を返します。</summary>
+			<returns>SqlChars インスタンスへの参照。</returns>
+			<param name="ordinal">値の取得元となるフィールド。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeUpdatableRecord.GetSqlDateTime(System.Int32)">
+			<summary>指定したフィールドの値を SqlDateTime として返します。</summary>
+			<param name="ordinal">値の取得元となるフィールド。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeUpdatableRecord.GetSqlDecimal(System.Int32)">
+			<summary>指定したフィールドの値を SqlDecimal として返します。</summary>
+			<param name="ordinal">値の取得元となるフィールド。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeUpdatableRecord.GetSqlDouble(System.Int32)">
+			<summary>指定したフィールドの値を SqlDouble として返します。</summary>
+			<param name="ordinal">値の取得元となるフィールド。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeUpdatableRecord.GetSqlGuid(System.Int32)">
+			<summary>指定したフィールドの値を SqlGuid として返します。</summary>
+			<param name="ordinal">値の取得元となるフィールド。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeUpdatableRecord.GetSqlInt16(System.Int32)">
+			<summary>指定したフィールドの値を SqlInt16 として返します。</summary>
+			<param name="ordinal">値の取得元となるフィールド。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeUpdatableRecord.GetSqlInt32(System.Int32)">
+			<summary>指定したフィールドの値を SqlInt32 として返します。</summary>
+			<param name="ordinal">値の取得元となるフィールド。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeUpdatableRecord.GetSqlInt64(System.Int32)">
+			<summary>指定したフィールドの値を SqlInt64 として返します。</summary>
+			<param name="ordinal">値の取得元となるフィールド。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeUpdatableRecord.GetSqlMetaData(System.Int32)">
+			<summary>指定したフィールドの値を SqlMetaData として返します。</summary>
+			<param name="ordinal">値の取得元となるフィールド。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeUpdatableRecord.GetSqlMoney(System.Int32)">
+			<summary>指定したフィールドの値を SqlMoney として返します。</summary>
+			<param name="ordinal">値の取得元となるフィールド。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeUpdatableRecord.GetSqlSingle(System.Int32)">
+			<summary>指定したフィールドの値を SqlSingle として返します。</summary>
+			<param name="ordinal">値の取得元となるフィールド。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeUpdatableRecord.GetSqlString(System.Int32)">
+			<summary>指定したフィールドの値を SqlString として返します。</summary>
+			<param name="ordinal">値の取得元となるフィールド。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeUpdatableRecord.GetString(System.Int32)">
+			<summary>指定したフィールドの値を string として返します。</summary>
+			<param name="ordinal">値の取得元となるフィールド。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeUpdatableRecord.GetValue(System.Int32)">
+			<summary>指定したレコードの値を返します。</summary>
+			<param name="ordinal">値の取得元となるフィールド。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeUpdatableRecord.GetValues(System.Object[])">
+			<summary>レコード内のすべてのフィールドの値を返します。</summary>
+			<param name="values">戻り値を格納する配列。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeUpdatableRecord.IsDBNull(System.Int32)">
+			<summary>指定されたフィールドが null かどうかを判断します。</summary>
+			<returns>フィールドが null の場合は、true。それ以外の場合は、false。</returns>
+			<param name="ordinal">確認するフィールド。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeUpdatableRecord.IsSetAsDefault(System.Int32)">
+			<summary>指定されたフィールドが基になる既定値を使用するように設定されているかどうかを確認します。</summary>
+			<returns>既定値を使用するようにフィールドに設定されている場合は、true。それ以外の場合は、false。</returns>
+			<param name="ordinal">確認するフィールド。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeUpdatableRecord.SetBoolean(System.Int32,System.Boolean)">
+			<summary>指定されたインデックス位置の列に、渡された bool 値を設定します。</summary>
+			<param name="ordinal">値を設定するフィールド。</param>
+			<param name="value">設定する値。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeUpdatableRecord.SetByte(System.Int32,System.Byte)">
+			<summary>指定されたインデックス位置の列に、渡された byte 値を設定します。</summary>
+			<param name="ordinal">値を設定するフィールド。</param>
+			<param name="value">設定する値。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeUpdatableRecord.SetBytes(System.Int32,System.Int64,System.Byte[],System.Int32,System.Int32)">
+			<summary>指定したバッファから指定した列にバイトの長さをコピーします。コピーは、フィールド内の指定位置から開始されます。</summary>
+			<param name="ordinal">設定する列の序数位置。</param>
+			<param name="dataIndex">データ コピーを開始する列内の位置。</param>
+			<param name="buffer">コピーするデータを格納しているバッファ。</param>
+			<param name="bufferIndex">データのコピー元バッファ内のオフセット。</param>
+			<param name="length">コピーする最大バイト数。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeUpdatableRecord.SetChar(System.Int32,System.Char)">
+			<summary>指定されたインデックス位置の列に、渡された char 値を設定します。</summary>
+			<param name="ordinal">値を設定するフィールド。</param>
+			<param name="value">設定する値。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeUpdatableRecord.SetChars(System.Int32,System.Int64,System.Char[],System.Int32,System.Int32)">
+			<summary>指定したバッファから指定したフィールドに char の長さをコピーします。コピーは、そのフィールド内の指定位置から開始されます。</summary>
+			<param name="ordinal">設定する列の序数位置。</param>
+			<param name="dataIndex">データ コピーを開始する列内の位置。</param>
+			<param name="buffer">コピーするデータを格納しているバッファ。</param>
+			<param name="bufferIndex">データのコピー元バッファ内のオフセット。</param>
+			<param name="length">コピーする最大バイト数。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeUpdatableRecord.SetDateTime(System.Int32,System.DateTime)">
+			<summary>指定されたインデックス位置の列に、渡された DateTime 値を設定します。</summary>
+			<param name="ordinal">値を設定するフィールド。</param>
+			<param name="value">設定する値。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeUpdatableRecord.SetDecimal(System.Int32,System.Decimal)">
+			<summary>指定されたインデックス位置の列に、渡された decimal 値を設定します。</summary>
+			<param name="ordinal">値を設定するフィールド。</param>
+			<param name="value">設定する値。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeUpdatableRecord.SetDefault(System.Int32)">
+			<summary>指定したフィールドに既定値を設定します。</summary>
+			<param name="ordinal">設定するフィールド。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeUpdatableRecord.SetDouble(System.Int32,System.Double)">
+			<summary>指定されたインデックス位置の列に、渡された double 値を設定します。</summary>
+			<param name="ordinal">値を設定するフィールド。</param>
+			<param name="value">設定する値。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeUpdatableRecord.SetFloat(System.Int32,System.Single)">
+			<summary>指定されたインデックス位置の列に、渡された float 値を設定します。</summary>
+			<param name="ordinal">値を設定するフィールド。</param>
+			<param name="value">設定する値。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeUpdatableRecord.SetGuid(System.Int32,System.Guid)">
+			<summary>指定されたインデックス位置の列に、渡された GUID 値を設定します。</summary>
+			<param name="ordinal">値を設定するフィールド。</param>
+			<param name="value">設定する値。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeUpdatableRecord.SetInt16(System.Int32,System.Int16)">
+			<summary>指定されたインデックス位置の列に、渡された int16 値を設定します。</summary>
+			<param name="ordinal">値を設定するフィールド。</param>
+			<param name="value">設定する値。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeUpdatableRecord.SetInt32(System.Int32,System.Int32)">
+			<summary>指定されたインデックス位置の列に、渡された int32 値を設定します。</summary>
+			<param name="ordinal">値を設定するフィールド。</param>
+			<param name="value">設定する値。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeUpdatableRecord.SetInt64(System.Int32,System.Int64)">
+			<summary>指定されたインデックス位置の列に、渡された int64 値を設定します。</summary>
+			<param name="ordinal">値を設定するフィールド。</param>
+			<param name="value">設定する値。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeUpdatableRecord.SetObjectRef(System.Int32,System.Object)">
+			<summary>値ではなく参照によって、指定したフィールドの値を設定します。</summary>
+			<param name="ordinal">値を設定するフィールド。</param>
+			<param name="value">設定する値。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeUpdatableRecord.SetSqlBinary(System.Int32,System.Data.SqlTypes.SqlBinary)">
+			<summary>指定されたインデックス位置の列に、渡された SqlBinary 値を設定します。</summary>
+			<param name="ordinal">値を設定するフィールド。</param>
+			<param name="value">設定する値。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeUpdatableRecord.SetSqlBoolean(System.Int32,System.Data.SqlTypes.SqlBoolean)">
+			<summary>指定されたインデックス位置の列に、渡された SqlBool 値を設定します。</summary>
+			<param name="ordinal">値を設定するフィールド。</param>
+			<param name="value">設定する値。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeUpdatableRecord.SetSqlByte(System.Int32,System.Data.SqlTypes.SqlByte)">
+			<summary>指定されたインデックス位置の列に、渡された SqlByte 値を設定します。</summary>
+			<param name="ordinal">値を設定するフィールド。</param>
+			<param name="value">設定する値。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeUpdatableRecord.SetSqlDateTime(System.Int32,System.Data.SqlTypes.SqlDateTime)">
+			<summary>指定されたインデックス位置の列に、渡された SqlDateTime 値を設定します。</summary>
+			<param name="ordinal">値を設定するフィールド。</param>
+			<param name="value">設定する値。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeUpdatableRecord.SetSqlDecimal(System.Int32,System.Data.SqlTypes.SqlDecimal)">
+			<summary>指定されたインデックス位置の列に、渡された SqlDecimal 値を設定します。</summary>
+			<param name="ordinal">値を設定するフィールド。</param>
+			<param name="value">設定する値。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeUpdatableRecord.SetSqlDouble(System.Int32,System.Data.SqlTypes.SqlDouble)">
+			<summary>指定されたインデックス位置の列に、渡された SqlDouble 値を設定します。</summary>
+			<param name="ordinal">値を設定するフィールド。</param>
+			<param name="value">設定する値。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeUpdatableRecord.SetSqlGuid(System.Int32,System.Data.SqlTypes.SqlGuid)">
+			<summary>指定されたインデックス位置の列に、渡された SqlGuid 値を設定します。</summary>
+			<param name="ordinal">値を設定するフィールド。</param>
+			<param name="value">設定する値。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeUpdatableRecord.SetSqlInt16(System.Int32,System.Data.SqlTypes.SqlInt16)">
+			<summary>指定されたインデックス位置の列に、渡された SqlInt16 値を設定します。</summary>
+			<param name="ordinal">値を設定するフィールド。</param>
+			<param name="value">設定する値。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeUpdatableRecord.SetSqlInt32(System.Int32,System.Data.SqlTypes.SqlInt32)">
+			<summary>指定されたインデックス位置の列に、渡された SqlInt32 値を設定します。</summary>
+			<param name="ordinal">値を設定するフィールド。</param>
+			<param name="value">設定する値。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeUpdatableRecord.SetSqlInt64(System.Int32,System.Data.SqlTypes.SqlInt64)">
+			<summary>指定されたインデックス位置の列に、渡された SqlInt64 値を設定します。</summary>
+			<param name="ordinal">値を設定するフィールド。</param>
+			<param name="value">設定する値。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeUpdatableRecord.SetSqlMoney(System.Int32,System.Data.SqlTypes.SqlMoney)">
+			<summary>指定されたインデックス位置の列に、渡された SqlMoney 値を設定します。</summary>
+			<param name="ordinal">値を設定するフィールド。</param>
+			<param name="value">設定する値。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeUpdatableRecord.SetSqlSingle(System.Int32,System.Data.SqlTypes.SqlSingle)">
+			<summary>指定されたインデックス位置の列に、渡された SqlSingle 値を設定します。</summary>
+			<param name="ordinal">値を設定するフィールド。</param>
+			<param name="value">設定する値。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeUpdatableRecord.SetSqlString(System.Int32,System.Data.SqlTypes.SqlString)">
+			<summary>指定されたインデックス位置の列に、渡された SqlString 値を設定します。</summary>
+			<param name="ordinal">値を設定するフィールド。</param>
+			<param name="value">設定する値。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeUpdatableRecord.SetString(System.Int32,System.String)">
+			<summary>指定されたインデックス位置の列に、渡された string 値を設定します。</summary>
+			<param name="ordinal">値を設定するフィールド。</param>
+			<param name="value">設定する値。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeUpdatableRecord.SetValue(System.Int32,System.Object)">
+			<summary>指定されたインデックス位置の列に、渡された値を設定します。</summary>
+			<param name="ordinal">値を設定するフィールド。</param>
+			<param name="value">設定する値。</param>
+		</member>
+		<member name="M:System.Data.SqlServerCe.SqlCeUpdatableRecord.SetValues(System.Object[])">
+			<summary>レコード内の各フィールドに、渡された配列内の対応する値を設定します。</summary>
+			<param name="values">レコード内のフィールドの出現順で設定する値。</param>
+		</member>
+		<member name="P:System.Data.SqlServerCe.SqlCeUpdatableRecord.FieldCount">
+			<summary>指定したレコード内のフィールド数を返します。</summary>
+			<returns>レコード内のフィールド数。</returns>
+		</member>
+		<member name="P:System.Data.SqlServerCe.SqlCeUpdatableRecord.HiddenFieldCount">
+			<summary>レコード内の非表示フィールド数を返します。SQL Server Compact では、このプロパティは常に 0 を返します。</summary>
+			<returns>常に値 0 を返します。</returns>
+		</member>
+		<member name="P:System.Data.SqlServerCe.SqlCeUpdatableRecord.Item(System.Int32)">
+			<summary>レコード内の特定のフィールドに対するインデクサとして機能します。</summary>
+			<param name="ordinal">レコード内のフィールド (列) の序数。</param>
+		</member>
+		<member name="P:System.Data.SqlServerCe.SqlCeUpdatableRecord.Item(System.String)">
+			<summary>レコード内の特定のフィールドに対するインデクサとして機能します。</summary>
+			<param name="name">レコード内のフィールド (列) の名前。</param>
+		</member>
+		<member name="P:System.Data.SqlServerCe.SqlCeUpdatableRecord.Updatable">
+			<summary>フィールドが更新可能かどうかを表します。</summary>
+			<returns>フィールドが更新可能な場合は、true。それ以外の場合は、false。</returns>
+		</member>
+		<member name="T:System.Data.SqlServerCe.SqlMetaData">
+			<summary>データベースから取得したパラメータおよび列のメタデータ情報を指定して取得します。このクラスは継承できません。</summary>
+		</member>
+		<member name="T:System.Data.SqlServerCe.TrackingKeyType">
+			<summary>追跡が有効な場合にキーの識別の種類を指定する値を格納します。</summary>
+		</member>
+		<member name="F:System.Data.SqlServerCe.TrackingKeyType.Guid">
+			<summary>rowguidcol 列値を使用して行を識別します。</summary>
+		</member>
+		<member name="F:System.Data.SqlServerCe.TrackingKeyType.Max">
+			<summary>センチネル フィールドです。使用されていません。</summary>
+		</member>
+		<member name="F:System.Data.SqlServerCe.TrackingKeyType.None">
+			<summary>センチネル フィールドです。使用されていません。</summary>
+		</member>
+		<member name="F:System.Data.SqlServerCe.TrackingKeyType.PrimaryKey">
+			<summary>主キー列の値を使用して行を識別します。</summary>
+		</member>
+		<member name="T:System.Data.SqlServerCe.TrackingOptions">
+			<summary>追跡対象にするテーブルの操作を指定します。</summary>
+		</member>
+		<member name="F:System.Data.SqlServerCe.TrackingOptions.All">
+			<summary>すべての操作を追跡します。</summary>
+		</member>
+		<member name="F:System.Data.SqlServerCe.TrackingOptions.Delete">
+			<summary>削除だけを追跡します。</summary>
+		</member>
+		<member name="F:System.Data.SqlServerCe.TrackingOptions.Insert">
+			<summary>挿入だけを追跡します。</summary>
+		</member>
+		<member name="F:System.Data.SqlServerCe.TrackingOptions.Max">
+			<summary>センチネル フィールドです。使用されていません。</summary>
+		</member>
+		<member name="F:System.Data.SqlServerCe.TrackingOptions.None">
+			<summary>センチネル フィールドです。使用されていません。</summary>
+		</member>
+		<member name="F:System.Data.SqlServerCe.TrackingOptions.Update">
+			<summary>更新だけを追跡します。</summary>
+		</member>
+		<member name="T:System.Data.SqlServerCe.ValidateType">
+			<summary>実行するデータ検証のタイプを指定します。</summary>
+		</member>
+		<member name="F:System.Data.SqlServerCe.ValidateType.NoValidation">
+			<summary>検証を実行しないように指定します。これは、既定の設定です。</summary>
+		</member>
+		<member name="F:System.Data.SqlServerCe.ValidateType.RowCountOnly">
+			<summary>パブリッシュされたデータに対して行数比較を実行するように指定します。</summary>
+		</member>
+		<member name="T:System.Data.SqlServerCe.VerifyOption">
+			<summary>これらのオプションによって、使用するデータベース検証のレベルが決まります。</summary>
+		</member>
+		<member name="F:System.Data.SqlServerCe.VerifyOption.Default">
+			<summary>データベース内の各ページのチェックサムを再計算し、その新しいチェックサムと予測される値を比較します。</summary>
+		</member>
+		<member name="F:System.Data.SqlServerCe.VerifyOption.Enhanced">
+			<summary>Default オプションと同じチェックを実行し、インデックスの整合性を検証します。各インデックス エントリがテーブル内に存在し、各テーブル エントリがインデックス内に存在することを確認します。このオプションは、Default オプションよりも時間がかかる、詳細なチェックです。</summary>
+		</member>
+	</members>
+</doc>

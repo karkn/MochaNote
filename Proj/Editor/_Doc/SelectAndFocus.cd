@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Comment CommentText="同じ親を持つEditorだけが選択状態になるようにEditor#IsSelectedを管理する">
+    <Position X="1.917" Y="3.146" Height="0.521" Width="2.648" />
+  </Comment>
+  <Class Name="Mkamo.Editor.Core.EditorCanvas" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Properties" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <AssociationLine Name="_HandleLayer" Type="Mkamo.Figure.Core.IFigure" FixedFromPoint="true">
+      <Path>
+        <Point X="2" Y="1" />
+        <Point X="3.75" Y="1" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="_SelectionManager" Type="Mkamo.Editor.Core.ISelectionManager" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="1.562" Y="1.155" />
+        <Point X="1.562" Y="4.596" />
+        <Point X="3.75" Y="4.596" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="_FocusManager" Type="Mkamo.Editor.Core.IFocusManager" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="0.938" Y="1.155" />
+        <Point X="0.938" Y="6.933" />
+        <Point X="3.75" Y="6.933" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>CghAABCECDBADAAAEgBAEBABAIAQBsiDAgSISSABgQw=</HashCode>
+      <FileName>Core\EditorCanvas.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="_HandleLayer" />
+      <Property Name="_FocusLayer" />
+      <Property Name="_SelectionManager" />
+      <Property Name="_FocusManager" />
+    </ShowAsAssociation>
+  </Class>
+  <Interface Name="Mkamo.Editor.Core.IEditor" Collapsed="true">
+    <Position X="7.5" Y="4" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+      <Compartment Name="Events" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>ADRIAAAGASVDkCAADAEkSAAACkBCEAAABw4gRABYCCE=</HashCode>
+      <FileName>Core\IEditor.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Site" />
+      <Property Name="Focus" />
+    </ShowAsAssociation>
+  </Interface>
+  <Interface Name="Mkamo.Editor.Core.IFocus" Collapsed="true">
+    <Position X="7.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgABEAAgCAAgEAGAggAAABBAAAAEAQAAAgIAAiAQAA=</HashCode>
+      <FileName>Core\IFocus.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Mkamo.Editor.Core.ISelectionManager">
+    <Position X="3.75" Y="4" Width="1.75" />
+    <AssociationLine Name="SelectedEditors" Type="Mkamo.Editor.Core.IEditor" FixedFromPoint="true">
+      <Path>
+        <Point X="5.5" Y="4.25" />
+        <Point X="7.5" Y="4.25" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAIAAAAAAAAAAAAAAgAAAAAAAAAAAQAAAAAA=</HashCode>
+      <FileName>Core\ISelectionManager.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="SelectedEditors" />
+    </ShowAsCollectionAssociation>
+  </Interface>
+  <Interface Name="Mkamo.Editor.Core.IFocusManager">
+    <Position X="3.75" Y="6.25" Width="1.5" />
+    <AssociationLine Name="FocusedEditor" Type="Mkamo.Editor.Core.IEditor" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="5.25" Y="6.5" />
+        <Point X="6.5" Y="6.5" />
+        <Point X="6.5" Y="4.688" />
+        <Point X="7.5" Y="4.688" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.081" Y="0.058" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>ACAAAAAEAgAAAAAAAAAAAAAAAAAAAAgAAECAAAAAAAA=</HashCode>
+      <FileName>Core\IFocusManager.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="FocusedEditor" />
+    </ShowAsAssociation>
+  </Interface>
+  <Interface Name="Mkamo.Figure.Core.IFigure" Collapsed="true">
+    <Position X="3.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier />
+  </Interface>
+  <Interface Name="Mkamo.Editor.Core.IEditorSite">
+    <Position X="9.75" Y="2" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Properties" Collapsed="true" />
+    </Compartments>
+    <AssociationLine Name="SelectionManager" Type="Mkamo.Editor.Core.ISelectionManager" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="9.75" Y="2.711" />
+        <Point X="5.125" Y="2.711" />
+        <Point X="5.125" Y="4" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="FocusManager" Type="Mkamo.Editor.Core.IFocusManager" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="10.875" Y="3.423" />
+        <Point X="10.875" Y="7.25" />
+        <Point X="5.25" Y="7.25" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAAABAACgAAAAQABAAkAAAIAAAAAAgABCAg=</HashCode>
+      <FileName>Core\IEditorSite.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="SelectionManager" />
+      <Property Name="FocusManager" />
+    </ShowAsAssociation>
+  </Interface>
+  <Font Name="MeiryoKe_UIGothic" Size="9" />
+</ClassDiagram>

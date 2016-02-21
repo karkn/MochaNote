@@ -1,0 +1,6 @@
+﻿log4net
+dotnetzip
+kripton toolkit
+アイコン
+  http://www.fatcow.com/free-icons/
+  creditsにURL込みで表示が必要

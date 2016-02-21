@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Mkamo.Common.Event.DetailedNotifyPropertyChanged" Collapsed="true">
+    <Position X="0.75" Y="5.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAApAAAAAAAAIAAAAAAAQAAAEAAAIABAA=</HashCode>
+      <FileName>Event\DetailedNotifyPropertyChanged.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mkamo.Common.Event.DetailedNotifyPropertyChangedBase" Collapsed="true">
+    <Position X="0.75" Y="3.25" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAABApAAABAAARIAAAABAAQAAAEAAAMABAA=</HashCode>
+      <FileName>Event\DetailedNotifyPropertyChangedBase.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Mkamo.Common.Event.DetailedPropertyChangedEventArgs" Collapsed="true">
+    <Position X="7.75" Y="3.75" Width="2" />
+    <InheritanceLine Type="System.ComponentModel.PropertyChangedEventArgs" FixedFromPoint="true">
+      <Path>
+        <Point X="8.75" Y="3.155" />
+        <Point X="8.75" Y="3.75" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAABAAAAAAAAgEAAgAABAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>Event\DetailedPropertyChangedEventArgs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mkamo.Common.Event.DetailedPropertyChangeEventArgs&lt;TValue&gt;" Collapsed="true">
+    <Position X="7.75" Y="5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAQQAAAAAAAAAAAAAACAEAAAAAAAAAAAAAAAEAIAAAA=</HashCode>
+      <FileName>Event\DetailedPropertyChangedEventArgs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mkamo.Common.Event.DetailedPropertyChangeNotifier" Collapsed="true">
+    <Position X="3.75" Y="7" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAEAAAQAApABAAAQAAIAIAAAAAQAAAEAAAIABYA=</HashCode>
+      <FileName>Event\DetailedPropertyChangeNotifier.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Mkamo.Common.Event.DetailedPropertyChangeNotifierBase" Collapsed="true">
+    <Position X="3.5" Y="5.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>BEAAAAEAAAQAAAABAAAQAAQgIAAAAAAAAAAIAAAAAYA=</HashCode>
+      <FileName>Event\DetailedPropertyChangeNotifierBase.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="System.ComponentModel.PropertyChangedEventArgs" Collapsed="true">
+    <Position X="7.75" Y="2.5" Width="2.25" />
+    <TypeIdentifier />
+  </Class>
+  <Interface Name="Mkamo.Common.Event.IQualifiedEventHandlers&lt;TEventArgs&gt;" Collapsed="true">
+    <Position X="7.5" Y="1" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAABAAAAAAAA=</HashCode>
+      <FileName>Event\IQualifiedEventHandlers.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Mkamo.Common.Event.IDetailedNotifyPropertyChanged" Collapsed="true">
+    <Position X="0.75" Y="1.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAABAAAQAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Event\IDetailedNotifyPropertyChanged.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Mkamo.Common.Event.IDetailedNotifyPropertyChanging" Collapsed="true">
+    <Position X="3.75" Y="1.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Event\IDetailedNotifyPropertyChanging.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="Mkamo.Common.Event.PropertyChangeKind">
+    <Position X="8.5" Y="6.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAIBAIAAAAAABAEAAAAABAAAAAAAAAAAAAAAAABAAIA=</HashCode>
+      <FileName>Event\DetailedPropertyChangedEventArgs.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="MeiryoKe_UIGothic" Size="9" />
+</ClassDiagram>

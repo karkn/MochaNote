@@ -1,0 +1,182 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Mkamo.Editor.Core.EditorCanvas">
+    <Position X="0.5" Y="7.25" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Properties" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+      <Compartment Name="Events" Collapsed="true" />
+    </Compartments>
+    <AssociationLine Name="_PrimaryLayer" Type="Mkamo.Figure.Core.IFigure" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="2" Y="7.319" />
+        <Point X="5.672" Y="7.319" />
+        <Point X="5.672" Y="2.802" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.079" Y="0.05" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="_HandleLayer" Type="Mkamo.Figure.Core.IFigure" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="2" Y="7.474" />
+        <Point X="6.72" Y="7.474" />
+        <Point X="6.72" Y="2.802" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.016" Y="0.664" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="_FeedbackLayer" Type="Mkamo.Figure.Core.IFigure" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="2" Y="7.422" />
+        <Point X="6.356" Y="7.422" />
+        <Point X="6.356" Y="2.802" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.037" Y="0.445" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="_FocusLayer" Type="Mkamo.Figure.Core.IFigure" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="2" Y="7.37" />
+        <Point X="6.014" Y="7.37" />
+        <Point X="6.014" Y="2.802" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.068" Y="0.248" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>CghAABCECDBADAAAEgBAEBABAIAQBsiDAgSISSABgQw=</HashCode>
+      <FileName>Core\EditorCanvas.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="RootEditor" />
+      <Property Name="_PrimaryLayer" />
+      <Property Name="_HandleLayer" />
+      <Property Name="_FeedbackLayer" />
+      <Property Name="_FocusLayer" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Mkamo.Figure.Core.Canvas" Collapsed="true">
+    <Position X="0.5" Y="1" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Properties" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <AssociationLine Name="Content" Type="Mkamo.Figure.Core.IFigure" FixedFromPoint="true">
+      <Path>
+        <Point X="2" Y="1.134" />
+        <Point X="6.25" Y="1.134" />
+        <Point X="6.25" Y="1.5" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="_EventDispatcher" Type="Mkamo.Figure.Core.EventDispatcher" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="1.75" Y="1.655" />
+        <Point X="1.75" Y="3.763" />
+        <Point X="3.25" Y="3.763" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier />
+    <ShowAsAssociation>
+      <Property Name="Content" />
+      <Property Name="_EventDispatcher" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Mkamo.Editor.Internal.Core.EditorEventDispatcher" Collapsed="true">
+    <Position X="3" Y="5.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAABgBAIBUAAIKAAAAAAIAAQABAAgEAAEAAAAgAQgg=</HashCode>
+      <FileName>Internal\Core\EditorEventDispatcher.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="_Tool" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Mkamo.Figure.Core.EventDispatcher" Collapsed="true">
+    <Position X="3.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Interface Name="Mkamo.Editor.Core.IEditor" Collapsed="true">
+    <Position X="5.5" Y="7.75" Width="1.5" />
+    <AssociationLine Name="Figure" Type="Mkamo.Figure.Core.IFigure" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="7" Y="8.25" />
+        <Point X="7.24" Y="8.25" />
+        <Point X="7.24" Y="2.688" />
+        <Point X="7" Y="2.688" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>ADRIAAAGASVDkCAADAEkSAAACkBCEAAABw4gRABYCCE=</HashCode>
+      <FileName>Core\IEditor.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Figure" />
+    </ShowAsAssociation>
+  </Interface>
+  <Interface Name="Mkamo.Figure.Core.IFigure" Collapsed="true">
+    <Position X="5.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier />
+  </Interface>
+  <Interface Name="Mkamo.Editor.Core.ITool" Collapsed="true">
+    <Position X="3.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABgBAIBUAAACAAABAAIAAQAAAAAGAAEAAAAgAQgA=</HashCode>
+      <FileName>Core\ITool.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Mkamo.Editor.Core.IEditorHandle" Collapsed="true">
+    <Position X="7.5" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAAAAgAAAAAgAAAAAAAAAAAQAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\IEditorHandle.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Mkamo.Editor.Core.IHandle" Collapsed="true">
+    <Position X="7.5" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgABAAAgSAAAEAEAgAAAABBAAAAGAAAAAgIAAiAAAA=</HashCode>
+      <FileName>Core\IHandle.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Mkamo.Editor.Core.IFocus" Collapsed="true">
+    <Position X="9.25" Y="7.75" Width="1.5" />
+    <AssociationLine Name="Figure" Type="Mkamo.Figure.Core.IFigure" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="10" Y="7.75" />
+        <Point X="10" Y="2.312" />
+        <Point X="7" Y="2.312" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAgABEAAgCAAgEAGAggAAABBAAAAEAQAAAgIAAiAQAA=</HashCode>
+      <FileName>Core\IFocus.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Figure" />
+    </ShowAsAssociation>
+  </Interface>
+  <Interface Name="Mkamo.Editor.Core.IAuxiliaryHandle">
+    <Position X="9.25" Y="9" Width="1.5" />
+    <AssociationLine Name="Figure" Type="Mkamo.Figure.Core.IFigure" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="10.75" Y="9.562" />
+        <Point X="11.156" Y="9.562" />
+        <Point X="11.156" Y="2" />
+        <Point X="7" Y="2" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAQAA=</HashCode>
+      <FileName>Core\IAuxiliaryHandle.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Figure" />
+    </ShowAsAssociation>
+  </Interface>
+  <Font Name="MeiryoKe_UIGothic" Size="9" />
+</ClassDiagram>

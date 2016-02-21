@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>MochaNoteヘルプ - MochaNoteClient</title>
+<link rel="stylesheet" href="../CSS/MochaNote.css" type="text/css" />
+</head>
+
+<body>
+
+<div id="container">
+<div id="navi">
+<iframe src="../menu.html" marginwidth="0" marginheight="0" frameborder="0"></iframe>
+</div>
+
+<div id="content">
+<h2>MochaNoteClient</h2>
+
+<p>
+MochaNoteClientはMochaNoteを操作するためのコマンドラインアプリケーションです。
+MochaNoteClientにコマンドライン引数を渡すことでノートの作成，ロード，削除といった処理を呼び出せます。
+</p>
+
+<p>
+使い方は以下のUsageのとおりです。
+</p>
+
+<pre>
+Usage:
+  MochaNoteClient.exe &lt;method and args&gt; [options]
+
+  &lt;method and args&gt; are
+    create &lt;title&gt;: create a new memo
+    load &lt;memoUri&gt;: load a memo
+    remove &lt;memoUri&gt;: remove a memo
+    uris: query all memo URIs
+    exist &lt;memoUri&gt;: query existence of a memo
+    title &lt;memoUri&gt;: query a title of a memo
+
+    &lt;title&gt; is a string that is a title of a creating memo
+    &lt;memoUri&gt; is a string that was returned on creating or querying memo URIs
+
+  [options] are
+    -a: activate MochaNote window
+    -s[=seconds]: start MochaNote if not started and wait for seconds.
+                  If seconds omitted, wait for 20 seconds
+
+  Example:
+    MochaNoteClient.exe create "My memo"
+      create a memo titled "My memo"
+    MochaNoteClient.exe load MEMO_URI
+      load a memo specified by MEMO_URI
+    MochaNoteClient.exe create "My memo" -s=30 -a
+      start MochaNote if not started, and create a memo, and activate
+</pre>
+
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,304 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{11E94803-0024-4A00-88C4-0E0E0C826FE5}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Mkamo.Common</RootNamespace>
+    <AssemblyName>Mkamo.Common</AssemblyName>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <SignAssembly>false</SignAssembly>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Document|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Document\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>bin\Document\Mkamo.Common.XML</DocumentationFile>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <BaseAddress>1610612736</BaseAddress>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Document|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Document\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>bin\Document\Mkamo.Common.XML</DocumentationFile>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Deploy|AnyCPU' ">
+    <OutputPath>bin\Deploy\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Deploy|x86' ">
+    <OutputPath>bin\x86\Deploy\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Lib\log4net\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Collection\BidirectionalDictionary.cs" />
+    <Compile Include="Core\ArrayOrderingComparer.cs" />
+    <Compile Include="Core\DateTimeUtil.cs" />
+    <Compile Include="Core\ExpressionUtil.cs" />
+    <Compile Include="Core\Extensions.cs" />
+    <Compile Include="Core\Lazy.cs" />
+    <Compile Include="Core\DelegatingComparer.cs" />
+    <Compile Include="Core\IDictionaryUtil.cs" />
+    <Compile Include="Collection\Internal\AsIListWrapper.cs" />
+    <Compile Include="Collection\Iterator.cs" />
+    <Compile Include="Command\CommandEventArgs.cs" />
+    <Compile Include="Command\CommandTypes.cs" />
+    <Compile Include="Command\DelegatingCommand.cs" />
+    <Compile Include="Command\NoopCommand.cs" />
+    <Compile Include="Core\ObjectActivatorCache.cs" />
+    <Compile Include="Core\StringProvider.cs" />
+    <Compile Include="Crypto\RsaUtil.cs" />
+    <Compile Include="Csv\CachedCsvReader.cs" />
+    <Compile Include="Csv\CachedCsvReader.CsvBindingList.cs" />
+    <Compile Include="Csv\CachedCsvReader.CsvPropertyDescriptor.cs" />
+    <Compile Include="Csv\CachedCsvReader.CsvRecordComparer.cs" />
+    <Compile Include="Csv\CsvReader.cs" />
+    <Compile Include="Csv\CsvReader.DataReaderValidations.cs" />
+    <Compile Include="Csv\CsvReader.RecordEnumerator.cs" />
+    <Compile Include="Csv\Events\ParseErrorEventArgs.cs" />
+    <Compile Include="Csv\Exceptions\MalformedCsvException.cs" />
+    <Compile Include="Csv\Exceptions\MissingFieldCsvException.cs" />
+    <Compile Include="Csv\MissingFieldAction.cs" />
+    <Compile Include="Csv\ParseErrorAction.cs" />
+    <Compile Include="Csv\Resources\ExceptionMessage.Designer.cs" />
+    <Compile Include="Csv\ValueTrimmingOptions.cs" />
+    <Compile Include="Diagnostics\Contract.cs" />
+    <Compile Include="Association\AssociationCollection.cs" />
+    <Compile Include="Association\AssociationList.cs" />
+    <Compile Include="Association\AssociationUtil.cs" />
+    <Compile Include="Core\ICollectionUtil.cs" />
+    <Compile Include="Collection\ConvertedList.cs" />
+    <Compile Include="Collection\EmptyList.cs" />
+    <Compile Include="Crypto\AesUtil.cs" />
+    <Compile Include="DataType\HorizontalAlignment.cs" />
+    <Compile Include="DataType\Tuple.cs" />
+    <Compile Include="DataType\VerticalAlignment.cs" />
+    <Compile Include="Diagnostics\StackTraceUtil.cs" />
+    <Compile Include="Core\EventArgs.cs" />
+    <Compile Include="Core\DisposableBundle.cs" />
+    <Compile Include="Externalize\ExternalizableProxy.cs" />
+    <Compile Include="Externalize\ExternalAttribute.cs" />
+    <Compile Include="Externalize\ExternalizableAttribute.cs" />
+    <Compile Include="Externalize\ExternalizeTypes.cs" />
+    <Compile Include="Externalize\Internal\Memento.cs" />
+    <Compile Include="Externalize\Internal\PropertyExternalizableSupport.cs" />
+    <Compile Include="Externalize\Internal\TypeService.cs" />
+    <Compile Include="Externalize\IReplacingExternalizable.cs" />
+    <Compile Include="Core\IEnumerableUtil.cs" />
+    <Compile Include="Collection\NotifyChangeList.cs" />
+    <Compile Include="Core\IListUtil.cs" />
+    <Compile Include="Collection\InsertionOrderedDictionary.cs" />
+    <Compile Include="Collection\RangedList.cs" />
+    <Compile Include="Command\AbstractCommand.cs" />
+    <Compile Include="Command\CommandExecutor.cs" />
+    <Compile Include="Command\CompositeCommand.cs" />
+    <Compile Include="Command\ICommand.cs" />
+    <Compile Include="Command\ICommandExecutor.cs" />
+    <Compile Include="DataType\Directions.cs" />
+    <Compile Include="DataType\Range.cs" />
+    <Compile Include="Disposable\ResourceCache.cs" />
+    <Compile Include="Core\EnumUtil.cs" />
+    <Compile Include="Event\IQualifiedEventHandlers.cs" />
+    <Compile Include="Event\PropertyChangeKind.cs" />
+    <Compile Include="Event\QualifiedEventHandlers.cs" />
+    <Compile Include="Event\DetailedPropertyChangingEventArgs.cs" />
+    <Compile Include="Core\ObjectUtil.cs" />
+    <Compile Include="Core\StringBuilderUtil.cs" />
+    <Compile Include="IO\DirectoryUtil.cs" />
+    <Compile Include="IO\PathUtil.cs" />
+    <Compile Include="Externalize\IMemento.cs" />
+    <Compile Include="Externalize\IExternalizable.cs" />
+    <Compile Include="Externalize\Externalizer.cs" />
+    <Compile Include="Externalize\ExternalizeContext.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Event\IDetailedNotifyPropertyChanged.cs" />
+    <Compile Include="Event\IDetailedNotifyPropertyChanging.cs" />
+    <Compile Include="Event\DetailedNotifyPropertyChangedBase.cs" />
+    <Compile Include="Event\DetailedPropertyChangedEventArgs.cs" />
+    <Compile Include="Event\DetailedNotifyPropertyChanged.cs" />
+    <Compile Include="Event\DetailedNotifyPropertyChange.cs" />
+    <Compile Include="Event\DetailedNotifyPropertyChangeBase.cs" />
+    <Compile Include="Reflection\Accessor.cs" />
+    <Compile Include="Reflection\AccessorCache.cs" />
+    <Compile Include="Reflection\ActionInvokerCache.cs" />
+    <Compile Include="Reflection\AttributeCache.cs" />
+    <Compile Include="Reflection\IAccessor.cs" />
+    <Compile Include="Reflection\IActionInvoker.cs" />
+    <Compile Include="Reflection\PropertyInfoCache.cs" />
+    <Compile Include="Reflection\MethodInfoUtil.cs" />
+    <Compile Include="Reflection\GenericTypeUtil.cs" />
+    <Compile Include="Reflection\PropertyInfoUtil.cs" />
+    <Compile Include="Core\BinaryFormatterUtil.cs" />
+    <Compile Include="Serialize\DelegatingSerializationBinder.cs" />
+    <Compile Include="String\ControlChars.cs" />
+    <Compile Include="String\LineContainerSupport.cs" />
+    <Compile Include="Core\StringUtil.cs" />
+    <Compile Include="Structure\Tree.cs" />
+    <Compile Include="Structure\TreeNode.cs" />
+    <Compile Include="Core\WeakReference.cs" />
+    <Compile Include="Core\EnvironmentUtil.cs" />
+    <Compile Include="Core\MathUtil.cs" />
+    <Compile Include="String\ILineContainer.cs" />
+    <Compile Include="Text\ITextBuffer.cs" />
+    <Compile Include="Text\ITextBufferReferer.cs" />
+    <Compile Include="Text\ITextSelection.cs" />
+    <Compile Include="String\StringLineUtil.cs" />
+    <Compile Include="Text\Internal\TextBuffer.cs" />
+    <Compile Include="Text\Internal\TextBufferReferer.cs" />
+    <Compile Include="Text\Internal\TextSelection.cs" />
+    <Compile Include="Structure\CompositeSupport.cs" />
+    <Compile Include="Structure\IComposite.cs" />
+    <Compile Include="Structure\IStructured.cs" />
+    <Compile Include="Structure\StructuredSupport.cs" />
+    <Compile Include="Text\TextUtil.cs" />
+    <Compile Include="Util\ExtendedData.cs" />
+    <Compile Include="Util\IExtendedData.cs" />
+    <Compile Include="Visitor\DelegatingVisitor.cs" />
+    <Compile Include="Visitor\IVisitable.cs" />
+    <Compile Include="Visitor\IVisitor.cs" />
+    <Compile Include="Visitor\VisitableSupport.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{B4F97281-0DBD-4835-9ED8-7DFB966E87FF}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Event\_Overview.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="_Doc\License.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Csv\Resources\ExceptionMessage.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows インストーラー 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

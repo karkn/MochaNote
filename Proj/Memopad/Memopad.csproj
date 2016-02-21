@@ -1,0 +1,1188 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AB4C6A1B-595C-45FF-87EF-5C021D23991D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Mkamo.Memopad</RootNamespace>
+    <AssemblyName>Mkamo.Memopad</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <SignAssembly>false</SignAssembly>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Document|AnyCPU' ">
+    <OutputPath>bin\Document\</OutputPath>
+    <DocumentationFile>bin\Document\Mkamo.Memopad.XML</DocumentationFile>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <BaseAddress>1629487104</BaseAddress>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Document|x86' ">
+    <OutputPath>bin\x86\Document\</OutputPath>
+    <DocumentationFile>bin\Document\Mkamo.Memopad.XML</DocumentationFile>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Deploy|AnyCPU' ">
+    <OutputPath>bin\Deploy\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Deploy|x86' ">
+    <OutputPath>bin\x86\Deploy\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ComponentFactory.Krypton.Toolkit, Version=4.4.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Lib\KryptonToolkit\ComponentFactory.Krypton.Toolkit.DLL</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="HtmlAgilityPack, Version=1.4.0.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Lib\HtmlAgilityPack\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Lib\log4net\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.SqlServerCe, Version=4.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Lib\SqlServerCompact\System.Data.SqlServerCe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Remoting" />
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Core\BootstrapSettings.cs" />
+    <Compile Include="Internal\Controllers\MemoFreehandController.cs" />
+    <Compile Include="Internal\Controls\DetailPage_\AbbrevSettingDetailPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Internal\Controls\DetailPage_\AbbrevSettingDetailPage.Designer.cs">
+      <DependentUpon>AbbrevSettingDetailPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Internal\Controls\DetailPage_\BackgroundSettingsDetailPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Internal\Controls\DetailPage_\BackgroundSettingsDetailPage.Designer.cs">
+      <DependentUpon>BackgroundSettingsDetailPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Internal\Controls\FreehandSelectorDropDown.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Internal\Controls\MemopadNotifyIcon.cs" />
+    <Compile Include="Internal\Core\AbbrevWordPersister.cs" />
+    <Compile Include="Internal\Core\DataFolderExporter.cs" />
+    <Compile Include="Internal\Core\FusenManager.cs" />
+    <Compile Include="Internal\Core\MemopadRemoteFacade.cs" />
+    <Compile Include="Core\MemoIdCollection.cs" />
+    <Compile Include="Core\MemopadRequestIds.cs" />
+    <Compile Include="Internal\Core\MemopadUILogic.cs" />
+    <Compile Include="Internal\Core\RegularFontNames.cs" />
+    <Compile Include="Core\MemopadWindowSettings.cs" />
+    <Compile Include="Internal\Commands\ChangeRowHeightCommand.cs" />
+    <Compile Include="Internal\Commands\InsertTableColumnCommand.cs" />
+    <Compile Include="Internal\Commands\InsertTableRowCommand.cs" />
+    <Compile Include="Internal\Commands\MergeTableCellsCommand.cs" />
+    <Compile Include="Internal\Commands\RemoveTableColumnCommand.cs" />
+    <Compile Include="Internal\Commands\RemoveTableRowCommand.cs" />
+    <Compile Include="Internal\Commands\ChangeColumnWidthCommand.cs" />
+    <Compile Include="Internal\Controllers\AbstractMemoContentController.cs" />
+    <Compile Include="Internal\Controllers\MemoTableController.cs" />
+    <Compile Include="Internal\Controllers\MemoTableCellController.cs" />
+    <Compile Include="Internal\Controllers\UIProviders\AbstractMemoStyledTextUIProvider.cs" />
+    <Compile Include="Internal\Controllers\UIProviders\MemoImageUIProvider.cs" />
+    <Compile Include="Internal\Controllers\UIProviders\MemoShapeUIProvider.cs" />
+    <Compile Include="Internal\Controllers\UIProviders\MemoTableCellUIProvider.cs" />
+    <Compile Include="Internal\Controllers\UIProviders\MemoTextUIProvider.cs" />
+    <Compile Include="Internal\Controls\DetailPage_\HotKeySettingsDetailPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Internal\Controls\DetailPage_\HotKeySettingsDetailPage.Designer.cs">
+      <DependentUpon>HotKeySettingsDetailPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Internal\Controls\OutlinePreviewControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Internal\Controls\OutlinePreviewControl.Designer.cs">
+      <DependentUpon>OutlinePreviewControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Internal\Controls\Presenter_\FolderTreePresenter.cs" />
+    <Compile Include="Internal\Controls\MemoQueryBuilderView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Internal\Controls\MemoQueryBuilderView.Designer.cs">
+      <DependentUpon>MemoQueryBuilderView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Internal\Controls\Presenter_\SmartFolderTreePresenter.cs" />
+    <Compile Include="Internal\Controls\Presenter_\TrashBoxPresenter.cs" />
+    <Compile Include="Internal\Controls\Presenter_\AllMemosPresenter.cs" />
+    <Compile Include="Internal\Controls\StartPageContent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Internal\Controls\StartPageContent.Designer.cs">
+      <DependentUpon>StartPageContent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Internal\Controls\TagSelectTextBox.cs">
+    </Compile>
+    <Compile Include="Internal\Controls\MarkSelectTextBox.cs" />
+    <Compile Include="Internal\Controls\TimeSpanPickTextBox.cs" />
+    <Compile Include="Internal\Core\IMemoInfoListProvider.cs" />
+    <Compile Include="Internal\Core\MemoFinder.cs" />
+    <Compile Include="Internal\Controls\Presenter_\TagTreePresenter.cs" />
+    <Compile Include="Internal\Core\MemoMarkDefinition.cs" />
+    <Compile Include="Internal\Core\MemopadFormMediator.cs" />
+    <Compile Include="Internal\Core\MemopadToolIds.cs" />
+    <Compile Include="Internal\Core\MemoDataFolderSync.cs" />
+    <Compile Include="Internal\Core\Updater.cs" />
+    <Compile Include="Internal\Figures\MemoTableRuledLineHandleFigure.cs" />
+    <Compile Include="Internal\Figures\MemoTableFrameHandleFigure.cs" />
+    <Compile Include="Internal\Focuses\MemoStyledTextFocusContextMenuProvider.cs" />
+    <Compile Include="Internal\Controllers\UIProviders\AbstractUmlClassifierUIProvider.cs" />
+    <Compile Include="Internal\Controllers\UIProviders\MemoEdgeUIProvider.cs" />
+    <Compile Include="Internal\Controllers\UIProviders\UmlClassUIProvider.cs" />
+    <Compile Include="Internal\Controllers\UIProviders\AbstractUmlFeatureUIProvider.cs" />
+    <Compile Include="Internal\Controllers\MemoFileController.cs" />
+    <Compile Include="Internal\Controllers\UIProviders\MemoFileUIProvider.cs" />
+    <Compile Include="Internal\Controllers\UIProviders\UmlInterfaceUIProvider.cs" />
+    <Compile Include="Internal\Controllers\UIProviders\UmlPropertyUIProvider.cs" />
+    <Compile Include="Internal\Controllers\UIProviders\UmlOperationUIProvider.cs" />
+    <Compile Include="Internal\Controllers\UIProviders\UmlAssociationUIProvider.cs" />
+    <Compile Include="Internal\Controls\DetailPage_\ConfirmSettingsDetailPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Internal\Controls\DetailPage_\ConfirmSettingsDetailPage.Designer.cs">
+      <DependentUpon>ConfirmSettingsDetailPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Internal\Controls\DetailPage_\FileDetailPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Internal\Controls\DetailPage_\FileDetailPage.Designer.cs">
+      <DependentUpon>FileDetailPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Internal\Controls\DetailPage_\FolderSettingsDetailPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Internal\Controls\DetailPage_\FolderSettingsDetailPage.Designer.cs">
+      <DependentUpon>FolderSettingsDetailPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Internal\Controls\WorkspaceTree.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Internal\Controls\InMemoSearcher.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Internal\Controls\InMemoSearcher.Designer.cs">
+      <DependentUpon>InMemoSearcher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Internal\Controls\MemoListView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Internal\Controls\MemoListView.Designer.cs">
+      <DependentUpon>MemoListView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Internal\Controls\DetailPage_\MiscSettingsDetailPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Internal\Controls\DetailPage_\MiscSettingsDetailPage.Designer.cs">
+      <DependentUpon>MiscSettingsDetailPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Internal\Controls\NodeStyleSelectorDropDown.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Internal\Controls\TagSelectorToolStripItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Internal\Controls\MemoListBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Internal\Controls\MemoListBox.Designer.cs">
+      <DependentUpon>MemoListBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Internal\Controls\PageContent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Internal\Controls\PageContent.Designer.cs">
+      <DependentUpon>PageContent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Internal\Controls\SubTitleLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Internal\Controls\TagSelector.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Internal\Controls\TagSelector.Designer.cs">
+      <DependentUpon>TagSelector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Internal\Controls\TagTree.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Internal\Controls\TimeSpanPicker.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Internal\Controls\TimeSpanPicker.Designer.cs">
+      <DependentUpon>TimeSpanPicker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Internal\Controls\TitleLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Internal\Controls\DetailPage_\BasicSettingsDetailPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Internal\Controls\DetailPage_\BasicSettingsDetailPage.Designer.cs">
+      <DependentUpon>BasicSettingsDetailPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Internal\Controls\WorkspaceView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Internal\Controls\WorkspaceView.Designer.cs">
+      <DependentUpon>WorkspaceView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Core\MemopadConsts.cs" />
+    <Compile Include="Core\MemoInfo.cs" />
+    <Compile Include="Core\MemoInfoCollection.cs" />
+    <Compile Include="Core\MemopadTypes.cs" />
+    <Compile Include="Internal\Controllers\AbstractModelController.cs" />
+    <Compile Include="Internal\Controllers\MemoController.cs" />
+    <Compile Include="Internal\Controllers\MemoControllerFactory.cs" />
+    <Compile Include="Internal\Controllers\MemoEdgeController.cs" />
+    <Compile Include="Internal\Controllers\MemoImageController.cs" />
+    <Compile Include="Internal\Controllers\MemoShapeController.cs" />
+    <Compile Include="Internal\Controllers\MemoTextController.cs" />
+    <Compile Include="Internal\Controllers\UmlAssociationController.cs" />
+    <Compile Include="Internal\Controllers\UmlAttributeCollectionController.cs" />
+    <Compile Include="Internal\Controllers\UmlClassController.cs" />
+    <Compile Include="Internal\Controllers\UmlDependencyController.cs" />
+    <Compile Include="Internal\Controllers\UmlGeneralizationController.cs" />
+    <Compile Include="Internal\Controllers\UmlInterfaceController.cs" />
+    <Compile Include="Internal\Controllers\UmlInterfaceRealizationController.cs" />
+    <Compile Include="Internal\Controllers\UmlOperationCollectionController.cs" />
+    <Compile Include="Internal\Controllers\UmlOperationController.cs" />
+    <Compile Include="Internal\Controllers\UmlPropertyController.cs" />
+    <Compile Include="Internal\Controls\ButtonLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Internal\Core\IKeyBinder.cs" />
+    <Compile Include="Internal\Core\IKeyScheme.cs" />
+    <Compile Include="Internal\Core\IToolRegistry.cs" />
+    <Compile Include="Internal\Core\MemoInfoEventArgs.cs" />
+    <Compile Include="Internal\Core\MemoModelSerializer.cs" />
+    <Compile Include="Core\MemopadAppContext.cs" />
+    <Compile Include="Internal\Core\MemopadApplication.cs" />
+    <Compile Include="Core\MemopadSettings.cs" />
+    <Compile Include="Internal\Core\MemopadServer.cs" />
+    <Compile Include="Internal\Figures\MemoTextWidthHandleFigure.cs" />
+    <Compile Include="Internal\Figures\UmlClassFigure.cs" />
+    <Compile Include="Internal\Figures\UmlClassifierStructureFigure.cs" />
+    <Compile Include="Internal\Figures\UmlInterfaceFigure.cs" />
+    <Compile Include="Internal\Figures\MemoFileFigure.cs" />
+    <Compile Include="Internal\Focuses\MemoStyledTextFocus.cs" />
+    <Compile Include="Internal\Forms\AboutBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Internal\Forms\AboutBox.Designer.cs">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Internal\Forms\FusenForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Internal\Forms\FusenForm.Designer.cs">
+      <DependentUpon>FusenForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Internal\Forms\MarkSelectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Internal\Forms\MarkSelectForm.Designer.cs">
+      <DependentUpon>MarkSelectForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Internal\Forms\MemopadForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Internal\Forms\MemopadForm.Designer.cs">
+      <DependentUpon>MemopadForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Internal\Forms\MemopadForm.Handlers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Internal\Forms\MemopadForm.MainMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Internal\Forms\MemopadForm.ToolStrip.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Internal\Forms\LinkSelectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Internal\Forms\LinkSelectForm.Designer.cs">
+      <DependentUpon>LinkSelectForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Internal\Forms\CreateTableForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Internal\Forms\CreateTableForm.Designer.cs">
+      <DependentUpon>CreateTableForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Internal\Forms\MemopadFormBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Internal\Forms\ProgressForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Internal\Forms\ProgressForm.Designer.cs">
+      <DependentUpon>ProgressForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Internal\Forms\QueryHolderEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Internal\Forms\QueryHolderEditForm.Designer.cs">
+      <DependentUpon>QueryHolderEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Internal\Forms\TagManageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Internal\Forms\TagManageForm.Designer.cs">
+      <DependentUpon>TagManageForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Internal\Controls\ToolSelectorDropDown.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Internal\Forms\TagSelectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Internal\Forms\TagSelectForm.Designer.cs">
+      <DependentUpon>TagSelectForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Internal\Forms\TimeSpanPickForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Internal\Forms\TimeSpanPickForm.Designer.cs">
+      <DependentUpon>TimeSpanPickForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Internal\Forms\ToolStripForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Internal\Forms\ToolStripForm.Designer.cs">
+      <DependentUpon>ToolStripForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Internal\Handles\CompositeMemoMarkHandle.cs" />
+    <Compile Include="Internal\Handles\MemoMarkHandle.cs" />
+    <Compile Include="Internal\Handles\MemoTableCellEditorHandle.cs" />
+    <Compile Include="Internal\Handles\MemoTableFrameHandle.cs" />
+    <Compile Include="Internal\Handles\MemoTableRuledLineHandle.cs" />
+    <Compile Include="Internal\Handles\MemoTextEditorHandle.cs" />
+    <Compile Include="Internal\Handles\MemoTextFrameHandle.cs" />
+    <Compile Include="Internal\Handles\MemoTextWidthHandle.cs" />
+    <Compile Include="Internal\Handles\MemoEditorScenario.cs" />
+    <Compile Include="Internal\Handles\MemoFileEditorHandle.cs" />
+    <Compile Include="Internal\Handles\MemoShapeEditorHandle.cs" />
+    <Compile Include="Internal\Helpers\MemoFileEditorHelper.cs" />
+    <Compile Include="Internal\Helpers\UmlFeatureEditorHelper.cs" />
+    <Compile Include="Internal\KeyActions\ComboBoxKeyActions.cs" />
+    <Compile Include="Internal\KeyActions\CommonKeyActions.cs" />
+    <Compile Include="Internal\KeyActions\MemoContentEditorKeyActions.cs" />
+    <Compile Include="Internal\KeyActions\MemoContentFocusKeyActions.cs" />
+    <Compile Include="Internal\KeyActions\MemoEditorKeyActions.cs" />
+    <Compile Include="Internal\KeyActions\MemoListViewKeyActions.cs" />
+    <Compile Include="Internal\KeyActions\MemoTableCellEditorKeyActions.cs" />
+    <Compile Include="Internal\KeyActions\MemoTableCellFocusKeyActions.cs" />
+    <Compile Include="Internal\KeyActions\NoSelectionKeyActions.cs" />
+    <Compile Include="Internal\KeyActions\PageContentTitleTextBoxKeyActions.cs" />
+    <Compile Include="Internal\KeyActions\TextBoxKeyActions.cs" />
+    <Compile Include="Internal\KeyActions\TreeViewKeyActions.cs" />
+    <Compile Include="Internal\KeyActions\UmlFeatureEditorKeyActions.cs" />
+    <Compile Include="Internal\KeySchemes\AbstractKeyScheme.cs" />
+    <Compile Include="Internal\KeySchemes\DefaultKeyScheme.cs" />
+    <Compile Include="Internal\KeySchemes\EmacsKeyScheme.cs" />
+    <Compile Include="Internal\Requests\ChangeRowHeightRequest.cs" />
+    <Compile Include="Internal\Requests\ChangeColumnWidthRequest.cs" />
+    <Compile Include="Internal\Roles\MemoTextResizeRole.cs" />
+    <Compile Include="Internal\Roles\ChangeRowHeightRole.cs" />
+    <Compile Include="Internal\Roles\ChangeColumnWidthRole.cs" />
+    <Compile Include="Internal\Utils\CaretUtil.cs" />
+    <Compile Include="Internal\Helpers\MemoEditorHelper.cs" />
+    <Compile Include="Internal\Utils\HotKeyUtil.cs" />
+    <Compile Include="Internal\Core\HtmlParser.cs" />
+    <Compile Include="Internal\Utils\LinkUtil.cs" />
+    <Compile Include="Internal\Utils\MemoMarkUtil.cs" />
+    <Compile Include="Internal\Utils\MemoOutlineUtil.cs" />
+    <Compile Include="Internal\Utils\MemoTextUtil.cs" />
+    <Compile Include="Internal\Utils\MemoTagUtil.cs" />
+    <Compile Include="Internal\Utils\UriUtil.cs" />
+    <Compile Include="Internal\Utils\MessageUtil.cs" />
+    <Compile Include="Internal\Utils\ShortcutUtil.cs" />
+    <Compile Include="Internal\Utils\TreeViewUtil.cs" />
+    <Compile Include="Internal\Helpers\UmlClassifierHelper.cs" />
+    <Compile Include="Internal\Utils\MemoSerializeUtil.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <DependentUpon>Resources.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CommonForms\CommonForms.csproj">
+      <Project>{6E0EE774-EDD5-4B7D-9A1A-2FF4808FFFDC}</Project>
+      <Name>CommonForms</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{11E94803-0024-4A00-88C4-0E0E0C826FE5}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Container\Container.csproj">
+      <Project>{46AD29F8-2303-46B4-8E6B-E3618EAC0475}</Project>
+      <Name>Container</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Control\Control.csproj">
+      <Project>{4B0D4325-D210-42E7-88E4-4905E17F3660}</Project>
+      <Name>Control</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Editor\Editor.csproj">
+      <Project>{23CEF6F7-BE4B-4B43-B23B-6E9891E69D33}</Project>
+      <Name>Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Figure\Figure.csproj">
+      <Project>{505ADE94-1A96-4291-909D-24988FFD1A51}</Project>
+      <Name>Figure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MemopadRemote\MemopadRemote.csproj">
+      <Project>{B3854E93-E209-4B1A-B106-ECA7BCA4B09A}</Project>
+      <Name>MemopadRemote</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{50C19A53-3BA6-4367-AF93-9D705F5A533C}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\StyledText\StyledText.csproj">
+      <Project>{6E243DF9-8A7D-418B-9600-C3F0B9F97705}</Project>
+      <Name>StyledText</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Internal\Controls\DetailPage_\AbbrevSettingDetailPage.resx">
+      <DependentUpon>AbbrevSettingDetailPage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Internal\Controls\DetailPage_\ConfirmSettingsDetailPage.resx">
+      <DependentUpon>ConfirmSettingsDetailPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Internal\Controls\DetailPage_\HotKeySettingsDetailPage.resx">
+      <DependentUpon>HotKeySettingsDetailPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Internal\Controls\DetailPage_\FileDetailPage.resx">
+      <DependentUpon>FileDetailPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Internal\Controls\DetailPage_\FolderSettingsDetailPage.resx">
+      <DependentUpon>FolderSettingsDetailPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Internal\Controls\DetailPage_\BackgroundSettingsDetailPage.resx">
+      <DependentUpon>BackgroundSettingsDetailPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Internal\Controls\StartPageContent.resx">
+      <DependentUpon>StartPageContent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Internal\Controls\TagTree.resx">
+      <DependentUpon>TagTree.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Internal\Controls\WorkspaceTree.resx">
+      <DependentUpon>WorkspaceTree.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Internal\Controls\InMemoSearcher.resx">
+      <DependentUpon>InMemoSearcher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Internal\Controls\MemoListBox.resx">
+      <DependentUpon>MemoListBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Internal\Controls\MemoListView.resx">
+      <DependentUpon>MemoListView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Internal\Controls\MemoQueryBuilderView.resx">
+      <DependentUpon>MemoQueryBuilderView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Internal\Controls\DetailPage_\MiscSettingsDetailPage.resx">
+      <DependentUpon>MiscSettingsDetailPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Internal\Controls\PageContent.resx">
+      <DependentUpon>PageContent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Internal\Controls\TagSelector.resx">
+      <DependentUpon>TagSelector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Internal\Controls\TimeSpanPicker.resx">
+      <DependentUpon>TimeSpanPicker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Internal\Controls\DetailPage_\BasicSettingsDetailPage.resx">
+      <DependentUpon>BasicSettingsDetailPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Internal\Controls\WorkspaceView.resx">
+      <DependentUpon>WorkspaceView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Internal\Forms\AboutBox.resx">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Internal\Forms\ConfirmDataConversionForm.resx">
+      <DependentUpon>ConfirmDataConversionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Internal\Forms\CreateMemoForm.resx">
+      <DependentUpon>CreateMemoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Internal\Forms\EncourageUpgradeLicenseForm.resx">
+      <DependentUpon>EncourageUpgradeLicenseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Internal\Forms\FusenForm.resx">
+      <DependentUpon>FusenForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Internal\Forms\ImportanceSelectForm.resx">
+      <DependentUpon>ImportanceSelectForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Internal\Forms\MarkSelectForm.resx">
+      <DependentUpon>MarkSelectForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Internal\Forms\MemopadForm.resx">
+      <DependentUpon>MemopadForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Internal\Forms\LinkSelectForm.resx">
+      <DependentUpon>LinkSelectForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Internal\Forms\CreateTableForm.resx">
+      <DependentUpon>CreateTableForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Internal\Forms\PrintForm.resx">
+      <DependentUpon>PrintForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Internal\Forms\ProgressForm.resx">
+      <DependentUpon>ProgressForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Internal\Forms\RegisterLicenseForm.resx">
+      <DependentUpon>RegisterLicenseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Internal\Forms\SendMailForm.resx">
+      <DependentUpon>SendMailForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Internal\Forms\QueryHolderEditForm.resx">
+      <DependentUpon>QueryHolderEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Internal\Forms\SmartFilterManageForm.resx">
+      <DependentUpon>SmartFilterManageForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Internal\Forms\SmtpDetailSettingsForm.resx">
+      <DependentUpon>SmtpDetailSettingsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Internal\Forms\TagManageForm.resx">
+      <DependentUpon>TagManageForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Internal\Forms\TagSelectForm.resx">
+      <DependentUpon>TagSelectForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Internal\Forms\TimeSpanPickForm.resx">
+      <DependentUpon>TimeSpanPickForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Internal\Forms\ToolStripForm.resx">
+      <DependentUpon>ToolStripForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aggregation.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow_fig_d.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow_fig_l.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow_fig_r.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow_fig_u.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow_line.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\base.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clazz.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Collapse_large.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\composition.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cursor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dashed_arrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ellipse.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Expand_large.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\generalization.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ifc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\line.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\picture.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\realization.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rect.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\round_rect.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shape_square.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Internal\Commands\ConnectCommentCommand.cs" />
+    <Compile Include="Internal\Commands\CreateCommentCommand.cs" />
+    <Compile Include="Internal\Controllers\UIProviders\AbstractMemoContentUIProvider.cs" />
+    <Compile Include="Internal\Controllers\UIProviders\MemoTableUIProvider.cs" />
+    <Compile Include="Internal\Controllers\UIProviders\MemoFreehandUIProvider.cs" />
+    <Compile Include="Internal\Controllers\MemoAnchorReferenceController.cs" />
+    <Compile Include="Internal\Controllers\UIProviders\MemoAnchorReferenceUIProvider.cs" />
+    <Compile Include="Internal\Controls\Presenter_\OpenMemosPresenter.cs" />
+    <Compile Include="Internal\Controls\LineStyleSelectorDropDown.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Internal\Controls\ImportanceSelectTextBox.cs" />
+    <Compile Include="Internal\Core\BackupExecutor.cs" />
+    <Compile Include="Internal\Core\AutoFileImporter.cs" />
+    <Compile Include="Internal\Core\CsvExporter.cs" />
+    <Compile Include="Internal\Core\CsvParser.cs" />
+    <Compile Include="Internal\Forms\ImportanceSelectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Internal\Forms\ImportanceSelectForm.Designer.cs">
+      <DependentUpon>ImportanceSelectForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Internal\Forms\SmtpDetailSettingsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Internal\Forms\SmtpDetailSettingsForm.Designer.cs">
+      <DependentUpon>SmtpDetailSettingsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Internal\Utils\CryptoUtil.cs" />
+    <Compile Include="Internal\Core\HtmlExporter.cs" />
+    <Compile Include="Internal\Core\MemoProcessor.cs" />
+    <Compile Include="Internal\Core\PlainTextExporter.cs" />
+    <Compile Include="Internal\Forms\ConfirmDataConversionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Internal\Forms\ConfirmDataConversionForm.Designer.cs">
+      <DependentUpon>ConfirmDataConversionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Internal\Forms\CreateMemoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Internal\Forms\CreateMemoForm.Designer.cs">
+      <DependentUpon>CreateMemoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Internal\Forms\EncourageUpgradeLicenseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Internal\Forms\EncourageUpgradeLicenseForm.Designer.cs">
+      <DependentUpon>EncourageUpgradeLicenseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Internal\Forms\FusenForm.ToolStrip.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Internal\Forms\MemopadFormBase.ToolStrip.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Internal\Forms\PrintForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Internal\Forms\PrintForm.Designer.cs">
+      <DependentUpon>PrintForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Internal\Forms\RegisterLicenseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Internal\Forms\RegisterLicenseForm.Designer.cs">
+      <DependentUpon>RegisterLicenseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Internal\Forms\SendMailForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Internal\Forms\SendMailForm.Designer.cs">
+      <DependentUpon>SendMailForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Internal\Forms\SmartFilterManageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Internal\Forms\SmartFilterManageForm.Designer.cs">
+      <DependentUpon>SmartFilterManageForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Internal\Handles\CompositeCommentAnchorHandle.cs" />
+    <Compile Include="Internal\Handles\EdgeCommentAnchorHandle.cs" />
+    <Compile Include="Internal\Handles\MemoTextFrameMoveAndCombineHandle.cs" />
+    <Compile Include="Internal\Helpers\TableFigureHelper.cs" />
+    <Compile Include="Internal\Requests\ConnectCommentRequest.cs" />
+    <Compile Include="Internal\Requests\CreateCommentRequest.cs" />
+    <Compile Include="Internal\Roles\ConnectCommentRole.cs" />
+    <Compile Include="Internal\Roles\CreateChildCommentEdgeRole.cs" />
+    <Compile Include="Internal\Tools\CreateCommentEdgeTool.cs" />
+    <Compile Include="Internal\Utils\KeyActionUtil.cs" />
+    <None Include="Resources\SortHS.png" />
+    <None Include="Resources\delete.bmp" />
+    <None Include="Resources\Edit_UndoHS.png" />
+    <None Include="Resources\tag_blue_add.png" />
+    <None Include="Resources\tag_blue_delete.png" />
+    <None Include="Resources\tag_blue_edit.png" />
+    <None Include="Resources\List_Bullets.bmp" />
+    <None Include="Resources\List_Numbered.bmp" />
+    <None Include="Resources\Indent.bmp" />
+    <None Include="Resources\IndentRTL.bmp" />
+    <None Include="Resources\Edit_RedoHS.png" />
+    <None Include="Resources\16-em-down.png" />
+    <None Include="Resources\16-em-up.png" />
+    <None Include="Resources\shape_square_edit.png" />
+    <None Include="Resources\edit-bold.png" />
+    <None Include="Resources\edit-italic.png" />
+    <None Include="Resources\edit-underline.png" />
+    <None Include="Resources\edit-strike.png" />
+    <None Include="Resources\edit-alignment.png" />
+    <None Include="Resources\edit-alignment-center.png" />
+    <None Include="Resources\edit-alignment-right.png" />
+    <None Include="Resources\edit-vertical-alignment-top.png" />
+    <None Include="Resources\edit-vertical-alignment-middle.png" />
+    <None Include="Resources\edit-vertical-alignment.png" />
+    <None Include="Resources\ui-list-box-blue.png" />
+    <None Include="Resources\style_light_solid_black.png" />
+    <None Include="Resources\style_light_solid_blue.png" />
+    <None Include="Resources\style_light_solid_green.png" />
+    <None Include="Resources\style_light_solid_orange.png" />
+    <None Include="Resources\style_light_solid_red.png" />
+    <None Include="Resources\style_light_solid_sblue.png" />
+    <None Include="Resources\style_light_solid_violet.png" />
+    <None Include="Resources\style_light_solid_yellow.png" />
+    <None Include="Resources\style_hollow_black.png" />
+    <None Include="Resources\style_hollow_blue.png" />
+    <None Include="Resources\style_hollow_red.png" />
+    <None Include="Resources\style_hollow_green.png" />
+    <None Include="Resources\style_hollow_violet.png" />
+    <None Include="Resources\style_hollow_sblue.png" />
+    <None Include="Resources\style_hollow_orange.png" />
+    <None Include="Resources\style_hollow_yellow.png" />
+    <None Include="Resources\style_deep_solid_black.png" />
+    <None Include="Resources\style_deep_solid_blue.png" />
+    <None Include="Resources\style_deep_solid_red.png" />
+    <None Include="Resources\style_deep_solid_green.png" />
+    <None Include="Resources\style_deep_solid_violet.png" />
+    <None Include="Resources\style_deep_solid_sblue.png" />
+    <None Include="Resources\style_deep_solid_orange.png" />
+    <None Include="Resources\style_deep_solid_yellow.png" />
+    <None Include="Resources\style_light_grad_black.png" />
+    <None Include="Resources\style_light_grad_blue.png" />
+    <None Include="Resources\style_light_grad_red.png" />
+    <None Include="Resources\style_light_grad_green.png" />
+    <None Include="Resources\style_light_grad_violet.png" />
+    <None Include="Resources\style_light_grad_sblue.png" />
+    <None Include="Resources\style_light_grad_orange.png" />
+    <None Include="Resources\style_light_grad_yellow.png" />
+    <None Include="Resources\style_deep_grad_black.png" />
+    <None Include="Resources\style_deep_grad_blue.png" />
+    <None Include="Resources\style_deep_grad_red.png" />
+    <None Include="Resources\style_deep_grad_green.png" />
+    <None Include="Resources\style_deep_grad_violet.png" />
+    <None Include="Resources\style_deep_grad_sblue.png" />
+    <None Include="Resources\style_deep_grad_orange.png" />
+    <None Include="Resources\style_deep_grad_yellow.png" />
+    <None Include="Resources\bin.png" />
+    <None Include="Resources\diamond.png" />
+    <None Include="Resources\parallelogram.png" />
+    <None Include="Resources\cylinder.png" />
+    <None Include="Resources\paper.png" />
+    <None Include="Resources\orthogonal_arrow_line.png" />
+    <None Include="Resources\orthogonal_line.png" />
+    <None Include="Resources\arrow_fig_lr.png" />
+    <None Include="Resources\arrow_fig_ud.png" />
+    <None Include="Resources\equal_fig.png" />
+    <None Include="Resources\not_equal_fig.png" />
+    <None Include="Resources\plus_figure.png" />
+    <None Include="Resources\minus_figure.png" />
+    <None Include="Resources\devide_figure.png" />
+    <None Include="Resources\times_figure.png" />
+    <None Include="Resources\Bold.bmp" />
+    <None Include="Resources\Italic.bmp" />
+    <None Include="Resources\page_white_edit.png" />
+    <None Include="Resources\text_underline.png" />
+    <None Include="Resources\text_italic.png" />
+    <None Include="Resources\text_strikethrough.png" />
+    <None Include="Resources\text_bold.png" />
+    <None Include="Resources\edit-color.png" />
+    <None Include="Resources\page.png" />
+    <None Include="Resources\splash.png" />
+    <None Include="Resources\about.png" />
+    <None Include="Resources\tag-blue.png" />
+    <None Include="Resources\desktop.png" />
+    <None Include="Resources\application-resize-actual.png" />
+    <None Include="Resources\application-small-blue.png" />
+    <None Include="Resources\window_compact.png" />
+    <None Include="Resources\orthogonal_composition.png" />
+    <None Include="Resources\orthogonal_aggregation.png" />
+    <None Include="Resources\orthogonal_generalization.png" />
+    <None Include="Resources\orthogonal_realization.png" />
+    <None Include="Resources\orthogonal_dependency.png" />
+    <None Include="Resources\rect_box.png" />
+    <None Include="Resources\round_rect_box.png" />
+    <None Include="Resources\star.png" />
+    <None Include="Resources\question.png" />
+    <None Include="Resources\exclamation.png" />
+    <None Include="Resources\folder.png" />
+    <None Include="Resources\folder-open.png" />
+    <None Include="Resources\magnifier.png" />
+    <None Include="Resources\sticky-note.png" />
+    <None Include="Resources\chevron-expand.png" />
+    <None Include="Resources\cross.png" />
+    <None Include="Resources\16-em-check.png" />
+    <None Include="Resources\light_bulb.png" />
+    <None Include="Resources\book.png" />
+    <None Include="Resources\telephone-fax.png" />
+    <None Include="Resources\telephone.png" />
+    <None Include="Resources\email.png" />
+    <None Include="Resources\envelope.png" />
+    <None Include="Resources\users.png" />
+    <None Include="Resources\briefcase.png" />
+    <None Include="Resources\user-business.png" />
+    <None Include="Resources\cart.png" />
+    <None Include="Resources\report.png" />
+    <None Include="Resources\table.png" />
+    <None Include="Resources\triangle.png" />
+    <None Include="Resources\dashed_line.png" />
+    <None Include="Resources\orthogonal_dashed_arrow.png" />
+    <None Include="Resources\orthogonal_dashed_line.png" />
+    <None Include="Resources\note-information.png" />
+    <None Include="Resources\tags-label.png" />
+    <None Include="Resources\scissors-blue.png" />
+    <None Include="Resources\document-copy.png" />
+    <None Include="Resources\clipboard-paste.png" />
+    <None Include="Resources\arrow-curve-180-left.png" />
+    <None Include="Resources\page_find.png" />
+    <None Include="Resources\arrow-curve.png" />
+    <None Include="Resources\confidante.ico" />
+    <None Include="Resources\paint-can-color.png" />
+    <None Include="Resources\bullet_arrow_down.png" />
+    <None Include="Resources\2arrow_down.png" />
+    <None Include="Resources\2arrow_up.png" />
+    <None Include="Resources\shortcut.png" />
+    <None Include="Resources\arrow-045-medium.png" />
+    <None Include="Resources\arrow_045_medium_disabled.png" />
+    <None Include="Resources\memo_data_folder.ico" />
+    <None Include="Resources\drive-download.png" />
+    <None Include="Resources\black_middle.png" />
+    <None Include="Resources\black_thick.png" />
+    <None Include="Resources\black_thin.png" />
+    <None Include="Resources\blue_middle.png" />
+    <None Include="Resources\blue_thick.png" />
+    <None Include="Resources\blue_thin.png" />
+    <None Include="Resources\gray_middle.png" />
+    <None Include="Resources\gray_thick.png" />
+    <None Include="Resources\gray_thin.png" />
+    <None Include="Resources\green_middle.png" />
+    <None Include="Resources\green_thick.png" />
+    <None Include="Resources\green_thin.png" />
+    <None Include="Resources\red_middle.png" />
+    <None Include="Resources\red_thick.png" />
+    <None Include="Resources\red_thin.png" />
+    <None Include="Resources\pencil.png" />
+    <None Include="Resources\cursor24.png" />
+    <None Include="Resources\eraser24.png" />
+    <None Include="Resources\hand.png" />
+    <None Include="Resources\cursor_hand.cur" />
+    <None Include="Resources\cursor_hand_grab.cur" />
+    <None Include="Resources\drag_select24.png" />
+    <None Include="Resources\clear_folder_horizontal.png" />
+    <None Include="Resources\clear_folder_horizontal_open.png" />
+    <None Include="Resources\tag_plus.png" />
+    <None Include="Resources\magnifier_mono.png" />
+    <None Include="Resources\2arrow_left.png" />
+    <None Include="Resources\2arrow_right.png" />
+    <None Include="Resources\text_width_handle.png" />
+    <None Include="Resources\sticky_note_right_arrow.png" />
+    <None Include="Resources\sticky_note_left_arrow.png" />
+    <None Include="Resources\sticky_note_pin.png" />
+    <None Include="Resources\application_form.png" />
+    <None Include="Resources\sticky_note_unimportant.png" />
+    <None Include="Resources\sticky_note_important.png" />
+    <None Include="Resources\web.png" />
+    <None Include="Resources\article.png" />
+    <None Include="Resources\task.png" />
+    <None Include="Resources\map.png" />
+    <None Include="Resources\cup.png" />
+    <None Include="Resources\glass.png" />
+    <None Include="Resources\calendar.png" />
+    <None Include="Resources\currency.png" />
+    <None Include="Resources\game.png" />
+    <None Include="Resources\show_sticky_notes.png" />
+    <None Include="Resources\add_comment.png" />
+    <None Include="Resources\comment_line.png" />
+    <None Include="Resources\list_special.bmp" />
+    <None Include="Resources\star1.png" />
+    <None Include="Resources\left_arrow.png" />
+    <None Include="Resources\right_arrow.png" />
+    <None Include="Resources\list_left_arrow.bmp" />
+    <None Include="Resources\list_right_arrow.bmp" />
+    <None Include="Resources\filter_plus.png" />
+    <None Include="Resources\filter_minus.png" />
+    <None Include="Resources\filter_edit.png" />
+    <None Include="Resources\tag-label.png" />
+    <None Include="Resources\sticky_notes.png" />
+    <None Include="Resources\canvas_size.png" />
+    <None Include="Resources\filter.png" />
+    <None Include="Resources\folder_search_result.png" />
+    <None Include="Resources\arrow_180.png" />
+    <None Include="Resources\confidante48.png" />
+    <None Include="Resources\application_detail.png" />
+    <None Include="Resources\license_key.png" />
+    <None Include="Resources\insert_space.png" />
+    <None Include="Resources\checkbox_checked.png" />
+    <None Include="Resources\checkbox_indeterminate.png" />
+    <None Include="Resources\checkbox_unchecked.png" />
+    <None Include="Resources\arrow_270.png" />
+    <None Include="Resources\arrow_090.png" />
+    <None Include="Resources\cross_button.png" />
+    <None Include="Resources\line_style.png" />
+    <None Include="Resources\line_style_black_thin.png" />
+    <None Include="Resources\line_style_black_middle.png" />
+    <None Include="Resources\line_style_black_thick.png" />
+    <None Include="Resources\line_style_gray_thin.png" />
+    <None Include="Resources\line_style_gray_middle.png" />
+    <None Include="Resources\line_style_gray_thick.png" />
+    <None Include="Resources\line_style_blue_thin.png" />
+    <None Include="Resources\line_style_blue_middle.png" />
+    <None Include="Resources\line_style_blue_thick.png" />
+    <None Include="Resources\line_style_red_thick.png" />
+    <None Include="Resources\line_style_red_thin.png" />
+    <None Include="Resources\line_style_red_middle.png" />
+    <None Include="Resources\line_style_green_thin.png" />
+    <None Include="Resources\line_style_green_middle.png" />
+    <None Include="Resources\line_style_green_thick.png" />
+    <None Include="Resources\line_style_purple_thin.png" />
+    <None Include="Resources\line_style_purple_middle.png" />
+    <None Include="Resources\line_style_purple_thick.png" />
+    <None Include="Resources\line_style_aqua_thin.png" />
+    <None Include="Resources\line_style_aqua_middle.png" />
+    <None Include="Resources\line_style_aqua_thick.png" />
+    <None Include="Resources\line_style_orange_thin.png" />
+    <None Include="Resources\line_style_orange_middle.png" />
+    <None Include="Resources\line_style_orange_thick.png" />
+    <None Include="Resources\line_style_yellow_thin.png" />
+    <None Include="Resources\line_style_yellow_middle.png" />
+    <None Include="Resources\line_style_yellow_thick.png" />
+    <None Include="Resources\line_style_black_thin_dash.png" />
+    <None Include="Resources\line_style_black_middle_dash.png" />
+    <None Include="Resources\line_style_black_thick_dash.png" />
+    <None Include="Resources\line_style_gray_thin_dash.png" />
+    <None Include="Resources\line_style_gray_middle_dash.png" />
+    <None Include="Resources\line_style_gray_thick_dash.png" />
+    <None Include="Resources\line_style_blue_thin_dash.png" />
+    <None Include="Resources\line_style_blue_middle_dash.png" />
+    <None Include="Resources\line_style_blue_thick_dash.png" />
+    <None Include="Resources\line_style_red_thick_dash.png" />
+    <None Include="Resources\line_style_red_thin_dash.png" />
+    <None Include="Resources\line_style_red_middle_dash.png" />
+    <None Include="Resources\line_style_green_thin_dash.png" />
+    <None Include="Resources\line_style_green_middle_dash.png" />
+    <None Include="Resources\line_style_green_thick_dash.png" />
+    <None Include="Resources\line_style_purple_thin_dash.png" />
+    <None Include="Resources\line_style_purple_middle_dash.png" />
+    <None Include="Resources\line_style_purple_thick_dash.png" />
+    <None Include="Resources\line_style_aqua_thin_dash.png" />
+    <None Include="Resources\line_style_aqua_middle_dash.png" />
+    <None Include="Resources\line_style_aqua_thick_dash.png" />
+    <None Include="Resources\line_style_orange_thin_dash.png" />
+    <None Include="Resources\line_style_orange_middle_dash.png" />
+    <None Include="Resources\line_style_orange_thick_dash.png" />
+    <None Include="Resources\line_style_yellow_thin_dash.png" />
+    <None Include="Resources\line_style_yellow_middle_dash.png" />
+    <None Include="Resources\line_style_yellow_thick_dash.png" />
+    <None Include="Resources\chevron.png" />
+    <None Include="Resources\pentagon.png" />
+    <Content Include="..\..\Lib\SqlServerCompact\sqlceca35.dll">
+      <Link>sqlceca35.dll</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Lib\SqlServerCompact\sqlcecompact35.dll">
+      <Link>sqlcecompact35.dll</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Lib\SqlServerCompact\sqlceer35EN.dll">
+      <Link>sqlceer35EN.dll</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Lib\SqlServerCompact\sqlceer35JA.dll">
+      <Link>sqlceer35JA.dll</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Lib\SqlServerCompact\sqlceme35.dll">
+      <Link>sqlceme35.dll</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Lib\SqlServerCompact\sqlceoledb35.dll">
+      <Link>sqlceoledb35.dll</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Lib\SqlServerCompact\sqlceqp35.dll">
+      <Link>sqlceqp35.dll</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Lib\SqlServerCompact\sqlcese35.dll">
+      <Link>sqlcese35.dll</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\Lib\SqlServerCompact\System.Data.SqlServerCe.dll">
+      <Link>System.Data.SqlServerCe.dll</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="_Doc\License.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows インストーラー 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>
