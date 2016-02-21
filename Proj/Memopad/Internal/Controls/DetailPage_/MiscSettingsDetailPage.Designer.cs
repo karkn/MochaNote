@@ -39,7 +39,7 @@
             this._startOnWindowsStartUpCheckBox.Name = "_startOnWindowsStartUpCheckBox";
             this._startOnWindowsStartUpCheckBox.Size = new System.Drawing.Size(237, 16);
             this._startOnWindowsStartUpCheckBox.TabIndex = 4;
-            this._startOnWindowsStartUpCheckBox.Text = "Windows起動時にConfidanteを起動する(&W)";
+            this._startOnWindowsStartUpCheckBox.Text = "Windows起動時に起動する(&W)";
             this._startOnWindowsStartUpCheckBox.UseVisualStyleBackColor = true;
             // 
             // _emptyTrasBoxCheckBox

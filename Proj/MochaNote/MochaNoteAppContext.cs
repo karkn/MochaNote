@@ -9,7 +9,7 @@ using System.Text;
 using Mkamo.Memopad.Core;
 using Mkamo.Common.Crypto;
 
-namespace Mkamo.Confidante {
+namespace Mkamo.MochaNote {
     internal class MochaNoteAppContext: MemopadAppContext {
         // ========================================
         // field

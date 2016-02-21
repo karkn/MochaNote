@@ -429,7 +429,7 @@ namespace Mkamo.Editor.Internal.Core {
         private void HandleContextMenuClosed(object sender, ToolStripDropDownClosedEventArgs e) {
             if (_miniToolBar != null) {
                 /// マウスがmini toolbar上にあり，かつ，
-                /// 閉じる理由がなんらかのConfidante上のマウスクリックであるときのみ
+                /// 閉じる理由がなんらかのMochaNote上のマウスクリックであるときのみ
                 /// Closeの予約だけにする
                 if (_isMouseOnMiniToolBar && e.CloseReason == ToolStripDropDownCloseReason.AppClicked) {
                     //_needCloseMiniToolBarOnMouseLeave = true;

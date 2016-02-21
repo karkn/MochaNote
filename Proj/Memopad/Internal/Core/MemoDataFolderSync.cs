@@ -120,7 +120,7 @@ namespace Mkamo.Memopad.Internal.Core {
         public void SyncMemoDataFoldersTo(string dirPath) {
             if (ExistsLockFile(dirPath)) {
                 /// コピー先にlockファイルがあるということは
-                /// 起動中のConfidanteが使用しているディレクトリなのでエラー
+                /// 起動中のMochaNoteが使用しているディレクトリなのでエラー
                 throw new ArgumentException("dirPath");
             }
 

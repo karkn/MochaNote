@@ -40,7 +40,7 @@ namespace Mkamo.Memopad.Internal.Core {
             if (MemoDataFolderSync.ExistsLockFile(dirPath)) {
                 MessageBox.Show(
                     _app.MainForm,
-                    "他のConfidanteが使用中のノート格納フォルダにはエクスポートできません。",
+                    "他のMochaNoteが使用中のノート格納フォルダにはエクスポートできません。",
                     "エクスポートエラー"
                 );
                 return false;
@@ -117,7 +117,7 @@ namespace Mkamo.Memopad.Internal.Core {
             if (MemoDataFolderSync.ExistsLockFile(dirPath)) {
                 MessageBox.Show(
                     _app.MainForm,
-                    "他のConfidanteが使用中のノート格納フォルダからはインポートできません。",
+                    "他のMochaNoteが使用中のノート格納フォルダからはインポートできません。",
                     "インポートエラー"
                 );
                 return false;
@@ -295,7 +295,7 @@ namespace Mkamo.Memopad.Internal.Core {
                             return;
                         }
     
-                        zip.Comment = "Created by Confidante";
+                        zip.Comment = "Created by MochaNote";
                         zip.CompressionLevel = CompressionLevel.BestSpeed;
                         var dir = MemopadConsts.MemoRoot;
                         zip.AddDirectory(dir, Path.GetFileName(dir));
@@ -353,12 +353,12 @@ namespace Mkamo.Memopad.Internal.Core {
                 var tmpFolderPath = default(string);
                 try {
                     /// テンポラリフォルダパスの作成
-                    tmpFolderName = "_confidante_restore_" + Guid.NewGuid().ToString();
+                    tmpFolderName = "_mochanote_restore_" + Guid.NewGuid().ToString();
                     tmpFolderPath = Path.Combine(Path.GetDirectoryName(root), tmpFolderName);
 
                     var count = 1;
                     while (File.Exists(tmpFolderPath) || Directory.Exists(tmpFolderPath)) {
-                        tmpFolderName = "_confidante_restore_" + Guid.NewGuid().ToString();
+                        tmpFolderName = "_mochanote_restore_" + Guid.NewGuid().ToString();
                         tmpFolderPath = Path.Combine(Path.GetDirectoryName(root), tmpFolderName);
                         ++count;
                         if (count > 10) {
@@ -369,7 +369,7 @@ namespace Mkamo.Memopad.Internal.Core {
                     using (var zip = ZipFile.Read(fileName, Encoding.GetEncoding("shift_jis"))) {
                         worker.ReportProgress(60);
 
-                        if (zip.Comment != "Created by Confidante") {
+                        if (zip.Comment != "Created by MochaNote") {
                             throw new Exception("ファイル形式が正しくありません。");
                         }
 

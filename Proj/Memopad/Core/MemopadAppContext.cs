@@ -59,7 +59,7 @@ namespace Mkamo.Memopad.Core {
 
             } catch (Exception ex) {
                 MessageBox.Show(
-                    "Confidanteが使用するフォルダを作成できません。" + Environment.NewLine +
+                    "MochaNoteが使用するフォルダを作成できません。" + Environment.NewLine +
                     ex.Message,
                     "起動エラー",
                     MessageBoxButtons.OK,

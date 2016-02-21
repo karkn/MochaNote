@@ -28,7 +28,7 @@ namespace Mkamo.Memopad.Internal.Controls {
             _app = MemopadApplication.Instance;
 
             _notifyIcon = new NotifyIcon();
-            _notifyIcon.Text = "Confidante";
+            _notifyIcon.Text = "MochaNote";
             _notifyIcon.Icon = Properties.Resources.confidante;
             _notifyIcon.Visible = true;
 

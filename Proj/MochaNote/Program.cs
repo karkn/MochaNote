@@ -19,7 +19,7 @@ using log4net.Config;
 using Mkamo.Common.Crypto;
 using System.Text;
 
-namespace Mkamo.Confidante {
+namespace Mkamo.MochaNote {
     static class Program {
         private static readonly log4net.ILog Logger =
             log4net.LogManager.GetLogger(global::System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
@@ -37,7 +37,7 @@ namespace Mkamo.Confidante {
             var args = Environment.GetCommandLineArgs();
             var memoRoot = args != null && args.Length > 1? args[1]: "";
             var mutexNamePostfix = memoRoot.Replace('\\', '_');
-            var mutexName = "Mkamo.Confidante_" + mutexNamePostfix;
+            var mutexName = "Mkamo.MochaNote_" + mutexNamePostfix;
 
             var isCreatedNew = false;
             using (var mutex = new Mutex(true, mutexName, out isCreatedNew)) {
@@ -67,7 +67,7 @@ namespace Mkamo.Confidante {
                         PathUtil.EnsureDirectoryExists(MemopadConsts.MemoRoot);
                     } catch (Exception e) {
                         MessageBox.Show(
-                            "Confidanteが使用するフォルダを作成できません。" + Environment.NewLine +
+                            "MochaNoteが使用するフォルダを作成できません。" + Environment.NewLine +
                             e.Message,
                             "起動エラー",
                             MessageBoxButtons.OK,
@@ -108,11 +108,11 @@ namespace Mkamo.Confidante {
                     /// すでに起動されている場合はWindowを前面に
                     //User32Util.ActivateWindow(
                     //    null,
-                    //    "Confidante",
+                    //    "MochaNote",
                     //    Process.GetCurrentProcess().MainModule.FileName
                     //);
                     MessageBox.Show(
-                        "Confidanteはすでに起動しています。",
+                        "MochaNoteはすでに起動しています。",
                         "起動エラー",
                         MessageBoxButtons.OK,
                         MessageBoxIcon.Error
@@ -144,7 +144,7 @@ namespace Mkamo.Confidante {
 
                 } catch (Exception e2) {
                     Logger.Warn("Can't read lock file", e2);
-                    return "他のConfidanteが同じノートデータを使用している可能性があります。";
+                    return "他のMochaNoteが同じノートデータを使用している可能性があります。";
 
                 } finally {
                     if (lockFileStream != null) {
@@ -157,15 +157,15 @@ namespace Mkamo.Confidante {
                         File.Delete(MemopadConsts.LockFilePath);
                     } catch (Exception e2) {
                         Logger.Warn("Can't delete lock file", e2);
-                        return "他のConfidanteが同じノートデータを使用している可能性があります。";
+                        return "他のMochaNoteが同じノートデータを使用している可能性があります。";
                     }
 
                     return Lock();
 
                 } else {
                     return
-                        machineName + "で起動しているConfidanteが同じノートデータを使用しています。\r\n" +
-                        machineName + "で起動しているConfidanteを終了してください。";
+                        machineName + "で起動しているMochaNoteが同じノートデータを使用しています。\r\n" +
+                        machineName + "で起動しているMochaNoteを終了してください。";
                 }
             }
 
@@ -206,7 +206,7 @@ namespace Mkamo.Confidante {
                 PathUtil.EnsureDirectoryExists(logRoot);
             } catch (Exception e) {
                 MessageBox.Show(
-                    "Confidanteが使用するフォルダを作成できません。" + Environment.NewLine +
+                    "MochaNoteが使用するフォルダを作成できません。" + Environment.NewLine +
                     e.Message,
                     "起動エラー",
                     MessageBoxButtons.OK,

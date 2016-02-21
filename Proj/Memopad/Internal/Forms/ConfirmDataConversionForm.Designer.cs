@@ -46,8 +46,8 @@
             this._messageLabel.Name = "_messageLabel";
             this._messageLabel.Size = new System.Drawing.Size(228, 60);
             this._messageLabel.TabIndex = 1;
-            this._messageLabel.Text = "Confidante Ver 1のデータが見つかりました。\r\nConfidante Ver 2のデータに変換するには\r\nConfidanteを終了してからスタート" +
-                "メニューの\r\n「プログラム」>「Confidante」>「V1データ変換」を\r\n実行してください。";
+            this._messageLabel.Text = "MochaNote Ver 1のデータが見つかりました。\r\nMochaNote Ver 2のデータに変換するには\r\nMochaNoteを終了してからスタート" +
+                "メニューの\r\n「プログラム」>「MochaNote」>「V1データ変換」を\r\n実行してください。";
             // 
             // _dontShowCheckBox
             // 

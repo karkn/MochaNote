@@ -117,7 +117,7 @@ namespace Mkamo.Memopad.Internal.Utils {
                 var app = MemopadApplication.Instance;
 
                 dialog.Message =
-                    "Confidanteのご利用ありがとうございます。" + Environment.NewLine +
+                    "MochaNoteのご利用ありがとうございます。" + Environment.NewLine +
                     "プレミアムライセンスにアップグレードするとさらに便利な機能が使用できます。";
                 dialog.Font = app.Theme.CaptionFont;
 

@@ -8,7 +8,7 @@
     <ProjectGuid>{E65437AB-7E95-4169-B9B8-B6ED9D510B64}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MochaNoteClientW</RootNamespace>
+    <RootNamespace>Mkamo.MochaNoteClientW</RootNamespace>
     <AssemblyName>MochaNoteClientW</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>

@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // 繧｢繧ｻ繝ｳ繝悶Μ縺ｫ髢｢縺吶ｋ荳闊ｬ諠・ｱ縺ｯ莉･荳九・螻樊ｧ繧ｻ繝・ヨ繧偵→縺翫＠縺ｦ蛻ｶ蠕｡縺輔ｌ縺ｾ縺吶・
 // 繧｢繧ｻ繝ｳ繝悶Μ縺ｫ髢｢騾｣莉倥￠繧峨ｌ縺ｦ縺・ｋ諠・ｱ繧貞､画峩縺吶ｋ縺ｫ縺ｯ縲・
 // 縺薙ｌ繧峨・螻樊ｧ蛟､繧貞､画峩縺励※縺上□縺輔＞縲・
-[assembly: AssemblyTitle("ConfidanteClientW.Properties")]
+[assembly: AssemblyTitle("MochaNoteClientW.Properties")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("mkamo")]
-[assembly: AssemblyProduct("ConfidanteClientW.Properties")]
+[assembly: AssemblyProduct("MochaNoteClientW.Properties")]
 [assembly: AssemblyCopyright("Copyright ﾂｩ mkamo 2010")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

@@ -83,7 +83,7 @@ namespace Mkamo.Memopad.Internal.Core {
 
         public void ShowAll(bool useDummy) {
             /// NotifyIconクリック時は一旦dummyをアクティブ化しないと
-            /// Confidanteが非アクティブ時にShowWindow()でfusenが前に出てこない
+            /// 非アクティブ時にShowWindow()でfusenが前に出てこない
             var dummy = default(Form);
             if (useDummy) {
                 dummy = new Form();

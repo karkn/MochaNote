@@ -11,7 +11,7 @@ using Mkamo.Memopad.Remote;
 using System.Diagnostics;
 using System.Threading;
 
-namespace Mkamo.ConfidanteClient {
+namespace Mkamo.MochaNoteClient {
     class Program {
         static void Main(string[] args) {
             MemopadClient.Start(args, true);

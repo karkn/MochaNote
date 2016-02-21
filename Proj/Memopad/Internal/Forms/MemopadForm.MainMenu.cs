@@ -390,7 +390,7 @@ namespace Mkamo.Memopad.Internal.Forms {
         //    using (var dialog = new SaveFileDialog()) {
         //        dialog.RestoreDirectory = true;
         //        dialog.ShowHelp = true;
-        //        dialog.Filter = "Confidante Backup File(*.cnfbak)|*.cnfbak";
+        //        dialog.Filter = "MochaNote Backup File(*.cnfbak)|*.cnfbak";
         //        if (dialog.ShowDialog(this) == DialogResult.OK) {
         //            EnsureFocusCommited();
         //            var exporter = new Exporter();
@@ -414,7 +414,7 @@ namespace Mkamo.Memopad.Internal.Forms {
         //    using (var dialog = new OpenFileDialog()) {
         //        dialog.RestoreDirectory = true;
         //        dialog.ShowHelp = true;
-        //        dialog.Filter = "Confidante Backup File(*.cnfbak)|*.cnfbak";
+        //        dialog.Filter = "MochaNote Backup File(*.cnfbak)|*.cnfbak";
         //        if (dialog.ShowDialog(this) == DialogResult.OK) {
         //            EnsureFocusCommited();
         //            var exporter = new Exporter();

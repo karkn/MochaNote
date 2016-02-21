@@ -33,7 +33,7 @@ namespace Mkamo.Memopad.Internal.Forms {
         private void _licenseFileButton_Click(object sender, EventArgs e) {
             using (var dialog = new OpenFileDialog()) {
                 dialog.ShowHelp = true;
-                dialog.Filter = "Confidante2 License File(*.cnflic2)|*.cnflic2";
+                dialog.Filter = "MochaNote2 License File(*.cnflic2)|*.cnflic2";
                 if (dialog.ShowDialog(this) == DialogResult.OK) {
                     _licenseFileTextBox.Text = dialog.FileName;
                 }

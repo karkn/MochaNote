@@ -8,7 +8,7 @@
     <ProjectGuid>{7ED09E83-CC62-46B9-B7B7-AA9507046B15}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Mkamo.Condidante</RootNamespace>
+    <RootNamespace>Mkamo.MochaNote</RootNamespace>
     <AssemblyName>MochaNote</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>

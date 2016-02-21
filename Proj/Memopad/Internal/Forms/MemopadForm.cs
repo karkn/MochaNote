@@ -312,7 +312,7 @@ namespace Mkamo.Memopad.Internal.Forms {
 
         //            var cmd = Path.Combine(
         //                Path.GetDirectoryName(Application.ExecutablePath),
-        //                "ConfidanteClientW.exe"
+        //                "MochaNoteClientW.exe"
         //            );
 
         //            var task = new JumpListLink(cmd, "ノートを作成");

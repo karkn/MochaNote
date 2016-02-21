@@ -425,8 +425,8 @@ namespace Mkamo.Memopad.Internal.Core {
             /// バージョンチェック
             if (version > currentVersion) {
                 MessageBox.Show(
-                    "ご利用のConfidanteのバージョンでは対応していないノートデータです。" + Environment.NewLine +
-                    "最新版のConfidanteをインストールしてください。",
+                    "ご利用のMochaNoteのバージョンでは対応していないノートデータです。" + Environment.NewLine +
+                    "最新版のMochaNoteをインストールしてください。",
                     "バージョンエラー"
                 );
                 _illegalSettings = true;
@@ -621,7 +621,7 @@ namespace Mkamo.Memopad.Internal.Core {
                             Logger.Warn("Can't load proxy assembly.", e);
                             MessageBox.Show(
                                 "古いプロキシアセンブリが見つかりました。" + Environment.NewLine +
-                                "Confidante終了後に" + assemPath + "を削除してください。",
+                                "MochaNote終了後に" + assemPath + "を削除してください。",
                                 "プロキシアセンブリロードエラー"
                             );
                             throw;
@@ -678,7 +678,7 @@ namespace Mkamo.Memopad.Internal.Core {
                     _theme.CaptionFont,
                     "キャッシュを作成しています。\r\n" +
                     "しばらくお待ちください。\r\n" +
-                    "この処理は初めてのConfidanteの終了時にのみ行われます。",
+                    "この処理は初めてのMochaNoteの終了時にのみ行われます。",
                     "キャッシュの作成",
                     () => _container.SaveProxyAssembly(new[] { assem })
                 );
@@ -1053,7 +1053,7 @@ namespace Mkamo.Memopad.Internal.Core {
                     if (updater.IsLatest(_settings.Version)) {
                         MessageBox.Show(
                             _mainForm,
-                            "ご使用のConfidanteは最新です。",
+                            "ご使用のMochaNoteは最新です。",
                             "最新版の確認",
                             MessageBoxButtons.OK,
                             MessageBoxIcon.Information
@@ -1062,7 +1062,7 @@ namespace Mkamo.Memopad.Internal.Core {
                     } else {
                         var ret = MessageBox.Show(
                             _mainForm,
-                            "新しいバージョンのConfidanteが見つかりました。" + Environment.NewLine +
+                            "新しいバージョンのMochaNoteが見つかりました。" + Environment.NewLine +
                             "ダウンロードしますか?",
                             "最新版の確認",
                             MessageBoxButtons.YesNo,
@@ -1098,7 +1098,7 @@ namespace Mkamo.Memopad.Internal.Core {
                     Action update = () => {
                         var ret = MessageBox.Show(
                             _mainForm,
-                            "新しいバージョンのConfidanteが見つかりました。" + Environment.NewLine +
+                            "新しいバージョンのMochaNoteが見つかりました。" + Environment.NewLine +
                             "ダウンロードしますか?",
                             "最新版の確認",
                             MessageBoxButtons.YesNo,
