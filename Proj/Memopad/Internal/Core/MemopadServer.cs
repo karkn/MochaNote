@@ -27,7 +27,7 @@ namespace Mkamo.Memopad.Internal.Core {
         // ========================================
         public void Listen() {
             try {
-                _channel = new IpcServerChannel("confidante");
+                _channel = new IpcServerChannel("mochanote");
                 ChannelServices.RegisterChannel(_channel, true);
                 var facade = new MemopadRemoteFacadeProxy(new MemopadRemoteFacade());
                 RemotingServices.Marshal(facade, "facade", typeof(MemopadRemoteFacadeProxy));
