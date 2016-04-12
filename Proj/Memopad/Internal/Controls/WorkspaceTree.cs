@@ -100,8 +100,8 @@ namespace Mkamo.Memopad.Internal.Controls {
             InitializeComponent();
 
             _showAllMemos = false;
-            _showSmartFolder = true;
-            _showFolder = true;
+            _showSmartFolder = false;
+            _showFolder = false;
             _showTrashBox = true;
             _showOpenMemos = true;
             _allowEdit = true;

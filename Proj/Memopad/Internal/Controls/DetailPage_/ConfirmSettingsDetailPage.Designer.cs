@@ -34,7 +34,7 @@
             this._confirmMemoRemoveCheckBox.AutoSize = true;
             this._confirmMemoRemoveCheckBox.Location = new System.Drawing.Point(12, 12);
             this._confirmMemoRemoveCheckBox.Name = "_confirmMemoRemoveCheckBox";
-            this._confirmMemoRemoveCheckBox.Size = new System.Drawing.Size(156, 16);
+            this._confirmMemoRemoveCheckBox.Size = new System.Drawing.Size(165, 16);
             this._confirmMemoRemoveCheckBox.TabIndex = 0;
             this._confirmMemoRemoveCheckBox.Text = "ノートの削除時に確認する(&M)";
             this._confirmMemoRemoveCheckBox.UseVisualStyleBackColor = true;
@@ -58,16 +58,18 @@
             this._confirmSmartFolderRemoveCheckBox.TabIndex = 1;
             this._confirmSmartFolderRemoveCheckBox.Text = "スマートフォルダの削除時に確認する(&S)";
             this._confirmSmartFolderRemoveCheckBox.UseVisualStyleBackColor = true;
+            this._confirmSmartFolderRemoveCheckBox.Visible = false;
             // 
             // _confirmFolderRemoveCheckBox
             // 
             this._confirmFolderRemoveCheckBox.AutoSize = true;
             this._confirmFolderRemoveCheckBox.Location = new System.Drawing.Point(12, 78);
             this._confirmFolderRemoveCheckBox.Name = "_confirmFolderRemoveCheckBox";
-            this._confirmFolderRemoveCheckBox.Size = new System.Drawing.Size(191, 16);
+            this._confirmFolderRemoveCheckBox.Size = new System.Drawing.Size(196, 16);
             this._confirmFolderRemoveCheckBox.TabIndex = 1;
             this._confirmFolderRemoveCheckBox.Text = "クリアファイルの削除時に確認する(&C)";
             this._confirmFolderRemoveCheckBox.UseVisualStyleBackColor = true;
+            this._confirmFolderRemoveCheckBox.Visible = false;
             // 
             // ConfirmSettingsDetailPage
             // 

@@ -28,10 +28,10 @@
             this._flowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
             this._titleTextBox = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this._tagTextBox = new Mkamo.Memopad.Internal.Controls.TagSelectTextBox();
-            this._markLabel = new System.Windows.Forms.Label();
-            this._markTextBox = new Mkamo.Memopad.Internal.Controls.MarkSelectTextBox();
             this._importanceLabel = new System.Windows.Forms.Label();
             this._importanceTextBox = new Mkamo.Memopad.Internal.Controls.ImportanceSelectTextBox();
+            this._markLabel = new System.Windows.Forms.Label();
+            this._markTextBox = new Mkamo.Memopad.Internal.Controls.MarkSelectTextBox();
             this._timeSpanLabel = new System.Windows.Forms.Label();
             this._timeSpanTextBox = new Mkamo.Memopad.Internal.Controls.TimeSpanPickTextBox();
             this._saveAsSmartFolderButton = new ComponentFactory.Krypton.Toolkit.KryptonButton();
@@ -97,7 +97,7 @@
             // 
             // _tagTextBox
             // 
-            this._tagTextBox.Anchor = ((System.Windows.Forms.AnchorStyles) ((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this._tagTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this._tagTextBox.CheckedTags = new Mkamo.Model.Memo.MemoTag[0];
             this._tagTextBox.IsAnyChecked = true;
             this._tagTextBox.IsUntaggedChecked = false;
@@ -105,31 +105,9 @@
             this._tagTextBox.Name = "_tagTextBox";
             this._tagTextBox.ReadOnly = true;
             this._tagTextBox.Size = new System.Drawing.Size(141, 24);
+            this._tagTextBox.StateCommon.Content.Color1 = System.Drawing.SystemColors.GrayText;
             this._tagTextBox.TabIndex = 3;
             this._tagTextBox.Text = "条件なし";
-            // 
-            // _markLabel
-            // 
-            this._markLabel.AutoSize = true;
-            this._markLabel.ForeColor = System.Drawing.Color.Navy;
-            this._markLabel.Location = new System.Drawing.Point(8, 142);
-            this._markLabel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 0);
-            this._markLabel.Name = "_markLabel";
-            this._markLabel.Size = new System.Drawing.Size(51, 12);
-            this._markLabel.TabIndex = 6;
-            this._markLabel.Text = "マーク(&M):";
-            // 
-            // _markTextBox
-            // 
-            this._markTextBox.Anchor = ((System.Windows.Forms.AnchorStyles) ((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this._markTextBox.CheckedMarkKinds = new Mkamo.Model.Memo.MemoMarkKind[0];
-            this._markTextBox.IsAnyChecked = true;
-            this._markTextBox.Location = new System.Drawing.Point(8, 157);
-            this._markTextBox.Name = "_markTextBox";
-            this._markTextBox.ReadOnly = true;
-            this._markTextBox.Size = new System.Drawing.Size(141, 24);
-            this._markTextBox.TabIndex = 7;
-            this._markTextBox.Text = "条件なし";
             // 
             // _importanceLabel
             // 
@@ -144,14 +122,39 @@
             // 
             // _importanceTextBox
             // 
-            this._importanceTextBox.Anchor = ((System.Windows.Forms.AnchorStyles) ((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this._importanceTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this._importanceTextBox.CheckedImportanceKinds = new Mkamo.Model.Memo.MemoImportanceKind[0];
             this._importanceTextBox.Location = new System.Drawing.Point(8, 111);
             this._importanceTextBox.Name = "_importanceTextBox";
             this._importanceTextBox.ReadOnly = true;
             this._importanceTextBox.Size = new System.Drawing.Size(141, 24);
+            this._importanceTextBox.StateCommon.Content.Color1 = System.Drawing.SystemColors.GrayText;
             this._importanceTextBox.TabIndex = 5;
             this._importanceTextBox.Text = "条件なし";
+            // 
+            // _markLabel
+            // 
+            this._markLabel.AutoSize = true;
+            this._markLabel.ForeColor = System.Drawing.Color.Navy;
+            this._markLabel.Location = new System.Drawing.Point(8, 142);
+            this._markLabel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 0);
+            this._markLabel.Name = "_markLabel";
+            this._markLabel.Size = new System.Drawing.Size(51, 12);
+            this._markLabel.TabIndex = 6;
+            this._markLabel.Text = "マーク(&M):";
+            // 
+            // _markTextBox
+            // 
+            this._markTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this._markTextBox.CheckedMarkKinds = new Mkamo.Model.Memo.MemoMarkKind[0];
+            this._markTextBox.IsAnyChecked = true;
+            this._markTextBox.Location = new System.Drawing.Point(8, 157);
+            this._markTextBox.Name = "_markTextBox";
+            this._markTextBox.ReadOnly = true;
+            this._markTextBox.Size = new System.Drawing.Size(141, 24);
+            this._markTextBox.StateCommon.Content.Color1 = System.Drawing.SystemColors.GrayText;
+            this._markTextBox.TabIndex = 7;
+            this._markTextBox.Text = "条件なし";
             // 
             // _timeSpanLabel
             // 
@@ -166,7 +169,7 @@
             // 
             // _timeSpanTextBox
             // 
-            this._timeSpanTextBox.Anchor = ((System.Windows.Forms.AnchorStyles) ((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this._timeSpanTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this._timeSpanTextBox.Location = new System.Drawing.Point(8, 203);
             this._timeSpanTextBox.Name = "_timeSpanTextBox";
             this._timeSpanTextBox.ReadOnly = true;
@@ -184,6 +187,7 @@
             this._saveAsSmartFolderButton.StateCommon.Content.Padding = new System.Windows.Forms.Padding(0);
             this._saveAsSmartFolderButton.TabIndex = 10;
             this._saveAsSmartFolderButton.Values.Text = "スマートフォルダに保存(&S)";
+            this._saveAsSmartFolderButton.Visible = false;
             this._saveAsSmartFolderButton.Click += new System.EventHandler(this._saveAsSmartFolderButton_Click);
             // 
             // _saveAsSmartFilterButton
@@ -196,6 +200,7 @@
             this._saveAsSmartFilterButton.StateCommon.Content.Padding = new System.Windows.Forms.Padding(0);
             this._saveAsSmartFilterButton.TabIndex = 11;
             this._saveAsSmartFilterButton.Values.Text = "スマートフィルタに保存(&F)";
+            this._saveAsSmartFilterButton.Visible = false;
             this._saveAsSmartFilterButton.Click += new System.EventHandler(this._saveAsSmartFilterButton_Click);
             // 
             // _returnButton
