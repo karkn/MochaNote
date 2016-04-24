@@ -127,7 +127,7 @@ namespace Mkamo.Memopad.Core {
             UnlicensedMaxTagCreationCount = 10;
 
             var localAppDataFolder = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
-            AppDataRoot = Path.Combine(localAppDataFolder, @"mocha\MochaNote\2.0");
+            AppDataRoot = Path.Combine(localAppDataFolder, @"mocha\MochaNote\4.0");
 
             LogRoot = Path.Combine(AppDataRoot, LogRootName);
 

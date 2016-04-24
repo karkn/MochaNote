@@ -150,7 +150,7 @@ namespace Mkamo.Memopad.Internal.Core {
         /// MemopadAppContextから呼ばれる。
         /// </summary>
         internal void Init(MemopadAppContext context) {
-            var currentVersion = new Version("3.0.3");
+            var currentVersion = new Version("4.0.0");
 
             _context = context;
             _context.ThreadExit += (sender, ev) => {
