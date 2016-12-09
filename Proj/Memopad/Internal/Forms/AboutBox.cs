@@ -28,7 +28,8 @@ namespace Mkamo.Memopad.Internal.Forms {
 
             InitializeComponent();
 
-            var ver = _facade.Settings.Version;
+            //var ver = _facade.Settings.Version;
+            var ver = "1.0.0";
 
             Text = String.Format("MochaNoteのバージョン情報");
             _productNameLabel.Text = "MochaNote Version " + ver;
