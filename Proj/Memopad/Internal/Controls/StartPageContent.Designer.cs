@@ -28,12 +28,10 @@
             this._titleLabel = new System.Windows.Forms.Label();
             this._recentLabel = new System.Windows.Forms.Label();
             this.kryptonBorderEdge1 = new ComponentFactory.Krypton.Toolkit.KryptonBorderEdge();
-            this._showTutorialLinkLabel = new ComponentFactory.Krypton.Toolkit.KryptonLinkLabel();
             this._manageTagsLinkLabel = new ComponentFactory.Krypton.Toolkit.KryptonLinkLabel();
             this._createMemoLinkLabel = new ComponentFactory.Krypton.Toolkit.KryptonLinkLabel();
             this._recentlyClosedListBox = new ComponentFactory.Krypton.Toolkit.KryptonListBox();
             this.kryptonBorderEdge2 = new ComponentFactory.Krypton.Toolkit.KryptonBorderEdge();
-            this._checkForUpdatesLinkLabel = new ComponentFactory.Krypton.Toolkit.KryptonLinkLabel();
             this.SuspendLayout();
             // 
             // _showOnStartCheckBox
@@ -65,7 +63,7 @@
             this._recentLabel.AutoSize = true;
             this._recentLabel.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this._recentLabel.ForeColor = System.Drawing.Color.Gray;
-            this._recentLabel.Location = new System.Drawing.Point(20, 176);
+            this._recentLabel.Location = new System.Drawing.Point(20, 128);
             this._recentLabel.Name = "_recentLabel";
             this._recentLabel.Size = new System.Drawing.Size(114, 16);
             this._recentLabel.TabIndex = 11;
@@ -73,26 +71,12 @@
             // 
             // kryptonBorderEdge1
             // 
-            this.kryptonBorderEdge1.Location = new System.Drawing.Point(133, 186);
+            this.kryptonBorderEdge1.Location = new System.Drawing.Point(133, 138);
             this.kryptonBorderEdge1.Name = "kryptonBorderEdge1";
             this.kryptonBorderEdge1.Size = new System.Drawing.Size(190, 2);
             this.kryptonBorderEdge1.StateCommon.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(242)))), ((int)(((byte)(254)))));
             this.kryptonBorderEdge1.StateCommon.Width = 2;
             this.kryptonBorderEdge1.Text = "kryptonBorderEdge1";
-            // 
-            // _showTutorialLinkLabel
-            // 
-            this._showTutorialLinkLabel.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.Custom1;
-            this._showTutorialLinkLabel.LinkBehavior = ComponentFactory.Krypton.Toolkit.KryptonLinkBehavior.HoverUnderline;
-            this._showTutorialLinkLabel.Location = new System.Drawing.Point(29, 113);
-            this._showTutorialLinkLabel.Name = "_showTutorialLinkLabel";
-            this._showTutorialLinkLabel.Size = new System.Drawing.Size(138, 20);
-            this._showTutorialLinkLabel.StateCommon.DrawFocus = ComponentFactory.Krypton.Toolkit.InheritBool.False;
-            this._showTutorialLinkLabel.StateCommon.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(95)))), ((int)(((byte)(235)))));
-            this._showTutorialLinkLabel.TabIndex = 2;
-            this._showTutorialLinkLabel.Values.Image = global::Mkamo.Memopad.Properties.Resources.note_information;
-            this._showTutorialLinkLabel.Values.Text = "チュートリアルを表示...";
-            this._showTutorialLinkLabel.LinkClicked += new System.EventHandler(this._showTutorialLinkLabel_LinkClicked);
             // 
             // _manageTagsLinkLabel
             // 
@@ -126,11 +110,11 @@
             // 
             this._recentlyClosedListBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this._recentlyClosedListBox.Location = new System.Drawing.Point(23, 204);
+            this._recentlyClosedListBox.Location = new System.Drawing.Point(23, 147);
             this._recentlyClosedListBox.Name = "_recentlyClosedListBox";
             this._recentlyClosedListBox.Padding = new System.Windows.Forms.Padding(10, 1, 10, 1);
             this._recentlyClosedListBox.SelectionMode = System.Windows.Forms.SelectionMode.None;
-            this._recentlyClosedListBox.Size = new System.Drawing.Size(305, 130);
+            this._recentlyClosedListBox.Size = new System.Drawing.Size(305, 187);
             this._recentlyClosedListBox.StateCommon.Border.DrawBorders = ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.None;
             this._recentlyClosedListBox.StateCommon.Item.Content.Padding = new System.Windows.Forms.Padding(-1, 2, -1, 2);
             this._recentlyClosedListBox.StateCommon.Item.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(95)))), ((int)(((byte)(235)))));
@@ -145,20 +129,6 @@
             this.kryptonBorderEdge2.StateCommon.Width = 2;
             this.kryptonBorderEdge2.Text = "kryptonBorderEdge1";
             // 
-            // _checkForUpdatesLinkLabel
-            // 
-            this._checkForUpdatesLinkLabel.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.Custom1;
-            this._checkForUpdatesLinkLabel.LinkBehavior = ComponentFactory.Krypton.Toolkit.KryptonLinkBehavior.HoverUnderline;
-            this._checkForUpdatesLinkLabel.Location = new System.Drawing.Point(29, 139);
-            this._checkForUpdatesLinkLabel.Name = "_checkForUpdatesLinkLabel";
-            this._checkForUpdatesLinkLabel.Size = new System.Drawing.Size(110, 20);
-            this._checkForUpdatesLinkLabel.StateCommon.DrawFocus = ComponentFactory.Krypton.Toolkit.InheritBool.False;
-            this._checkForUpdatesLinkLabel.StateCommon.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(95)))), ((int)(((byte)(235)))));
-            this._checkForUpdatesLinkLabel.TabIndex = 2;
-            this._checkForUpdatesLinkLabel.Values.Image = global::Mkamo.Memopad.Properties.Resources.drive_download;
-            this._checkForUpdatesLinkLabel.Values.Text = "最新版を確認...";
-            this._checkForUpdatesLinkLabel.LinkClicked += new System.EventHandler(this._checkForUpdatesLinkLabel_LinkClicked);
-            // 
             // StartPageContent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -170,8 +140,6 @@
             this.Controls.Add(this._recentLabel);
             this.Controls.Add(this.kryptonBorderEdge2);
             this.Controls.Add(this.kryptonBorderEdge1);
-            this.Controls.Add(this._checkForUpdatesLinkLabel);
-            this.Controls.Add(this._showTutorialLinkLabel);
             this.Controls.Add(this._manageTagsLinkLabel);
             this.Controls.Add(this._createMemoLinkLabel);
             this.Name = "StartPageContent";
@@ -188,12 +156,10 @@
         private System.Windows.Forms.Label _titleLabel;
         private System.Windows.Forms.Label _recentLabel;
         private ComponentFactory.Krypton.Toolkit.KryptonBorderEdge kryptonBorderEdge1;
-        private ComponentFactory.Krypton.Toolkit.KryptonLinkLabel _showTutorialLinkLabel;
         private ComponentFactory.Krypton.Toolkit.KryptonLinkLabel _manageTagsLinkLabel;
         private ComponentFactory.Krypton.Toolkit.KryptonLinkLabel _createMemoLinkLabel;
         private ComponentFactory.Krypton.Toolkit.KryptonListBox _recentlyClosedListBox;
         private ComponentFactory.Krypton.Toolkit.KryptonBorderEdge kryptonBorderEdge2;
-        private ComponentFactory.Krypton.Toolkit.KryptonLinkLabel _checkForUpdatesLinkLabel;
 
 
     }
