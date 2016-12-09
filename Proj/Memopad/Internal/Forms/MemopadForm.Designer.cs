@@ -31,7 +31,6 @@ namespace Mkamo.Memopad.Internal.Forms {
             this._toolStripContainer = new System.Windows.Forms.ToolStripContainer();
             this._statusStrip = new System.Windows.Forms.StatusStrip();
             this._memoCountStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
-            this._smartFilterToolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this._messageToolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this._canvasSizeToolStripDropDownButton = new System.Windows.Forms.ToolStripDropDownButton();
             this._spaceRightToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -52,7 +51,6 @@ namespace Mkamo.Memopad.Internal.Forms {
             this._cancelSearchButtonSpec = new ComponentFactory.Krypton.Toolkit.ButtonSpecAny();
             this._memoListSplitContainer = new ComponentFactory.Krypton.Toolkit.KryptonSplitContainer();
             this._memoListHeaderGroup = new ComponentFactory.Krypton.Toolkit.KryptonHeaderGroup();
-            this._memoListViewSmartFilterButtonSpecHeaderGroup = new ComponentFactory.Krypton.Toolkit.ButtonSpecHeaderGroup();
             this._memoListViewSmartFilterContextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
             this._memoListViewManageSmartFilterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this._memoListViewSmartFilterSplitterToolStripMenuItem = new System.Windows.Forms.ToolStripSeparator();
@@ -127,7 +125,6 @@ namespace Mkamo.Memopad.Internal.Forms {
             this._dummyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this._toolToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this._manageTagToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this._manageSmartFilterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem6 = new System.Windows.Forms.ToolStripSeparator();
             this._optionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this._helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -228,10 +225,13 @@ namespace Mkamo.Memopad.Internal.Forms {
             this._toolStripContainer.SuspendLayout();
             this._statusStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this._finderSplitContainer)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._finderSplitContainer.Panel1)).BeginInit();
             this._finderSplitContainer.Panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._finderSplitContainer.Panel2)).BeginInit();
             this._finderSplitContainer.Panel2.SuspendLayout();
             this._finderSplitContainer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this._finderHeaderGroup)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._finderHeaderGroup.Panel)).BeginInit();
             this._finderHeaderGroup.Panel.SuspendLayout();
             this._finderHeaderGroup.SuspendLayout();
             this._workspaceTagContextMenuStrip.SuspendLayout();
@@ -239,10 +239,13 @@ namespace Mkamo.Memopad.Internal.Forms {
             this._adPanel.SuspendLayout();
             this._conditionPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this._memoListSplitContainer)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._memoListSplitContainer.Panel1)).BeginInit();
             this._memoListSplitContainer.Panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._memoListSplitContainer.Panel2)).BeginInit();
             this._memoListSplitContainer.Panel2.SuspendLayout();
             this._memoListSplitContainer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this._memoListHeaderGroup)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._memoListHeaderGroup.Panel)).BeginInit();
             this._memoListHeaderGroup.Panel.SuspendLayout();
             this._memoListHeaderGroup.SuspendLayout();
             this._memoListViewSmartFilterContextMenuStrip.SuspendLayout();
@@ -288,7 +291,6 @@ namespace Mkamo.Memopad.Internal.Forms {
             this._statusStrip.Font = new System.Drawing.Font("Segoe UI", 9F);
             this._statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this._memoCountStatusLabel,
-            this._smartFilterToolStripStatusLabel,
             this._messageToolStripStatusLabel,
             this._canvasSizeToolStripDropDownButton});
             this._statusStrip.Location = new System.Drawing.Point(0, 0);
@@ -303,23 +305,14 @@ namespace Mkamo.Memopad.Internal.Forms {
             this._memoCountStatusLabel.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this._memoCountStatusLabel.Margin = new System.Windows.Forms.Padding(0, 3, 10, 2);
             this._memoCountStatusLabel.Name = "_memoCountStatusLabel";
-            this._memoCountStatusLabel.Size = new System.Drawing.Size(61, 20);
+            this._memoCountStatusLabel.Size = new System.Drawing.Size(65, 20);
             this._memoCountStatusLabel.Text = "ノート数";
-            // 
-            // _smartFilterToolStripStatusLabel
-            // 
-            this._smartFilterToolStripStatusLabel.Image = ((System.Drawing.Image)(resources.GetObject("_smartFilterToolStripStatusLabel.Image")));
-            this._smartFilterToolStripStatusLabel.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this._smartFilterToolStripStatusLabel.Margin = new System.Windows.Forms.Padding(0, 3, 10, 2);
-            this._smartFilterToolStripStatusLabel.Name = "_smartFilterToolStripStatusLabel";
-            this._smartFilterToolStripStatusLabel.Size = new System.Drawing.Size(92, 20);
-            this._smartFilterToolStripStatusLabel.Text = "スマートフィルタ";
             // 
             // _messageToolStripStatusLabel
             // 
             this._messageToolStripStatusLabel.BorderSides = ((System.Windows.Forms.ToolStripStatusLabelBorderSides)((System.Windows.Forms.ToolStripStatusLabelBorderSides.Left | System.Windows.Forms.ToolStripStatusLabelBorderSides.Right)));
             this._messageToolStripStatusLabel.Name = "_messageToolStripStatusLabel";
-            this._messageToolStripStatusLabel.Size = new System.Drawing.Size(594, 20);
+            this._messageToolStripStatusLabel.Size = new System.Drawing.Size(661, 20);
             this._messageToolStripStatusLabel.Spring = true;
             this._messageToolStripStatusLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -340,14 +333,14 @@ namespace Mkamo.Memopad.Internal.Forms {
             // _spaceRightToolStripMenuItem
             // 
             this._spaceRightToolStripMenuItem.Name = "_spaceRightToolStripMenuItem";
-            this._spaceRightToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
+            this._spaceRightToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
             this._spaceRightToolStripMenuItem.Text = "右に余白(&R)";
             this._spaceRightToolStripMenuItem.Click += new System.EventHandler(this._spaceRightToolStripMenuItem_Click);
             // 
             // _spaceDownToolStripMenuItem
             // 
             this._spaceDownToolStripMenuItem.Name = "_spaceDownToolStripMenuItem";
-            this._spaceDownToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
+            this._spaceDownToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
             this._spaceDownToolStripMenuItem.Text = "下に余白(&B)";
             this._spaceDownToolStripMenuItem.Click += new System.EventHandler(this._spaceDownToolStripMenuItem_Click);
             // 
@@ -411,13 +404,13 @@ namespace Mkamo.Memopad.Internal.Forms {
             this._workspaceTagContextMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this._showDescendantTagsMemoToolStripMenuItem});
             this._workspaceTagContextMenuStrip.Name = "_workspaceTagContextMenuStrip";
-            this._workspaceTagContextMenuStrip.Size = new System.Drawing.Size(201, 26);
+            this._workspaceTagContextMenuStrip.Size = new System.Drawing.Size(212, 26);
             this._workspaceTagContextMenuStrip.Opening += new System.ComponentModel.CancelEventHandler(this._workspaceTagContextMenuStrip_Opening);
             // 
             // _showDescendantTagsMemoToolStripMenuItem
             // 
             this._showDescendantTagsMemoToolStripMenuItem.Name = "_showDescendantTagsMemoToolStripMenuItem";
-            this._showDescendantTagsMemoToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
+            this._showDescendantTagsMemoToolStripMenuItem.Size = new System.Drawing.Size(211, 22);
             this._showDescendantTagsMemoToolStripMenuItem.Text = "子孫タグのノートも表示(&D)";
             this._showDescendantTagsMemoToolStripMenuItem.Click += new System.EventHandler(this._showDescendantTagsMemoToolStripMenuItem_Click);
             // 
@@ -532,7 +525,6 @@ namespace Mkamo.Memopad.Internal.Forms {
             this._memoListHeaderGroup.AutoCollapseArrow = false;
             this._memoListHeaderGroup.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowOnly;
             this._memoListHeaderGroup.ButtonSpecs.AddRange(new ComponentFactory.Krypton.Toolkit.ButtonSpecHeaderGroup[] {
-            this._memoListViewSmartFilterButtonSpecHeaderGroup,
             this._memoListViewDisplayItemButtonSpecHeaderGroup,
             this._memoListViewSortButtonSpecHeaderGroup,
             this._memoListFoldButtonSpecHeaderGroup});
@@ -550,13 +542,6 @@ namespace Mkamo.Memopad.Internal.Forms {
             this._memoListHeaderGroup.ValuesPrimary.Heading = "ノートリスト";
             this._memoListHeaderGroup.ValuesPrimary.Image = null;
             // 
-            // _memoListViewSmartFilterButtonSpecHeaderGroup
-            // 
-            this._memoListViewSmartFilterButtonSpecHeaderGroup.ContextMenuStrip = this._memoListViewSmartFilterContextMenuStrip;
-            this._memoListViewSmartFilterButtonSpecHeaderGroup.Image = global::Mkamo.Memopad.Properties.Resources.filter;
-            this._memoListViewSmartFilterButtonSpecHeaderGroup.ToolTipTitle = "スマートフィルタ";
-            this._memoListViewSmartFilterButtonSpecHeaderGroup.UniqueName = "6628DED6D2DF4BE3D59DA36F61CF6292";
-            // 
             // _memoListViewSmartFilterContextMenuStrip
             // 
             this._memoListViewSmartFilterContextMenuStrip.Font = new System.Drawing.Font("Segoe UI", 9F);
@@ -565,25 +550,25 @@ namespace Mkamo.Memopad.Internal.Forms {
             this._memoListViewSmartFilterSplitterToolStripMenuItem,
             this._clearSmartFilterToolStripMenuItem});
             this._memoListViewSmartFilterContextMenuStrip.Name = "_memoListViewFilterContextMenuStrip";
-            this._memoListViewSmartFilterContextMenuStrip.Size = new System.Drawing.Size(206, 54);
+            this._memoListViewSmartFilterContextMenuStrip.Size = new System.Drawing.Size(216, 54);
             this._memoListViewSmartFilterContextMenuStrip.Opening += new System.ComponentModel.CancelEventHandler(this._memoListViewSmartFilterContextMenuStrip_Opening);
             // 
             // _memoListViewManageSmartFilterToolStripMenuItem
             // 
             this._memoListViewManageSmartFilterToolStripMenuItem.Name = "_memoListViewManageSmartFilterToolStripMenuItem";
-            this._memoListViewManageSmartFilterToolStripMenuItem.Size = new System.Drawing.Size(205, 22);
+            this._memoListViewManageSmartFilterToolStripMenuItem.Size = new System.Drawing.Size(215, 22);
             this._memoListViewManageSmartFilterToolStripMenuItem.Text = "スマートフィルタの管理(&M)...";
             this._memoListViewManageSmartFilterToolStripMenuItem.Click += new System.EventHandler(this._memoListViewManageSmartFilterToolStripMenuItem_Click);
             // 
             // _memoListViewSmartFilterSplitterToolStripMenuItem
             // 
             this._memoListViewSmartFilterSplitterToolStripMenuItem.Name = "_memoListViewSmartFilterSplitterToolStripMenuItem";
-            this._memoListViewSmartFilterSplitterToolStripMenuItem.Size = new System.Drawing.Size(202, 6);
+            this._memoListViewSmartFilterSplitterToolStripMenuItem.Size = new System.Drawing.Size(212, 6);
             // 
             // _clearSmartFilterToolStripMenuItem
             // 
             this._clearSmartFilterToolStripMenuItem.Name = "_clearSmartFilterToolStripMenuItem";
-            this._clearSmartFilterToolStripMenuItem.Size = new System.Drawing.Size(205, 22);
+            this._clearSmartFilterToolStripMenuItem.Size = new System.Drawing.Size(215, 22);
             this._clearSmartFilterToolStripMenuItem.Text = "スマートフィルタなし";
             this._clearSmartFilterToolStripMenuItem.Click += new System.EventHandler(this._clearSmartFilterToolStripMenuItem_Click);
             // 
@@ -604,41 +589,41 @@ namespace Mkamo.Memopad.Internal.Forms {
             this._tagDisplayToolStripMenuItem,
             this._summaryTextDisplayToolStripMenuItem});
             this._memoListViewDisplayItemContextMenuStrip.Name = "_memoListViewVisibleItemContextMenuStrip";
-            this._memoListViewDisplayItemContextMenuStrip.Size = new System.Drawing.Size(135, 114);
+            this._memoListViewDisplayItemContextMenuStrip.Size = new System.Drawing.Size(141, 114);
             this._memoListViewDisplayItemContextMenuStrip.Opening += new System.ComponentModel.CancelEventHandler(this._memoListViewDisplayItemContextMenuStrip_Opening);
             // 
             // _createdDateDisplayToolStripMenuItem
             // 
             this._createdDateDisplayToolStripMenuItem.Name = "_createdDateDisplayToolStripMenuItem";
-            this._createdDateDisplayToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
+            this._createdDateDisplayToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
             this._createdDateDisplayToolStripMenuItem.Text = "作成日時";
             this._createdDateDisplayToolStripMenuItem.Click += new System.EventHandler(this._createdDateDisplayToolStripMenuItem_Click);
             // 
             // _modifiedDateDisplayToolStripMenuItem
             // 
             this._modifiedDateDisplayToolStripMenuItem.Name = "_modifiedDateDisplayToolStripMenuItem";
-            this._modifiedDateDisplayToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
+            this._modifiedDateDisplayToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
             this._modifiedDateDisplayToolStripMenuItem.Text = "更新日時";
             this._modifiedDateDisplayToolStripMenuItem.Click += new System.EventHandler(this._modifiedDateDisplayToolStripMenuItem_Click);
             // 
             // _accessedDateDisplayToolStripMenuItem
             // 
             this._accessedDateDisplayToolStripMenuItem.Name = "_accessedDateDisplayToolStripMenuItem";
-            this._accessedDateDisplayToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
+            this._accessedDateDisplayToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
             this._accessedDateDisplayToolStripMenuItem.Text = "アクセス日時";
             this._accessedDateDisplayToolStripMenuItem.Click += new System.EventHandler(this._accessedDateDisplayToolStripMenuItem_Click);
             // 
             // _tagDisplayToolStripMenuItem
             // 
             this._tagDisplayToolStripMenuItem.Name = "_tagDisplayToolStripMenuItem";
-            this._tagDisplayToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
+            this._tagDisplayToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
             this._tagDisplayToolStripMenuItem.Text = "タグ";
             this._tagDisplayToolStripMenuItem.Click += new System.EventHandler(this._tagDisplayToolStripMenuItem_Click);
             // 
             // _summaryTextDisplayToolStripMenuItem
             // 
             this._summaryTextDisplayToolStripMenuItem.Name = "_summaryTextDisplayToolStripMenuItem";
-            this._summaryTextDisplayToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
+            this._summaryTextDisplayToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
             this._summaryTextDisplayToolStripMenuItem.Text = "要約文";
             this._summaryTextDisplayToolStripMenuItem.Click += new System.EventHandler(this._summaryTextDisplayToolStripMenuItem_Click);
             // 
@@ -663,46 +648,46 @@ namespace Mkamo.Memopad.Internal.Forms {
             this.toolStripMenuItem15,
             this._sortByImortanceToolStripMenuItem});
             this._memoListViewSortContextMenuStrip.Name = "_memoListViewSortContextMenuStrip";
-            this._memoListViewSortContextMenuStrip.Size = new System.Drawing.Size(135, 170);
+            this._memoListViewSortContextMenuStrip.Size = new System.Drawing.Size(141, 170);
             this._memoListViewSortContextMenuStrip.Opening += new System.ComponentModel.CancelEventHandler(this._memoListViewSortContextMenuStrip_Opening);
             // 
             // _sortByTitleToolStripMenuItem
             // 
             this._sortByTitleToolStripMenuItem.Name = "_sortByTitleToolStripMenuItem";
-            this._sortByTitleToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
+            this._sortByTitleToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
             this._sortByTitleToolStripMenuItem.Text = "タイトル";
             this._sortByTitleToolStripMenuItem.Click += new System.EventHandler(this._sortByTitleToolStripMenuItem_Click);
             // 
             // _sortByCreatedDateToolStripMenuItem
             // 
             this._sortByCreatedDateToolStripMenuItem.Name = "_sortByCreatedDateToolStripMenuItem";
-            this._sortByCreatedDateToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
+            this._sortByCreatedDateToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
             this._sortByCreatedDateToolStripMenuItem.Text = "作成日時";
             this._sortByCreatedDateToolStripMenuItem.Click += new System.EventHandler(this._sortByCreatedDateToolStripMenuItem_Click);
             // 
             // _sortByModifiedDateToolStripMenuItem
             // 
             this._sortByModifiedDateToolStripMenuItem.Name = "_sortByModifiedDateToolStripMenuItem";
-            this._sortByModifiedDateToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
+            this._sortByModifiedDateToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
             this._sortByModifiedDateToolStripMenuItem.Text = "更新日時";
             this._sortByModifiedDateToolStripMenuItem.Click += new System.EventHandler(this._sortByModifiedDateToolStripMenuItem_Click);
             // 
             // _sortByAccessedDateToolStripMenuItem
             // 
             this._sortByAccessedDateToolStripMenuItem.Name = "_sortByAccessedDateToolStripMenuItem";
-            this._sortByAccessedDateToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
+            this._sortByAccessedDateToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
             this._sortByAccessedDateToolStripMenuItem.Text = "アクセス日時";
             this._sortByAccessedDateToolStripMenuItem.Click += new System.EventHandler(this._sortByAccessedDateToolStripMenuItem_Click);
             // 
             // toolStripMenuItem4
             // 
             this.toolStripMenuItem4.Name = "toolStripMenuItem4";
-            this.toolStripMenuItem4.Size = new System.Drawing.Size(131, 6);
+            this.toolStripMenuItem4.Size = new System.Drawing.Size(137, 6);
             // 
             // _sortByAscendingOrderToolStripMenuItem
             // 
             this._sortByAscendingOrderToolStripMenuItem.Name = "_sortByAscendingOrderToolStripMenuItem";
-            this._sortByAscendingOrderToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
+            this._sortByAscendingOrderToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
             this._sortByAscendingOrderToolStripMenuItem.Text = "昇順";
             this._sortByAscendingOrderToolStripMenuItem.Click += new System.EventHandler(this._sortByAscendingOrderToolStripMenuItem_Click);
             // 
@@ -710,19 +695,19 @@ namespace Mkamo.Memopad.Internal.Forms {
             // 
             this._sortByDescendingOrderToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
             this._sortByDescendingOrderToolStripMenuItem.Name = "_sortByDescendingOrderToolStripMenuItem";
-            this._sortByDescendingOrderToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
+            this._sortByDescendingOrderToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
             this._sortByDescendingOrderToolStripMenuItem.Text = "降順";
             this._sortByDescendingOrderToolStripMenuItem.Click += new System.EventHandler(this._sortByDescendingOrderToolStripMenuItem_Click);
             // 
             // toolStripMenuItem15
             // 
             this.toolStripMenuItem15.Name = "toolStripMenuItem15";
-            this.toolStripMenuItem15.Size = new System.Drawing.Size(131, 6);
+            this.toolStripMenuItem15.Size = new System.Drawing.Size(137, 6);
             // 
             // _sortByImortanceToolStripMenuItem
             // 
             this._sortByImortanceToolStripMenuItem.Name = "_sortByImortanceToolStripMenuItem";
-            this._sortByImortanceToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
+            this._sortByImortanceToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
             this._sortByImortanceToolStripMenuItem.Text = "重要度";
             this._sortByImortanceToolStripMenuItem.Click += new System.EventHandler(this._sortByImortanceToolStripMenuItem_Click);
             // 
@@ -792,35 +777,35 @@ namespace Mkamo.Memopad.Internal.Forms {
             this.toolStripMenuItem9,
             this._exitToolStripMenuItem});
             this._fileToolStripMenuItem.Name = "_fileToolStripMenuItem";
-            this._fileToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
+            this._fileToolStripMenuItem.Size = new System.Drawing.Size(70, 20);
             this._fileToolStripMenuItem.Text = "ファイル(&F)";
             this._fileToolStripMenuItem.DropDownOpening += new System.EventHandler(this._fileToolStripMenuItem_DropDownOpening);
             // 
             // _createMemoFileToolStripMenuItem
             // 
             this._createMemoFileToolStripMenuItem.Name = "_createMemoFileToolStripMenuItem";
-            this._createMemoFileToolStripMenuItem.Size = new System.Drawing.Size(227, 22);
+            this._createMemoFileToolStripMenuItem.Size = new System.Drawing.Size(241, 22);
             this._createMemoFileToolStripMenuItem.Text = "ノートを作成(&N)";
             this._createMemoFileToolStripMenuItem.Click += new System.EventHandler(this._newMemoToolStripMenuItem_Click);
             // 
             // _createFusenMemoFileToolStripMenuItem
             // 
             this._createFusenMemoFileToolStripMenuItem.Name = "_createFusenMemoFileToolStripMenuItem";
-            this._createFusenMemoFileToolStripMenuItem.Size = new System.Drawing.Size(227, 22);
+            this._createFusenMemoFileToolStripMenuItem.Size = new System.Drawing.Size(241, 22);
             this._createFusenMemoFileToolStripMenuItem.Text = "付箋ノートを作成(&F)";
             this._createFusenMemoFileToolStripMenuItem.Click += new System.EventHandler(this._newFusenMemoToolStripMenuItem_Click);
             // 
             // _createMemoFromClipboardFileToolStripMenuItem
             // 
             this._createMemoFromClipboardFileToolStripMenuItem.Name = "_createMemoFromClipboardFileToolStripMenuItem";
-            this._createMemoFromClipboardFileToolStripMenuItem.Size = new System.Drawing.Size(227, 22);
+            this._createMemoFromClipboardFileToolStripMenuItem.Size = new System.Drawing.Size(241, 22);
             this._createMemoFromClipboardFileToolStripMenuItem.Text = "クリップボードからノートを作成(&C)";
             this._createMemoFromClipboardFileToolStripMenuItem.Click += new System.EventHandler(this._createMemoFromClipboardMenuToolStripMenuItem_Click);
             // 
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(224, 6);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(238, 6);
             // 
             // _saveAsToolStripMenuItem
             // 
@@ -831,41 +816,41 @@ namespace Mkamo.Memopad.Internal.Forms {
             this._saveAsPngToolStripMenuItem,
             this._saveAsJpegToolStripMenuItem});
             this._saveAsToolStripMenuItem.Name = "_saveAsToolStripMenuItem";
-            this._saveAsToolStripMenuItem.Size = new System.Drawing.Size(227, 22);
+            this._saveAsToolStripMenuItem.Size = new System.Drawing.Size(241, 22);
             this._saveAsToolStripMenuItem.Text = "他の形式で保存(&A)";
             // 
             // _saveAsHtmlToolStripMenuItem
             // 
             this._saveAsHtmlToolStripMenuItem.Name = "_saveAsHtmlToolStripMenuItem";
-            this._saveAsHtmlToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
+            this._saveAsHtmlToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
             this._saveAsHtmlToolStripMenuItem.Text = "HTML(&H)...";
             this._saveAsHtmlToolStripMenuItem.Click += new System.EventHandler(this._saveAsHtmlToolStripMenuItem_Click);
             // 
             // _saveAsTextToolStripMenuItem
             // 
             this._saveAsTextToolStripMenuItem.Name = "_saveAsTextToolStripMenuItem";
-            this._saveAsTextToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
+            this._saveAsTextToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
             this._saveAsTextToolStripMenuItem.Text = "テキスト(&T)...";
             this._saveAsTextToolStripMenuItem.Click += new System.EventHandler(this._saveAsTextToolStripMenuItem_Click);
             // 
             // _saveAsEmfToolStripMenuItem
             // 
             this._saveAsEmfToolStripMenuItem.Name = "_saveAsEmfToolStripMenuItem";
-            this._saveAsEmfToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
+            this._saveAsEmfToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
             this._saveAsEmfToolStripMenuItem.Text = "EMF(&E)...";
             this._saveAsEmfToolStripMenuItem.Click += new System.EventHandler(this._saveAsEmfToolStripMenuItem_Click);
             // 
             // _saveAsPngToolStripMenuItem
             // 
             this._saveAsPngToolStripMenuItem.Name = "_saveAsPngToolStripMenuItem";
-            this._saveAsPngToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
+            this._saveAsPngToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
             this._saveAsPngToolStripMenuItem.Text = "PNG(&P)...";
             this._saveAsPngToolStripMenuItem.Click += new System.EventHandler(this._saveAsPngToolStripMenuItem_Click);
             // 
             // _saveAsJpegToolStripMenuItem
             // 
             this._saveAsJpegToolStripMenuItem.Name = "_saveAsJpegToolStripMenuItem";
-            this._saveAsJpegToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
+            this._saveAsJpegToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
             this._saveAsJpegToolStripMenuItem.Text = "JPEG(&J)...";
             this._saveAsJpegToolStripMenuItem.Click += new System.EventHandler(this._saveAsJpegToolStripMenuItem_Click);
             // 
@@ -874,20 +859,20 @@ namespace Mkamo.Memopad.Internal.Forms {
             this._sendToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this._sendMailToolStripMenuItem});
             this._sendToolStripMenuItem.Name = "_sendToolStripMenuItem";
-            this._sendToolStripMenuItem.Size = new System.Drawing.Size(227, 22);
+            this._sendToolStripMenuItem.Size = new System.Drawing.Size(241, 22);
             this._sendToolStripMenuItem.Text = "送る(&S)";
             // 
             // _sendMailToolStripMenuItem
             // 
             this._sendMailToolStripMenuItem.Name = "_sendMailToolStripMenuItem";
-            this._sendMailToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
+            this._sendMailToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
             this._sendMailToolStripMenuItem.Text = "メール(&M)...";
             this._sendMailToolStripMenuItem.Click += new System.EventHandler(this._sendMailToolStripMenuItem_Click);
             // 
             // toolStripMenuItem16
             // 
             this.toolStripMenuItem16.Name = "toolStripMenuItem16";
-            this.toolStripMenuItem16.Size = new System.Drawing.Size(224, 6);
+            this.toolStripMenuItem16.Size = new System.Drawing.Size(238, 6);
             // 
             // _exportToolStripMenuItem
             // 
@@ -895,39 +880,39 @@ namespace Mkamo.Memopad.Internal.Forms {
             this._exportHtmlToolStripMenuItem,
             this._exportTextToolStripMenuItem});
             this._exportToolStripMenuItem.Name = "_exportToolStripMenuItem";
-            this._exportToolStripMenuItem.Size = new System.Drawing.Size(227, 22);
+            this._exportToolStripMenuItem.Size = new System.Drawing.Size(241, 22);
             this._exportToolStripMenuItem.Text = "エクスポート(&E)";
             // 
             // _exportHtmlToolStripMenuItem
             // 
             this._exportHtmlToolStripMenuItem.Name = "_exportHtmlToolStripMenuItem";
-            this._exportHtmlToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this._exportHtmlToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
             this._exportHtmlToolStripMenuItem.Text = "HTML(&H)...";
             this._exportHtmlToolStripMenuItem.Click += new System.EventHandler(this._exportHtmlToolStripMenuItem_Click);
             // 
             // _exportTextToolStripMenuItem
             // 
             this._exportTextToolStripMenuItem.Name = "_exportTextToolStripMenuItem";
-            this._exportTextToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this._exportTextToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
             this._exportTextToolStripMenuItem.Text = "テキスト(&T)...";
             this._exportTextToolStripMenuItem.Click += new System.EventHandler(this._exportTextToolStripMenuItem_Click);
             // 
             // _exportNextToolStripMenuItem
             // 
             this._exportNextToolStripMenuItem.Name = "_exportNextToolStripMenuItem";
-            this._exportNextToolStripMenuItem.Size = new System.Drawing.Size(224, 6);
+            this._exportNextToolStripMenuItem.Size = new System.Drawing.Size(238, 6);
             // 
             // _printToolStripMenuItem
             // 
             this._printToolStripMenuItem.Name = "_printToolStripMenuItem";
-            this._printToolStripMenuItem.Size = new System.Drawing.Size(227, 22);
+            this._printToolStripMenuItem.Size = new System.Drawing.Size(241, 22);
             this._printToolStripMenuItem.Text = "印刷(&P)...";
             this._printToolStripMenuItem.Click += new System.EventHandler(this._printToolStripMenuItem_Click);
             // 
             // _nextPrintSeparatorToolStripMenuItem
             // 
             this._nextPrintSeparatorToolStripMenuItem.Name = "_nextPrintSeparatorToolStripMenuItem";
-            this._nextPrintSeparatorToolStripMenuItem.Size = new System.Drawing.Size(224, 6);
+            this._nextPrintSeparatorToolStripMenuItem.Size = new System.Drawing.Size(238, 6);
             // 
             // _noteFolderToolStripMenuItem
             // 
@@ -935,32 +920,32 @@ namespace Mkamo.Memopad.Internal.Forms {
             this._exportToFolderToolStripMenuItem,
             this._importFromFolderToolStripMenuItem});
             this._noteFolderToolStripMenuItem.Name = "_noteFolderToolStripMenuItem";
-            this._noteFolderToolStripMenuItem.Size = new System.Drawing.Size(227, 22);
+            this._noteFolderToolStripMenuItem.Size = new System.Drawing.Size(241, 22);
             this._noteFolderToolStripMenuItem.Text = "ノート格納フォルダ(&D)";
             // 
             // _exportToFolderToolStripMenuItem
             // 
             this._exportToFolderToolStripMenuItem.Name = "_exportToFolderToolStripMenuItem";
-            this._exportToFolderToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
+            this._exportToFolderToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
             this._exportToFolderToolStripMenuItem.Text = "エクスポート(&E)...";
             this._exportToFolderToolStripMenuItem.Click += new System.EventHandler(this._exportToFolderToolStripMenuItem_Click);
             // 
             // _importFromFolderToolStripMenuItem
             // 
             this._importFromFolderToolStripMenuItem.Name = "_importFromFolderToolStripMenuItem";
-            this._importFromFolderToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
+            this._importFromFolderToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
             this._importFromFolderToolStripMenuItem.Text = "インポート(&I)...";
             this._importFromFolderToolStripMenuItem.Click += new System.EventHandler(this._importFromFolderToolStripMenuItem_Click);
             // 
             // toolStripMenuItem9
             // 
             this.toolStripMenuItem9.Name = "toolStripMenuItem9";
-            this.toolStripMenuItem9.Size = new System.Drawing.Size(224, 6);
+            this.toolStripMenuItem9.Size = new System.Drawing.Size(238, 6);
             // 
             // _exitToolStripMenuItem
             // 
             this._exitToolStripMenuItem.Name = "_exitToolStripMenuItem";
-            this._exitToolStripMenuItem.Size = new System.Drawing.Size(227, 22);
+            this._exitToolStripMenuItem.Size = new System.Drawing.Size(241, 22);
             this._exitToolStripMenuItem.Text = "終了(&X)";
             this._exitToolStripMenuItem.Click += new System.EventHandler(this._exitToolStripMenuItem_Click);
             // 
@@ -979,78 +964,78 @@ namespace Mkamo.Memopad.Internal.Forms {
             this.toolStripMenuItem3,
             this._findToolStripMenuItem});
             this._editToolStripMenuItem.Name = "_editToolStripMenuItem";
-            this._editToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
+            this._editToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
             this._editToolStripMenuItem.Text = "編集(&E)";
             this._editToolStripMenuItem.DropDownOpening += new System.EventHandler(this._editToolStripMenuItem_DropDownOpening);
             // 
             // _undoToolStripMenuItem
             // 
             this._undoToolStripMenuItem.Name = "_undoToolStripMenuItem";
-            this._undoToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
+            this._undoToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
             this._undoToolStripMenuItem.Text = "元に戻す(&U)";
             this._undoToolStripMenuItem.Click += new System.EventHandler(this._undoToolStripMenuItem_Click);
             // 
             // _redoToolStripMenuItem
             // 
             this._redoToolStripMenuItem.Name = "_redoToolStripMenuItem";
-            this._redoToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
+            this._redoToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
             this._redoToolStripMenuItem.Text = "やり直し(&R)";
             this._redoToolStripMenuItem.Click += new System.EventHandler(this._redoToolStripMenuItem_Click);
             // 
             // toolStripSeparator5
             // 
             this.toolStripSeparator5.Name = "toolStripSeparator5";
-            this.toolStripSeparator5.Size = new System.Drawing.Size(147, 6);
+            this.toolStripSeparator5.Size = new System.Drawing.Size(153, 6);
             // 
             // _cutToolStripMenuItem
             // 
             this._cutToolStripMenuItem.Name = "_cutToolStripMenuItem";
-            this._cutToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
+            this._cutToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
             this._cutToolStripMenuItem.Text = "切り取り(&T)";
             this._cutToolStripMenuItem.Click += new System.EventHandler(this._cutToolStripMenuItem_Click);
             // 
             // _copyToolStripMenuItem
             // 
             this._copyToolStripMenuItem.Name = "_copyToolStripMenuItem";
-            this._copyToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
+            this._copyToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
             this._copyToolStripMenuItem.Text = "コピー(&C)";
             this._copyToolStripMenuItem.Click += new System.EventHandler(this._copyToolStripMenuItem_Click);
             // 
             // _pasteToolStripMenuItem
             // 
             this._pasteToolStripMenuItem.Name = "_pasteToolStripMenuItem";
-            this._pasteToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
+            this._pasteToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
             this._pasteToolStripMenuItem.Text = "貼り付け(&P)";
             this._pasteToolStripMenuItem.Click += new System.EventHandler(this._pasteToolStripMenuItem_Click);
             // 
             // _deleteToolStripMenuItem
             // 
             this._deleteToolStripMenuItem.Name = "_deleteToolStripMenuItem";
-            this._deleteToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
+            this._deleteToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
             this._deleteToolStripMenuItem.Text = "削除(&D)";
             this._deleteToolStripMenuItem.Click += new System.EventHandler(this._deleteToolStripMenuItem_Click);
             // 
             // toolStripSeparator6
             // 
             this.toolStripSeparator6.Name = "toolStripSeparator6";
-            this.toolStripSeparator6.Size = new System.Drawing.Size(147, 6);
+            this.toolStripSeparator6.Size = new System.Drawing.Size(153, 6);
             // 
             // _selectAllToolStripMenuItem
             // 
             this._selectAllToolStripMenuItem.Name = "_selectAllToolStripMenuItem";
-            this._selectAllToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
+            this._selectAllToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
             this._selectAllToolStripMenuItem.Text = "すべて選択(&A)";
             this._selectAllToolStripMenuItem.Click += new System.EventHandler(this._selectAllToolStripMenuItem_Click);
             // 
             // toolStripMenuItem3
             // 
             this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(147, 6);
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(153, 6);
             // 
             // _findToolStripMenuItem
             // 
             this._findToolStripMenuItem.Name = "_findToolStripMenuItem";
-            this._findToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
+            this._findToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
             this._findToolStripMenuItem.Text = "ノート内検索(&F)";
             this._findToolStripMenuItem.Click += new System.EventHandler(this._findToolStripMenuItem_Click);
             // 
@@ -1065,45 +1050,45 @@ namespace Mkamo.Memopad.Internal.Forms {
             this._displayTopMostToolStripMenuItem});
             this._viewToolStripMenuItem.Name = "_viewToolStripMenuItem";
             this._viewToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.S)));
-            this._viewToolStripMenuItem.Size = new System.Drawing.Size(58, 20);
+            this._viewToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
             this._viewToolStripMenuItem.Text = "表示(&V)";
             this._viewToolStripMenuItem.DropDownOpening += new System.EventHandler(this._viewToolStripMenuItem_DropDownOpening);
             // 
             // _showStartPageToolStripMenuItem
             // 
             this._showStartPageToolStripMenuItem.Name = "_showStartPageToolStripMenuItem";
-            this._showStartPageToolStripMenuItem.Size = new System.Drawing.Size(226, 22);
+            this._showStartPageToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
             this._showStartPageToolStripMenuItem.Text = "スタートページ(&S)";
             this._showStartPageToolStripMenuItem.Click += new System.EventHandler(this._showStartPageToolStripMenuItem_Click);
             // 
             // toolStripMenuItem12
             // 
             this.toolStripMenuItem12.Name = "toolStripMenuItem12";
-            this.toolStripMenuItem12.Size = new System.Drawing.Size(223, 6);
+            this.toolStripMenuItem12.Size = new System.Drawing.Size(171, 6);
             // 
             // _showFusenMemosToolStripMenuItem
             // 
             this._showFusenMemosToolStripMenuItem.Name = "_showFusenMemosToolStripMenuItem";
-            this._showFusenMemosToolStripMenuItem.Size = new System.Drawing.Size(226, 22);
+            this._showFusenMemosToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
             this._showFusenMemosToolStripMenuItem.Text = "付箋ノート(&F)";
             this._showFusenMemosToolStripMenuItem.Click += new System.EventHandler(this._showFusenMemosToolStripMenuItem_Click);
             // 
             // _nextShowFusenMemosSeparatorToolStripMenuItem
             // 
             this._nextShowFusenMemosSeparatorToolStripMenuItem.Name = "_nextShowFusenMemosSeparatorToolStripMenuItem";
-            this._nextShowFusenMemosSeparatorToolStripMenuItem.Size = new System.Drawing.Size(223, 6);
+            this._nextShowFusenMemosSeparatorToolStripMenuItem.Size = new System.Drawing.Size(171, 6);
             // 
             // _compactModeToolStripMenuItem
             // 
             this._compactModeToolStripMenuItem.Name = "_compactModeToolStripMenuItem";
-            this._compactModeToolStripMenuItem.Size = new System.Drawing.Size(226, 22);
+            this._compactModeToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
             this._compactModeToolStripMenuItem.Text = "コンパクト表示(&C)";
             this._compactModeToolStripMenuItem.Click += new System.EventHandler(this._compactModeToolStripMenuItem_Click);
             // 
             // _displayTopMostToolStripMenuItem
             // 
             this._displayTopMostToolStripMenuItem.Name = "_displayTopMostToolStripMenuItem";
-            this._displayTopMostToolStripMenuItem.Size = new System.Drawing.Size(226, 22);
+            this._displayTopMostToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
             this._displayTopMostToolStripMenuItem.Text = "常に手前に表示(&T)";
             this._displayTopMostToolStripMenuItem.Click += new System.EventHandler(this._displayTopMostToolStripMenuItem_Click);
             // 
@@ -1112,50 +1097,42 @@ namespace Mkamo.Memopad.Internal.Forms {
             this._recentToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this._dummyToolStripMenuItem});
             this._recentToolStripMenuItem.Name = "_recentToolStripMenuItem";
-            this._recentToolStripMenuItem.Size = new System.Drawing.Size(58, 20);
+            this._recentToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
             this._recentToolStripMenuItem.Text = "履歴(&R)";
             this._recentToolStripMenuItem.DropDownOpening += new System.EventHandler(this._recentToolStripMenuItem_DropDownOpening);
             // 
             // _dummyToolStripMenuItem
             // 
             this._dummyToolStripMenuItem.Name = "_dummyToolStripMenuItem";
-            this._dummyToolStripMenuItem.Size = new System.Drawing.Size(100, 22);
+            this._dummyToolStripMenuItem.Size = new System.Drawing.Size(102, 22);
             this._dummyToolStripMenuItem.Text = "ダミー";
             // 
             // _toolToolStripMenuItem
             // 
             this._toolToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this._manageTagToolStripMenuItem,
-            this._manageSmartFilterToolStripMenuItem,
             this.toolStripMenuItem6,
             this._optionToolStripMenuItem});
             this._toolToolStripMenuItem.Name = "_toolToolStripMenuItem";
-            this._toolToolStripMenuItem.Size = new System.Drawing.Size(63, 20);
+            this._toolToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
             this._toolToolStripMenuItem.Text = "ツール(&T)";
             // 
             // _manageTagToolStripMenuItem
             // 
             this._manageTagToolStripMenuItem.Name = "_manageTagToolStripMenuItem";
-            this._manageTagToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
+            this._manageTagToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
             this._manageTagToolStripMenuItem.Text = "タグの管理(&T)...";
             this._manageTagToolStripMenuItem.Click += new System.EventHandler(this._manageTagToolStripMenuItem_Click);
-            // 
-            // _manageSmartFilterToolStripMenuItem
-            // 
-            this._manageSmartFilterToolStripMenuItem.Name = "_manageSmartFilterToolStripMenuItem";
-            this._manageSmartFilterToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
-            this._manageSmartFilterToolStripMenuItem.Text = "スマートフィルタの管理(&F)...";
-            this._manageSmartFilterToolStripMenuItem.Click += new System.EventHandler(this._manageSmartFilterToolStripMenuItem_Click);
             // 
             // toolStripMenuItem6
             // 
             this.toolStripMenuItem6.Name = "toolStripMenuItem6";
-            this.toolStripMenuItem6.Size = new System.Drawing.Size(197, 6);
+            this.toolStripMenuItem6.Size = new System.Drawing.Size(151, 6);
             // 
             // _optionToolStripMenuItem
             // 
             this._optionToolStripMenuItem.Name = "_optionToolStripMenuItem";
-            this._optionToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
+            this._optionToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
             this._optionToolStripMenuItem.Text = "オプション(&O)...";
             this._optionToolStripMenuItem.Click += new System.EventHandler(this._optionToolStripMenuItem_Click);
             // 
@@ -1167,32 +1144,32 @@ namespace Mkamo.Memopad.Internal.Forms {
             this._checkForUpdatesToolStripMenuItem,
             this._aboutBoxToolStripMenuItem});
             this._helpToolStripMenuItem.Name = "_helpToolStripMenuItem";
-            this._helpToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
+            this._helpToolStripMenuItem.Size = new System.Drawing.Size(68, 20);
             this._helpToolStripMenuItem.Text = "ヘルプ(&H)";
             // 
             // _showHelpToolStripMenuItem
             // 
             this._showHelpToolStripMenuItem.Name = "_showHelpToolStripMenuItem";
-            this._showHelpToolStripMenuItem.Size = new System.Drawing.Size(193, 22);
+            this._showHelpToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
             this._showHelpToolStripMenuItem.Text = "ヘルプ(&H)";
             this._showHelpToolStripMenuItem.Click += new System.EventHandler(this._showHelpToolStripMenuItem_Click);
             // 
             // toolStripMenuItem7
             // 
             this.toolStripMenuItem7.Name = "toolStripMenuItem7";
-            this.toolStripMenuItem7.Size = new System.Drawing.Size(190, 6);
+            this.toolStripMenuItem7.Size = new System.Drawing.Size(172, 6);
             // 
             // _checkForUpdatesToolStripMenuItem
             // 
             this._checkForUpdatesToolStripMenuItem.Name = "_checkForUpdatesToolStripMenuItem";
-            this._checkForUpdatesToolStripMenuItem.Size = new System.Drawing.Size(193, 22);
+            this._checkForUpdatesToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
             this._checkForUpdatesToolStripMenuItem.Text = "最新版を確認(&L)";
             this._checkForUpdatesToolStripMenuItem.Click += new System.EventHandler(this._checkForUpdatesToolStripMenuItem_Click);
             // 
             // _aboutBoxToolStripMenuItem
             // 
             this._aboutBoxToolStripMenuItem.Name = "_aboutBoxToolStripMenuItem";
-            this._aboutBoxToolStripMenuItem.Size = new System.Drawing.Size(193, 22);
+            this._aboutBoxToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
             this._aboutBoxToolStripMenuItem.Text = "バージョン情報(&A)...";
             this._aboutBoxToolStripMenuItem.Click += new System.EventHandler(this._aboutBoxToolStripMenuItem_Click);
             // 
@@ -1236,7 +1213,7 @@ namespace Mkamo.Memopad.Internal.Forms {
             this._unimportantToolStripButton});
             this._mainToolStrip.Location = new System.Drawing.Point(3, 24);
             this._mainToolStrip.Name = "_mainToolStrip";
-            this._mainToolStrip.Size = new System.Drawing.Size(705, 25);
+            this._mainToolStrip.Size = new System.Drawing.Size(711, 25);
             this._mainToolStrip.TabIndex = 0;
             // 
             // _createMemoToolStripSplitButton
@@ -1248,28 +1225,28 @@ namespace Mkamo.Memopad.Internal.Forms {
             this._createMemoToolStripSplitButton.Image = global::Mkamo.Memopad.Properties.Resources.sticky_note;
             this._createMemoToolStripSplitButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this._createMemoToolStripSplitButton.Name = "_createMemoToolStripSplitButton";
-            this._createMemoToolStripSplitButton.Size = new System.Drawing.Size(98, 22);
+            this._createMemoToolStripSplitButton.Size = new System.Drawing.Size(104, 22);
             this._createMemoToolStripSplitButton.Text = "ノートを作成";
             this._createMemoToolStripSplitButton.ButtonClick += new System.EventHandler(this._createMemoToolStripSplitButton_ButtonClick);
             // 
             // _createMemoToolStripMenuItem
             // 
             this._createMemoToolStripMenuItem.Name = "_createMemoToolStripMenuItem";
-            this._createMemoToolStripMenuItem.Size = new System.Drawing.Size(227, 22);
+            this._createMemoToolStripMenuItem.Size = new System.Drawing.Size(241, 22);
             this._createMemoToolStripMenuItem.Text = "ノートを作成(&N)";
             this._createMemoToolStripMenuItem.Click += new System.EventHandler(this._createMemoToolStripMenuItem_Click);
             // 
             // _createFusenMemoToolStripMenuItem
             // 
             this._createFusenMemoToolStripMenuItem.Name = "_createFusenMemoToolStripMenuItem";
-            this._createFusenMemoToolStripMenuItem.Size = new System.Drawing.Size(227, 22);
+            this._createFusenMemoToolStripMenuItem.Size = new System.Drawing.Size(241, 22);
             this._createFusenMemoToolStripMenuItem.Text = "付箋ノートを作成(&F)";
             this._createFusenMemoToolStripMenuItem.Click += new System.EventHandler(this._createFusenMemoToolStripMenuItem_Click);
             // 
             // _createMemoFromClipboardToolStripMenuItem
             // 
             this._createMemoFromClipboardToolStripMenuItem.Name = "_createMemoFromClipboardToolStripMenuItem";
-            this._createMemoFromClipboardToolStripMenuItem.Size = new System.Drawing.Size(227, 22);
+            this._createMemoFromClipboardToolStripMenuItem.Size = new System.Drawing.Size(241, 22);
             this._createMemoFromClipboardToolStripMenuItem.Text = "クリップボードからノートを作成(&C)";
             this._createMemoFromClipboardToolStripMenuItem.Click += new System.EventHandler(this._createMemoFromClipboardToolStripMenuItem_Click);
             // 
@@ -1449,13 +1426,13 @@ namespace Mkamo.Memopad.Internal.Forms {
             // _addImageFromFileToolStripMenuItem
             // 
             this._addImageFromFileToolStripMenuItem.Name = "_addImageFromFileToolStripMenuItem";
-            this._addImageFromFileToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
+            this._addImageFromFileToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
             this._addImageFromFileToolStripMenuItem.Text = "画像ファイル(&F)...";
             // 
             // _addImageFromScreenToolStripMenuItem
             // 
             this._addImageFromScreenToolStripMenuItem.Name = "_addImageFromScreenToolStripMenuItem";
-            this._addImageFromScreenToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
+            this._addImageFromScreenToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
             this._addImageFromScreenToolStripMenuItem.Text = "画面の領域(&S)";
             // 
             // _addFileToolStripDropDownButton
@@ -1474,19 +1451,19 @@ namespace Mkamo.Memopad.Internal.Forms {
             // _addEmbededFileToolStripMenuItem
             // 
             this._addEmbededFileToolStripMenuItem.Name = "_addEmbededFileToolStripMenuItem";
-            this._addEmbededFileToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
+            this._addEmbededFileToolStripMenuItem.Size = new System.Drawing.Size(212, 22);
             this._addEmbededFileToolStripMenuItem.Text = "ファイル(&F)...";
             // 
             // _addShortcutFileToolStripMenuItem
             // 
             this._addShortcutFileToolStripMenuItem.Name = "_addShortcutFileToolStripMenuItem";
-            this._addShortcutFileToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
+            this._addShortcutFileToolStripMenuItem.Size = new System.Drawing.Size(212, 22);
             this._addShortcutFileToolStripMenuItem.Text = "ファイルのショートカット(&S)...";
             // 
             // _addFolderShortcutFileToolStripMenuItem
             // 
             this._addFolderShortcutFileToolStripMenuItem.Name = "_addFolderShortcutFileToolStripMenuItem";
-            this._addFolderShortcutFileToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
+            this._addFolderShortcutFileToolStripMenuItem.Size = new System.Drawing.Size(212, 22);
             this._addFolderShortcutFileToolStripMenuItem.Text = "フォルダのショートカット(&D)...";
             // 
             // _addTableToolStripButton
@@ -1528,7 +1505,7 @@ namespace Mkamo.Memopad.Internal.Forms {
             // 
             this._shapeColorButtonToolStripItem.KryptonColorButtonControl.AccessibleName = "_shapeColorButtonToolStripItem";
             this._shapeColorButtonToolStripItem.KryptonColorButtonControl.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.LowProfile;
-            this._shapeColorButtonToolStripItem.KryptonColorButtonControl.Location = new System.Drawing.Point(584, 1);
+            this._shapeColorButtonToolStripItem.KryptonColorButtonControl.Location = new System.Drawing.Point(590, 1);
             this._shapeColorButtonToolStripItem.KryptonColorButtonControl.Name = "kryptonColorButtonToolStripItem1";
             this._shapeColorButtonToolStripItem.KryptonColorButtonControl.Size = new System.Drawing.Size(34, 22);
             this._shapeColorButtonToolStripItem.KryptonColorButtonControl.Strings.MoreColors = "その他の色(&M)...";
@@ -1631,14 +1608,14 @@ namespace Mkamo.Memopad.Internal.Forms {
             this._fontNameToolStripComboBox.DropDownWidth = 180;
             this._fontNameToolStripComboBox.IntegralHeight = false;
             this._fontNameToolStripComboBox.Name = "_fontNameToolStripComboBox";
-            this._fontNameToolStripComboBox.Size = new System.Drawing.Size(100, 22);
+            this._fontNameToolStripComboBox.Size = new System.Drawing.Size(100, 23);
             // 
             // _fontSizeToolStripComboBox
             // 
             this._fontSizeToolStripComboBox.AutoSize = false;
             this._fontSizeToolStripComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this._fontSizeToolStripComboBox.Name = "_fontSizeToolStripComboBox";
-            this._fontSizeToolStripComboBox.Size = new System.Drawing.Size(40, 22);
+            this._fontSizeToolStripComboBox.Size = new System.Drawing.Size(40, 23);
             // 
             // _fontBoldToolStripButton
             // 
@@ -1755,19 +1732,19 @@ namespace Mkamo.Memopad.Internal.Forms {
             // _topVAlignToolStripMenuItem
             // 
             this._topVAlignToolStripMenuItem.Name = "_topVAlignToolStripMenuItem";
-            this._topVAlignToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
+            this._topVAlignToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
             this._topVAlignToolStripMenuItem.Text = "上寄せ(&T)";
             // 
             // _centerVAlignToolStripMenuItem
             // 
             this._centerVAlignToolStripMenuItem.Name = "_centerVAlignToolStripMenuItem";
-            this._centerVAlignToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
+            this._centerVAlignToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
             this._centerVAlignToolStripMenuItem.Text = "中央(&C)";
             // 
             // _bottomVAlignToolStripMenuItem
             // 
             this._bottomVAlignToolStripMenuItem.Name = "_bottomVAlignToolStripMenuItem";
-            this._bottomVAlignToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
+            this._bottomVAlignToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
             this._bottomVAlignToolStripMenuItem.Text = "下寄せ(&B)";
             // 
             // toolStripSeparator3
@@ -1822,7 +1799,7 @@ namespace Mkamo.Memopad.Internal.Forms {
             this._checkBoxListToolStripMenuItem.Image = global::Mkamo.Memopad.Properties.Resources.checkbox_checked;
             this._checkBoxListToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this._checkBoxListToolStripMenuItem.Name = "_checkBoxListToolStripMenuItem";
-            this._checkBoxListToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this._checkBoxListToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
             this._checkBoxListToolStripMenuItem.Text = "チェックボックス(&C)";
             // 
             // _triStateCheckBoxListToolStripMenuItem
@@ -1830,7 +1807,7 @@ namespace Mkamo.Memopad.Internal.Forms {
             this._triStateCheckBoxListToolStripMenuItem.Image = global::Mkamo.Memopad.Properties.Resources.checkbox_indeterminate;
             this._triStateCheckBoxListToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this._triStateCheckBoxListToolStripMenuItem.Name = "_triStateCheckBoxListToolStripMenuItem";
-            this._triStateCheckBoxListToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this._triStateCheckBoxListToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
             this._triStateCheckBoxListToolStripMenuItem.Text = "3値チェックボックス(&T)";
             // 
             // _starListToolStripMenuItem
@@ -1838,7 +1815,7 @@ namespace Mkamo.Memopad.Internal.Forms {
             this._starListToolStripMenuItem.Image = global::Mkamo.Memopad.Properties.Resources.star_small;
             this._starListToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this._starListToolStripMenuItem.Name = "_starListToolStripMenuItem";
-            this._starListToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this._starListToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
             this._starListToolStripMenuItem.Text = "スター(&S)";
             // 
             // _leftArrowListToolStripMenuItem
@@ -1846,7 +1823,7 @@ namespace Mkamo.Memopad.Internal.Forms {
             this._leftArrowListToolStripMenuItem.Image = global::Mkamo.Memopad.Properties.Resources.left_arrow;
             this._leftArrowListToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this._leftArrowListToolStripMenuItem.Name = "_leftArrowListToolStripMenuItem";
-            this._leftArrowListToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this._leftArrowListToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
             this._leftArrowListToolStripMenuItem.Text = "左矢印(&L)";
             // 
             // _rightArrowListToolStripMenuItem
@@ -1854,7 +1831,7 @@ namespace Mkamo.Memopad.Internal.Forms {
             this._rightArrowListToolStripMenuItem.Image = global::Mkamo.Memopad.Properties.Resources.right_arrow;
             this._rightArrowListToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this._rightArrowListToolStripMenuItem.Name = "_rightArrowListToolStripMenuItem";
-            this._rightArrowListToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this._rightArrowListToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
             this._rightArrowListToolStripMenuItem.Text = "右矢印(&R)";
             // 
             // toolStripSeparator7
@@ -1909,70 +1886,70 @@ namespace Mkamo.Memopad.Internal.Forms {
             this._maximizeEditorSizeTabToolStripMenuItem,
             this._restoreEditorSizeTabToolStripMenuItem});
             this._tabControlContextMenuStrip.Name = "tabContextMenuStrip";
-            this._tabControlContextMenuStrip.Size = new System.Drawing.Size(186, 176);
+            this._tabControlContextMenuStrip.Size = new System.Drawing.Size(195, 176);
             this._tabControlContextMenuStrip.Opening += new System.ComponentModel.CancelEventHandler(this._tabControlContextMenuStrip_Opening);
             // 
             // _closeMemoTabToolStripMenuItem
             // 
             this._closeMemoTabToolStripMenuItem.Name = "_closeMemoTabToolStripMenuItem";
-            this._closeMemoTabToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
+            this._closeMemoTabToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
             this._closeMemoTabToolStripMenuItem.Text = "閉じる(&C)";
             this._closeMemoTabToolStripMenuItem.Click += new System.EventHandler(this._closeMemoTabToolStripMenuItem_Click);
             // 
             // _closeOtherMemoTabsToolStripMenuItem
             // 
             this._closeOtherMemoTabsToolStripMenuItem.Name = "_closeOtherMemoTabsToolStripMenuItem";
-            this._closeOtherMemoTabsToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
+            this._closeOtherMemoTabsToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
             this._closeOtherMemoTabsToolStripMenuItem.Text = "他のタブを閉じる(&O)";
             this._closeOtherMemoTabsToolStripMenuItem.Click += new System.EventHandler(this._closeOtherMemoTabsToolStripMenuItem_Click);
             // 
             // _closeAllMemoTabsToolStripMenuItem
             // 
             this._closeAllMemoTabsToolStripMenuItem.Name = "_closeAllMemoTabsToolStripMenuItem";
-            this._closeAllMemoTabsToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
+            this._closeAllMemoTabsToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
             this._closeAllMemoTabsToolStripMenuItem.Text = "すべてのタブを閉じる(&A)";
             this._closeAllMemoTabsToolStripMenuItem.Click += new System.EventHandler(this._closeAllMemoTabsToolStripMenuItem_Click);
             // 
             // toolStripMenuItem11
             // 
             this.toolStripMenuItem11.Name = "toolStripMenuItem11";
-            this.toolStripMenuItem11.Size = new System.Drawing.Size(182, 6);
+            this.toolStripMenuItem11.Size = new System.Drawing.Size(191, 6);
             // 
             // _showFusenTabToolStripMenuItem
             // 
             this._showFusenTabToolStripMenuItem.Name = "_showFusenTabToolStripMenuItem";
-            this._showFusenTabToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
+            this._showFusenTabToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
             this._showFusenTabToolStripMenuItem.Text = "付箋として表示(&F)";
             this._showFusenTabToolStripMenuItem.Click += new System.EventHandler(this._showFusenTabToolStripMenuItem_Click);
             // 
             // _nextShowFusenSeparatorTabToolStripMenuItem
             // 
             this._nextShowFusenSeparatorTabToolStripMenuItem.Name = "_nextShowFusenSeparatorTabToolStripMenuItem";
-            this._nextShowFusenSeparatorTabToolStripMenuItem.Size = new System.Drawing.Size(182, 6);
+            this._nextShowFusenSeparatorTabToolStripMenuItem.Size = new System.Drawing.Size(191, 6);
             // 
             // _removeMemoTabToolStripMenuItem
             // 
             this._removeMemoTabToolStripMenuItem.Name = "_removeMemoTabToolStripMenuItem";
-            this._removeMemoTabToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
+            this._removeMemoTabToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
             this._removeMemoTabToolStripMenuItem.Text = "ノートを削除(&D)";
             this._removeMemoTabToolStripMenuItem.Click += new System.EventHandler(this._removeMemoTabToolStripMenuItem_Click);
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(182, 6);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(191, 6);
             // 
             // _maximizeEditorSizeTabToolStripMenuItem
             // 
             this._maximizeEditorSizeTabToolStripMenuItem.Name = "_maximizeEditorSizeTabToolStripMenuItem";
-            this._maximizeEditorSizeTabToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
+            this._maximizeEditorSizeTabToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
             this._maximizeEditorSizeTabToolStripMenuItem.Text = "最大化(&X)";
             this._maximizeEditorSizeTabToolStripMenuItem.Click += new System.EventHandler(this._maximizeEditorSizeTabToolStripMenuItem_Click);
             // 
             // _restoreEditorSizeTabToolStripMenuItem
             // 
             this._restoreEditorSizeTabToolStripMenuItem.Name = "_restoreEditorSizeTabToolStripMenuItem";
-            this._restoreEditorSizeTabToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
+            this._restoreEditorSizeTabToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
             this._restoreEditorSizeTabToolStripMenuItem.Text = "元のサイズに戻す(&R)";
             this._restoreEditorSizeTabToolStripMenuItem.Click += new System.EventHandler(this._restoreEditorSizeTabToolStripMenuItem_Click);
             // 
@@ -1996,10 +1973,13 @@ namespace Mkamo.Memopad.Internal.Forms {
             this._toolStripContainer.PerformLayout();
             this._statusStrip.ResumeLayout(false);
             this._statusStrip.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._finderSplitContainer.Panel1)).EndInit();
             this._finderSplitContainer.Panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this._finderSplitContainer.Panel2)).EndInit();
             this._finderSplitContainer.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this._finderSplitContainer)).EndInit();
             this._finderSplitContainer.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this._finderHeaderGroup.Panel)).EndInit();
             this._finderHeaderGroup.Panel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this._finderHeaderGroup)).EndInit();
             this._finderHeaderGroup.ResumeLayout(false);
@@ -2009,10 +1989,13 @@ namespace Mkamo.Memopad.Internal.Forms {
             this._adPanel.PerformLayout();
             this._conditionPanel.ResumeLayout(false);
             this._conditionPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._memoListSplitContainer.Panel1)).EndInit();
             this._memoListSplitContainer.Panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this._memoListSplitContainer.Panel2)).EndInit();
             this._memoListSplitContainer.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this._memoListSplitContainer)).EndInit();
             this._memoListSplitContainer.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this._memoListHeaderGroup.Panel)).EndInit();
             this._memoListHeaderGroup.Panel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this._memoListHeaderGroup)).EndInit();
             this._memoListHeaderGroup.ResumeLayout(false);
@@ -2209,11 +2192,8 @@ namespace Mkamo.Memopad.Internal.Forms {
         private System.Windows.Forms.ToolStripDropDownButton _canvasSizeToolStripDropDownButton;
         private System.Windows.Forms.ToolStripMenuItem _spaceRightToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem _spaceDownToolStripMenuItem;
-        private ComponentFactory.Krypton.Toolkit.ButtonSpecHeaderGroup _memoListViewSmartFilterButtonSpecHeaderGroup;
         private System.Windows.Forms.ContextMenuStrip _memoListViewSmartFilterContextMenuStrip;
         private System.Windows.Forms.ToolStripSeparator _memoListViewSmartFilterSplitterToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem _manageSmartFilterToolStripMenuItem;
-        private System.Windows.Forms.ToolStripStatusLabel _smartFilterToolStripStatusLabel;
         private System.Windows.Forms.ToolStripMenuItem _clearSmartFilterToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem _memoListViewManageSmartFilterToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem _maximizeEditorSizeTabToolStripMenuItem;

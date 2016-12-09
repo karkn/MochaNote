@@ -305,19 +305,12 @@ namespace Mkamo.Memopad.Internal.Forms {
             }
             _mediator.UpdateMemoListBox(true);
             UpdateSmartFilterLabel();
-
-            _memoListViewSmartFilterButtonSpecHeaderGroup.Checked =
-                _app.ActiveSmartFilter == null ?
-                ComponentFactory.Krypton.Toolkit.ButtonCheckState.Unchecked :
-                ComponentFactory.Krypton.Toolkit.ButtonCheckState.Checked;
         }
 
         private void UpdateSmartFilterLabel() {
             var name = _app.ActiveSmartFilter == null ? "なし" : _app.ActiveSmartFilter.Name;
-            _smartFilterToolStripStatusLabel.Text = "スマートフィルタ: " + name;
+            //_smartFilterToolStripStatusLabel.Text = "スマートフィルタ: " + name;
         }
-
-
 
         private void _memoListViewDisplayItemContextMenuStrip_Opening(object sender, CancelEventArgs e) {
             var items = _memoListView.MemoListBox.DisplayItems;
