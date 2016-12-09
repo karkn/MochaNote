@@ -218,6 +218,7 @@ namespace Mkamo.Memopad.Internal.Forms {
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
             this._maximizeEditorSizeTabToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this._restoreEditorSizeTabToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator8 = new System.Windows.Forms.ToolStripSeparator();
             this._toolStripContainer.BottomToolStripPanel.SuspendLayout();
             this._toolStripContainer.ContentPanel.SuspendLayout();
             this._toolStripContainer.TopToolStripPanel.SuspendLayout();
@@ -1158,12 +1159,13 @@ namespace Mkamo.Memopad.Internal.Forms {
             this.toolStripSeparator9,
             this._selectToolToolStripButton,
             this._handToolToolStripButton,
-            this._adjustSpaceToolToolStripButton,
+            this.toolStripSeparator8,
             this._addFreehandToolStripDropDownButton,
             this._addFigureToolStripDropDownButton,
             this._addImageToolStripButton,
             this._addFileToolStripDropDownButton,
             this._addTableToolStripButton,
+            this._adjustSpaceToolToolStripButton,
             this._tableNextToolStripSeparator,
             this._setNodeStyleToolStripDropDownButton,
             this._setLineStyleToolStripDropDownButton,
@@ -1174,7 +1176,7 @@ namespace Mkamo.Memopad.Internal.Forms {
             this._unimportantToolStripButton});
             this._mainToolStrip.Location = new System.Drawing.Point(3, 24);
             this._mainToolStrip.Name = "_mainToolStrip";
-            this._mainToolStrip.Size = new System.Drawing.Size(711, 25);
+            this._mainToolStrip.Size = new System.Drawing.Size(717, 25);
             this._mainToolStrip.TabIndex = 0;
             // 
             // _createMemoToolStripSplitButton
@@ -1466,7 +1468,7 @@ namespace Mkamo.Memopad.Internal.Forms {
             // 
             this._shapeColorButtonToolStripItem.KryptonColorButtonControl.AccessibleName = "_shapeColorButtonToolStripItem";
             this._shapeColorButtonToolStripItem.KryptonColorButtonControl.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.LowProfile;
-            this._shapeColorButtonToolStripItem.KryptonColorButtonControl.Location = new System.Drawing.Point(590, 1);
+            this._shapeColorButtonToolStripItem.KryptonColorButtonControl.Location = new System.Drawing.Point(596, 1);
             this._shapeColorButtonToolStripItem.KryptonColorButtonControl.Name = "kryptonColorButtonToolStripItem1";
             this._shapeColorButtonToolStripItem.KryptonColorButtonControl.Size = new System.Drawing.Size(34, 22);
             this._shapeColorButtonToolStripItem.KryptonColorButtonControl.Strings.MoreColors = "その他の色(&M)...";
@@ -1944,6 +1946,11 @@ namespace Mkamo.Memopad.Internal.Forms {
             this._restoreEditorSizeTabToolStripMenuItem.Text = "元のサイズに戻す(&R)";
             this._restoreEditorSizeTabToolStripMenuItem.Click += new System.EventHandler(this._restoreEditorSizeTabToolStripMenuItem_Click);
             // 
+            // toolStripSeparator8
+            // 
+            this.toolStripSeparator8.Name = "toolStripSeparator8";
+            this.toolStripSeparator8.Size = new System.Drawing.Size(6, 25);
+            // 
             // MemopadForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -2196,6 +2203,6 @@ namespace Mkamo.Memopad.Internal.Forms {
         private System.Windows.Forms.ToolStripMenuItem _checkBoxListToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem _triStateCheckBoxListToolStripMenuItem;
         private System.Windows.Forms.ToolStripDropDownButton _setLineStyleToolStripDropDownButton;
-
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator8;
     }
 }
