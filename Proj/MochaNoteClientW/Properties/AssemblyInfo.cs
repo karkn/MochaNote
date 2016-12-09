@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("mkamo")]
 [assembly: AssemblyProduct("MochaNoteClientW.Properties")]
-[assembly: AssemblyCopyright("Copyright ﾂｩ mkamo 2010")]
+[assembly: AssemblyCopyright("Copyright (C)  2007-2016 mkamo")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -29,4 +29,4 @@ using System.Runtime.InteropServices;
 //      Build Number
 //      Revision
 //
-[assembly: AssemblyVersion("3.0.3")]
+[assembly: AssemblyVersion("4.0.0")]

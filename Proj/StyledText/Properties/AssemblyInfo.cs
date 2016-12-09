@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("mkamo")]
 [assembly: AssemblyProduct("Mkamo StyledText")]
-[assembly: AssemblyCopyright("Copyright (C)  2007-2010 mkamo")]
+[assembly: AssemblyCopyright("Copyright (C)  2007-2016 mkamo")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -32,7 +32,7 @@ using System.Runtime.InteropServices;
 // 縺吶∋縺ｦ縺ｮ蛟､繧呈欠螳壹☆繧九°縲∽ｸ九・繧医≧縺ｫ '*' 繧剃ｽｿ縺｣縺ｦ繝薙Ν繝峨♀繧医・繝ｪ繝薙ず繝ｧ繝ｳ逡ｪ蜿ｷ繧・
 // 譌｢螳壼､縺ｫ縺吶ｋ縺薙→縺後〒縺阪∪縺・
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("3.0.3")]
+[assembly: AssemblyVersion("4.0.0")]
 
 [assembly: log4net.Config.XmlConfigurator(Watch=true)]
 

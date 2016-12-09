@@ -32,7 +32,7 @@ namespace Mkamo.Memopad.Internal.Forms {
 
             Text = String.Format("MochaNoteのバージョン情報");
             _productNameLabel.Text = "MochaNote Version " + ver;
-            _copyrightLabel.Text = "Copyright (c) 2010-2015 mocha All rights reserved.";
+            _copyrightLabel.Text = "Copyright (c) 2010-2016 mocha All rights reserved.";
             _descriptionTextBox.Text = GetDescription();
         }
 
