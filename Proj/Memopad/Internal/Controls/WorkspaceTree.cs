@@ -456,6 +456,8 @@ namespace Mkamo.Memopad.Internal.Controls {
             _folderCategoryNode.Nodes.Add(new TreeNodeEx("_dummy"));
             _tagCategoryNode.Nodes.Add(new TreeNodeEx("_dummy"));
 
+            _tagCategoryNode.Expand();
+
             EndUpdate();
         }
 
