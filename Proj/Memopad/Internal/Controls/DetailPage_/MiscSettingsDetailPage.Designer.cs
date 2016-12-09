@@ -29,15 +29,14 @@
             this._minimizeToTaskTrayCheckBox = new System.Windows.Forms.CheckBox();
             this._minimizeOnStartUpCheckBox = new System.Windows.Forms.CheckBox();
             this._replaceMeiryoCheckBox = new System.Windows.Forms.CheckBox();
-            this._checkLatestOnStartCheckBox = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // _startOnWindowsStartUpCheckBox
             // 
             this._startOnWindowsStartUpCheckBox.AutoSize = true;
-            this._startOnWindowsStartUpCheckBox.Location = new System.Drawing.Point(12, 144);
+            this._startOnWindowsStartUpCheckBox.Location = new System.Drawing.Point(12, 122);
             this._startOnWindowsStartUpCheckBox.Name = "_startOnWindowsStartUpCheckBox";
-            this._startOnWindowsStartUpCheckBox.Size = new System.Drawing.Size(237, 16);
+            this._startOnWindowsStartUpCheckBox.Size = new System.Drawing.Size(173, 16);
             this._startOnWindowsStartUpCheckBox.TabIndex = 4;
             this._startOnWindowsStartUpCheckBox.Text = "Windows起動時に起動する(&W)";
             this._startOnWindowsStartUpCheckBox.UseVisualStyleBackColor = true;
@@ -65,7 +64,7 @@
             // _minimizeToTaskTrayCheckBox
             // 
             this._minimizeToTaskTrayCheckBox.AutoSize = true;
-            this._minimizeToTaskTrayCheckBox.Location = new System.Drawing.Point(12, 78);
+            this._minimizeToTaskTrayCheckBox.Location = new System.Drawing.Point(12, 56);
             this._minimizeToTaskTrayCheckBox.Name = "_minimizeToTaskTrayCheckBox";
             this._minimizeToTaskTrayCheckBox.Size = new System.Drawing.Size(201, 16);
             this._minimizeToTaskTrayCheckBox.TabIndex = 2;
@@ -75,7 +74,7 @@
             // _minimizeOnStartUpCheckBox
             // 
             this._minimizeOnStartUpCheckBox.AutoSize = true;
-            this._minimizeOnStartUpCheckBox.Location = new System.Drawing.Point(30, 100);
+            this._minimizeOnStartUpCheckBox.Location = new System.Drawing.Point(30, 78);
             this._minimizeOnStartUpCheckBox.Name = "_minimizeOnStartUpCheckBox";
             this._minimizeOnStartUpCheckBox.Size = new System.Drawing.Size(187, 16);
             this._minimizeOnStartUpCheckBox.TabIndex = 3;
@@ -85,22 +84,12 @@
             // _replaceMeiryoCheckBox
             // 
             this._replaceMeiryoCheckBox.AutoSize = true;
-            this._replaceMeiryoCheckBox.Location = new System.Drawing.Point(12, 122);
+            this._replaceMeiryoCheckBox.Location = new System.Drawing.Point(12, 100);
             this._replaceMeiryoCheckBox.Name = "_replaceMeiryoCheckBox";
             this._replaceMeiryoCheckBox.Size = new System.Drawing.Size(295, 16);
             this._replaceMeiryoCheckBox.TabIndex = 4;
             this._replaceMeiryoCheckBox.Text = "ウィンドウのフォントをメイリオからMeiryo UIに置き換える(&R)";
             this._replaceMeiryoCheckBox.UseVisualStyleBackColor = true;
-            // 
-            // _checkLatestOnStartCheckBox
-            // 
-            this._checkLatestOnStartCheckBox.AutoSize = true;
-            this._checkLatestOnStartCheckBox.Location = new System.Drawing.Point(12, 56);
-            this._checkLatestOnStartCheckBox.Name = "_checkLatestOnStartCheckBox";
-            this._checkLatestOnStartCheckBox.Size = new System.Drawing.Size(178, 16);
-            this._checkLatestOnStartCheckBox.TabIndex = 4;
-            this._checkLatestOnStartCheckBox.Text = "起動時に最新版をチェックする(&L)";
-            this._checkLatestOnStartCheckBox.UseVisualStyleBackColor = true;
             // 
             // MiscSettingsDetailPage
             // 
@@ -110,7 +99,6 @@
             this.Controls.Add(this._minimizeOnStartUpCheckBox);
             this.Controls.Add(this._minimizeToTaskTrayCheckBox);
             this.Controls.Add(this._replaceMeiryoCheckBox);
-            this.Controls.Add(this._checkLatestOnStartCheckBox);
             this.Controls.Add(this._startOnWindowsStartUpCheckBox);
             this.Controls.Add(this._showStartPageOnStartCheckBox);
             this.Controls.Add(this._emptyTrasBoxCheckBox);
@@ -129,6 +117,5 @@
         private System.Windows.Forms.CheckBox _minimizeToTaskTrayCheckBox;
         private System.Windows.Forms.CheckBox _minimizeOnStartUpCheckBox;
         private System.Windows.Forms.CheckBox _replaceMeiryoCheckBox;
-        private System.Windows.Forms.CheckBox _checkLatestOnStartCheckBox;
     }
 }

@@ -44,7 +44,7 @@ namespace Mkamo.Memopad.Internal.Controls {
 
             _emptyTrasBoxCheckBox.Checked = _settings.EmptyTrashBoxOnExit;
             _showStartPageOnStartCheckBox.Checked = _windowSettings.ShowStartPageOnStart;
-            _checkLatestOnStartCheckBox.Checked = _settings.CheckLatestOnStart;
+//            _checkLatestOnStartCheckBox.Checked = _settings.CheckLatestOnStart;
             _minimizeToTaskTrayCheckBox.Checked = _windowSettings.MinimizeToTaskTray;
             _minimizeOnStartUpCheckBox.Checked = _windowSettings.MinimizeOnStartUp;
             if (_isWinXP) {
@@ -57,7 +57,7 @@ namespace Mkamo.Memopad.Internal.Controls {
 
             _emptyTrasBoxCheckBox.CheckedChanged += HandleCheckBoxCheckedChanged;
             _showStartPageOnStartCheckBox.CheckedChanged += HandleCheckBoxCheckedChanged;
-            _checkLatestOnStartCheckBox.CheckedChanged += HandleCheckBoxCheckedChanged;
+//            _checkLatestOnStartCheckBox.CheckedChanged += HandleCheckBoxCheckedChanged;
             _minimizeToTaskTrayCheckBox.CheckedChanged += HandleCheckBoxCheckedChanged;
             _minimizeOnStartUpCheckBox.CheckedChanged += HandleCheckBoxCheckedChanged;
             if (_isWinXP) {
@@ -104,7 +104,7 @@ namespace Mkamo.Memopad.Internal.Controls {
                 () => {
                     _settings.EmptyTrashBoxOnExit = _emptyTrasBoxCheckBox.Checked;
                     _windowSettings.ShowStartPageOnStart = _showStartPageOnStartCheckBox.Checked;
-                    _settings.CheckLatestOnStart = _checkLatestOnStartCheckBox.Checked;
+//                    _settings.CheckLatestOnStart = _checkLatestOnStartCheckBox.Checked;
                     _windowSettings.MinimizeToTaskTray = _minimizeToTaskTrayCheckBox.Checked;
                     _windowSettings.MinimizeOnStartUp = _minimizeOnStartUpCheckBox.Checked;
                     _windowSettings.ReplaceMeiryoWithMeiryoUI = _replaceMeiryoCheckBox.Checked;

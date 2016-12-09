@@ -51,10 +51,6 @@ namespace Mkamo.Memopad.Internal.Forms {
             this._cancelSearchButtonSpec = new ComponentFactory.Krypton.Toolkit.ButtonSpecAny();
             this._memoListSplitContainer = new ComponentFactory.Krypton.Toolkit.KryptonSplitContainer();
             this._memoListHeaderGroup = new ComponentFactory.Krypton.Toolkit.KryptonHeaderGroup();
-            this._memoListViewSmartFilterContextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this._memoListViewManageSmartFilterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this._memoListViewSmartFilterSplitterToolStripMenuItem = new System.Windows.Forms.ToolStripSeparator();
-            this._clearSmartFilterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this._memoListViewDisplayItemButtonSpecHeaderGroup = new ComponentFactory.Krypton.Toolkit.ButtonSpecHeaderGroup();
             this._memoListViewDisplayItemContextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
             this._createdDateDisplayToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -130,7 +126,6 @@ namespace Mkamo.Memopad.Internal.Forms {
             this._helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this._showHelpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem7 = new System.Windows.Forms.ToolStripSeparator();
-            this._checkForUpdatesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this._aboutBoxToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this._mainToolStrip = new System.Windows.Forms.ToolStrip();
             this._createMemoToolStripSplitButton = new System.Windows.Forms.ToolStripSplitButton();
@@ -208,6 +203,10 @@ namespace Mkamo.Memopad.Internal.Forms {
             this._indentToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator20 = new System.Windows.Forms.ToolStripSeparator();
             this._addCommentToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this._memoListViewSmartFilterContextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this._memoListViewManageSmartFilterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this._memoListViewSmartFilterSplitterToolStripMenuItem = new System.Windows.Forms.ToolStripSeparator();
+            this._clearSmartFilterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this._tabControlContextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
             this._closeMemoTabToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this._closeOtherMemoTabsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -248,12 +247,12 @@ namespace Mkamo.Memopad.Internal.Forms {
             ((System.ComponentModel.ISupportInitialize)(this._memoListHeaderGroup.Panel)).BeginInit();
             this._memoListHeaderGroup.Panel.SuspendLayout();
             this._memoListHeaderGroup.SuspendLayout();
-            this._memoListViewSmartFilterContextMenuStrip.SuspendLayout();
             this._memoListViewDisplayItemContextMenuStrip.SuspendLayout();
             this._memoListViewSortContextMenuStrip.SuspendLayout();
             this._mainMenuStrip.SuspendLayout();
             this._mainToolStrip.SuspendLayout();
             this._editToolStrip.SuspendLayout();
+            this._memoListViewSmartFilterContextMenuStrip.SuspendLayout();
             this._tabControlContextMenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -312,7 +311,7 @@ namespace Mkamo.Memopad.Internal.Forms {
             // 
             this._messageToolStripStatusLabel.BorderSides = ((System.Windows.Forms.ToolStripStatusLabelBorderSides)((System.Windows.Forms.ToolStripStatusLabelBorderSides.Left | System.Windows.Forms.ToolStripStatusLabelBorderSides.Right)));
             this._messageToolStripStatusLabel.Name = "_messageToolStripStatusLabel";
-            this._messageToolStripStatusLabel.Size = new System.Drawing.Size(661, 20);
+            this._messageToolStripStatusLabel.Size = new System.Drawing.Size(692, 20);
             this._messageToolStripStatusLabel.Spring = true;
             this._messageToolStripStatusLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -541,36 +540,6 @@ namespace Mkamo.Memopad.Internal.Forms {
             this._memoListHeaderGroup.TabIndex = 0;
             this._memoListHeaderGroup.ValuesPrimary.Heading = "ノートリスト";
             this._memoListHeaderGroup.ValuesPrimary.Image = null;
-            // 
-            // _memoListViewSmartFilterContextMenuStrip
-            // 
-            this._memoListViewSmartFilterContextMenuStrip.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this._memoListViewSmartFilterContextMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this._memoListViewManageSmartFilterToolStripMenuItem,
-            this._memoListViewSmartFilterSplitterToolStripMenuItem,
-            this._clearSmartFilterToolStripMenuItem});
-            this._memoListViewSmartFilterContextMenuStrip.Name = "_memoListViewFilterContextMenuStrip";
-            this._memoListViewSmartFilterContextMenuStrip.Size = new System.Drawing.Size(216, 54);
-            this._memoListViewSmartFilterContextMenuStrip.Opening += new System.ComponentModel.CancelEventHandler(this._memoListViewSmartFilterContextMenuStrip_Opening);
-            // 
-            // _memoListViewManageSmartFilterToolStripMenuItem
-            // 
-            this._memoListViewManageSmartFilterToolStripMenuItem.Name = "_memoListViewManageSmartFilterToolStripMenuItem";
-            this._memoListViewManageSmartFilterToolStripMenuItem.Size = new System.Drawing.Size(215, 22);
-            this._memoListViewManageSmartFilterToolStripMenuItem.Text = "スマートフィルタの管理(&M)...";
-            this._memoListViewManageSmartFilterToolStripMenuItem.Click += new System.EventHandler(this._memoListViewManageSmartFilterToolStripMenuItem_Click);
-            // 
-            // _memoListViewSmartFilterSplitterToolStripMenuItem
-            // 
-            this._memoListViewSmartFilterSplitterToolStripMenuItem.Name = "_memoListViewSmartFilterSplitterToolStripMenuItem";
-            this._memoListViewSmartFilterSplitterToolStripMenuItem.Size = new System.Drawing.Size(212, 6);
-            // 
-            // _clearSmartFilterToolStripMenuItem
-            // 
-            this._clearSmartFilterToolStripMenuItem.Name = "_clearSmartFilterToolStripMenuItem";
-            this._clearSmartFilterToolStripMenuItem.Size = new System.Drawing.Size(215, 22);
-            this._clearSmartFilterToolStripMenuItem.Text = "スマートフィルタなし";
-            this._clearSmartFilterToolStripMenuItem.Click += new System.EventHandler(this._clearSmartFilterToolStripMenuItem_Click);
             // 
             // _memoListViewDisplayItemButtonSpecHeaderGroup
             // 
@@ -1104,7 +1073,7 @@ namespace Mkamo.Memopad.Internal.Forms {
             // _dummyToolStripMenuItem
             // 
             this._dummyToolStripMenuItem.Name = "_dummyToolStripMenuItem";
-            this._dummyToolStripMenuItem.Size = new System.Drawing.Size(102, 22);
+            this._dummyToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this._dummyToolStripMenuItem.Text = "ダミー";
             // 
             // _toolToolStripMenuItem
@@ -1141,7 +1110,6 @@ namespace Mkamo.Memopad.Internal.Forms {
             this._helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this._showHelpToolStripMenuItem,
             this.toolStripMenuItem7,
-            this._checkForUpdatesToolStripMenuItem,
             this._aboutBoxToolStripMenuItem});
             this._helpToolStripMenuItem.Name = "_helpToolStripMenuItem";
             this._helpToolStripMenuItem.Size = new System.Drawing.Size(68, 20);
@@ -1158,13 +1126,6 @@ namespace Mkamo.Memopad.Internal.Forms {
             // 
             this.toolStripMenuItem7.Name = "toolStripMenuItem7";
             this.toolStripMenuItem7.Size = new System.Drawing.Size(172, 6);
-            // 
-            // _checkForUpdatesToolStripMenuItem
-            // 
-            this._checkForUpdatesToolStripMenuItem.Name = "_checkForUpdatesToolStripMenuItem";
-            this._checkForUpdatesToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
-            this._checkForUpdatesToolStripMenuItem.Text = "最新版を確認(&L)";
-            this._checkForUpdatesToolStripMenuItem.Click += new System.EventHandler(this._checkForUpdatesToolStripMenuItem_Click);
             // 
             // _aboutBoxToolStripMenuItem
             // 
@@ -1871,6 +1832,36 @@ namespace Mkamo.Memopad.Internal.Forms {
             this._addCommentToolStripButton.Size = new System.Drawing.Size(23, 22);
             this._addCommentToolStripButton.Text = "コメントを追加";
             // 
+            // _memoListViewSmartFilterContextMenuStrip
+            // 
+            this._memoListViewSmartFilterContextMenuStrip.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this._memoListViewSmartFilterContextMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this._memoListViewManageSmartFilterToolStripMenuItem,
+            this._memoListViewSmartFilterSplitterToolStripMenuItem,
+            this._clearSmartFilterToolStripMenuItem});
+            this._memoListViewSmartFilterContextMenuStrip.Name = "_memoListViewFilterContextMenuStrip";
+            this._memoListViewSmartFilterContextMenuStrip.Size = new System.Drawing.Size(216, 54);
+            this._memoListViewSmartFilterContextMenuStrip.Opening += new System.ComponentModel.CancelEventHandler(this._memoListViewSmartFilterContextMenuStrip_Opening);
+            // 
+            // _memoListViewManageSmartFilterToolStripMenuItem
+            // 
+            this._memoListViewManageSmartFilterToolStripMenuItem.Name = "_memoListViewManageSmartFilterToolStripMenuItem";
+            this._memoListViewManageSmartFilterToolStripMenuItem.Size = new System.Drawing.Size(215, 22);
+            this._memoListViewManageSmartFilterToolStripMenuItem.Text = "スマートフィルタの管理(&M)...";
+            this._memoListViewManageSmartFilterToolStripMenuItem.Click += new System.EventHandler(this._memoListViewManageSmartFilterToolStripMenuItem_Click);
+            // 
+            // _memoListViewSmartFilterSplitterToolStripMenuItem
+            // 
+            this._memoListViewSmartFilterSplitterToolStripMenuItem.Name = "_memoListViewSmartFilterSplitterToolStripMenuItem";
+            this._memoListViewSmartFilterSplitterToolStripMenuItem.Size = new System.Drawing.Size(212, 6);
+            // 
+            // _clearSmartFilterToolStripMenuItem
+            // 
+            this._clearSmartFilterToolStripMenuItem.Name = "_clearSmartFilterToolStripMenuItem";
+            this._clearSmartFilterToolStripMenuItem.Size = new System.Drawing.Size(215, 22);
+            this._clearSmartFilterToolStripMenuItem.Text = "スマートフィルタなし";
+            this._clearSmartFilterToolStripMenuItem.Click += new System.EventHandler(this._clearSmartFilterToolStripMenuItem_Click);
+            // 
             // _tabControlContextMenuStrip
             // 
             this._tabControlContextMenuStrip.Font = new System.Drawing.Font("Segoe UI", 9F);
@@ -1999,7 +1990,6 @@ namespace Mkamo.Memopad.Internal.Forms {
             this._memoListHeaderGroup.Panel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this._memoListHeaderGroup)).EndInit();
             this._memoListHeaderGroup.ResumeLayout(false);
-            this._memoListViewSmartFilterContextMenuStrip.ResumeLayout(false);
             this._memoListViewDisplayItemContextMenuStrip.ResumeLayout(false);
             this._memoListViewSortContextMenuStrip.ResumeLayout(false);
             this._mainMenuStrip.ResumeLayout(false);
@@ -2008,6 +1998,7 @@ namespace Mkamo.Memopad.Internal.Forms {
             this._mainToolStrip.PerformLayout();
             this._editToolStrip.ResumeLayout(false);
             this._editToolStrip.PerformLayout();
+            this._memoListViewSmartFilterContextMenuStrip.ResumeLayout(false);
             this._tabControlContextMenuStrip.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -2144,7 +2135,6 @@ namespace Mkamo.Memopad.Internal.Forms {
         private System.Windows.Forms.ToolStripMenuItem _createMemoFromClipboardToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem _createMemoFromClipboardFileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem _createMemoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem _checkForUpdatesToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator _tableNextToolStripSeparator;
         private System.Windows.Forms.ToolStripDropDownButton _addFreehandToolStripDropDownButton;
         private System.Windows.Forms.ToolStripButton _selectToolToolStripButton;
