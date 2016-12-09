@@ -547,10 +547,6 @@ namespace Mkamo.Memopad.Internal.Forms {
 
         // --- view menu ---
         private void _viewToolStripMenuItem_DropDownOpening(object sender, EventArgs e) {
-            _focusConditionTextBoxToolStripMenuItem.Enabled = !_IsCompact;
-            _showWorkspaceToolStripMenuItem.Enabled = !_IsCompact;
-            _showMemoListToolStripMenuItem.Enabled = !_IsCompact;
-
             _compactModeToolStripMenuItem.Checked = _IsCompact;
             _displayTopMostToolStripMenuItem.Checked = TopMost;
         }

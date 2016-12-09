@@ -117,10 +117,6 @@ namespace Mkamo.Memopad.Internal.Forms {
             this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripSeparator();
             this._findToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this._viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this._focusConditionTextBoxToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this._showWorkspaceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this._showMemoListToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripSeparator();
             this._showStartPageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem12 = new System.Windows.Forms.ToolStripSeparator();
             this._showFusenMemosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -1061,10 +1057,6 @@ namespace Mkamo.Memopad.Internal.Forms {
             // _viewToolStripMenuItem
             // 
             this._viewToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this._focusConditionTextBoxToolStripMenuItem,
-            this._showWorkspaceToolStripMenuItem,
-            this._showMemoListToolStripMenuItem,
-            this.toolStripMenuItem5,
             this._showStartPageToolStripMenuItem,
             this.toolStripMenuItem12,
             this._showFusenMemosToolStripMenuItem,
@@ -1076,38 +1068,6 @@ namespace Mkamo.Memopad.Internal.Forms {
             this._viewToolStripMenuItem.Size = new System.Drawing.Size(58, 20);
             this._viewToolStripMenuItem.Text = "表示(&V)";
             this._viewToolStripMenuItem.DropDownOpening += new System.EventHandler(this._viewToolStripMenuItem_DropDownOpening);
-            // 
-            // _focusConditionTextBoxToolStripMenuItem
-            // 
-            this._focusConditionTextBoxToolStripMenuItem.Name = "_focusConditionTextBoxToolStripMenuItem";
-            this._focusConditionTextBoxToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Alt) 
-            | System.Windows.Forms.Keys.S)));
-            this._focusConditionTextBoxToolStripMenuItem.Size = new System.Drawing.Size(226, 22);
-            this._focusConditionTextBoxToolStripMenuItem.Text = "検索(&S)";
-            this._focusConditionTextBoxToolStripMenuItem.Click += new System.EventHandler(this._focusConditionTextBoxToolStripMenuItem_Click);
-            // 
-            // _showWorkspaceToolStripMenuItem
-            // 
-            this._showWorkspaceToolStripMenuItem.Name = "_showWorkspaceToolStripMenuItem";
-            this._showWorkspaceToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Alt) 
-            | System.Windows.Forms.Keys.W)));
-            this._showWorkspaceToolStripMenuItem.Size = new System.Drawing.Size(226, 22);
-            this._showWorkspaceToolStripMenuItem.Text = "ワークスペース(&W)";
-            this._showWorkspaceToolStripMenuItem.Click += new System.EventHandler(this._showWorkspaceToolStripMenuItem_Click);
-            // 
-            // _showMemoListToolStripMenuItem
-            // 
-            this._showMemoListToolStripMenuItem.Name = "_showMemoListToolStripMenuItem";
-            this._showMemoListToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Alt) 
-            | System.Windows.Forms.Keys.L)));
-            this._showMemoListToolStripMenuItem.Size = new System.Drawing.Size(226, 22);
-            this._showMemoListToolStripMenuItem.Text = "ノートリスト(&L)";
-            this._showMemoListToolStripMenuItem.Click += new System.EventHandler(this._showMemoListToolStripMenuItem_Click);
-            // 
-            // toolStripMenuItem5
-            // 
-            this.toolStripMenuItem5.Name = "toolStripMenuItem5";
-            this.toolStripMenuItem5.Size = new System.Drawing.Size(223, 6);
             // 
             // _showStartPageToolStripMenuItem
             // 
@@ -2147,7 +2107,6 @@ namespace Mkamo.Memopad.Internal.Forms {
         private System.Windows.Forms.ToolStripMenuItem _modifiedDateDisplayToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem _accessedDateDisplayToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem _tagDisplayToolStripMenuItem;
-        private System.Windows.Forms.ToolStripSeparator toolStripMenuItem5;
         private System.Windows.Forms.ToolStripMenuItem _displayTopMostToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem6;
         private System.Windows.Forms.ToolStripMenuItem _optionToolStripMenuItem;
@@ -2156,8 +2115,6 @@ namespace Mkamo.Memopad.Internal.Forms {
         private System.Windows.Forms.ToolStripMenuItem _printToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem9;
         private System.Windows.Forms.ToolStripSeparator _nextPrintSeparatorToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem _showWorkspaceToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem _showMemoListToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem _compactModeToolStripMenuItem;
         private TabControlEx _tabControl;
         private System.Windows.Forms.Panel _workspaceViewPanel;
@@ -2166,7 +2123,6 @@ namespace Mkamo.Memopad.Internal.Forms {
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox _conditionTextBox;
         private ComponentFactory.Krypton.Toolkit.ButtonSpecAny _searchButtonSpec;
         private ComponentFactory.Krypton.Toolkit.ButtonSpecAny _cancelSearchButtonSpec;
-        private System.Windows.Forms.ToolStripMenuItem _focusConditionTextBoxToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem11;
         private System.Windows.Forms.ToolStripMenuItem _removeMemoTabToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem _showStartPageToolStripMenuItem;
