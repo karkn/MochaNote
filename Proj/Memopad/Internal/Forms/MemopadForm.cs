@@ -288,6 +288,9 @@ namespace Mkamo.Memopad.Internal.Forms {
                 UpdateMemoCountLabel();
                 UpdateSmartFilterLabel();
 
+                /// default focus
+                FocusWorkspaceTree();
+
                 // --- win7 taskbar ---
                 //if (EnvironmentUtil.IsWin7()) {
                 //    InitWin7Taskbar();
@@ -1019,6 +1022,15 @@ namespace Mkamo.Memopad.Internal.Forms {
                 ExpandFinderPane();
             }
             _conditionTextBox.Focus();
+        }
+
+        public void FocusWorkspaceTree()
+        {
+            if (IsFinderPaneCollapsed)
+            {
+                ExpandFinderPane();
+            }
+            _workspaceView.WorkspaceTree.Focus();
         }
 
         public void InvalidateMemoListBox(IEnumerable<MemoInfo> infos) {

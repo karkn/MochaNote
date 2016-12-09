@@ -99,7 +99,7 @@ namespace Mkamo.Memopad.Internal.Controls {
 
             InitializeComponent();
 
-            _showAllMemos = false;
+            _showAllMemos = true;// false;
             _showSmartFolder = false;
             _showFolder = false;
             _showTrashBox = true;
@@ -662,7 +662,8 @@ namespace Mkamo.Memopad.Internal.Controls {
         }
 
         protected override void OnMouseClick(MouseEventArgs e) {
-            if (e.Button == MouseButtons.Left) {
+            /* if (e.Button == MouseButtons.Left) {
+                /// Nodeクリックでサブツリーを開閉する
                 var test = HitTest(e.Location);
                 var node = test.Node;
                 if (node != null) {
@@ -698,7 +699,7 @@ namespace Mkamo.Memopad.Internal.Controls {
                     }
                 }
             }
-
+            */
             base.OnMouseClick(e);
         }
 

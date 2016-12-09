@@ -1073,7 +1073,7 @@ namespace Mkamo.Memopad.Internal.Forms {
             // _dummyToolStripMenuItem
             // 
             this._dummyToolStripMenuItem.Name = "_dummyToolStripMenuItem";
-            this._dummyToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this._dummyToolStripMenuItem.Size = new System.Drawing.Size(102, 22);
             this._dummyToolStripMenuItem.Text = "ダミー";
             // 
             // _toolToolStripMenuItem
