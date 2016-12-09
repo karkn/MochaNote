@@ -1475,8 +1475,7 @@ namespace Mkamo.Memopad.Internal.Forms {
 
                 _memoListHeaderGroup.ButtonSpecs[0].Visible = true;
                 _memoListHeaderGroup.ButtonSpecs[1].Visible = true;
-                _memoListHeaderGroup.ButtonSpecs[2].Visible = true;
-                _memoListHeaderGroup.ButtonSpecs[3].Type = PaletteButtonSpecStyle.ArrowLeft;
+                _memoListHeaderGroup.ButtonSpecs[2].Type = PaletteButtonSpecStyle.ArrowLeft;
 
                 _memoListHeaderGroup.Collapsed = false;
                 _memoListSplitContainer.Panel1MinSize = 100;
@@ -1499,8 +1498,7 @@ namespace Mkamo.Memopad.Internal.Forms {
 
                 _memoListHeaderGroup.ButtonSpecs[0].Visible = false;
                 _memoListHeaderGroup.ButtonSpecs[1].Visible = false;
-                _memoListHeaderGroup.ButtonSpecs[2].Visible = false;
-                _memoListHeaderGroup.ButtonSpecs[3].Type = PaletteButtonSpecStyle.ArrowRight;
+                _memoListHeaderGroup.ButtonSpecs[2].Type = PaletteButtonSpecStyle.ArrowRight;
 
                 _memoListHeaderGroup.Collapsed = true;
                 var newWidth = _memoListHeaderGroup.PreferredSize.Height;
