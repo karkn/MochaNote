@@ -356,7 +356,8 @@ namespace Mkamo.Control.TabControlEx {
                         g.FillPath(br, path);
                     }
                 } else {
-                    using (var br = new SolidBrush(tabPage.BackColor)) {
+                    using (var br = new SolidBrush(SystemColors.Control))
+                    {
                         g.FillPath(br, path);
                     }
                 }

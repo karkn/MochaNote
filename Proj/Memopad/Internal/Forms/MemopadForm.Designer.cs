@@ -149,7 +149,7 @@ namespace Mkamo.Memopad.Internal.Forms {
             this.toolStripSeparator9 = new System.Windows.Forms.ToolStripSeparator();
             this._selectToolToolStripButton = new System.Windows.Forms.ToolStripButton();
             this._handToolToolStripButton = new System.Windows.Forms.ToolStripButton();
-            this._adjustSpaceToolToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator8 = new System.Windows.Forms.ToolStripSeparator();
             this._addFreehandToolStripDropDownButton = new System.Windows.Forms.ToolStripDropDownButton();
             this._addFigureToolStripDropDownButton = new System.Windows.Forms.ToolStripDropDownButton();
             this._addImageToolStripButton = new System.Windows.Forms.ToolStripDropDownButton();
@@ -160,6 +160,7 @@ namespace Mkamo.Memopad.Internal.Forms {
             this._addShortcutFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this._addFolderShortcutFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this._addTableToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this._adjustSpaceToolToolStripButton = new System.Windows.Forms.ToolStripButton();
             this._tableNextToolStripSeparator = new System.Windows.Forms.ToolStripSeparator();
             this._setNodeStyleToolStripDropDownButton = new System.Windows.Forms.ToolStripDropDownButton();
             this._setLineStyleToolStripDropDownButton = new System.Windows.Forms.ToolStripDropDownButton();
@@ -218,7 +219,6 @@ namespace Mkamo.Memopad.Internal.Forms {
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
             this._maximizeEditorSizeTabToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this._restoreEditorSizeTabToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator8 = new System.Windows.Forms.ToolStripSeparator();
             this._toolStripContainer.BottomToolStripPanel.SuspendLayout();
             this._toolStripContainer.ContentPanel.SuspendLayout();
             this._toolStripContainer.TopToolStripPanel.SuspendLayout();
@@ -1347,14 +1347,10 @@ namespace Mkamo.Memopad.Internal.Forms {
             this._handToolToolStripButton.Size = new System.Drawing.Size(23, 22);
             this._handToolToolStripButton.Text = "手のひら";
             // 
-            // _adjustSpaceToolToolStripButton
+            // toolStripSeparator8
             // 
-            this._adjustSpaceToolToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this._adjustSpaceToolToolStripButton.Image = global::Mkamo.Memopad.Properties.Resources.insert_space;
-            this._adjustSpaceToolToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this._adjustSpaceToolToolStripButton.Name = "_adjustSpaceToolToolStripButton";
-            this._adjustSpaceToolToolStripButton.Size = new System.Drawing.Size(23, 22);
-            this._adjustSpaceToolToolStripButton.Text = "スペースの調節";
+            this.toolStripSeparator8.Name = "toolStripSeparator8";
+            this.toolStripSeparator8.Size = new System.Drawing.Size(6, 25);
             // 
             // _addFreehandToolStripDropDownButton
             // 
@@ -1437,6 +1433,15 @@ namespace Mkamo.Memopad.Internal.Forms {
             this._addTableToolStripButton.Name = "_addTableToolStripButton";
             this._addTableToolStripButton.Size = new System.Drawing.Size(23, 22);
             this._addTableToolStripButton.Text = "表を追加";
+            // 
+            // _adjustSpaceToolToolStripButton
+            // 
+            this._adjustSpaceToolToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this._adjustSpaceToolToolStripButton.Image = global::Mkamo.Memopad.Properties.Resources.insert_space;
+            this._adjustSpaceToolToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this._adjustSpaceToolToolStripButton.Name = "_adjustSpaceToolToolStripButton";
+            this._adjustSpaceToolToolStripButton.Size = new System.Drawing.Size(23, 22);
+            this._adjustSpaceToolToolStripButton.Text = "スペースの調節";
             // 
             // _tableNextToolStripSeparator
             // 
@@ -1945,11 +1950,6 @@ namespace Mkamo.Memopad.Internal.Forms {
             this._restoreEditorSizeTabToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
             this._restoreEditorSizeTabToolStripMenuItem.Text = "元のサイズに戻す(&R)";
             this._restoreEditorSizeTabToolStripMenuItem.Click += new System.EventHandler(this._restoreEditorSizeTabToolStripMenuItem_Click);
-            // 
-            // toolStripSeparator8
-            // 
-            this.toolStripSeparator8.Name = "toolStripSeparator8";
-            this.toolStripSeparator8.Size = new System.Drawing.Size(6, 25);
             // 
             // MemopadForm
             // 

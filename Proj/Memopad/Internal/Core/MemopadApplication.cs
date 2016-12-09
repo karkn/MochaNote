@@ -389,6 +389,8 @@ namespace Mkamo.Memopad.Internal.Core {
                 var color = _kryptonPalette.GetBackColor1(PaletteBackStyle.PanelClient, PaletteState.Normal);
                 _kryptonPalette.ToolMenuStatus.ToolStrip.ToolStripGradientBegin = color;
                 _kryptonPalette.ToolMenuStatus.ToolStrip.ToolStripGradientEnd = color;
+                _kryptonPalette.ToolMenuStatus.StatusStrip.StatusStripGradientBegin = color;
+                _kryptonPalette.ToolMenuStatus.StatusStrip.StatusStripGradientEnd = color;
                 _kryptonPalette.BaseRenderer = new CustomOffice2010Renderer(color);
             }
 

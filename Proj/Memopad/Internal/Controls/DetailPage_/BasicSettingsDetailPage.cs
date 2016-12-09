@@ -52,7 +52,6 @@ namespace Mkamo.Memopad.Internal.Controls {
             _useClearTypeCheckBox.Checked = _settings.UseClearType;
             _editorCanvasImeOnCheckBox.Checked = _settings.EditorCanvasImeOn;
 
-            InitThemeComboBox();
             InitMemoTextFrameVisiblePolicyComboBox();
             InitMemoTextDefaultMaxWidthComboBox();
 
@@ -65,7 +64,6 @@ namespace Mkamo.Memopad.Internal.Controls {
             _memoDefaultFontSizeComboBox.SelectedIndexChanged += HandleControlValueChanged;
             _useClearTypeCheckBox.CheckedChanged += HandleControlValueChanged;
             _keySchemeComboBox.SelectedIndexChanged += HandleControlValueChanged;
-            _themeComboBox.SelectedIndexChanged += HandleControlValueChanged;
             _memoTextFrameVisiblePolicyComboBox.SelectedIndexChanged += HandleControlValueChanged;
             _memoTextDefaultMaxWidthcomboBox.SelectedIndexChanged += HandleControlValueChanged;
             _showLineBreakCheckBox.CheckedChanged += HandleControlValueChanged;
@@ -113,10 +111,6 @@ namespace Mkamo.Memopad.Internal.Controls {
         //    }
         //    _defaultShapeComboBox.Text = _toolRegistry.GetCreateNodeToolText(_settings.DefaultShapeId);
         //}
-
-        private void InitThemeComboBox() {
-            ThemeKind = _windowSettings.Theme;
-        }
 
         private void InitMemoTextFrameVisiblePolicyComboBox() {
             var pol = (HandleStickyKind) _settings.MemoTextFrameVisiblePolicy;
@@ -262,64 +256,6 @@ namespace Mkamo.Memopad.Internal.Controls {
         //    }
         //}
 
-        public ThemeKind ThemeKind {
-            get {
-                switch (_themeComboBox.SelectedIndex) {
-                    case 0: {
-                        return ThemeKind.Default;
-                    }
-                    case 1: {
-                        return ThemeKind.Blue;
-                    }
-                    case 2: {
-                        return ThemeKind.Silver;
-                    }
-                    case 3: {
-                        return ThemeKind.Black;
-                    }
-                    default: {
-                        return ThemeKind.Default;
-                    }
-                }
-            }
-            set {
-                switch (value) {
-                    case ThemeKind.Default: {
-                        if (_themeComboBox.SelectedIndex == 0) {
-                            return;
-                        }
-                        _themeComboBox.SelectedIndex = 0;
-                        _isModified = true;
-                        break;
-                    }
-                    case ThemeKind.Blue: {
-                        if (_themeComboBox.SelectedIndex == 1) {
-                            return;
-                        }
-                        _themeComboBox.SelectedIndex = 1;
-                        _isModified = true;
-                        break;
-                    }
-                    case ThemeKind.Silver: {
-                        if (_themeComboBox.SelectedIndex == 2) {
-                            return;
-                        }
-                        _themeComboBox.SelectedIndex = 2;
-                        _isModified = true;
-                        break;
-                    }
-                    case ThemeKind.Black: {
-                        if (_themeComboBox.SelectedIndex == 3) {
-                            return;
-                        }
-                        _themeComboBox.SelectedIndex = 3;
-                        _isModified = true;
-                        break;
-                    }
-                }
-            }
-        }
-
         public HandleStickyKind MemoTextFrameVisiblePolicy {
             get {
                 switch (_memoTextFrameVisiblePolicyComboBox.SelectedIndex) {
@@ -364,8 +300,6 @@ namespace Mkamo.Memopad.Internal.Controls {
                     _settings.KeyScheme = KeyScheme;
 
                     //_settings.DefaultShapeId = DefaultShapeId;
-
-                    _windowSettings.Theme = ThemeKind;
 
                     _settings.MemoTextFrameVisiblePolicy = (int) MemoTextFrameVisiblePolicy;
                     _windowSettings.MemoTextDefaultMaxWidth = MemoTextDefaultMaxWidth;

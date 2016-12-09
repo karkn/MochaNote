@@ -67,7 +67,7 @@ namespace Mkamo.Memopad.Core {
         // constructor
         // ========================================
         public MemopadWindowSettings() {
-            Theme = ThemeKind.Silver;
+            Theme = ThemeKind.Default;
 
             WindowLocation = Point.Empty;
             WindowSize = new Size(900, 700);

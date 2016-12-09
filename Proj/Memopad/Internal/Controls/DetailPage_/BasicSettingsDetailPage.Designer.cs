@@ -30,8 +30,6 @@
             this._memoDefaultFontSizeComboBox = new System.Windows.Forms.ComboBox();
             this._keySchemeLabel = new System.Windows.Forms.Label();
             this._keySchemeComboBox = new System.Windows.Forms.ComboBox();
-            this._themeLabel = new System.Windows.Forms.Label();
-            this._themeComboBox = new System.Windows.Forms.ComboBox();
             this._memoTextFrameVisiblePolicylabel = new System.Windows.Forms.Label();
             this._memoTextFrameVisiblePolicyComboBox = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -109,33 +107,10 @@
             this._keySchemeComboBox.Size = new System.Drawing.Size(134, 20);
             this._keySchemeComboBox.TabIndex = 7;
             // 
-            // _themeLabel
-            // 
-            this._themeLabel.AutoSize = true;
-            this._themeLabel.Location = new System.Drawing.Point(12, 152);
-            this._themeLabel.Name = "_themeLabel";
-            this._themeLabel.Size = new System.Drawing.Size(50, 12);
-            this._themeLabel.TabIndex = 8;
-            this._themeLabel.Text = "テーマ(&T):";
-            // 
-            // _themeComboBox
-            // 
-            this._themeComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this._themeComboBox.FormattingEnabled = true;
-            this._themeComboBox.Items.AddRange(new object[] {
-            "デフォルト",
-            "青",
-            "銀",
-            "黒"});
-            this._themeComboBox.Location = new System.Drawing.Point(120, 149);
-            this._themeComboBox.Name = "_themeComboBox";
-            this._themeComboBox.Size = new System.Drawing.Size(134, 20);
-            this._themeComboBox.TabIndex = 9;
-            // 
             // _memoTextFrameVisiblePolicylabel
             // 
             this._memoTextFrameVisiblePolicylabel.AutoSize = true;
-            this._memoTextFrameVisiblePolicylabel.Location = new System.Drawing.Point(12, 187);
+            this._memoTextFrameVisiblePolicylabel.Location = new System.Drawing.Point(12, 152);
             this._memoTextFrameVisiblePolicylabel.Name = "_memoTextFrameVisiblePolicylabel";
             this._memoTextFrameVisiblePolicylabel.Size = new System.Drawing.Size(104, 12);
             this._memoTextFrameVisiblePolicylabel.TabIndex = 10;
@@ -149,7 +124,7 @@
             "枠内をマウスでポイントしたとき",
             "移動バー内をマウスでポイントしたとき",
             "選択したとき"});
-            this._memoTextFrameVisiblePolicyComboBox.Location = new System.Drawing.Point(24, 210);
+            this._memoTextFrameVisiblePolicyComboBox.Location = new System.Drawing.Point(24, 175);
             this._memoTextFrameVisiblePolicyComboBox.Name = "_memoTextFrameVisiblePolicyComboBox";
             this._memoTextFrameVisiblePolicyComboBox.Size = new System.Drawing.Size(230, 20);
             this._memoTextFrameVisiblePolicyComboBox.TabIndex = 11;
@@ -157,7 +132,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 245);
+            this.label1.Location = new System.Drawing.Point(12, 210);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(159, 12);
             this.label1.TabIndex = 12;
@@ -167,7 +142,7 @@
             // 
             this._memoTextDefaultMaxWidthcomboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this._memoTextDefaultMaxWidthcomboBox.FormattingEnabled = true;
-            this._memoTextDefaultMaxWidthcomboBox.Location = new System.Drawing.Point(120, 268);
+            this._memoTextDefaultMaxWidthcomboBox.Location = new System.Drawing.Point(120, 233);
             this._memoTextDefaultMaxWidthcomboBox.Name = "_memoTextDefaultMaxWidthcomboBox";
             this._memoTextDefaultMaxWidthcomboBox.Size = new System.Drawing.Size(134, 20);
             this._memoTextDefaultMaxWidthcomboBox.TabIndex = 13;
@@ -175,7 +150,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 303);
+            this.label2.Location = new System.Drawing.Point(12, 268);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(89, 12);
             this.label2.TabIndex = 14;
@@ -184,7 +159,7 @@
             // _showLineBreakCheckBox
             // 
             this._showLineBreakCheckBox.AutoSize = true;
-            this._showLineBreakCheckBox.Location = new System.Drawing.Point(24, 326);
+            this._showLineBreakCheckBox.Location = new System.Drawing.Point(24, 291);
             this._showLineBreakCheckBox.Name = "_showLineBreakCheckBox";
             this._showLineBreakCheckBox.Size = new System.Drawing.Size(62, 16);
             this._showLineBreakCheckBox.TabIndex = 15;
@@ -194,7 +169,7 @@
             // _showBlockBreakCheckBox
             // 
             this._showBlockBreakCheckBox.AutoSize = true;
-            this._showBlockBreakCheckBox.Location = new System.Drawing.Point(24, 348);
+            this._showBlockBreakCheckBox.Location = new System.Drawing.Point(24, 313);
             this._showBlockBreakCheckBox.Name = "_showBlockBreakCheckBox";
             this._showBlockBreakCheckBox.Size = new System.Drawing.Size(76, 16);
             this._showBlockBreakCheckBox.TabIndex = 16;
@@ -214,7 +189,7 @@
             // _editorCanvasImeOnCheckBox
             // 
             this._editorCanvasImeOnCheckBox.AutoSize = true;
-            this._editorCanvasImeOnCheckBox.Location = new System.Drawing.Point(14, 383);
+            this._editorCanvasImeOnCheckBox.Location = new System.Drawing.Point(14, 348);
             this._editorCanvasImeOnCheckBox.Name = "_editorCanvasImeOnCheckBox";
             this._editorCanvasImeOnCheckBox.Size = new System.Drawing.Size(235, 16);
             this._editorCanvasImeOnCheckBox.TabIndex = 17;
@@ -235,12 +210,10 @@
             this.Controls.Add(this._memoDefaultFontSizeComboBox);
             this.Controls.Add(this._memoTextDefaultMaxWidthcomboBox);
             this.Controls.Add(this._memoTextFrameVisiblePolicyComboBox);
-            this.Controls.Add(this._themeComboBox);
             this.Controls.Add(this._keySchemeComboBox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this._memoTextFrameVisiblePolicylabel);
-            this.Controls.Add(this._themeLabel);
             this.Controls.Add(this._memoDefaultFontNameComboBox);
             this.Controls.Add(this._memoDefaultFontSizeLabel);
             this.Controls.Add(this._keySchemeLabel);
@@ -262,8 +235,6 @@
         private System.Windows.Forms.ComboBox _memoDefaultFontSizeComboBox;
         private System.Windows.Forms.Label _keySchemeLabel;
         private System.Windows.Forms.ComboBox _keySchemeComboBox;
-        private System.Windows.Forms.Label _themeLabel;
-        private System.Windows.Forms.ComboBox _themeComboBox;
         private System.Windows.Forms.Label _memoTextFrameVisiblePolicylabel;
         private System.Windows.Forms.ComboBox _memoTextFrameVisiblePolicyComboBox;
         private System.Windows.Forms.Label label1;
