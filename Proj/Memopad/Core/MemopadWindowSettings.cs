@@ -84,7 +84,7 @@ namespace Mkamo.Memopad.Core {
             ShowLineBreak = false;
             ShowBlockBreak = false;
 
-            ShowDescendantTagsMemo = false;
+            ShowDescendantTagsMemo = true;
 
             MemoListBoxDisplayItems = new[] {
                 MemoListBoxDisplayItem.Title,
