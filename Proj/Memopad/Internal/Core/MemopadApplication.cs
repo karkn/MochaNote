@@ -475,7 +475,7 @@ namespace Mkamo.Memopad.Internal.Core {
                 settings.ConfirmSmartFolderRemoval = true;
             }
             if (winVersion < ver120) {
-                windowSettings.Theme = ThemeKind.Silver;
+                windowSettings.Theme = ThemeKind.Default;
             }
 
             var ver161 = new Version("1.6.1");
