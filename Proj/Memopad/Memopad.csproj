@@ -1150,11 +1150,7 @@
       <Link>sqlcese35.dll</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="..\..\Lib\SqlServerCompact\System.Data.SqlServerCe.dll">
-      <Link>System.Data.SqlServerCe.dll</Link>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="_Doc\License.txt" />
+    <None Include="_Doc\License.txt" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
