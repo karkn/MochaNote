@@ -20,7 +20,15 @@ namespace Mkamo.Container.Core {
         }
 
         public static IEntityContainer GetContainerSurely() {
-            return _container = _container?? new EntityContainer();
+            try
+            {
+                return _container = _container ?? new EntityContainer();
+            }
+            catch (Exception)
+            {
+                // デザイナで表示するとProgram Files以下にファイルを作ろうとして例外になるので適当なフォルダのstoreを作る
+                return _container = _container ?? new EntityContainer(new XmlFileEntityStore("."));
+            }
         }
 
         //public static IEntityContainer CreateContainer(string storeRoot) {
