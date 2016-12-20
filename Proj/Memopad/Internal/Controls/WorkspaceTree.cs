@@ -1035,7 +1035,12 @@ namespace Mkamo.Memopad.Internal.Controls {
                 return _folderCategoryNode;
             } else if (obj == TagCategoryObj) {
                 return _tagCategoryNode;
-            } else if (obj == TagTreePresenter.UntaggedObj) {
+            }
+            else if (obj == AllMemosObj)
+            {
+                return _allMemosNode;
+            }
+            else if (obj == TagTreePresenter.UntaggedObj) {
                 return _tagTreePresenter.UntaggedNode;
             } else if (obj is MemoSmartFolder) {
                 return _smartFolderTreePresenter.GetNode(obj);
