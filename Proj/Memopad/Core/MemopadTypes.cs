@@ -49,6 +49,7 @@ namespace Mkamo.Memopad.Core {
         Folder,
         TrashBox,
         OpenMemos,
+        AllMemos,
     }
 
     [Serializable]

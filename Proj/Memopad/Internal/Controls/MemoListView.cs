@@ -85,6 +85,7 @@ namespace Mkamo.Memopad.Internal.Controls {
                         ContextMenuStrip = _commonContextMenuStrip;
                         break;
                     case MemoListTargetKind.Tag:
+                    case MemoListTargetKind.AllMemos:
                         ContextMenuStrip = _tagContextMenuStrip;
                         break;
                     case MemoListTargetKind.Folder:
@@ -351,7 +352,11 @@ namespace Mkamo.Memopad.Internal.Controls {
 
         private void CreateMemoForTag() {
             _memoListBox.BeginUpdate();
-            _workspaceView.TagTreePresenter.CreateMemo();
+            if (_workspaceView.WorkspaceTree.IsAllMemosSelected) {
+                MemopadApplication.Instance.CreateMemo();
+            } else  {
+                _workspaceView.TagTreePresenter.CreateMemo();
+            }
             _memoListBox.EndUpdate();
         }
 
@@ -638,7 +643,8 @@ namespace Mkamo.Memopad.Internal.Controls {
 
         // --- tag ---
         private void _tagContextMenuStrip_Opening(object sender, CancelEventArgs e) {
-            var enabled = _workspaceView.WorkspaceTree.IsTagSelected || _workspaceView.WorkspaceTree.IsUntaggedSelected;
+            var wsTree = _workspaceView.WorkspaceTree;
+            var enabled = wsTree.IsTagSelected || wsTree.IsUntaggedSelected || wsTree.IsAllMemosSelected;
             var any = enabled && _memoListBox.Items.Count > 0;
             var selected = enabled && _memoListBox.SelectedIndices.Count > 0;
 

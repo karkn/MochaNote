@@ -165,16 +165,29 @@ namespace Mkamo.Memopad.Internal.Core {
         // --- handler ---
         private void HandleWorkspaceTreeAfterSelect(object sender, TreeViewEventArgs e) {
             var tree = _workspaceView.WorkspaceTree;
-            if (tree.IsSmartFolderSelected) {
+            if (tree.IsSmartFolderSelected)
+            {
                 _memoListView.TargetKind = MemoListTargetKind.SmartFolder;
-            } else if (tree.IsTagSelected || tree.IsUntaggedSelected) {
+            }
+            else if (tree.IsTagSelected || tree.IsUntaggedSelected)
+            {
                 _memoListView.TargetKind = MemoListTargetKind.Tag;
-            } else if (tree.IsFolderSelected) {
+            }
+            else if (tree.IsFolderSelected)
+            {
                 _memoListView.TargetKind = MemoListTargetKind.Folder;
-            } else if (tree.IsTrashBoxSelected) {
+            }
+            else if (tree.IsTrashBoxSelected)
+            {
                 _memoListView.TargetKind = MemoListTargetKind.TrashBox;
-            } else if (tree.IsOpenMemosSelected) {
+            }
+            else if (tree.IsOpenMemosSelected)
+            {
                 _memoListView.TargetKind = MemoListTargetKind.OpenMemos;
+            }
+            else if (tree.IsAllMemosSelected)
+            {
+                _memoListView.TargetKind = MemoListTargetKind.AllMemos;
             }
 
             UpdateMemoListBox(false);
