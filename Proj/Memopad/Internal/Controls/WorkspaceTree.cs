@@ -21,9 +21,11 @@ using System.ComponentModel;
 using Mkamo.Common.Event;
 using Mkamo.Memopad.Internal.Utils;
 
-namespace Mkamo.Memopad.Internal.Controls {
+namespace Mkamo.Memopad.Internal.Controls
+{
     [ToolboxItem(false)]
-    internal class WorkspaceTree: TreeView {
+    internal class WorkspaceTree : TreeView
+    {
         // ========================================
         // static field
         // ========================================
@@ -42,7 +44,7 @@ namespace Mkamo.Memopad.Internal.Controls {
             TrashBoxObj,
             OpenMemosObj,
         };
-        
+
         // ========================================
         // field
         // ========================================
@@ -93,7 +95,8 @@ namespace Mkamo.Memopad.Internal.Controls {
         // ========================================
         // constructor
         // ========================================
-        public WorkspaceTree() {
+        public WorkspaceTree()
+        {
             _facade = MemopadApplication.Instance;
             _workspace = _facade.Workspace;
 
@@ -111,7 +114,7 @@ namespace Mkamo.Memopad.Internal.Controls {
             _isInDragOver = false;
             _selectedObjBeforeDragOver = null;
 
-            ItemHeight = (int) (ItemHeight * 1.2);
+            ItemHeight = (int)(ItemHeight * 1.2);
             AllowDrop = true;
             HideSelection = false;
             LabelEdit = true;
@@ -135,7 +138,8 @@ namespace Mkamo.Memopad.Internal.Controls {
 
         }
 
-        private void InitializeComponent() {
+        private void InitializeComponent()
+        {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WorkspaceTree));
             this._imageList = new System.Windows.Forms.ImageList(this.components);
@@ -143,7 +147,7 @@ namespace Mkamo.Memopad.Internal.Controls {
             // 
             // _imageList
             // 
-            this._imageList.ImageStream = ((System.Windows.Forms.ImageListStreamer) (resources.GetObject("_imageList.ImageStream")));
+            this._imageList.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("_imageList.ImageStream")));
             this._imageList.TransparentColor = System.Drawing.Color.Magenta;
             this._imageList.Images.SetKeyName(0, "desktop.png");
             this._imageList.Images.SetKeyName(1, "clear_folder_horizontal.png");
@@ -169,12 +173,14 @@ namespace Mkamo.Memopad.Internal.Controls {
         // ========================================
         // destructor
         // ========================================
-        protected override void Dispose(bool disposing) {
+        protected override void Dispose(bool disposing)
+        {
             CleanUp();
             base.Dispose(disposing);
         }
 
-        private void CleanUp() {
+        private void CleanUp()
+        {
             //_facade.MemoInfoAdded -= HandleFacadeMemoInfoAdded;
             //_facade.MemoInfoRemoving -= HandleFacadeMemoInfoRemoving;
             //_facade.MemoInfoChanged -= HandleFacadeMemoInfoChanged;
@@ -195,78 +201,101 @@ namespace Mkamo.Memopad.Internal.Controls {
         // property
         // ========================================
         [Browsable(false), DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
-        public ContextMenuStrip CommonContextMenuStrip {
+        public ContextMenuStrip CommonContextMenuStrip
+        {
             get { return _commonContextMenuStrip; }
             set { _commonContextMenuStrip = value; }
         }
 
         [Browsable(false), DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
-        public ContextMenuStrip FolderContextMenuStrip {
+        public ContextMenuStrip FolderContextMenuStrip
+        {
             get { return _folderContextMenuStrip; }
             set { _folderContextMenuStrip = value; }
         }
 
         [Browsable(false), DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
-        public ContextMenuStrip SmartFolderContextMenuStrip {
+        public ContextMenuStrip SmartFolderContextMenuStrip
+        {
             get { return _smartFolderContextMenuStrip; }
             set { _smartFolderContextMenuStrip = value; }
         }
 
         [Browsable(false), DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
-        public ContextMenuStrip TagContextMenuStrip {
+        public ContextMenuStrip TagContextMenuStrip
+        {
             get { return _tagContextMenuStrip; }
             set { _tagContextMenuStrip = value; }
         }
 
         [Browsable(false), DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
-        public bool ShowAllMemos {
+        public bool ShowAllMemos
+        {
             get { return _showAllMemos; }
             set { _showAllMemos = value; }
         }
 
         [Browsable(false), DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
-        public bool ShowSmartFolder {
+        public bool ShowSmartFolder
+        {
             get { return _showSmartFolder; }
             set { _showSmartFolder = value; }
         }
 
         [Browsable(false), DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
-        public bool ShowFolder {
+        public bool ShowFolder
+        {
             get { return _showFolder; }
             set { _showFolder = value; }
         }
 
         [Browsable(false), DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
-        public bool ShowTrashBox {
+        public bool ShowTrashBox
+        {
             get { return _showTrashBox; }
             set { _showTrashBox = value; }
         }
 
         [Browsable(false), DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
-        public bool ShowOpenMemos {
+        public bool ShowOpenMemos
+        {
             get { return _showOpenMemos; }
-            set { _showOpenMemos= value; }
+            set { _showOpenMemos = value; }
         }
 
         [Browsable(false), DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
-        public bool AllowEdit {
+        public bool AllowEdit
+        {
             get { return _allowEdit; }
             set { _allowEdit = value; }
         }
 
-        public IMemoInfoListProvider CurrentMemoInfoListProvider {
-            get {
-                if (IsSmartFolderSelected) {
+        public IMemoInfoListProvider CurrentMemoInfoListProvider
+        {
+            get
+            {
+                if (IsSmartFolderSelected)
+                {
                     return _smartFolderTreePresenter;
-                } else if (IsTagSelected || IsUntaggedSelected) {
+                }
+                else if (IsTagSelected || IsUntaggedSelected)
+                {
                     return _tagTreePresenter;
-                } else if (IsFolderSelected) {
+                }
+                else if (IsFolderSelected)
+                {
                     return _folderTreePresenter;
-                } else if (IsTrashBoxSelected) {
+                }
+                else if (IsTrashBoxSelected)
+                {
                     return _trashBoxPresenter;
-                } else if (IsAllMemosSelected) {
+                }
+                else if (IsAllMemosSelected)
+                {
                     return _allMemosPresenter;
-                } else if (IsOpenMemosSelected) {
+                }
+                else if (IsOpenMemosSelected)
+                {
                     return _openMemosPresenter;
                 }
 
@@ -274,115 +303,144 @@ namespace Mkamo.Memopad.Internal.Controls {
             }
         }
 
-        public SmartFolderTreePresenter SmartFolderTreePresenter {
+        public SmartFolderTreePresenter SmartFolderTreePresenter
+        {
             get { return _smartFolderTreePresenter; }
         }
-        
-        public TagTreePresenter TagTreePresenter {
+
+        public TagTreePresenter TagTreePresenter
+        {
             get { return _tagTreePresenter; }
         }
 
-        public FolderTreePresenter FolderTreePresenter {
+        public FolderTreePresenter FolderTreePresenter
+        {
             get { return _folderTreePresenter; }
         }
-        
-        public bool IsFolderSelected {
-            get {
-                if (SelectedNode == null) {
+
+        public bool IsFolderSelected
+        {
+            get
+            {
+                if (SelectedNode == null)
+                {
                     return false;
                 }
                 return SelectedNode.Tag is MemoFolder;
             }
         }
 
-        public bool IsSmartFolderSelected {
-            get {
-                if (SelectedNode == null) {
+        public bool IsSmartFolderSelected
+        {
+            get
+            {
+                if (SelectedNode == null)
+                {
                     return false;
                 }
                 return SelectedNode.Tag is MemoSmartFolder;
             }
         }
 
-        public bool IsTagSelected {
-            get {
-                if (SelectedNode == null) {
+        public bool IsTagSelected
+        {
+            get
+            {
+                if (SelectedNode == null)
+                {
                     return false;
                 }
                 return SelectedNode.Tag is MemoTag;
             }
         }
 
-        public bool IsUntaggedSelected {
+        public bool IsUntaggedSelected
+        {
             get { return _tagTreePresenter.IsUntaggedSelected; }
         }
 
-        public bool IsCategorySelected {
+        public bool IsCategorySelected
+        {
             get { return IsFolderCategorySelected || IsSmartFolderCategorySelected || IsTagCategorySelected; }
         }
 
-        public bool IsFolderCategorySelected {
+        public bool IsFolderCategorySelected
+        {
             get { return SelectedNode == _folderCategoryNode; }
         }
 
-        public bool IsSmartFolderCategorySelected {
+        public bool IsSmartFolderCategorySelected
+        {
             get { return SelectedNode == _smartFolderCategoryNode; }
         }
 
-        public bool IsTagCategorySelected {
+        public bool IsTagCategorySelected
+        {
             get { return SelectedNode == _tagCategoryNode; }
         }
 
-        public bool IsTrashBoxSelected {
+        public bool IsTrashBoxSelected
+        {
             get { return SelectedNode == _trashBoxNode; }
         }
 
-        public bool IsAllMemosSelected {
+        public bool IsAllMemosSelected
+        {
             get { return _showAllMemos && SelectedNode == _allMemosNode; }
         }
 
-        public bool IsOpenMemosSelected {
+        public bool IsOpenMemosSelected
+        {
             get { return SelectedNode == _openMemosNode; }
         }
 
-        public MemoFolder SelectedFolder {
-            get { return SelectedNode == null? null: SelectedNode.Tag as MemoFolder; }
+        public MemoFolder SelectedFolder
+        {
+            get { return SelectedNode == null ? null : SelectedNode.Tag as MemoFolder; }
         }
 
-        public MemoTag SelectedTag {
-            get { return SelectedNode == null? null: SelectedNode.Tag as MemoTag; }
+        public MemoTag SelectedTag
+        {
+            get { return SelectedNode == null ? null : SelectedNode.Tag as MemoTag; }
         }
 
-        public TreeNode AllMemosNode {
+        public TreeNode AllMemosNode
+        {
             get { return _allMemosNode; }
         }
 
-        public bool IsInDragOver {
+        public bool IsInDragOver
+        {
             get { return _isInDragOver; }
         }
 
         // ------------------------------
         // internal
         // ------------------------------
-        internal OpenMemosPresenter _OpenMemosPresenter {
+        internal OpenMemosPresenter _OpenMemosPresenter
+        {
             get { return _openMemosPresenter; }
         }
 
-        internal TreeNodeEx _OpenMemosNode {
+        internal TreeNodeEx _OpenMemosNode
+        {
             get { return _openMemosNode; }
         }
 
-        internal TreeNodeEx _TagCategoryNode {
+        internal TreeNodeEx _TagCategoryNode
+        {
             get { return _tagCategoryNode; }
         }
 
         // ========================================
         // method
         // ========================================
-        public void RebuildTree() {
+        public void RebuildTree()
+        {
             BeginUpdate();
 
-            if (_showAllMemos && _allMemosNode == null) {
+            if (_showAllMemos && _allMemosNode == null)
+            {
                 _allMemosNode = new TreeNodeEx("すべてのノート");
                 _allMemosNode.Tag = AllMemosObj;
                 _allMemosNode.ImageIndex = 9;
@@ -392,12 +450,14 @@ namespace Mkamo.Memopad.Internal.Controls {
                 _allMemosPresenter = new AllMemosPresenter();
             }
 
-            if (_smartFolderCategoryNode == null) {
+            if (_smartFolderCategoryNode == null)
+            {
                 _smartFolderCategoryNode = new TreeNodeEx("スマートフォルダ");
                 _smartFolderCategoryNode.Tag = SmartFolderCategoryObj;
                 _smartFolderCategoryNode.ImageIndex = 8;
                 _smartFolderCategoryNode.SelectedImageIndex = 8;
-                if (_showSmartFolder) {
+                if (_showSmartFolder)
+                {
                     Nodes.Add(_smartFolderCategoryNode);
                 }
 
@@ -405,12 +465,14 @@ namespace Mkamo.Memopad.Internal.Controls {
                 _smartFolderTreePresenter.SmartFolderImageIndex = 8;
             }
 
-            if (_folderCategoryNode == null) {
+            if (_folderCategoryNode == null)
+            {
                 _folderCategoryNode = new TreeNodeEx("クリアファイル");
                 _folderCategoryNode.Tag = FolderCategoryObj;
                 _folderCategoryNode.ImageIndex = 1;
                 _folderCategoryNode.SelectedImageIndex = 1;
-                if (_showFolder) {
+                if (_showFolder)
+                {
                     Nodes.Add(_folderCategoryNode);
                 }
 
@@ -419,7 +481,8 @@ namespace Mkamo.Memopad.Internal.Controls {
                 _folderTreePresenter.ActiveFolderImageIndex = 2;
             }
 
-            if (_tagCategoryNode == null) {
+            if (_tagCategoryNode == null)
+            {
                 _tagCategoryNode = new TreeNodeEx("タグ");
                 _tagCategoryNode.Tag = TagCategoryObj;
                 _tagCategoryNode.ImageIndex = 6;
@@ -431,7 +494,8 @@ namespace Mkamo.Memopad.Internal.Controls {
                 _tagTreePresenter.TagImageIndex = 5;
             }
 
-            if (_showTrashBox && _trashBoxNode == null) {
+            if (_showTrashBox && _trashBoxNode == null)
+            {
                 _trashBoxNode = new TreeNodeEx("ごみ箱");
                 _trashBoxNode.Tag = TrashBoxObj;
                 _trashBoxNode.ImageIndex = 7;
@@ -441,7 +505,8 @@ namespace Mkamo.Memopad.Internal.Controls {
                 _trashBoxPresenter = new TrashBoxPresenter();
             }
 
-            if (_showOpenMemos && _openMemosNode == null) {
+            if (_showOpenMemos && _openMemosNode == null)
+            {
                 _openMemosNode = new TreeNodeEx("開いているノート");
                 _openMemosNode.Tag = OpenMemosObj;
                 _openMemosNode.ImageIndex = 10;
@@ -464,23 +529,27 @@ namespace Mkamo.Memopad.Internal.Controls {
         // ------------------------------
         // protected
         // ------------------------------
-        protected override void OnBeforeExpand(TreeViewCancelEventArgs e) {
+        protected override void OnBeforeExpand(TreeViewCancelEventArgs e)
+        {
             base.OnBeforeExpand(e);
 
-            var node = (TreeNodeEx) e.Node;
+            var node = (TreeNodeEx)e.Node;
             BeginUpdate();
             UpdateSubNodes(node);
             EndUpdate();
         }
 
-        protected override void  OnBeforeLabelEdit(NodeLabelEditEventArgs e) {
+        protected override void OnBeforeLabelEdit(NodeLabelEditEventArgs e)
+        {
             base.OnBeforeLabelEdit(e);
 
-            if (!_allowEdit) {
+            if (!_allowEdit)
+            {
                 e.CancelEdit = true;
                 return;
             }
-            if (_isInProcessingAfterLabelEdit) {
+            if (_isInProcessingAfterLabelEdit)
+            {
                 e.CancelEdit = true;
                 return;
             }
@@ -488,81 +557,106 @@ namespace Mkamo.Memopad.Internal.Controls {
                 e.Node == _folderCategoryNode || e.Node == _smartFolderCategoryNode ||
                 e.Node == _tagCategoryNode || e.Node == _tagTreePresenter.UntaggedNode ||
                 e.Node == _trashBoxNode || e.Node == _allMemosNode || e.Node == _openMemosNode
-            ) {
+            )
+            {
                 e.CancelEdit = true;
                 return;
             }
         }
 
-        protected override void OnAfterLabelEdit(NodeLabelEditEventArgs e) {
+        protected override void OnAfterLabelEdit(NodeLabelEditEventArgs e)
+        {
             base.OnAfterLabelEdit(e);
 
-            if (!_allowEdit) {
+            if (!_allowEdit)
+            {
                 e.CancelEdit = true;
                 return;
             }
-            if (string.IsNullOrEmpty(e.Label)) {
+            if (string.IsNullOrEmpty(e.Label))
+            {
                 e.CancelEdit = true;
                 return;
             }
 
-            if (e.Node.Tag is MemoTag) {
+            if (e.Node.Tag is MemoTag)
+            {
                 var tag = e.Node.Tag as MemoTag;
-                if (tag != null) {
+                if (tag != null)
+                {
                     /// _folderTreeNodeのNodeを変更するような処理をする場合，
                     /// BeginInvoke()を通さないと変更時点でまたBegin/AfterLabelEditされてしまう
                     BeginInvoke(
-                        (Action) (() => {
+                        (Action)(() =>
+                        {
                             _isInProcessingAfterLabelEdit = true;
-                            try {
+                            try
+                            {
                                 tag.Name = e.Label;
                                 Sort();
-                                if (tag != null) {
+                                if (tag != null)
+                                {
                                     SelectNode(tag);
                                 }
-                            } finally {
+                            }
+                            finally
+                            {
                                 _isInProcessingAfterLabelEdit = false;
                             }
                         })
                     );
                 }
             }
-            if (e.Node.Tag is MemoFolder) {
+            if (e.Node.Tag is MemoFolder)
+            {
                 var folder = e.Node.Tag as MemoFolder;
-                if (folder != null) {
+                if (folder != null)
+                {
                     /// _folderTreeNodeのNodeを変更するような処理をする場合，
                     /// BeginInvoke()を通さないと変更時点でまたBegin/AfterLabelEditされてしまう
                     BeginInvoke(
-                        (Action) (() => {
+                        (Action)(() =>
+                        {
                             _isInProcessingAfterLabelEdit = true;
-                            try {
+                            try
+                            {
                                 folder.Name = e.Label;
                                 Sort();
-                                if (folder != null) {
+                                if (folder != null)
+                                {
                                     SelectNode(folder);
                                 }
-                            } finally {
+                            }
+                            finally
+                            {
                                 _isInProcessingAfterLabelEdit = false;
                             }
                         })
                     );
                 }
             }
-            if (e.Node.Tag is MemoSmartFolder) {
+            if (e.Node.Tag is MemoSmartFolder)
+            {
                 var smartFolder = e.Node.Tag as MemoSmartFolder;
-                if (smartFolder != null) {
+                if (smartFolder != null)
+                {
                     /// _folderTreeNodeのNodeを変更するような処理をする場合，
                     /// BeginInvoke()を通さないと変更時点でまたBegin/AfterLabelEditされてしまう
                     BeginInvoke(
-                        (Action) (() => {
+                        (Action)(() =>
+                        {
                             _isInProcessingAfterLabelEdit = true;
-                            try {
+                            try
+                            {
                                 smartFolder.Name = e.Label;
                                 Sort();
-                                if (smartFolder != null) {
+                                if (smartFolder != null)
+                                {
                                     SelectNode(smartFolder);
                                 }
-                            } finally {
+                            }
+                            finally
+                            {
                                 _isInProcessingAfterLabelEdit = false;
                             }
                         })
@@ -571,21 +665,31 @@ namespace Mkamo.Memopad.Internal.Controls {
             }
         }
 
-        protected override void OnMouseDown(MouseEventArgs e) {
+        protected override void OnMouseDown(MouseEventArgs e)
+        {
             base.OnMouseDown(e);
 
-            if (e.Button == MouseButtons.Left) {
+            if (e.Button == MouseButtons.Left)
+            {
                 var node = GetNodeAt(e.X, e.Y);
-                if (node != null) {
+                if (node != null)
+                {
                     SetUpDragState(new Point(e.X, e.Y));
-                } else {
+                }
+                else
+                {
                     ClearDragState();
                 }
-            } else {
-                if (e.Button == MouseButtons.Right) {
+            }
+            else
+            {
+                if (e.Button == MouseButtons.Right)
+                {
                     SelectedNode = GetNodeAt(e.X, e.Y);
                     _isRightMouseDown = true;
-                } else {
+                }
+                else
+                {
                     _isRightMouseDown = false;
                 }
                 ClearDragState();
@@ -593,31 +697,45 @@ namespace Mkamo.Memopad.Internal.Controls {
         }
 
 
-        protected override void OnMouseUp(MouseEventArgs e) {
+        protected override void OnMouseUp(MouseEventArgs e)
+        {
             base.OnMouseUp(e);
 
-            if (_isRightMouseDown) {
+            if (_isRightMouseDown)
+            {
                 if (
                     IsFolderCategorySelected ||
                     IsSmartFolderCategorySelected ||
                     IsTagCategorySelected ||
                     IsTrashBoxSelected
-                    // IsOpenMemosSelected 表示するものがない
-                ) {
-                    if (_commonContextMenuStrip != null) {
+                // IsOpenMemosSelected 表示するものがない
+                )
+                {
+                    if (_commonContextMenuStrip != null)
+                    {
                         _commonContextMenuStrip.Show(this, new Point(e.X, e.Y));
                     }
-                } else {
-                    if (IsSmartFolderSelected) {
-                        if (_smartFolderContextMenuStrip != null) {
+                }
+                else
+                {
+                    if (IsSmartFolderSelected)
+                    {
+                        if (_smartFolderContextMenuStrip != null)
+                        {
                             _smartFolderContextMenuStrip.Show(this, new Point(e.X, e.Y));
                         }
-                    } else if (IsTagSelected || IsUntaggedSelected) {
-                        if (_tagContextMenuStrip != null) {
+                    }
+                    else if (IsTagSelected || IsUntaggedSelected)
+                    {
+                        if (_tagContextMenuStrip != null)
+                        {
                             _tagContextMenuStrip.Show(this, new Point(e.X, e.Y));
                         }
-                    } else if (IsFolderSelected) {
-                        if (_folderContextMenuStrip != null) {
+                    }
+                    else if (IsFolderSelected)
+                    {
+                        if (_folderContextMenuStrip != null)
+                        {
                             _folderContextMenuStrip.Show(this, new Point(e.X, e.Y));
                         }
                     }
@@ -628,42 +746,53 @@ namespace Mkamo.Memopad.Internal.Controls {
             ClearDragState();
         }
 
-        protected override void OnMouseMove(MouseEventArgs e) {
+        protected override void OnMouseMove(MouseEventArgs e)
+        {
             base.OnMouseMove(e);
 
-            if (_isDragPrepared) {
-                if (!_dragStartRect.Contains(e.X, e.Y)) {
+            if (_isDragPrepared)
+            {
+                if (!_dragStartRect.Contains(e.X, e.Y))
+                {
                     var node = GetNodeAt(_dragStartPoint);
-                    if (node == null) {
+                    if (node == null)
+                    {
                         return;
                     }
 
-                    if (node.Tag is MemoFolder) {
+                    if (node.Tag is MemoFolder)
+                    {
                         var effects = DoDragDrop(
                             node,
                             DragDropEffects.Move | DragDropEffects.Copy
                         );
                         ClearDragState();
 
-                    } else if (node.Tag is MemoTag) {
+                    }
+                    else if (node.Tag is MemoTag)
+                    {
                         var effects = DoDragDrop(
                             node,
                             DragDropEffects.Move | DragDropEffects.Copy
                         );
                         ClearDragState();
 
-                        if ((effects & DragDropEffects.Move) == DragDropEffects.Move) {
+                        if ((effects & DragDropEffects.Move) == DragDropEffects.Move)
+                        {
                             node.Remove();
                         }
 
-                    } else {
+                    }
+                    else
+                    {
                         ClearDragState();
                     }
                 }
             }
         }
 
-        protected override void OnMouseClick(MouseEventArgs e) {
+        protected override void OnMouseClick(MouseEventArgs e)
+        {
             /* if (e.Button == MouseButtons.Left) {
                 /// Nodeクリックでサブツリーを開閉する
                 var test = HitTest(e.Location);
@@ -715,85 +844,115 @@ namespace Mkamo.Memopad.Internal.Controls {
         //}
 
         // --- dnd ---
-        protected override void OnQueryContinueDrag(QueryContinueDragEventArgs e) {
+        protected override void OnQueryContinueDrag(QueryContinueDragEventArgs e)
+        {
             base.OnQueryContinueDrag(e);
 
             /// マウスの右ボタンが押されていればドラッグをキャンセル
-            if (EnumUtil.HasAllFlags((int) e.KeyState, (int) DragEventKeyStates.RightButton)) {
+            if (EnumUtil.HasAllFlags((int)e.KeyState, (int)DragEventKeyStates.RightButton))
+            {
                 e.Action = DragAction.Cancel;
             }
         }
 
-        protected override void OnDragOver(DragEventArgs e) {
+        protected override void OnDragOver(DragEventArgs e)
+        {
             base.OnDragOver(e);
 
             e.Effect = DragDropEffects.None;
 
-            if (e.Data.GetDataPresent(typeof(MemoInfo[]))) {
-                if (DragDropUtil.IsMoveAllowed(e) || DragDropUtil.IsCopyAllowed(e)) {
+            if (e.Data.GetDataPresent(typeof(MemoInfo[])))
+            {
+                if (DragDropUtil.IsMoveAllowed(e) || DragDropUtil.IsCopyAllowed(e))
+                {
                     var target = GetNodeAt(PointToClient(new Point(e.X, e.Y)));
-                    var source = (TreeNode) e.Data.GetData(typeof(TreeNode));
+                    var source = (TreeNode)e.Data.GetData(typeof(TreeNode));
 
-                    if (!_isInDragOver) {
+                    if (!_isInDragOver)
+                    {
                         _isInDragOver = true;
                         _selectedObjBeforeDragOver = SelectedNode == null ? null : SelectedNode.Tag;
                     }
 
                     /// 表示のための処理
-                    if (target != null) {
+                    if (target != null)
+                    {
                         SelectedNode = target;
-                        if (target.PrevVisibleNode != null) {
+                        if (target.PrevVisibleNode != null)
+                        {
                             target.PrevVisibleNode.EnsureVisible();
                         }
-                        if (target.NextVisibleNode != null) {
+                        if (target.NextVisibleNode != null)
+                        {
                             target.NextVisibleNode.EnsureVisible();
                         }
                     }
 
                     /// targetがドロップ先として適切か調べる
-                    if (target != null) {
-                        if (target.Tag is MemoFolder) {
+                    if (target != null)
+                    {
+                        if (target.Tag is MemoFolder)
+                        {
                             /// MemoFolderにドロップ
-                            if (DragDropUtil.IsControlPressed(e)) {
+                            if (DragDropUtil.IsControlPressed(e))
+                            {
                                 e.Effect = DragDropEffects.Copy;
-                            } else {
+                            }
+                            else
+                            {
                                 e.Effect = DragDropEffects.Move;
                             }
 
-                        } else if (target.Tag is MemoTag) {
+                        }
+                        else if (target.Tag is MemoTag)
+                        {
                             /// MemoTagにドロップ
-                            if (DragDropUtil.IsControlPressed(e)) {
+                            if (DragDropUtil.IsControlPressed(e))
+                            {
                                 e.Effect = DragDropEffects.Copy;
-                            } else {
+                            }
+                            else
+                            {
                                 e.Effect = DragDropEffects.Move;
                             }
 
-                        } else {
+                        }
+                        else
+                        {
                             /// ドロップ先として不適切
                             e.Effect = DragDropEffects.None;
                         }
-                    } else {
+                    }
+                    else
+                    {
                         e.Effect = DragDropEffects.None;
                     }
                 }
 
-            } else if (e.Data.GetDataPresent(typeof(TreeNodeEx))) {
-                if (DragDropUtil.IsMoveAllowed(e) || DragDropUtil.IsCopyAllowed(e)) {
+            }
+            else if (e.Data.GetDataPresent(typeof(TreeNodeEx)))
+            {
+                if (DragDropUtil.IsMoveAllowed(e) || DragDropUtil.IsCopyAllowed(e))
+                {
                     var target = GetNodeAt(PointToClient(new Point(e.X, e.Y)));
-                    var source = (TreeNodeEx) e.Data.GetData(typeof(TreeNodeEx));
+                    var source = (TreeNodeEx)e.Data.GetData(typeof(TreeNodeEx));
 
-                    if (!_isInDragOver) {
+                    if (!_isInDragOver)
+                    {
                         _isInDragOver = true;
                         _selectedObjBeforeDragOver = SelectedNode == null ? null : SelectedNode.Tag;
                     }
 
                     /// 表示のための処理
-                    if (target != null) {
+                    if (target != null)
+                    {
                         SelectedNode = target;
-                        if (target.PrevVisibleNode != null) {
+                        if (target.PrevVisibleNode != null)
+                        {
                             target.PrevVisibleNode.EnsureVisible();
                         }
-                        if (target.NextVisibleNode != null) {
+                        if (target.NextVisibleNode != null)
+                        {
                             target.NextVisibleNode.EnsureVisible();
                         }
 
@@ -804,30 +963,39 @@ namespace Mkamo.Memopad.Internal.Controls {
                         target != null &&
                         target != source &&
                         !IsChildNode(source, target)
-                    ) {
+                    )
+                    {
                         if (
                             source.Tag is MemoFolder &&
                             (target.Tag is MemoFolder || target.Tag == FolderCategoryObj) &&
                             (target != source.Parent || DragDropUtil.IsCopyAllowed(e))
-                        ) {
+                        )
+                        {
                             /// MemoFolderのドロップ
                             if (
                                 DragDropUtil.IsCopyAllowed(e) &&
                                 DragDropUtil.IsControlPressed(e)
-                            ) {
+                            )
+                            {
                                 e.Effect = DragDropEffects.Copy;
-                            } else {
+                            }
+                            else
+                            {
                                 e.Effect = DragDropEffects.Move;
                             }
-                        } else if (
-                            source.Tag is MemoTag &&
-                            (target.Tag is MemoTag || target.Tag == TagCategoryObj) &&
-                            target != source.Parent
-                        ) {
+                        }
+                        else if (
+                          source.Tag is MemoTag &&
+                          (target.Tag is MemoTag || target.Tag == TagCategoryObj) &&
+                          target != source.Parent
+                      )
+                        {
                             /// MemoTagのドロップ
                             e.Effect = DragDropEffects.Move;
 
-                        } else {
+                        }
+                        else
+                        {
                             e.Effect = DragDropEffects.None;
                         }
                     }
@@ -835,58 +1003,75 @@ namespace Mkamo.Memopad.Internal.Controls {
             }
         }
 
-        protected override void OnDragDrop(DragEventArgs e) {
+        protected override void OnDragDrop(DragEventArgs e)
+        {
             base.OnDragDrop(e);
 
-            if (e.Data.GetDataPresent(typeof(MemoInfo[]))) {
-                if (DragDropUtil.IsMove(e) || DragDropUtil.IsCopy(e)) {
+            if (e.Data.GetDataPresent(typeof(MemoInfo[])))
+            {
+                if (DragDropUtil.IsMove(e) || DragDropUtil.IsCopy(e))
+                {
                     var target = GetNodeAt(PointToClient(new Point(e.X, e.Y)));
-                    var memoInfos = (MemoInfo[]) e.Data.GetData(typeof(MemoInfo[]));
+                    var memoInfos = (MemoInfo[])e.Data.GetData(typeof(MemoInfo[]));
 
-                    if (target != null) {
-                        if (target.Tag is MemoFolder) {
+                    if (target != null)
+                    {
+                        if (target.Tag is MemoFolder)
+                        {
                             /// クリアファイルにドロップ
                             var targetFolder = target.Tag as MemoFolder;
-    
+
                             var existsNotContained = false;
-                            foreach (var memoInfo in memoInfos) {
-                                if (!targetFolder.ContainingMemos.Contains(_facade.Container.Find<Memo>(memoInfo.MemoId))) {
+                            foreach (var memoInfo in memoInfos)
+                            {
+                                if (!targetFolder.ContainingMemos.Contains(_facade.Container.Find<Memo>(memoInfo.MemoId)))
+                                {
                                     existsNotContained = true;
                                     break;
                                 }
                             }
-                            if (existsNotContained) {
-                                foreach (var memoInfo in memoInfos) {
+                            if (existsNotContained)
+                            {
+                                foreach (var memoInfo in memoInfos)
+                                {
                                     var memo = _workspace.Container.Find<Memo>(memoInfo.MemoId);
-                                    if (!targetFolder.ContainingMemos.Contains(memo)) {
-                                        if (EnumUtil.HasAllFlags((int) e.Effect, (int) DragDropEffects.Move)) {
+                                    if (!targetFolder.ContainingMemos.Contains(memo))
+                                    {
+                                        if (EnumUtil.HasAllFlags((int)e.Effect, (int)DragDropEffects.Move))
+                                        {
                                             memo.ClearContainedFolders();
                                         }
                                         targetFolder.AddContainingMemo(memo);
                                     }
                                 }
                                 _isInDragOver = false;
-                                if (SelectedNode.Tag != _selectedObjBeforeDragOver) {
+                                if (SelectedNode.Tag != _selectedObjBeforeDragOver)
+                                {
                                     SelectedNode = SelectNode(_selectedObjBeforeDragOver);
                                 }
                                 _selectedObjBeforeDragOver = null;
-            
+
                                 return; /// end of drop success
                             }
-                        } else if (target.Tag is MemoTag) {
+                        }
+                        else if (target.Tag is MemoTag)
+                        {
                             /// タグにドロップ
                             _isInDragOver = false;
                             SelectNode(_selectedObjBeforeDragOver);
                             _selectedObjBeforeDragOver = null;
-    
+
                             var addingTag = target.Tag as MemoTag;
-                            foreach (var memoInfo in memoInfos) {
+                            foreach (var memoInfo in memoInfos)
+                            {
                                 var memo = _facade.Container.Find<Memo>(memoInfo.MemoId);
-    
-                                if (DragDropUtil.IsMove(e)) {
+
+                                if (DragDropUtil.IsMove(e))
+                                {
                                     memo.ClearTags();
                                 }
-                                if (!memo.Tags.Contains(addingTag)) {
+                                if (!memo.Tags.Contains(addingTag))
+                                {
                                     memo.AddTag(addingTag);
                                 }
                             }
@@ -894,24 +1079,31 @@ namespace Mkamo.Memopad.Internal.Controls {
                         }
                     }
                 }
-            } else if (e.Data.GetDataPresent(typeof(TreeNodeEx))) {
-                if (DragDropUtil.IsMove(e) || DragDropUtil.IsCopy(e)) {
+            }
+            else if (e.Data.GetDataPresent(typeof(TreeNodeEx)))
+            {
+                if (DragDropUtil.IsMove(e) || DragDropUtil.IsCopy(e))
+                {
                     var target = GetNodeAt(PointToClient(new Point(e.X, e.Y)));
-                    var source = (TreeNodeEx) e.Data.GetData(typeof(TreeNodeEx));
+                    var source = (TreeNodeEx)e.Data.GetData(typeof(TreeNodeEx));
                     var sourceFolder = source.Tag as MemoFolder;
 
                     if (
                         target != null &&
                         target != source &&
                         !IsChildNode(source, target)
-                    ) {
+                    )
+                    {
                         if (
                             source.Tag is MemoFolder &&
                             (target.Tag is MemoFolder || target.Tag == FolderCategoryObj) &&
                             (target != source.Parent || DragDropUtil.IsCopyAllowed(e))
-                        ) {
-                            if (target == _folderCategoryNode) {
-                                if (DragDropUtil.IsMove(e)) {
+                        )
+                        {
+                            if (target == _folderCategoryNode)
+                            {
+                                if (DragDropUtil.IsMove(e))
+                                {
                                     sourceFolder.ParentFolder = null;
                                     source.Remove();
                                     target.Nodes.Add(source);
@@ -919,10 +1111,13 @@ namespace Mkamo.Memopad.Internal.Controls {
                                     _selectedObjBeforeDragOver = null;
                                     SelectedNode = source;
                                     return; /// end of drop success
-                                } else if (DragDropUtil.IsCopy(e)) {
+                                }
+                                else if (DragDropUtil.IsCopy(e))
+                                {
                                     var created = _workspace.CreateFolder();
                                     created.Name = sourceFolder.Name;
-                                    foreach (var memo in sourceFolder.ContainingMemos) {
+                                    foreach (var memo in sourceFolder.ContainingMemos)
+                                    {
                                         created.AddContainingMemo(memo);
                                     }
                                     var createdNode = new TreeNodeEx(created.Name);
@@ -935,10 +1130,13 @@ namespace Mkamo.Memopad.Internal.Controls {
                                     SelectedNode = createdNode;
                                     return; /// end of drop success
                                 }
-         
-                            } else if (target.Tag is MemoFolder) {
-                                var targetFolder = (MemoFolder) target.Tag;
-                                if (DragDropUtil.IsMove(e)) {
+
+                            }
+                            else if (target.Tag is MemoFolder)
+                            {
+                                var targetFolder = (MemoFolder)target.Tag;
+                                if (DragDropUtil.IsMove(e))
+                                {
                                     sourceFolder.ParentFolder = targetFolder;
                                     source.Remove();
                                     target.Nodes.Add(source);
@@ -946,11 +1144,14 @@ namespace Mkamo.Memopad.Internal.Controls {
                                     _selectedObjBeforeDragOver = null;
                                     SelectedNode = source;
                                     return; /// end of success drop
-                                } else if (DragDropUtil.IsCopy(e)) {
+                                }
+                                else if (DragDropUtil.IsCopy(e))
+                                {
                                     var created = _workspace.CreateFolder();
                                     created.ParentFolder = targetFolder;
                                     created.Name = sourceFolder.Name;
-                                    foreach (var memo in sourceFolder.ContainingMemos) {
+                                    foreach (var memo in sourceFolder.ContainingMemos)
+                                    {
                                         created.AddContainingMemo(memo);
                                     }
                                     var createdNode = new TreeNodeEx(created.Name);
@@ -964,22 +1165,28 @@ namespace Mkamo.Memopad.Internal.Controls {
                                     return; /// end of drop success
                                 }
                             }
-                        } else if (
-                            source.Tag is MemoTag &&
-                            DragDropUtil.IsMove(e) || DragDropUtil.IsCopy(e) &&
-                            target != source.Parent
-                        ) {
+                        }
+                        else if (
+                          source.Tag is MemoTag &&
+                          DragDropUtil.IsMove(e) || DragDropUtil.IsCopy(e) &&
+                          target != source.Parent
+                      )
+                        {
                             /// ドロップされたNodeのコピーを作成
-                            var clone = (TreeNode) source.Clone();
+                            var clone = (TreeNode)source.Clone();
                             target.Nodes.Add(clone);
                             target.Expand();
-        
-                            var draggedTag = (MemoTag) clone.Tag;
-                            if (target == _tagCategoryNode) {
+
+                            var draggedTag = (MemoTag)clone.Tag;
+                            if (target == _tagCategoryNode)
+                            {
                                 draggedTag.SuperTag = null;
-                            } else {
+                            }
+                            else
+                            {
                                 var super = target.Tag as MemoTag;
-                                if (super != null) {
+                                if (super != null)
+                                {
                                     draggedTag.SuperTag = super;
                                 }
                             }
@@ -1000,9 +1207,11 @@ namespace Mkamo.Memopad.Internal.Controls {
             _selectedObjBeforeDragOver = null;
         }
 
-        protected override void OnDragLeave(EventArgs e) {
+        protected override void OnDragLeave(EventArgs e)
+        {
             base.OnDragLeave(e);
-            if (_isInDragOver) {
+            if (_isInDragOver)
+            {
                 _isInDragOver = false;
                 SelectNode(_selectedObjBeforeDragOver);
                 _selectedObjBeforeDragOver = null;
@@ -1026,43 +1235,67 @@ namespace Mkamo.Memopad.Internal.Controls {
         // ------------------------------
         // private
         // ------------------------------
-        private TreeNode GetNode(object obj) {
-            if (obj == null) {
+        private TreeNode GetNode(object obj)
+        {
+            if (obj == null)
+            {
                 return null;
-            } else if (obj == SmartFolderCategoryObj) {
+            }
+            else if (obj == SmartFolderCategoryObj)
+            {
                 return _smartFolderCategoryNode;
-            } else if (obj == FolderCategoryObj) {
+            }
+            else if (obj == FolderCategoryObj)
+            {
                 return _folderCategoryNode;
-            } else if (obj == TagCategoryObj) {
+            }
+            else if (obj == TagCategoryObj)
+            {
                 return _tagCategoryNode;
             }
             else if (obj == AllMemosObj)
             {
                 return _allMemosNode;
             }
-            else if (obj == TagTreePresenter.UntaggedObj) {
+            else if (obj == TagTreePresenter.UntaggedObj)
+            {
                 return _tagTreePresenter.UntaggedNode;
-            } else if (obj is MemoSmartFolder) {
+            }
+            else if (obj is MemoSmartFolder)
+            {
                 return _smartFolderTreePresenter.GetNode(obj);
-            } else if (obj is MemoFolder) {
+            }
+            else if (obj is MemoFolder)
+            {
                 return _folderTreePresenter.GetNode(obj);
-            } else if (obj is MemoTag) {
+            }
+            else if (obj is MemoTag)
+            {
                 return _tagTreePresenter.GetNode(obj);
-            } else {
+            }
+            else
+            {
                 return null;
             }
         }
 
-        private TreeNode SelectNode(object obj) {
+        private TreeNode SelectNode(object obj)
+        {
             return SelectedNode = GetNode(obj);
         }
 
-        private TreeNode SelectNode(object obj, TreeNode root) {
-            if (obj == null || obj == _folderCategoryNode) {
+        private TreeNode SelectNode(object obj, TreeNode root)
+        {
+            if (obj == null || obj == _folderCategoryNode)
+            {
                 return SelectedNode = _folderCategoryNode;
-            } else {
-                foreach (var node in new TreeNodeIterator(root)) {
-                    if (node.Tag == obj) {
+            }
+            else
+            {
+                foreach (var node in new TreeNodeIterator(root))
+                {
+                    if (node.Tag == obj)
+                    {
                         SelectedNode = node;
                         return node;
                     }
@@ -1071,47 +1304,71 @@ namespace Mkamo.Memopad.Internal.Controls {
             }
         }
 
-        private void UpdateSubNodes(TreeNodeEx node) {
-            if (node == _smartFolderCategoryNode) {
-                if (!node.IsSubNodesLoaded) {
-                    try {
+        private void UpdateSubNodes(TreeNodeEx node)
+        {
+            if (node == _smartFolderCategoryNode)
+            {
+                if (!node.IsSubNodesLoaded)
+                {
+                    try
+                    {
                         Cursor = Cursors.WaitCursor;
                         _smartFolderTreePresenter.RebuildTree();
                         node.IsSubNodesLoaded = true;
-                    } finally {
+                    }
+                    finally
+                    {
                         Cursor = Cursors.Default;
                     }
                 }
-            } else if (node == _folderCategoryNode) {
-                if (!node.IsSubNodesLoaded) {
-                    try {
+            }
+            else if (node == _folderCategoryNode)
+            {
+                if (!node.IsSubNodesLoaded)
+                {
+                    try
+                    {
                         Cursor = Cursors.WaitCursor;
                         _folderTreePresenter.RebuildTree();
                         node.IsSubNodesLoaded = true;
 
-                        foreach (TreeNodeEx child in node.Nodes) {
-                            if (!child.IsSubNodesLoaded) {
+                        foreach (TreeNodeEx child in node.Nodes)
+                        {
+                            if (!child.IsSubNodesLoaded)
+                            {
                                 UpdateNode(child);
                             }
                             child.IsSubNodesLoaded = true;
                         }
-                    } finally {
+                    }
+                    finally
+                    {
                         Cursor = Cursors.Default;
                     }
                 }
-            } else if (node == _tagCategoryNode) {
-                if (!node.IsSubNodesLoaded) {
-                    try {
+            }
+            else if (node == _tagCategoryNode)
+            {
+                if (!node.IsSubNodesLoaded)
+                {
+                    try
+                    {
                         Cursor = Cursors.WaitCursor;
                         _tagTreePresenter.RebuildTree();
                         node.IsSubNodesLoaded = true;
-                    } finally {
+                    }
+                    finally
+                    {
                         Cursor = Cursors.Default;
                     }
                 }
-            } else {
-                foreach (TreeNodeEx child in node.Nodes) {
-                    if (!child.IsSubNodesLoaded) {
+            }
+            else
+            {
+                foreach (TreeNodeEx child in node.Nodes)
+                {
+                    if (!child.IsSubNodesLoaded)
+                    {
                         UpdateNode(child);
                     }
                     child.IsSubNodesLoaded = true;
@@ -1120,16 +1377,22 @@ namespace Mkamo.Memopad.Internal.Controls {
         }
 
 
-        private void UpdateNode(TreeNodeEx node) {
+        private void UpdateNode(TreeNodeEx node)
+        {
             var folder = node.Tag as MemoFolder;
-            if (folder != null) {
-                foreach (var sub in folder.SubFolders) {
+            if (folder != null)
+            {
+                foreach (var sub in folder.SubFolders)
+                {
                     var created = new TreeNodeEx(sub.Name);
                     created.Tag = sub;
-                    if (sub == _facade.ActiveFolder) {
+                    if (sub == _facade.ActiveFolder)
+                    {
                         created.ImageIndex = 2;
                         created.SelectedImageIndex = 2;
-                    } else {
+                    }
+                    else
+                    {
                         created.ImageIndex = 1;
                         created.SelectedImageIndex = 1;
                     }
@@ -1138,14 +1401,17 @@ namespace Mkamo.Memopad.Internal.Controls {
             }
         }
 
-        private void ClearDragState() {
+        private void ClearDragState()
+        {
             _isDragPrepared = false;
             _dragStartPoint = Point.Empty;
             _dragStartRect = Rectangle.Empty;
         }
 
-        private void SetUpDragState(Point pt) {
-            if (_allowEdit) {
+        private void SetUpDragState(Point pt)
+        {
+            if (_allowEdit)
+            {
                 _isDragPrepared = true;
                 _dragStartPoint = pt;
                 _dragStartRect = new Rectangle(
@@ -1154,17 +1420,25 @@ namespace Mkamo.Memopad.Internal.Controls {
                     SystemInformation.DragSize.Width,
                     SystemInformation.DragSize.Height
                 );
-            } else {
+            }
+            else
+            {
                 ClearDragState();
             }
         }
 
-        private static bool IsChildNode(TreeNode parent, TreeNode child) {
-            if (child.Parent == null) {
+        private static bool IsChildNode(TreeNode parent, TreeNode child)
+        {
+            if (child.Parent == null)
+            {
                 return false;
-            } else if (child.Parent == parent) {
-                return true; 
-            } else {
+            }
+            else if (child.Parent == parent)
+            {
+                return true;
+            }
+            else
+            {
                 return IsChildNode(parent, child.Parent);
             }
         }
@@ -1211,7 +1485,7 @@ namespace Mkamo.Memopad.Internal.Controls {
         //    }
         //}
 
-        
+
         //private void UpdateMemoListBoxForSelectedNode(MemoInfoEventArgs e) {
         //    if (SelectedNode == null) {
         //        return;
@@ -1234,7 +1508,7 @@ namespace Mkamo.Memopad.Internal.Controls {
         //        }
         //    }
         //}
-  
+
         //private void HandleFacadeMemoInfoAdded(object sender, MemoInfoEventArgs e) {
         //    UpdateMemoListBoxForSelectedNode(e);
         //}
@@ -1288,20 +1562,26 @@ namespace Mkamo.Memopad.Internal.Controls {
         //    UpdateMemoListBox(_memoListBox);
         //}
 
-        private void HandleFacadeActiveFolderChanging(object sender, EventArgs e) {
-            if (_facade.ActiveFolder != null) {
+        private void HandleFacadeActiveFolderChanging(object sender, EventArgs e)
+        {
+            if (_facade.ActiveFolder != null)
+            {
                 var node = GetNode(_facade.ActiveFolder);
-                if (node != null) {
+                if (node != null)
+                {
                     node.ImageIndex = 1;
                     node.SelectedImageIndex = 1;
                 }
             }
         }
 
-        private void HandleFacadeActiveFolderChanged(object sender, EventArgs e) {
-            if (_facade.ActiveFolder != null) {
+        private void HandleFacadeActiveFolderChanged(object sender, EventArgs e)
+        {
+            if (_facade.ActiveFolder != null)
+            {
                 var node = GetNode(_facade.ActiveFolder);
-                if (node != null) {
+                if (node != null)
+                {
                     node.ImageIndex = 2;
                     node.SelectedImageIndex = 2;
                 }
@@ -1316,45 +1596,58 @@ namespace Mkamo.Memopad.Internal.Controls {
         /// <summary>
         /// 未整理，すべてを最後に，それ以外は辞書順にソートするcomparer．
         /// </summary>
-        private class WorkspaceTreeNodeComparer: IComparer {
+        private class WorkspaceTreeNodeComparer : IComparer
+        {
             private WorkspaceTree _tree;
 
-            public WorkspaceTreeNodeComparer(WorkspaceTree tree) {
+            public WorkspaceTreeNodeComparer(WorkspaceTree tree)
+            {
                 _tree = tree;
             }
 
-            public int Compare(object x, object y) {
-                var xNode = (TreeNode) x;
-                var yNode = (TreeNode) y;
+            public int Compare(object x, object y)
+            {
+                var xNode = (TreeNode)x;
+                var yNode = (TreeNode)y;
 
                 var xObj = xNode.Tag;
                 var yObj = yNode.Tag;
 
-                if (xObj == yObj) {
+                if (xObj == yObj)
+                {
                     return 0;
                 }
 
-                if (Array.IndexOf(SpecialObjects, xObj) > -1) {
+                if (Array.IndexOf(SpecialObjects, xObj) > -1)
+                {
                     var arrComparer = new ArrayOrderingComparer<object>(SpecialObjects);
                     return arrComparer.Compare(xObj, yObj);
                 }
 
 
-                if (xObj is MemoFolder && yObj is MemoFolder) {
+                if (xObj is MemoFolder && yObj is MemoFolder)
+                {
                     return xNode.Text.CompareTo(yNode.Text);
                 }
-                if (xObj is MemoSmartFolder && yObj is MemoSmartFolder) {
+                if (xObj is MemoSmartFolder && yObj is MemoSmartFolder)
+                {
                     return xNode.Text.CompareTo(yNode.Text);
                 }
-                if (xObj == _tree.TagTreePresenter.UntaggedNode.Tag) {
-                    if (yObj is MemoTag) {
+                if (xObj == _tree.TagTreePresenter.UntaggedNode.Tag)
+                {
+                    if (yObj is MemoTag)
+                    {
                         return -1;
                     }
                 }
-                if (xObj is MemoTag) {
-                    if (yObj == _tree.TagTreePresenter.UntaggedNode.Tag) {
+                if (xObj is MemoTag)
+                {
+                    if (yObj == _tree.TagTreePresenter.UntaggedNode.Tag)
+                    {
                         return 1;
-                    } else if (yObj is MemoTag) {
+                    }
+                    else if (yObj is MemoTag)
+                    {
                         return xNode.Text.CompareTo(yNode.Text);
                     }
                 }
