@@ -722,7 +722,8 @@ namespace Mkamo.Memopad.Internal.Controls {
             AddCategory(math);
 
             // --- クラス図 ---
-//if (string.Equals(MemopadApplication.Instance.UserInfo.Email, "mkamo@mkamo.org", StringComparison.Ordinal)) {
+            //if (string.Equals(MemopadApplication.Instance.UserInfo.Email, "mkamo@mkamo.org", StringComparison.Ordinal)) {
+#if false
             var classdia = new SelectorCategory("クラス図");
             {
                 var feedback = new UmlClassFigure() {
@@ -1103,6 +1104,8 @@ namespace Mkamo.Memopad.Internal.Controls {
             
             AddCategory(classdia);
 //}
+#endif
+
             PrepareAddEdgeTools();
             
             ResumeLayout();
